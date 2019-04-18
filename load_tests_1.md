@@ -67,6 +67,10 @@ Let's make the following assumptions:
 - All days have the same user load
 - The client flow is somewhat constant during that hours
 
+Let's translate this into a simple diagram to vizualize the user groups that we have:
+
+![Alt](images/Blog-Load-Tests.png)
+
 ### Doing the math
 
 With that in mind lets do some math:
