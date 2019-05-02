@@ -11,16 +11,17 @@ So, this task opens several questions that we had to answer:
 - How should our client scale to solve those bottlenecks?
 
 To give an answer to those questions we've decided to do load testing.
-In this article we're sharing what we learned so far.
+In this article we share what we learned so far.
 
 ## What is load testing?
 
 Load testing is a type of test that tries to measure an application's performance
 under expected user loads.
 With this type of test we can measure the users' experience of the app,
-collecting metrics about things like responsiveness and error rates.
+collecting metrics about things like response times and error rates.
 This info allows us to emulate the day to day experience the clients will have with the app
 and plan how to scale the platform as the user base grows.
+This also allows us to set an objective criteria about what is acceptable and what is not.
 
 ### What is not
 
@@ -65,7 +66,7 @@ most of the users will concur at that time.
 Let's make the following assumptions:
 - We're at rush hours of the business.
 - 80% of the app uses are made during rush hours.
-- All days have the same user load
+- All days have the same user load.
 - The client flow is somewhat constant during that hours.
 
 Let's translate this into a simple diagram to vizualize the user groups that we have:
@@ -75,23 +76,23 @@ Let's translate this into a simple diagram to vizualize the user groups that we 
 ### Doing the math
 
 With that in mind lets do some math:
- - 400.000 is the 80% of 500.000
+ - 400.000 is the 80% of 500.000.
  - From that we have two distinct groups:
-     - 260.000 New users (65% of all users)
-     - 78.000 Users that will register in the loyalty program (this is 30% of the new users)
- - 140.000 Returning users using the loyalty program
+     - 260.000 new users (65% of all users).
+     - 78.000 users that will register in the loyalty program (this is 30% of the new users).
+ - 140.000 returning users using the loyalty program.
 
 Now, a month has 30 days and for each day the rush hours are from 11:30 am to 02:00 pm and from 08:00 pm to 09:30 pm.
 Then we should adjust our math to see how much user traffic we have in an hour.
 Since we have 4 rush hours we should divide every number we have until now between 120 to get how many users
 we get per hour on average. That gives us:
 
-- 3334 Total users
-- 2167 New users
-- - 650 Of that new users will register in the app
-- 1167 Returning users
+- 3334 total users.
+- 2167 new users.
+    - 650 of that new users will register in the app.
+- 1167 returning users.
 
-But we're gonna run our tests during 15 minutes, so we have to divide this numbers again to obtain the ammount of users
+But we're gonna run our tests during 15 minutes, so we have to divide this numbers again to obtain an approximation of the ammount of users
 that will use the app during our tests.
 This 15 minutes are known as ramp up time, what we have to do now is to distribute the user input in this period of time.
 Even tough there's going to be some concurrent usage of the app, it's not real that all users are going to be using the app
@@ -101,10 +102,10 @@ lapse.
 If the start time is random, and all the start times are equally probable, we should get a fairly equal distribution of users in the ramp up time.
 
 So the final numbers are:
-- 833 Total users
-- 541 New Users
-    - 163 of that users will sign up for the app
-- 292 Returning users
+- 833 total users.
+- 541 new Users.
+    - 163 of that users will sign up for the app.
+- 292 returning users.
 
 Note that with this model we're not considering things like:
 - Short bursts of users in one or two minutes
@@ -113,11 +114,11 @@ Note that with this model we're not considering things like:
 But even though those things are not being taken into account, this model should give us a fairly
 good idea of how our app performs on a day to day basis.
 
-But we also need to model how our app is going to scale over time.
+We also need to model how our app is going to scale over time.
 For that we need to play with the user base of the app, to se how it performs as the user base grows.
 After our model of the reality is defined it's easy to scale it up or down.
 The only modifications needed are in the number users that will be runinng concurrently.
-A very solid approach to start is to divide the by 100, 75, 50, and 25 the user base provided by the client.
+A very solid approach to start is to divide by 100, 75, 50, and 25 the user base provided by the client.
 After the calculations are rerun we will have five scenarios that represent diferent user bases with the same flows in consideration.
 If you want to scale further than the user base provided by the client, mutipliying by 1.25, 1.5, and 1.75 should give you an idea of that.
 A simple excel sheet should do the trick of keeping track of how many users every scenario has.
