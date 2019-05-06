@@ -39,7 +39,7 @@ Those tests are useful to recreate concrete scenarios like:
 - How the telephone network will behave on christmas.
 - How our streaming app will perform in the season finale of our most watched series.
 
-Even tough the avobe scenarios are very real, they do not represent the usual workload of an app
+Even tough the above scenarios are very real, they do not represent the usual workload of an app
 and for that reason they require another type of test.
 
 ## Reality Model
@@ -80,11 +80,11 @@ With that in mind lets do some math:
  - From that we have two distinct groups:
      - 260.000 new users (65% of all users).
      - 78.000 users that will register in the loyalty program (this is 30% of the new users).
- - 140.000 returning users using the loyalty program.
+ - 100.000 returning users using the loyalty program.
 
-Now, a month has 30 days and for each day the rush hours are from 11:30 am to 02:00 pm and from 08:00 pm to 09:30 pm.
+Now, a month has 30 days and for each day the rush hours are from 11:30 am to 12:30 pm and from 08:30 pm to 09:30 pm.
 Then we should adjust our math to see how much user traffic we have in an hour.
-Since we have 4 rush hours we should divide every number we have until now between 120 to get how many users
+Since we have 2 rush hours we should divide every number we have until now between 120 to get how many users
 we get per hour on average. That gives us:
 
 - 3334 total users.
@@ -103,7 +103,7 @@ If the start time is random, and all the start times are equally probable, we sh
 
 So the final numbers are:
 - 833 total users.
-- 541 new Users.
+- 541 new users.
     - 163 of that users will sign up for the app.
 - 292 returning users.
 
@@ -115,15 +115,16 @@ But even though those things are not being taken into account, this model should
 good idea of how our app performs on a day to day basis.
 
 We also need to model how our app is going to scale over time.
-For that we need to play with the user base of the app, to se how it performs as the user base grows.
+For this purpose we are going to make one more assumption: The user flows are still the same as the user base grows and no flows will be added.
+With that in mind the only thing left to do is play with the user base of the app and adjust the number of users, to see how it performs as the user base grows.
 After our model of the reality is defined it's easy to scale it up or down.
-The only modifications needed are in the number users that will be runinng concurrently.
+The only modifications needed are in the number of users that will be runinng concurrently.
 A very solid approach to start is to divide by 100, 75, 50, and 25 the user base provided by the client.
 After the calculations are rerun we will have five scenarios that represent diferent user bases with the same flows in consideration.
 If you want to scale further than the user base provided by the client, mutipliying by 1.25, 1.5, and 1.75 should give you an idea of that.
 A simple excel sheet should do the trick of keeping track of how many users every scenario has.
 
-And that's our user base for the Load tests.
+And that's our user base for the load tests.
 
 In the next post we will define user flows and set up Apache Jmeter to perform them.
 
