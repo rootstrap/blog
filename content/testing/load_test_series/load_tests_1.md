@@ -10,8 +10,8 @@ So, this task opens several questions that we had to answer:
 - Where are the bottlenecks?
 - How should our client scale to solve those bottlenecks?
 
-To give an answer to those questions we've decided to do load testing.
-In this article we share what we learned so far.
+To achieve the outcome if answering these questions, we've decided that this is a perfect scenario to create and execute load tests.
+This article describes what we learned on this journey.
 
 ## What is load testing?
 
@@ -53,7 +53,7 @@ and allows them to register themselves in the application to implement some sort
 loyalty program.
 
 The client tells us that he expects to have 500.000 monthly users by the end of the month.
-From that user mass he expects that 65% are annonymus users that redeem coupons occasionally
+From that user mass he expects that 65% are anonymus users that redeem coupons occasionally
 and the other 35% will be returning users.
 We also know that 30% of the users will register in the royality program after the
 discount is redeemed.
@@ -94,7 +94,7 @@ we get per hour on average. That gives us:
 
 But we're gonna run our tests during 15 minutes, so we have to divide this numbers again to obtain an approximation of the ammount of users
 that will use the app during our tests.
-This 15 minutes are known as ramp up time, what we have to do now is to distribute the user input in this period of time.
+This 15 minutes are known as ramp-up time, what we have to do now is to homogeneously distribute the user input in this period of time.
 Even tough there's going to be some concurrent usage of the app, it's not real that all users are going to be using the app
 all the time during this period of time.
 So what we're going to do is assign every user with a user flow and make that user execute it once in that 15 minute
