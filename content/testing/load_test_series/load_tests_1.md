@@ -1,4 +1,4 @@
-# Simulation of users: Load Testing
+# Load Testing with Apache JMeter.
 
 ## Introduction
 
@@ -42,6 +42,7 @@ Those tests are useful to recreate concrete scenarios like:
 Even tough the above scenarios are very real, they do not represent the usual workload of an app
 and for that reason they require another type of test.
 
+## Simulation of users: Load Testing
 ## Reality Model
 
 _¨All models are wrong, but some are useful¨_ - George Box
@@ -66,10 +67,11 @@ most of the users will concur at that time.
 Let's make the following assumptions:
 - We're at rush hours of the business.
 - 80% of the app uses are made during rush hours.
+- 80% of the users are active during rush hours.
 - All days have the same user load.
 - The client flow is somewhat constant during that hours.
 
-Let's translate this into a simple diagram to vizualize the user groups that we have:
+Let's translate this into a simple Venn diagram to vizualize the user groups that we have:
 
 ![Alt](images/Blog-Load-Tests.png)
 
@@ -80,17 +82,19 @@ With that in mind lets do some math:
  - From that we have two distinct groups:
      - 260.000 new users (65% of all users).
      - 78.000 users that will register in the loyalty program (this is 30% of the new users).
- - 100.000 returning users using the loyalty program.
+ - 169.000 returning users using the loyalty program.
 
 Now, a month has 30 days and for each day the rush hours are from 11:30 am to 12:30 pm and from 08:30 pm to 09:30 pm.
 Then we should adjust our math to see how much user traffic we have in an hour.
 Since we have 2 rush hours we should divide every number we have until now between 120 to get how many users
-we get per hour on average. That gives us:
+we get per hour on average. 
+Take into account that from the total user numbers we're taking the 80% of them since they use the app during the rush hours.
+That gives us:
 
-- 3334 total users.
-- 2167 new users.
-    - 650 of that new users will register in the app.
-- 1167 returning users.
+- 5715 total users.
+- 3715 new users.
+    - 1115 of that new users will register in the app.
+- 2415 returning users.
 
 But we're gonna run our tests during 15 minutes, so we have to divide this numbers again to obtain an approximation of the ammount of users
 that will use the app during our tests.
@@ -102,10 +106,10 @@ lapse.
 If the start time is random, and all the start times are equally probable, we should get a fairly equal distribution of users in the ramp up time.
 
 So the final numbers are:
-- 833 total users.
-- 541 new users.
-    - 163 of that users will sign up for the app.
-- 292 returning users.
+- 1429 total users.
+- 929 new users.
+    - 279 of that users will sign up for the app.
+- 604 returning users.
 
 Note that with this model we're not considering things like:
 - Short bursts of users in one or two minutes
