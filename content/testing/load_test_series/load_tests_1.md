@@ -78,11 +78,11 @@ Let's translate this into a simple Venn diagram to vizualize the user groups tha
 ### Doing the math
 
 With that in mind lets do some math:
- - 400.000 is the 80% of 500.000.
+ - 400,000 is the 80% of 500,000.
  - From that we have two distinct groups:
-     - 260.000 new users (65% of all users).
-     - 78.000 users that will register in the loyalty program (this is 30% of the new users).
- - 169.000 returning users using the loyalty program.
+     - 260,000 new users (65% of all users).
+     - 78,000 users that will register in the loyalty program (this is 30% of the new users).
+ - 169,000 returning users using the loyalty program.
 
 Now, a month has 30 days and for each day the rush hours are from 11:30 am to 12:30 pm and from 08:30 pm to 09:30 pm.
 Then we should adjust our math to see how much user traffic we have in an hour.
@@ -91,10 +91,10 @@ we get per hour on average.
 Take into account that from the total user numbers we're taking the 80% of them since they use the app during the rush hours.
 That gives us:
 
-- 5715 total users.
-- 3715 new users.
-    - 1115 of that new users will register in the app.
-- 2415 returning users.
+- 5,715 total users.
+- 3,715 new users.
+    - 1,115 of that new users will register in the app.
+- 2,415 returning users.
 
 But we're gonna run our tests during 15 minutes, so we have to divide this numbers again to obtain an approximation of the ammount of users
 that will use the app during our tests.
@@ -106,7 +106,7 @@ lapse.
 If the start time is random, and all the start times are equally probable, we should get a fairly equal distribution of users in the ramp up time.
 
 So the final numbers are:
-- 1429 total users.
+- 1,429 total users.
 - 929 new users.
     - 279 of that users will sign up for the app.
 - 604 returning users.
