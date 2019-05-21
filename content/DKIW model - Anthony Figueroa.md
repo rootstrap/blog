@@ -1,24 +1,30 @@
-# Data demystified - Part 1/4
-We've all seen a massive trend around data in the last times. Data "experts" are becoming the best-paid individuals in the industry, and every single company wants to surf the wave of data capabilities. 
+# Data Demystified - Part 1/4
 
-The goal of this article is painting a picture of what these buzzwords mean, what can and can't be done, and what are the leading technologies that you should explore if you are jumping on this journey. 
+Big data is one of the biggest new trends in both tech and business in general. Data "experts" are quickly becoming some of the best-paid individuals in the industry, and every single company wants to surf the wave of data capabilities. 
 
-You are reading the first of 4 articles about data analysis. It'll start with some foundational knowledge and then step-by-step building up the necessary Knowledge to build more sophisticated and robust systems (both computational and thinking processes) to achieve outstanding breakthroughs. 
+But as with any new trend, we have to ask ourselves: what do all these buzzwords actually mean? 
 
-## DIKW pyramid
-I believe that introducing this concept can help to shape the way we think. This pyramid is a well-known concept, yet not a lot of people understands where they are at, and the right interpretation. 
+The goal of this article is to demystify data analysis. We'll explain what these buzzwords mean, what big data can and cannot do, and which technologies you should explore if you're jumping on the data train
+
+This article is the first of a four-part series on data analysis. We'll start with some foundational knowledge, then build on that foundation, step-by-step, to expliain the more sophisticated and robust systems in both computational and thinking processes and help you understand why everyone is so crazy about data. 
+
+## DIKW Pyramid
+
+Before getting into the meet of data analysis, let's start with a simple, but incredibly important, concept: the DIKW Pyramid. While many people are familiar with the pyramid, few understand how to interpret it, how to use it, and where they themselves stand.
 
 ![DKIW Pyramid](images/dkiw.png)
 
-According to Jennifer Rowley (2007), "Typically information is defined in terms of data, knowledge in terms of information, and wisdom in terms of knowledge."
+To elaborate on the concept, listen to Jennifer Rowley (2007): "Typically information is defined in terms of data, knowledge in terms of information, and wisdom in terms of knowledge."
 
-**Data** is just a set of signals or symbols. It's useless and just noise. It can be server logs or user behavior events. If we don't know what it means, it's futile. It's unorganized and unprocessed. It's inert.
+Now let's explain each level of the pyramid. 
 
-You have **Information** when you start to make data useful. When we apply systems to organize and classify data, we can transform this unstructured noise into Information. The "What", "When" and "Who" question should be answered at this stage. In short, Information is data with meaning.  This "meaning" can be useful but does not have to be.
+**Data** is just a set of signals or symbols. Nothing more – just noise. It may be server logs, user behavior events, or any other data set. It's unorganized and unprocessed. It's inert. And if we don't know what it means, it's useless. 
 
-**Knowledge** is the next step in the journey, and probably the most significant leap. It implicitly requires learning. It means that we can take data, categorize and process it generating Information, and organize all this Information in a way that it can be useful. Whereas Information can help us to understand relations, Knowledge will help us to detect patterns. It's the foundation that will allow us to build predictive models. A definition that I like is that Knowledge is a mental structure, made from accumulated learning and systematic analysis of Information. 
+You get **Information** when you start to make data useful. When we apply systems to organize and classify data, we can transform this unstructured noise into Information. The "What", "When" and "Who" question should be answered at this stage. In short, Information is data with meaning. This "meaning" can be useful, but it isn't always useful.
 
-**Wisdom** is the final frontier. It allows us to predict the future correctly, not only by detecting and understanding patterns but also deeply comprehending the "Why". Wisdom is all about the future. It relies on Knowledge and models but even helps to shape your "gut feeling" and intuition, giving you an exponential competitive advantage. Knowledge ages quickly because of the reality changes, but wisdom will remain more rigid. For now, this is a pure human skill, but AI is catching up fast. When AI wisdom becomes better than human wisdom, the outcomes are just unpredictable. 
+**Knowledge** is the next step in the journey, and probably the most significant leap. It implicitly requires learning. It means that we can take data, categorize and process it generating Information, then organize all this Information in a way that it can be useful. Whereas Information can help us to understand relationships, Knowledge allows us to detect patterns. It's the foundation that will let us build predictive models and generate real insights. A definition that I like is that Knowledge is a mental structure, made from accumulated learning and systematic analysis of Information. 
+
+**Wisdom** is the final frontier. It allows us to predict the future correctly, not only by detecting and understanding patterns but also deeply comprehending the "Why" behind those patterns. Wisdom is all about the future: it relies on Knowledge and pattern models, but it can help to shape your "gut feeling" and intuition, giving you an exponential competitive advantage. Knowledge ages quickly because of how fast reality changes, but wisdom remains more rigid. For now, this is a pure human skill, but AI is catching up fast. When AI wisdom becomes better than human wisdom, the outcomes are unpredictable. 
 
 The following image exemplifies perfectly this mental model:
 
@@ -29,17 +35,18 @@ The following image exemplifies perfectly this mental model:
 
 **Information**: The temperature dropped 5 degrees, the humidity went up by 5% in one hour and then it started raining at 3 pm. 
 
-**Knowledge**: An quick increase in the humidity, accompanied by a temperature drop caused by lower pressure areas, will likely to make the atmosphere unable to hold the moisture and rain. 
+**Knowledge**: An quick increase in the humidity, accompanied by a temperature drop caused by lower pressure areas, will likely make the atmosphere unable to hold the moisture and rain. 
 
-**Wisdom**: Based on the observations and maths model, we can predict why and when it will rain in the future, and we can do it so fast and systematically that won't require a lot of analysis. We already have an understanding of all the interactions that happen between raining, evaporation, air currents, temperature gradients, changes, and raining.
+**Wisdom**: Based on the observations and maths model, we can predict why and when it will rain in the future, and we can do it so fast and systematically that it won't require a lot of analysis. We already have an understanding of all the interactions that happen between evaporation, air currents, temperature gradients, changes, and raining.
 
 ## Bonus points
-**Representativeness heuristic** is used by our brain to infer patterns. Our brain uses a vast percentage of its capacity to create patterns and is obsessed with trying to understand and predict the world successes. We have to be careful and not jumping to conclusions too soon. Knowing that we have this tendency to chase and see patterns everywhere, can help us to slow down when it comes to inferring patterns. This is a topic for another article, but I just wanted to bring it to the table.
+**Representativeness heuristic** is used by our brain to infer patterns. Our brain uses a vast percentage of its capacity to create patterns and is obsessed with trying to understand and predict patterns in the real world. That means that when working with data, we need to be extremely mindful in avoiding jumping to conclusions too soon. Knowing that we have this tendency to chase and see patterns everywhere can help us to slow down when it comes to inferring patterns. This is a topic warrants its own article, but it's good to keep in mind from the very beginning.
 
-**Availability Bias** is somewhat related to the previous concept. It's a mental shortcut that relies on immediate, urgent Information, and tries to generalize the findings. Under this bias, people tend to heavily weigh their judgments toward more recent Information, making new opinions biased toward that latest news. 
+**Availability Bias** is somewhat related to the previous concept. It's a mental shortcut that relies on immediate, urgent Information, and tries to generalize the findings using only the most obvious information. Under this bias, people tend to heavily weigh their judgments toward more recent Information, making new opinions biased toward the latest or closest news. 
 
 ### Origin of the DIKW hierarchy
-It's not data sciences. Not even the engineering field. The origin of this mental framework is poetry. The poet T.S.Eliot was the first to mention the "DIKW hierarchy" without even calling it by that name. In 1934 Eliot wrote in "The Rock":
+
+It's not data sciences. Not even the engineering field. The origin of this mental framework is poetry. The poet T.S.Eliot was the first to mention the "DIKW hierarchy," although he didn't it by that name. In 1934 Eliot wrote in "The Rock":
 
 ```
 Where is the Life we have lost in living? 
