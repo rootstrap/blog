@@ -1,6 +1,6 @@
-# Data Demystified - Part 1/4
+# Data Demystified - Chapter 1: DKIW model
 
-Big data is one of the biggest new trends in both tech and business in general. Data "experts" are quickly becoming some of the best-paid individuals in the industry, and every single company wants to surf the wave of data capabilities. 
+Data is one of the biggest new trends in both tech and business in general. Data "experts" are quickly becoming some of the best-paid individuals in the industry, and every single company wants to surf the wave of data capabilities. 
 
 But as with any new trend, we have to ask ourselves: what do all these buzzwords actually mean? 
 
