@@ -30,6 +30,8 @@ The following image exemplifies perfectly this mental model:
 
 ![DKIW](images/data_information_knowledge_insight_wisdom.jpg)
 
+This example also introduces the 'Insight' concept, sometimes named as 'Intelligence'. It's an sporadic manifestation of Wisdom. It's the natural evolution to it, and what really connects Knowledge and Wisdom.
+
 ## A dummy example
 **Data**: It's raining
 
