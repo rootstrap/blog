@@ -2,7 +2,11 @@
 
 Data is one of the biggest new trends in both tech and business in general. Data "experts" are quickly becoming some of the best-paid individuals in the industry, and every single company wants to surf the wave of data capabilities. 
 
+It is becoming a fundamental way of understanding the world around us. We can think of data sciences as epistemology or a way of knowing. We can think of it, about a way to approach problems and solving them.
+
 But as with any new trend, we have to ask ourselves: what do all these buzzwords actually mean? 
+
+What is a data scientist? In short, **a person who is better at statistics than any software engineer and better at software engineering than any statistician**.
 
 The goal of this article is to demystify data analysis. We'll explain what these buzzwords mean, what big data can and cannot do, and which technologies you should explore if you're jumping on the data train
 
