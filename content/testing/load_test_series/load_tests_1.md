@@ -1,4 +1,5 @@
 # Load Testing with Apache JMeter.
+*[Kalil de Lima](https://www.rootstrap.com/tech-blog/) is a full-stack developer on the Rootstrap team and writes about his experience tackling difficult problems for  our many clients. You can also follow Kalil on [LinkedIn](https://www.linkedin.com/in/kalil-de-lima-moreira/).*
 
 ## Introduction
 
@@ -115,5 +116,10 @@ And that's our user base for the load tests.
 
 But that's certainly not the full extent of load testing. In our next post, we'll define user flows and set up Apache Jmeter to perform them.
 
-
 Thanks for reading!
+
+*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he will arrange a free consultation with Kalil or another relevant member of the Rootstrap technical team.*
+
+*☞ Please tap or click “Star icon” below to help to recommend this article to others.*
+
+
