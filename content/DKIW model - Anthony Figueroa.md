@@ -1,5 +1,7 @@
 # Data Demystified - Chapter 1: DKIW model
 
+*[Anthony Figueroa](https://www.rootstrap.com/tech-blog/author/anthfig/) is CTO on the Rootstrap team and writes about his experience tackling difficult problems for  our many clients. You can also follow Anthony on [LinkedIn](https://uy.linkedin.com/in/figueroaanthony).*
+
 Data is one of the biggest new trends in both tech and business in general. Data "experts" are quickly becoming some of the best-paid individuals in the industry, and every single company wants to surf the wave of data capabilities. 
 
 It is becoming a fundamental way of understanding the world around us. We can think of data sciences as epistemology or a way of knowing. We can think of it, about a way to approach problems and solving them.
@@ -71,6 +73,9 @@ Beauty is not love,
 Love is not music, 
 and Music is THE BEST
 ```
+*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he will arrange a free consultation with Anthony or another relevant member of the Rootstrap technical team.*
+
+*☞ Please tap or click “Star icon” below to help to recommend this article to others.*
 
 ### References
 1. Russell .L. Ackoff, "From Data to Wisdom," Journal of Applied Systems Analysis 16 (1989): 3-9. 
