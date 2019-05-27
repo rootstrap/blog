@@ -1,3 +1,5 @@
+*[Leticia Esperon](https://www.rootstrap.com/tech-blog/author/letiesperon/) is a backend developer on the Rootstrap team and writes about her experience tackling difficult problems for  our many clients. You can also follow Leticia on [LinkedIn](https://www.linkedin.com/in/leticia-esperon-0ba955127/).*
+
 Sometimes we want to add filters in an ActiveAdmin model page that use scopes that are not just a simple 'where' clause applied to only one column of the table.
 
 For that we need to define the filter like this:
@@ -61,3 +63,6 @@ In the model:
 [/sourcecode]
 
 And that's it. This is the foundation for many other types of custom filters we want to create.
+
+*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he will arrange a free consultation with any relevant member of the Rootstrap technical team.*
+
