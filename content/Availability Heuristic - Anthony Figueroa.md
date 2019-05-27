@@ -27,6 +27,9 @@ We can't remove the availability heuristic from our brain – it's inherent. Bu
 
 And that's something that will help all of us make better decisions, both in business and in life. 
 
-*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he will arrange a free consultation with Anthony or another relevant member of the Rootstrap technical team.*
+*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [anthony@rootstrap.com](mailto:anthony@rootstrap.com) and he will arrange a free consultation with Anthony or another relevant member of the Rootstrap technical team.*
 
 *☞ Please tap or click “Star icon” below to help to recommend this article to others.*
+
+## References
+1- Daniel Kahneman, Thinking, Fast and Slow, 2011
