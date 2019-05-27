@@ -1,4 +1,5 @@
 ## Availability Heuristic
+*[Anthony Figueroa](https://www.rootstrap.com/tech-blog/author/anthfig/) is CTO on the Rootstrap team and writes about his experience tackling difficult problems for  our many clients. You can also follow Anthony on [LinkedIn](https://uy.linkedin.com/in/figueroaanthony).*
 
 We are all blind – all of us. Even worse? We're blind to our blindness. 
 
@@ -25,3 +26,7 @@ Understanding and combatting the avilability heuristic is one important step to 
 We can't remove the availability heuristic from our brain – it's inherent. But we can educate ourselves, understand our own cognitive failings, and consciously work to identify and counteract cognitive bias when it comes up.
 
 And that's something that will help all of us make better decisions, both in business and in life. 
+
+*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he will arrange a free consultation with Anthony or another relevant member of the Rootstrap technical team.*
+
+*☞ Please tap or click “Star icon” below to help to recommend this article to others.*
