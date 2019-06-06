@@ -1,8 +1,8 @@
 *[Leticia Esperon](https://www.rootstrap.com/tech-blog/author/letiesperon/) is a backend developer on the Rootstrap team and writes about her experience tackling difficult problems for  our many clients. You can also follow Leticia on [LinkedIn](https://www.linkedin.com/in/leticia-esperon-0ba955127/).*
 
-Sometimes we want to add filters in an ActiveAdmin model page that use scopes that are not just a simple 'where' clause applied to only one column of the table.
+On an ActiveAdmin page, filters can help make information more usable. But sometimes, we need to add filters that are more complex than normal, going beyond a simple 'where' clause applied to only one column of the table.
 
-For that we need to define the filter like this:
+To achieve this, we'll start by defining the filter like this:
 
 [sourcecode language="ruby"]
 # app/admin/my_model.rb
@@ -12,7 +12,7 @@ filter :my_custom_filter,
          filters: [:eq]
 [/sourcecode]
 
-We define in the model the scope or the class method that returns an Active Record Relation:
+In the model, we'll then define the scope or the class method that returns an Active Record Relation:
 
 [sourcecode language="ruby"]
 # app/models/my_model.rb
@@ -21,7 +21,7 @@ def self.my_custom_filter_eq(value)
 end
 [/sourcecode]
 
-And finally we also need to tell that the scope is ransackable, for which we add also in the model:
+And finally, we'll need to specify that the scope is ransackable. This means we'll add the following to the model:
 
 [sourcecode language="ruby"]
 # app/models/my_model.rb
@@ -30,13 +30,13 @@ And finally we also need to tell that the scope is ransackable, for which we add
   end
 [/sourcecode]
 
-In this example we assumed we wanted to create a filter that receives a numeric value as a param, and the querying options are limited to just equality. You can play around with the other predicates or change the param types.
+This example assumes we want to create a filter that receives a numeric value as a parameter, and for simplicity, we've limited the querying options to equality. But that's just one possibility – you can play around with other predicates and change param types to see what's most useful in your case.
 
-For example, now let's add a filter that uses a date range for a custom column.
+As an example, let's add a filter that uses a date range for a custom column.
 
-Suppose your model has a belongs to relation with the user model, and the user has an activation date. Now you want to filter the records belonging to a user that activated between two dates.
+Suppose your model has a 'belongs to' relation with the user model, and the user has an activation date. Now, you want to filter the records belonging to a user that activated between two dates.
 
-In the admin model:
+Here's what goes in the admin model:
 
 [sourcecode language="ruby"]
 # app/admin/my_model.rb
@@ -45,7 +45,7 @@ In the admin model:
          label: 'Of user activated during period'
 [/sourcecode]
 
-In the model:
+And in the model:
 
 [sourcecode language="ruby"]
 # app/models/my_model.rb
@@ -62,7 +62,7 @@ In the model:
   end
 [/sourcecode]
 
-And that's it. This is the foundation for many other types of custom filters we want to create.
+And that's it! We've only used a couple of examples here, but this code structure is the foundation for many other types of custom filters we want to create, so you can tweak it to achieve a variety of goals. 
 
-*If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he will arrange a free consultation with any relevant member of the Rootstrap technical team.*
+*At Rootstrap, we solve problems like this one – and much bigger problems – day in and day out. If your company could use a hand with its technical challenges, we'd be thrilled to talk them over with you either at a high or a technical level. Drop us a line [here](https://www.rootstrap.com/contact), or feel free to reach out to [Justin@rootstrap.com](mailto:justin@rootstrap.com) and he'll arrange a free consultation with a member of the Rootstrap technical team.*
 
