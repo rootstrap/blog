@@ -1,5 +1,5 @@
 ## Data Demystified - Data Quality
-*[Anthony Figueroa](https://www.rootstrap.com/tech-blog/author/anthfig/) is CTO on the Rootstrap team and writes about his experience tackling difficult problems for  our many clients. You can also follow Anthony on [LinkedIn](https://uy.linkedin.com/in/figueroaanthony).*
+*[Anthony Figueroa](https://www.linkedin.com/in/figueroaanthony/) is CTO on the Rootstrap team and writes about his experience tackling difficult problems for  our many clients.
 
 This article outlines a mental framework to organize our work around Data Quality. Referencing the well-known DIKW Pyramid, data quality is the enabler that allows us to take raw data and use it to generate information, starting from raw data.
 
