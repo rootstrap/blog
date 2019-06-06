@@ -3,7 +3,7 @@
 
 This article outlines a mental framework to organize our work around Data Quality. Referencing the well-known DIKW Pyramid, data quality is the enabler that allows us to take raw data and use it to generate information, starting from raw data.
 
-This article is the second in a four-part series on data analysis, so if you haven't checked out the previous article on the DIKW Pyramid, I'd recommend starting there. 
+This article is the second in a five-part series on data analysis, so if you haven't checked out the previous article on the DIKW Pyramid, I'd recommend starting there. 
 In this piece, we'll go over a few common scenarios, review some theory, and finally outline some advice for anyone facing this increasingly common issue.
 
 ### Why?
@@ -49,8 +49,6 @@ Another approach could be trying to mitigate future data problems by tracking do
 We'll explore some of these techniques in a following article. But as a conceptual model, this should serve as the basis for any systematized data quality efforts. 
 
 *If you are the owner of a digital platform and would like to discuss the challenges you face on a technical level, contact us [here](https://www.rootstrap.com/contact). Alternatively you can reach out to [anthony@rootstrap.com](mailto:anthony@rootstrap.com) and he will arrange a free consultation with Anthony or another relevant member of the Rootstrap technical team.*
-
-*☞ Please tap or click “Star icon” below to help to recommend this article to others.*
 
 ### References
 1- Russell .L. Ackoff, "From Data to Wisdom," Journal of Applied Systems Analysis 16 (1989): 3–9.
