@@ -52,7 +52,11 @@ We'll explore some of these techniques in a following article. But as a conceptu
 
 ### References
 1- Russell .L. Ackoff, "From Data to Wisdom," Journal of Applied Systems Analysis 16 (1989): 3–9.
+
 2- Harland Cleveland, "Information as Resource," The Futurist, December 1982, 34–39.
+
 3- Arkady Maydanchim, "Data Quality Assessment", September 15, 2007
+
 4- https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read/#2cf97cb160ba
+
 5- https://www.weforum.org/agenda/2019/04/how-much-data-is-generated-each-day-cf4bddf29f/
