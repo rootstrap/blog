@@ -28,6 +28,7 @@ Development on that project was very smooth having implemented this component be
 - The FormView makes a callback to its delegate whenever a change is made, so there you can update any view dependant on the data entered. (For example  enable/disable a submit button).
 - You can easily collect the entered data by iterating the items array of your FormViewModel.
 - Ability to manually mark items invalid, useful when you have backend validation. 
+- Ability to use TextFieldView (component inserted to FormViewCells) with no need of a FormView. 
 
 ### What needs to be improved? 
 
