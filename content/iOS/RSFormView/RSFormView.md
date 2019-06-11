@@ -1,7 +1,9 @@
 # Quickly Implementing elegant forms with RSFormView in Swift
 *[Germán Stábile](https://www.rootstrap.com/tech-blog/) is an iOS developer on the Rootstrap team and recently has started to write about some of the challenges faced during iOS development. You can also follow Germán on [LinkedIn](https://www.linkedin.com/in/german-stabile-61a1b755/).*
 
-## Introduction
+Note: this post is meant to discuss motivations and implementation of RSFormView, if you are interested in a tutorial on how to integrate please visit [RSFormView Readme](https://github.com/rootstrap/RSFormView) or the next article [Link to next article].
+
+## Introduction 
 
 During my first experience with React-Native for a short, form-based project, I found extremely useful the [redux-form](https://github.com/erikras/redux-form)  library and kept thinking on how nice would it be to have such library for iOS development. After finishing that project it was time to move back to iOS native programming for another project (yay!).
 A few glances at the beutiful wireframes the design team provided and I see at least five forms for data entry: and so I thought, developing a form component with such beautiful design (by default) may be both useful and fun! 
@@ -29,6 +31,8 @@ Development on that project was very smooth having implemented this component be
 - You can easily collect the entered data by iterating the items array of your FormViewModel.
 - Ability to manually mark items invalid, useful when you have backend validation. 
 - Ability to use TextFieldView (component inserted to FormViewCells) with no need of a FormView. 
+- Out of the box dark mode configuration you can set with a single line of code.
+- Ability to perform matching validation: useful for password/confirm password fields.  
 
 ### What needs to be improved? 
 
@@ -37,10 +41,24 @@ Development on that project was very smooth having implemented this component be
 - Better support long error messages.
 - Support Carthage.
 
+## How it is implemented?
 
-See RSFormView Readme for usage examples and guidance: https://github.com/rootstrap/RSFormView
+FormView is a custom view with a single UITableView embedded. 
+The table view is populated with three type of cells (for now): TextFieldCell, TwoTextFieldsCell, FormTextCell. 
+
+What type of cell is going to be displayed is determined by your implementation of the FormViewModel protocol.
+A FormItem with a single FormField will be rendered as TextFieldCell.
+If it has two FormFields it will be rendered as a TwoTextFieldsCell. 
+If it was created with no FormFields and with an NSAttributedString it will be render as FormTextCell you can use as a header, beside the NSAttributedString attributes you can further customize it by setting a ConstraintsConfigurator. 
+
+TextFieldView is going to update its state according to the text entered and the validation you have set in the related FormField, validations will be done real time (as the user types).
+The delegate will be notified every time an entry is made, so you can update any dependant view as needed. 
+
+See RSFormView Readme for usage examples and guidance: https://github.com/rootstrap/RSFormView.
 In that repo you'll also find an example app using RSFormView.
 Feel free to leave your feedback and request improvements or additions by creating issues. 
+
+If you're interested in a tutorial showcasing some of the functionalities continue reading: [Link to next article].
 
 Thanks so much for reading! I hope you find the library useful! 
 
