@@ -8,7 +8,6 @@ Once you create the issue, you can either assign it to yourself if you’re plan
 
 **IMPORTANT:** we highly recommend you create an issue before starting to write an article. During the submitting process the idea may change a bit and new ideas may come up, causing the scope of the article to change. This is not to discourage you to start writing articles, but to be aware that changes may happen when going through the pipeline.
 
-
 ## Pushing your article for review
 
 Once you decided to write an article, you can start working directly into the repository by creating a markdown formatted file in `content/<article-title> - <author-name>.md` and start writing!
@@ -21,3 +20,7 @@ Once the content is reviewed and considerd ready for publishing, one last review
 Other than that, all the same practices we’re already following for [code reviews](https://github.com/rootstrap/tech-guides/tree/master/code-review) should be taken into account on this process.
 
 Lastly, when the review process has been completed, your article will be merged into the repo, the originating issue will be closed, and your article will be scheduled to be released. To finish the process, you should work with the person in charge of the blog styling to work on your content and get it ready to be presented to the world!
+
+## Notes
+
+- Please, follow our [guide](https://github.com/rootstrap/blog/blob/master/GUIDE.md) to structure your post according to the standards we have defined.
