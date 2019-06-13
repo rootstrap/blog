@@ -55,10 +55,11 @@ After explaining everything, don't just end the post there. If your reader has m
     - Omit them if they don't add any value.
     - Utilize diagrams to get your points across for complex ideas.
     - Include references if they are from another post or article.
-    - Center them if they are not wide enough
+    - Center them if they are not wide enough.
+- Enumerate figures and tables so that they can be easily identified when making reference to them in the text.
 - 1200 - 1500 words. Separate in parts if necessary and link each part. [Here](https://www.rootstrap.com/tech-blog/2018/12/05/moving-from-java-spring-framework-to-a-reactjsapis-architecture) is an example of 1500.
 - Mark tech keywords.
 - Keep consistency along the post with the personal pronoun you are using (1st, 2nd or 3rd person).
 - Use Github Gists code blocks.
 - Include links to more information.
-- Take into account who should read the post when using the terminology (if you’re writing a ruby post, is it for advanced or beginner developers?)
+- Take into account who should read the post when using the terminology. If you’re writing a ruby post, is it for advanced or beginner developers?
