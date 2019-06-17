@@ -4,9 +4,9 @@ For the management of proposals and new ideas for blog posts, we use this repo's
 
 To make this process easier, we provide an issue template where we ask you for some basic information on your proposal: what’s the motivation for writing about the topic, some notes on the idea itself and possible keywords to identify the article with.
 
-Once you create the issue, you can either assign it to yourself if you’re planning on writing the article, or you can leave it unassigned for anyone interested to pick it up. Maintainers of the blog will reach out to the reporter and assignee to further refine the idea and eventually decide to include it on a release of the blog.
+Once you create the issue, you can either assign it to yourself if you’re planning on writing the article, or you can leave it unassigned for anyone interested to pick it up. The blog maintainers will reach out to the reporter and assignee to further refine the idea and eventually decide to include it on a blog release.
 
-**IMPORTANT:** we highly recommend you create an issue before starting to write an article. During the submitting process the idea may change a bit and new ideas may come up, causing the scope of the article to change. This is not to discourage you to start writing articles, but to be aware that changes may happen when going through the pipeline.
+**IMPORTANT:** We highly recommend you create an issue before starting to write an article. During the submitting process the idea may change a bit and new ideas may come up, causing the scope of the article to change. This is not to discourage you to start writing articles, but to be aware that changes may happen when going through the pipeline.
 
 ## Pushing your article for review
 
@@ -20,6 +20,12 @@ Once the content is reviewed and considerd ready for publishing, one last review
 Other than that, all the same practices we’re already following for [code reviews](https://github.com/rootstrap/tech-guides/tree/master/code-review) should be taken into account on this process.
 
 Lastly, when the review process has been completed, your article will be merged into the repo, the originating issue will be closed, and your article will be scheduled to be released. To finish the process, you should work with the person in charge of the blog styling to work on your content and get it ready to be presented to the world!
+
+## How to Use Labels
+
+Usually issues will not need any labels, but still there are a few labels that can be used for them. An issue can be labeled with `low hanging fruit` when it's an article that should be easy and fast to write. It can also be added the `duplicate` label if there has already been an article about the same subject, and it can be an `update`, when it's an update or enhacement to an already existing article.
+
+Regarding pull requests, we have a few labels that define in which step of the process the article is. If the PR was created but it's a work in progress, you would add the `WIP` label, so that reviewers know that it's not the final result. After the assignee finished writing it, `content review` can be used so that its content can be reviewed. When this is done, `style review` can be added so that the style of the article (grammar, diction, readability, appeal) can be assessed. Once all this is finished, the `ready` label will be added, so that the PR can be merged into the repo and published. There are other labels that can be used throughout this process, which are `help wanted`, if the assignee needs any kind of help (whether someone to finish writing the article or just to clear out some doubts), and `on hold`, in the case the article is not being worked on right now (for example if the person used to have more free time to do this but know is currently working on something with a higher priority). `low hanging fruit` and `update` also apply for PRs. 
 
 ## Notes
 
