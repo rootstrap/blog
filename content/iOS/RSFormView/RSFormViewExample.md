@@ -5,25 +5,25 @@ Note: this post is meant to help you integrate RSFormView in your app, if you ar
 
 ## Creating the project   
 
- During this article we will be implementing step by step an single view iOS application with RSFormView integrated.
+ During this article, we will be implementing a single view iOS application with RSFormView, step-by-step.
  
- Open Xcode, click on create new Xcode project and select Single View application. 
+ Create a new Xcode project and select Single View Application. 
  Select a name and a destination for the project, in our case it'll be RSFormViewExample.
 
 In order to integrate RSFormView we need Cocoapods, so we should install cocoapods and add a podfile in our project.
-You can find instructions in cocoapods [guides](https://guides.cocoapods.org/using/using-cocoapods.html).
+You can find instructions on how to do this in cocoapods [guides](https://guides.cocoapods.org/using/using-cocoapods.html).
 Add this line in your podfile `pod RSFormView`, this will bring the last RSFormView available version whenever you run `pod install/update`.
 Now that you have RSFormView installed you should see a workspace in your project folder, open it. 
 
 ## Creating your first view controller
 
-Xcode will create a `Main.storyboard` by default, and a `ViewController.swift` class, since we are gonna be doing the integration programatically
-(you can find instructions to integrate RSFormView in a storyboard based application in the [README](https://github.com/rootstrap/RSFormView))
-lets remove `Main.storyboard` and under Deployment Info in your target General tab, add "LaunchScreen" as Main Interface.
+Xcode will create a `Main.storyboard` by default, and a `ViewController.swift` class. 
+Since we are gonna be doing the integration programmatically (you can find instructions to integrate RSFormView in a storyboard based application in the [README](https://github.com/rootstrap/RSFormView))
+let's remove `Main.storyboard` and under Deployment Info in your target General tab, add "LaunchScreen" as Main Interface.
 
 ![Alt](images/targetSettings.png)
 
-Now lets rename `ViewController.swift` to something more descriptive, perhaps: `FormViewExampleViewController.swift` 
+Now let's rename `ViewController.swift` to something more descriptive, perhaps: `FormViewExampleViewController.swift` 
 and write `application(didFinishLaunchingWithOptions:)` in our `AppDelegate.swift`:
 
 ``` swift
@@ -35,13 +35,13 @@ and write `application(didFinishLaunchingWithOptions:)` in our `AppDelegate.swif
 Here we are setting a `UINavigationController` with our initial view controller as root, hiding the navigation var and setting it to be our
 `window`'s `rootViewController`.
 
-If you run your app now it will display a white screen, so lets add some content to the view controller. 
+If you run your app now it will display a white screen, so let's add some content to the view controller. 
 
-## Layouting the view controller 
+## Managing your ViewController's layout  
 
-First lets import `RSFormView` in order to get access to the module: add `import RSFormView` at the top of the file. 
+First, let's import `RSFormView` in order to get access to the module: add `import RSFormView` at the top of the file. 
 
-Then lets add properties for our UI components.
+Then let's add properties for our UI components.
 
 ``` swift
 //MARK: UIComponents
@@ -54,16 +54,16 @@ var modeSwitch = UISwitch()
 
 You may be wondering what are all these UI components for?
 
-We are gonna be building a view controller with a description label on top, right below a label with a UISwitch next to it
+We are gonna be building a view controller with a description label on top, below we'll set a label  with an UISwitch next to it,
 to enable/disable a fancy "dark mode". Our FormView will sit right below the label and UISwitch and our bottom view will be our submitButton.
 
 Our view controller will look something like this:
 
 ![Alt](images/viewControllerDiagram.png)
 
-So lets start coding: 
+So let's start coding: 
 
-First we will override `viewDidLoad`, call super as we always should and then call `configureViews` were we are gonna be doing the actual layouting.
+First, we will override `viewDidLoad`, call super as we always should and then call `configureViews` were we're gonna be doing the actual layout.
 
 `configureViews` will look like this:
 
@@ -78,8 +78,8 @@ func configureViews() {
 }
 ```
 
-This function is responsible of confguring every UIComponent in this view controller so in order to make it redable we are breaking it in different functions. 
-The naming should be self explanatory here, and each configure function should be pretty straight forward except for  `configureConstraints` were all the autolayout magic is gonna happen.
+This function is responsible of configuring every UIComponent in this view controller so in order to make it readable we are breaking it in different functions. 
+The naming should be self-explanatory here, and each configure function should be pretty straight forward except for  `configureConstraints` were all the autolayout magic is gonna happen.
 
 ``` swift
 func configureSubmitButton() {
@@ -100,8 +100,7 @@ func configureLabels() {
   descriptionLabel.textColor = UIColor.brightGray
   descriptionLabel.textAlignment = .center
   descriptionLabel.text = "This is an example of a RSFormView changing its aspect on an user triggered event"
-  descriptionLabel.font = UIFont.systemFont(ofSize: 22,
-  weight: .semibold)
+  descriptionLabel.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
 
   view.addSubview(descriptionLabel)
 
@@ -124,13 +123,13 @@ func configureSwitch() {
 }
 ```
 
-In each of this functions we are setting the initial state for each UI Component (except the formView we are leaving that for the end).
+In each of these functions we are setting the initial state for each UI Component (except the formView, we are leaving that for the end).
 We are setting titles to labels and buttons, as well as background colors. 
 We are setting actions for the submit button and the `modeSwitch` and setting `translatesAutoresizingMaskIntoConstraints`  to false to every UIComponent, since we are relying on autolayout to place the views.
 Finally we are adding the views to our viewController's view. 
 You are going to be seeing compiler errors when setting submitButton and modeSwitch targets since the referenced selectors are not defined yet, ignore those for now. 
 
-Now lets configure the formView: 
+Now let's configure the formView: 
 
 ``` swift
 func configureFormView() {
@@ -146,7 +145,7 @@ You should be seeing two compiler errors in this function.
 This is because your view controller doesn't comply to `FormViewModel` delegate and  `formHelper` was never defined. 
 We are gonna see how to do this in the next section. 
 
-Now lets tackle  `configureConstraints` the responsible of setting all the layouting rules for every view in our view controller.
+Now let's tackle  `configureConstraints`, responsible of setting all the layout rules for every view in our view controller.
 
 ``` swift
 func configureConstraints() {
@@ -180,13 +179,13 @@ func configureConstraints() {
 }
 ```
 
-Here we are setting constraints to attach views with eachother in order to accomplish the design we had in mind. 
+Here we are setting constraints to attach views with each other in order to accomplish the design we had in mind. 
 
 
 ## Populating your FormView
 
-Lets start by implementing the  `FormViewModel` delegate: 
-I tend to prefer implementing delegates in an extension of the implementing class to keep concerns separated, so lets do that. 
+Let's start by implementing the  `FormViewModel` delegate: 
+I tend to prefer implementing delegates in an extension of the implementing class to keep concerns separated, so let's do that. 
 Outside of the `FormViewExampleViewController` class scope we do:
 
 ``` swift
@@ -197,7 +196,7 @@ extension FormViewExampleViewController: FormViewDelegate {
 }
 ```
 
-This delegate method is gonna be called every time the user types, or select a new value in pickers and will let us now if all the fields are complete and the values are valid.
+This delegate method is gonna be called every time the user types, or select a new value in pickers and will let us know if all the fields are complete and the values are valid.
 So we are gonna update the submit button accordingly, this is the function to do so: 
 
 ``` swift 
@@ -208,10 +207,10 @@ func updateSubmitButton(enabled: Bool) {
 }
 ```
 
-When we set a FormView `viewModel` we are telling the formView this is the object thats gonna be populating it.
-This object need to conform to `FormViewModel` protocol in order to do so. 
-This protocol only requres that you hold an items array of `FormItem`s.
-Lets create a file to implement the FormViewModel, lets use ExampleFormHelper as a name. 
+When we set a FormView `viewModel` we are telling the formView this is the object that's gonna be populating it.
+This object needs to conform to `FormViewModel` protocol in order to do so. 
+This protocol only requires that you hold an items array of `FormItem`s.
+Let's create a file to implement the FormViewModel, let's use ExampleFormHelper as a name. 
 To keep this short I'm gonna be only showing how to add a couple of items. Take a look at the implementation: 
 
 ``` swift
@@ -235,11 +234,11 @@ lazy var nameItem: FormItem = {
                                 isValid: false,
                                 errorMessage: "Last name can't be empty")
 
-  return FormItem(firstField: firstNameField, secondField: lastNameField)
+  return TwoTextFieldCellItem(firstField: firstNameField, secondField: lastNameField)
 }()
 
 lazy var personalInfoHeaderItem: FormItem = {
-  let headerItem = FormItem()
+  let headerItem = TextCellItem()
   headerItem.attributedText = NSAttributedString(string: "Enter your personal info",
                                                  attributes: [.foregroundColor: UIColor.brightGray,
                                                               .font: UIFont.systemFont(ofSize: 20)])
@@ -253,7 +252,7 @@ func init() {
 
 Here we are only adding two items, to see the whole implementation you can download the example project I'm attaching at the end of this article.  
 Since we are setting two FormFields in the first item it will be rendered as a cell with two text fields. 
-For the header we are only setting a `NSAttributedString` so it will be rendered as a single label cell with the appearance we set in the attributes. 
+For the header, we are only setting a `NSAttributedString` so it will be rendered as a single label cell with the appearance we set in the attributes. 
 
 Now we go back to our FormExampleViewController and we define a var to hold our form helper. 
 
@@ -290,7 +289,7 @@ func submitButtonTapped() {
   present(alert, animated: true)
 }
 ```
-`switchValueChanged` changes our views aspect according to the selected value, if on we go for a "dark mode" otherwise we go for a clear mode. 
+`switchValueChanged` changes our views aspect according to the selected value, if set to on we go for a "dark mode" otherwise we go for a clear mode. 
 Here we are using the two out of the box configurations for the formView the `DarkModeConfigurator` and the default `FormConfigurator`
 
 In the submit button action we are iterating through all the fields in the formView and displaying them in an alert along with the field names. 
