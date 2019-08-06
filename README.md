@@ -10,7 +10,7 @@ Once you create the issue, you can either assign it to yourself if you’re plan
 
 ## Article Guide
 
-- Please, follow our [guide](https://github.com/rootstrap/blog/blob/master/GUIDE.md) to structure your post according to the standards we have defined.
+Please, follow our [guide](https://github.com/rootstrap/blog/blob/master/GUIDE.md) to structure your post according to the standards we have defined.
 
 ## Pushing your article for review
 
