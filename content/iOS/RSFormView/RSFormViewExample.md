@@ -3,7 +3,7 @@
 
 Note: This blog helps you integrate RSFormView into your app. For more about the motivation and implementation of RSFormView see the previous article [Link to previous article].
 
-## Create an Xcode project   
+### Create an Xcode project   
 
  In this tutorial, we implement a single-view iOS application with RSFormView, step-by-step. To get started, create a new Xcode project and select Single View Application. 
  Choose a name and a destination for the project, in this case, RSFormViewExample.
