@@ -123,8 +123,11 @@ func configureSwitch() {
 ```
 
 Except for the `formView`, which we leave for the end, the functions in the preceding code block, set these initial states for each UI component:
+
    • Titles and background colors for labels and buttons.
+
    • Actions for the submit button and the `modeSwitch`.
+
    • `translateAutoresizingMaskIntoConstraints` set to false for every UI component, because we'll be writing the constraint in `configureConstraints`.
 
 Finally, we add the views to the view controller's view. 
