@@ -39,7 +39,7 @@ If you run the app now it displays a white screen. So let's add some content to 
 
 ### Manage your view controller's layout  
 
-To access RSFormView module, add `import RSFormView` at the top of the fule.
+To access RSFormView module, add `import RSFormView` at the top of the file.
 
 Then add properties for the UI components:
 
