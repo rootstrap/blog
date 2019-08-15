@@ -33,7 +33,7 @@ and write `application(didFinishLaunchingWithOptions:)` in  `AppDelegate.swift`:
   window?.rootViewController = navigationController
   return true
 ```
-In this code block, we set a `UINavigationController` with our initial view controller as the root. We hid the navigation and set it as our `window`'s `rootViewController`.
+In this code block, we set a `UINavigationController` with our initial view controller as the root. We hid the navigation bar and set it as our `window`'s `rootViewController`.
 
 If you run the app now it displays a white screen. So let's add some content to the view controller. 
 
