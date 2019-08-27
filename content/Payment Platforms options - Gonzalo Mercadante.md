@@ -1,98 +1,83 @@
 # Payment platforms for mobile apps
 
-Nowadays, is very common to see apps that offer you in-app content. Sometimes they are just virtual things, like coins, diamonds, credits, which give users access to certain functionalities. But also, there are a lot of e-commerce apps, like Amazon, where you can buy physical goods.
-Both types of apps are using payment platforms to manage the payments. And there are a lot of options you can use.
-Let’s try to list some of them, along with some pros and cons.
+It’s common these days to see apps that offer to sell you in-app content on your mobile device. Sometimes they only sell virtual things like coins, diamonds, and credits that give users access to certain functionalities. But on a lot of e-commerce apps, like Amazon, you can buy physical goods. Both types of apps have platforms that manage payments. And there are many payment platform options to choose from. This article lists some of them, along with their pros and cons.
 
-## What payment platform should I use?
+## What platforms are available?
 
-Not always you can use the platform you want. If you want to sell virtual/digital goods in your app (coins, credits, etc) and you’re not providing another way to do that (for example, a web page) then you must use In-app purchases to be approved by Apple. On the other hand, if you’re implementing an e-commerce page where you’re selling for example, clothes, then you can use other payment methods.
+You can’t always use the payment platform you want. You might want to sell virtual or digital goods on your app like coins and credits, but you don’t provide another way to do that like a web page. In this case, you must use in-app purchases to be approved by Apple. But if you run an e-commerce page where you sell solid goods like clothes, you can use other payment methods.
 
 
 ### Virtual goods
 
-There are a lot of apps that use coins or credits to give the users access to certain functionalities, and for this case, you need to use In-app purchases. Despite the fact that most of the logic is managed in the frontend, because the payments are managed by apple/google in the device, the purchases should be validated also in the server.
-As with any feature that has anything to do with money, security is very important when implementing in-app purchases. Specifically, it’d be good to ensure that when you’re providing a user with a paid resource, they have actually paid for it.
-So, after the purchases are made, the frontend should send the receipt data to the server (encrypted data) and then the server should validate the receipt with apple/google servers.
-Optionally, you can also validate the receipt in the frontend.
+Many apps sell coins or credits that give users access to certain functions.
+For these cases, buyers need to make in-app purchases. Most of the logic is managed in the frontend of these platforms. But because the payments are managed by Apple or Google inside the user’s device, the purchases also need to be validated on the app’s server.
+As with any feature that has to do with money, security is of utmost importance when you implement in-app purchases. Specifically, it’s good to ensure that before you deliver paid resources to users, they actually pay for them. So after purchases are made, the frontend needs to send receipts to the server via encrypted data. Then the server needs to validate the receipt with Apple or Google servers.
 
 ### Physical goods
 
-For the apps that sell physical goods, there are more options to use. Some of them: Stripe, Braintree, Dwolla, Paypal.
-Let’s take a look at each one.
+Many payment platform options are available for apps that sell physical goods. Some examples are Stripe, Braintree, Dwolla, and PayPal. Let’s look at each one.
 
 
 ### Stripe
 
-Founded in 2011, Stripe provides technical infrastructure to operate online payment systems. It facilitates both private persons and business to accept online payments.
-It’s one of the best payment options, easy to implement and with good documentation.
-Accepts currencies from over 139 countries, and it automatically converts foreign currency into your account currency. It is available for over 30 countries, but accepts payments for almost all countries.
-The fee is 2.9% + 0.30$ per transaction, and supports subscriptions and discounts. Also,
-provides volume discounts for big companies, with more than $80.000 a month in sales.
-Credit cards: Visa, MasterCard, American Express, JCB, Discover, Diners Club, UnionPay. Accept international cards for an additional 1%. If the payment currency differs from your payout currency, a 1% conversion fee will also apply
-
-Some companies using stripe: Slack, Booking, Shoppify, Xero, National Geographic, etc.
+Founded in 2011, [Stripe](https://stripe.com/) provides technical infrastructure to run online payment systems. With Stripe, both private individuals and businesses can accept online payments. This platform is one of the best payment options because it’s easy to implement and well documented. Stripe accepts currency from over 139 countries. And it automatically converts foreign money into your account’s currency. You can get Stripe in over 30 countries, but it accepts payments for almost all of them.
+Stripe charges 2.9% plus $0.30 per transaction, and it supports subscriptions and discounts. The platform also gives volume discounts to big companies with more than $80,000 a month in sales. Accepted credit cards are Visa, MasterCard, American Express, JCB, Discover, Diners Club, and UnionPay. Stripe accepts international cards for an additional 1% fee. If the user’s payment currency is different than your payout currency, a 1% conversion fee also applies.
+Stripe’s clients include Slack, Booking, Shoppify, Xero, National Geographic, and more.
 
 
 ### Braintree
 
-Founded in 2007 and acquired by PayPal on Sep 26, 2013.
-Similar to Stripe, they have a good documentation, and let you take payments in over 130 currencies, but charges an additional 1% fee for international payments.
-The fee is 2.9% + 0.30$ per transaction and supports subscriptions and discounts. Provides volume discounts for big companies.
-Credit cards: Visa, MasterCard, American Express, JCB, Discover, Diners Club, UnionPay.
-Braintree allows you to accept Venmo and Paypal, so if you need to use Paypal in your app, then Braintree is better than Stripe. The fee for Paypal is charged directly from Paypal but it’s the same as Braintree.
-
-Some companies using Braintree: Airbnb, Uber, Github, Dropbox, Skyscanner, etc.
+Founded in 2007, [Braintree](https://www.braintreepayments.com/) was acquired by PayPal in 2013. Like Stripe, Braintree is well documented. And it takes payment in over 130 currencies.
+Braintree’s basic fee is 2.9% plus $0.30 per transaction, and it supports subscriptions and discounts. This payment platform also gives volume discounts to big companies. Accepted credit cards are Visa, MasterCard, American Express, JCB, Discover, Diners Club, and UnionPay. With Braintree, you can also accept Venmo and PayPal. So if you need to include PayPal in your app, Braintree is a better choice than Stripe. The PayPal fee is charged directly from PayPal, but it’s the same as Braintree’s fee.
+Braintree’s clients include Airbnb, Uber, Github, Dropbox, Skyscanner, and more.
 
 
 ### Dwolla
 
-Dwolla is an online payment solution specifically designed for better bank transactions, customer management, and account verification. It doesn't offer credit card payments support.
-Dwolla’s enterprise pricing information is available upon request. You need to contact the company sales team. Until now, they have a fixed fee per month (not depending on the transactions).
-
-Some companies using Dwolla: Goat, Sweep, Jane, Magento, Givetide
+The [Dwolla](https://www.dwolla.com/) online payment solution is specifically designed for better bank transactions, customer management, and account verification. It doesn't support credit card payments. Dwolla’s enterprise pricing information is only available on request. To subscribe, you need to contact the company’s sales team. They currently charge a fixed fee per month that doesn’t depend on transaction amounts.
+Dwolla’s clients include Goat, Sweep, Jane, Magento, Givetide, and more.
 
 
 ### Paypal
 
-Paypal also allows you to handle online payment processing, and it’s a more recognized platform. On the other hand, stripe is more like a “behind the scenes” processor with a brand name customers don’t necessarily recognize, but has a long list of popular clients.
-PayPal business account fees for sales within the US it’s 2.9% + $0.30 per transaction, and for international sales, it’s 4.4% transaction fee plus a fixed fee based on currency received.
-Paypal is easier to use but Stripe is meant for businesses that need a highly customizable and tech-based solution for payment processing. If you need more features and your emphasis is specifically online payments, the winner is Stripe.
+[Paypal](https://developer.paypal.com/) also offers an in-app platform that processes online payments. PayPal business account fees for sales within the U.S. are 2.9% plus $0.30 per transaction. For international sales, PayPal charges a 4.4% transaction fee plus a fixed fee based on the type of currency received.
 
 
 
+## Marketplace payment platforms
 
-## What are Marketplace payments?
+A marketplace platform is an e-commerce where potential buyers and sellers connect to rent, buy, swap, or negotiate. On this type of platform, users can transfer money from their credit card or bank account to another person’s account. Three parties are involved: the platform owner, users who sell products or services on the platform, and buyers who purchase products from the sellers through the platform. A good marketplace platform takes care of payment processing, security, compliance, and fraud detection. It also distributes money between the three parties. Let’s review some options.
 
-A Marketplace platform is a form of e-commerce that connects potential buyers and sellers all within one platform to help rent, buy, swap or negotiate. It allows users transferring money from their credit card or bank account to another individual’s account. There are three parties involved: an **owner** that allow users with a product or service (**sellers**) to sell to many other users (**buyers**).
-A Marketplace payments platform should take care of the payment processing, security, compliance, fraud detection and splitting the money between the parts.
-Let’s review some options:
 
 ### Stripe Connect
-Stripe Connect allows other Stripe accounts to connect to your Stripe marketplace account. Once a partner’s Stripe account is connected, the API can process payments from buyers and automatically transfer proceeds to sellers. The seller becomes the merchant of record and the marketplace owner is able to set an application fee on each transaction.
-It’s easy to implement.
-If you want to create merchant accounts (typically, the sellers) you need to verify them. The verification process depends on the country. [Here](https://stripe.com/docs/connect/identity-verification) you can take a look.
+With [Stripe Connect](https://stripe.com/connect), other Stripe accounts can connect to your Stripe marketplace account. After you integrate a partner’s Stripe account, the Stripe API can process payments from buyers and automatically transfer the proceeds to your seller partner. The seller becomes the merchant of record, and you, the marketplace owner, can charge an application fee for each transaction. Stripe Connect is easy to implement. To create merchant accounts, typically sellers, you need to verify them. The verification process depends on the country they’re in. To learn more, see [Identity Verification for Custom Accounts](https://stripe.com/docs/connect/identity-verification).
 
 
 ### Dwolla
 
-Dwolla also offers a Marketplace platform. But it doesn’t accept credit cards.
-In this case, it’s not necessary to verify both parts of the transaction, so for example, if you want to send money from your app to the seller account, you don’t need to verify the account since the app account is verified.
-Dwolla is cheaper if you will have a lot of transactions because the fee is fixed.
-It's easy to implement.
+Dwolla also offers a marketplace payment platform, but it doesn’t accept credit cards. In this case, it’s not necessary to verify both parts of the transaction. As an example, if you want to send money from your app to a seller’s account, you don’t need to verify the account because the app account is verified. Dwolla saves you money if you have many transactions because the fee is fixed. It's also easy to implement.
 
 
 ### Braintree
 
-Braintree marketplaces is not available for all. You need to contact the sales team, but at this moment they are no longer boarding new Braintree merchants to their marketplace platform.
+The Braintree marketplace payment platform isn’t available for everyone. To subscribe, you need to contact the sales team. But at this time, they aren’t accepting new Braintree merchants to their marketplace service.
 
 ### Paypal
 
-Paypal has a platform called Adaptive Payments but is now a limited release product. It is restricted to select partners for approved use cases and should not be used for new integrations without guidance from PayPal.
+PayPal has another platform called Adaptive Payments, but it’s currently a limited release product. Adaptive Payments is restricted to select partners for approved-use cases. You should not attempt to integrate this platform without guidance from PayPal.
 
-So, Stripe is the best marketplace in most of the cases, but sometimes Dwolla is a better option. It depends on the case.
+
+### Which marketplace platform is best?
+
+In most cases, we recommend Stripe Connect to support your marketplace app payments. Dwolla might be a better option if you don’t need a credit card platform.
+
 
 ## Summary
 
-To sum up, depending on the type of application you want to implement, you will have different payment platform options. Sometimes, depends on what your app is selling, and other times, depends on specific payment methods you cant to accept. For example, if you are selling virtual things, then you need to use in-app purchases for Apple.
-If you need to accept Paypal, the options are PayPal or Braintree. If you want to accept credit cards, you can't use Dwolla. If Alipay is a requirment, you should use Stripe.
+To conduct business, ecommerce stores that run on mobile apps need a payment platform that integrates with their website. Different platforms are designed to meet the different needs of online business. Variables include the type of items being sold, the payment methods required, and other factors.
+Depending on the type of application you want to implement, you have several different payment platform options. Sometimes your possibilities depend on what your app sells. In other cases, your possibilities depend on the specific payment methods you can accept.
+These guidelines sum it all up:
+  • If you sell virtual items, you can only use in-app purchases for Apple.
+  • If you need to accept PayPal, your options are either PayPal or Braintree.
+  • If you want to accept credit cards, you can't use Dwolla.
+  • If you need Alipay, you should use Stripe.
