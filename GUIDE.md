@@ -9,6 +9,7 @@ The title in a post is very important. Generally, it is what catches the reader'
 ### The cover image
 
 Always try to include a cover image at the beginning of the post, as it helps catching the attention of the reader.
+Here are some links to find images: https://unsplash.com, https://www.pexels.com. Remember that they should be public.
 
 ### The introduction
 
