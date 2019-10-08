@@ -34,7 +34,7 @@ As a team, we reached an agreement on the requirements for a good code quality/b
 
 ## Things changed... for good
 
-I would be sceptical if someone said that just by starting a new project from a boilderplate, it improved the productivity by a magical percentage.
+I would be sceptical if someone said that just by starting a new project from a boilerplate, it improved the productivity by a magical percentage.
 The truth is that it really improved, not just productivity, but other aspects of our engineering team.
 - The intial iterations finished earlier, generating confidence in our clients.
 - The iOS-base plus a good shared-knowlegde base in our company, helped to develop similar features in record time.
@@ -61,6 +61,8 @@ Of course you can fork the 'best match' and adapt it to your needs, but you will
   : We found very useful to create a GitHub project for the repository(a Trello board or similar will do the job as well).
   Managing milestones, new features implementation, issues, etc will be more organized, specially when working with teams.
   : Task assignment and bench management will benefit from these also.
+- **Keep it lean**
+  : Every project has different needs, so try to avoid adding features that ties you to a specific implementation or service.
 #
 
 In fewer words, build something that respond to your needs, then generalize it.
