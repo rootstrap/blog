@@ -299,10 +299,10 @@ func submitButtonTapped() {
   present(alert, animated: true)
 }
 ```
-`switchValueChanged` changes our views aspect based on the selected value. If set to on set the "dark mode" otherwise we go set the default mode. 
+`switchValueChanged` changes our views aspect based on the selected value. If set to on, we set the "dark mode", otherwise we set the default mode. 
 Here we are using the two out of the box configurations for the formView the `DarkModeConfigurator` and the default `FormConfigurator`
 
-In the submit button action, we are iterate through all the fields in the formView and display them in an alert along with the field names. 
+In the submit button action, we iterate through all the fields in the formView and display them in an alert along with the field names. 
 
 Here is the result when switching between modes: 
 
