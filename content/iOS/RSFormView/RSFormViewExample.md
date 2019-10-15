@@ -3,7 +3,7 @@
 
 Note: This blog helps you integrate RSFormView into your app. For more about the motivation and implementation of RSFormView see the previous article [Link to previous article].
 
-## Create an Xcode project   
+### Create an Xcode project   
 
  In this tutorial, we implement a single-view iOS application with RSFormView, step-by-step. To get started, create a new Xcode project and select Single View Application. 
  Choose a name and a destination for the project, in this case, RSFormViewExample.
@@ -33,13 +33,13 @@ and write `application(didFinishLaunchingWithOptions:)` in  `AppDelegate.swift`:
   window?.rootViewController = navigationController
   return true
 ```
-In this code block, we set a `UINavigationController` with our initial view controller as the root. We hid the navigation and set it as our `window`'s `rootViewController`.
+In this code block, we set a `UINavigationController` with our initial view controller as the root. We hid the navigation bar and set it as our `window`'s `rootViewController`.
 
 If you run the app now it displays a white screen. So let's add some content to the view controller. 
 
 ### Manage your view controller's layout  
 
-To access RSFormView module, add `import RSFormView` at the top of the fule.
+To access RSFormView module, add `import RSFormView` at the top of the file.
 
 Then add properties for the UI components:
 
@@ -125,9 +125,9 @@ func configureSwitch() {
 Except for the `formView`, which we leave for the end, the functions in the preceding code block, set these initial states for each UI component:
 
    • Titles and background colors for labels and buttons.
-   
+
    • Actions for the submit button and the `modeSwitch`.
-   
+
    • `translateAutoresizingMaskIntoConstraints` set to false for every UI component, because we'll be writing the constraint in `configureConstraints`.
 
 Finally, we add the views to the view controller's view. 
