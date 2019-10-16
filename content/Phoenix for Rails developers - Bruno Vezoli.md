@@ -1,4 +1,4 @@
-# Phoenix for Rails developers
+# Phoenix for Rails developers: a practical example
 
 ![Phoenix logo](images/phoenix-header.png)
 
