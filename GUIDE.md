@@ -2,7 +2,7 @@
 
 ### The title
 
-*[Style: Title, Bold, Color: Black]*
+*[Style: Heading 2, Bold, Color: Black]*
 
 The title in a post is very important. Generally, it is what catches the reader's attention, particularly for those who are searching for a solution among many posts. It should be clear, straightforward, and avoid any confusing terminology.
 
@@ -13,7 +13,7 @@ Here are some links to find images: https://unsplash.com, https://www.pexels.com
 
 ### The introduction
 
-*[Style: Title, Bold, Color: Black]*
+*[Style: Heading 3, Bold, Color: Black]*
 
 The first paragraph or two, after the cover image, will either convince the reader to stay on or lose their attention. Start off with a little bit of context to help people understand where your post fits into the big picture.
 
@@ -23,9 +23,12 @@ Try not to include technical details. You can talk about your background, why yo
 
 Now that you’ve told your readers what to expect, give it to them! Feel free to go into as much detail as you need.
 
-Use headings to help people understand where they are, and enable them to skip around to the content they are most interested in. Breaking things down into smaller parts makes things easier to manage for you as a writer and allows readers to quickly pick up where they stop.
+Use sections to help people understand where they are, and enable them to skip around to the content they are most interested in. Breaking sections down into subsections makes things easier to manage for you as a writer and allows readers to quickly pick up where they stop.
 
-*Headings [Style: Heading 2, Bold, Color: Black]*
+*Sections titles*  
+*[Style: Heading 3, Bold, Color: Black]*   
+*Subsections titles*  
+*[Style: Heading 4, Bold, Color: Black]*
 
 Use [Github Gists](https://help.github.com/en/articles/about-gists) for displaying code if necessary. Don’t be lazy and use the native code block. Code presentation matters for your readers to read properly.
 
@@ -35,13 +38,13 @@ Keep the length of the post between 1200 and 1500 words. If it takes more than t
 
 ### Summary
 
-*[Style: Heading 1, Bold, Color: Black]*
+*[Style: Heading 3, Bold, Color: Black]*
 
 After explaining everything, don't just end the post there. If your reader has made it all the way there, they really care. Give them a quick summary of what they learned, a pat on the back for reading, and maybe even some possible applications. Also, if it's a series of posts, give a general overview of the next part and make clear if it is ready by adding the link.
 
 ### References
 
-*[Style: Heading 2, Bold, Color: Black]*
+*[Style: Heading 3, Bold, Color: Black]*
 
 [1] https://dev.to/yelluw/how-to-do-technical-blogging
 
@@ -50,7 +53,7 @@ After explaining everything, don't just end the post there. If your reader has m
 ### Guidelines
 
 - Define a good title.
-- Use headings.
+- Use sections and subsections.
 - Images:
     - Should act as a further explainer of your main point.
     - Omit them if they don't add any value.
