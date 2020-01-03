@@ -8,10 +8,10 @@ ethical hacking and information security. You can also follow Pablo on
 
 ## Ethical hacking and how organizations can get value from being hacked.
 
-![White or black hat?](images/white_or_black_hat.png)
+![White or black hat?](images/white_or_black_hat.jpg)
 
-![](https://img.shields.io/badge/on_hold-dee510.svg) This image must be changed,
-I'm looking for a new one
+![](https://img.shields.io/badge/on_hold-dee510.svg) Image taken from
+https://www.pexels.com/photo/internet-screen-security-protection-60504/
 
 When we hear the words hacker or hacking, we tend to have a negative
 association. In truth, that makes a lot of sense as it conjures up the idea of a
