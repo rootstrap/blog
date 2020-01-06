@@ -32,13 +32,13 @@ But this begs the question, **can hacking be considered as a positive?**
 companies or organizations be willing to be hacked?**
 
 We define **hacking** as the actions taken to gain access to a system, network
-or application in an unauthorized way. Having said that, hacking something **can
-also have a different purpose**, whether with good or bad intentions.
+or application in an unauthorized way. Having said that, hacking **can also have
+a different purpose**, with good or bad intentions.
 
-The statistics mentioned above alerts any organization and also users in
-general, since today our information travels at the speed of light through a
-fiber optic cable and is dispersed at different points. However, there is a
-variant of hacking that is increasingly recognized and provides immense value:
+With information traveling at the speed of light these days through a fiber
+optic cable and being dispersed at different points, the statistics mentioned
+above will alert any organization as well as users in general. However, there is
+a variant of hacking that is increasingly recognized and provides immense value:
 **ethical hacking**.
 
 ---
@@ -46,15 +46,15 @@ variant of hacking that is increasingly recognized and provides immense value:
 ### How can hacking be ethical?
 
 At first glance it seems like a contradiction, but the ethical hacker or
-**"white hat"** aims to help detecting failures and improve the security of the
+**"white hat"** aims to help to detect failures and improve the security of the
 systems and applications we use every day. On the other hand, there are the
 **"black hat"** hackers whose purpose is to use the same technical skills to
-exploit vulnerabilities for a personal profit.
+exploit vulnerabilities for personal profit.
 
 Ethical hacking is based on **two fundamental principles**. First, the
-organization or entity to be hacked must be aware and explicitly allow this act.
-Secondly, the objective should be to detect vulnerabilities and find a mechanism
-to improve them, allowing them to be resolved before being exploited
+organization or entity to be hacked must be aware and explicitly allow this
+action. Secondly, the objective should be to detect vulnerabilities and find a
+mechanism to improve them, allowing them to be resolved before being exploited
 maliciously.
 
 ---
@@ -66,7 +66,7 @@ having vulnerabilities from a security point of view are high. Whether due to an
 error in the code, a failure in the testing stage or an incorrect configuration
 in a production environment, there are plenty of reasons to achieve a high
 degree of vulnerability. The real thing is that these types of vulnerabilities
-can cause large losses both financial or reputational to an organization.
+can cause large losses to an organization, both financial or reputational.
 
 For these reasons, organizations should carry out constant **VA** (vulnerability
 assessment) on the products they launch, as well as recognize this process as
@@ -79,7 +79,7 @@ compromised. In any case, the application's security requires constant effort
 and any action in this regard can prevent the failure of our systems.
 
 In general, the main assets of organizations are related to the data of their
-users, the integrity / availability of their systems or their own reputation.
+users, the integrity/availability of their systems or their own reputation.
 Given these factors, there are **several reasons** why companies should purchase
 **ethical hacking** services.
 
@@ -87,7 +87,7 @@ Given these factors, there are **several reasons** why companies should purchase
 
     Whether a company uses a standard (HIPAA, PCI, ISO, etc.) or not, the
     credibility of an organization and its responsibility to its customers' data
-    can be seriously affected for a security problem. It is for this reason that
+    can be seriously affected by a security problem. It is for this reason that
     companies that have services that may be attacked tend to open their
     products to ethical hacking in a modality known as “bug bounty”, in which
     they offer a reward for failures found in the security of their systems or
@@ -96,7 +96,7 @@ Given these factors, there are **several reasons** why companies should purchase
 2.  **Face sophisticated attacks**
 
     The ethical hacker tends to think like a hacker and is prepared to implement
-    defense mechanisms for possible attacks that a professional hacker could
+    defence mechanisms for possible attacks that a professional hacker could
     deploy.
 
 3.  **Defensive strategy**
@@ -107,7 +107,7 @@ Given these factors, there are **several reasons** why companies should purchase
 
 4.  **Damage reduction**
 
-    The damages caused by hacking maneuvers are visible; just think what would
+    The damages caused by hacking manoeuvres are visible; just think what would
     happen if someone obtained a database with sensitive customer information.
     Having a security specialist can greatly prevent the possible effects of an
     exploited vulnerability in systems.
@@ -116,7 +116,7 @@ Given these factors, there are **several reasons** why companies should purchase
 
 ### Summary
 
-Ethical hacking process and vulnerability assessment can help us to expose
+Ethical hacking processes and vulnerability assessments can help us expose
 threats and weaknesses reducing business risks in a controlled way.
 
 The strategic decision to use an ethical hacking service can be extremely
@@ -124,7 +124,7 @@ beneficial for an organization, resulting in increased awareness of unknown
 vulnerabilities and the implementation of stronger security measures and network
 protections.
 
-Ultimately, whether or not a company takes a chance on hiring this kind of
+Ultimately, whether or not a company takes a chance on hiring these kinds of
 services will be for them to decide - but it is certainly an option that
 businesses should at least consider as part of their efforts to build more
 secure solutions and avoid cyber attacks.
