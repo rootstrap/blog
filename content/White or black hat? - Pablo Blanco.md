@@ -1,6 +1,5 @@
 # White or black hat?
 
-![](https://img.shields.io/badge/on_hold-dee510.svg) I will need a blog profile
 _[Pablo Blanco](https://www.rootstrap.com/tech-blog/author/pblanco/) is
 Full-Stack developer on the Rootstrap team and writes about his experience with
 ethical hacking and information security. You can also follow Pablo on
@@ -9,9 +8,7 @@ ethical hacking and information security. You can also follow Pablo on
 ## Ethical hacking and how organizations can get value from being hacked.
 
 ![White or black hat?](images/white_or_black_hat.jpg)
-
-![](https://img.shields.io/badge/on_hold-dee510.svg) Image taken from
-https://www.pexels.com/photo/internet-screen-security-protection-60504/
+[Image source](https://www.pexels.com/photo/internet-screen-security-protection-60504/)
 
 When we hear the words hacker or hacking, we tend to have a negative
 association. In truth, that makes a lot of sense as it conjures up the idea of a
@@ -26,7 +23,7 @@ On the other hand, there are
 that **28% of online businesses**, regardless of size, will have a security
 issue in the next 2 years.
 
-Being that said, **can hacking be considered as positive?**
+That being said, **can hacking be considered as positive?**
 
 **What is ethical hacking and how does it differ from other types? Should
 companies or organizations be willing to be hacked?**
