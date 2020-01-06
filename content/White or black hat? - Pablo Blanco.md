@@ -26,7 +26,7 @@ On the other hand, there are
 that **28% of online businesses**, regardless of size, will have a security
 issue in the next 2 years.
 
-But this begs the question, **can hacking be considered as a positive?**
+Being that said, **can hacking be considered as positive?**
 
 **What is ethical hacking and how does it differ from other types? Should
 companies or organizations be willing to be hacked?**
