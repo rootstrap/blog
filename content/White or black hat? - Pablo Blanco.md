@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/on_hold-dee510.svg) I will need a blog profile
 _[Pablo Blanco](https://www.rootstrap.com/tech-blog/author/pblanco/) is
-Full-Stack developer on the Rootstrap team and writes about his experience about
+Full-Stack developer on the Rootstrap team and writes about his experience with
 ethical hacking and information security. You can also follow Pablo on
 [LinkedIn](https://www.linkedin.com/in/pablo-blanco-a6b5a371/)._
 
@@ -111,3 +111,20 @@ Given these factors, there are **several reasons** why companies should purchase
     happen if someone obtained a database with sensitive customer information.
     Having a security specialist can greatly prevent the possible effects of an
     exploited vulnerability in systems.
+
+---
+
+### Summary
+
+Ethical hacking process and vulnerability assessment can help us to expose
+threats and weaknesses reducing business risks in a controlled way.
+
+The strategic decision to use an ethical hacking service can be extremely
+beneficial for an organization, resulting in increased awareness of unknown
+vulnerabilities and the implementation of stronger security measures and network
+protections.
+
+Ultimately, whether or not a company takes a chance on hiring this kind of
+services will be for them to decide - but it is certainly an option that
+businesses should at least consider as part of their efforts to build more
+secure solutions and avoid cyber attacks.
