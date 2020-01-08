@@ -20,4 +20,6 @@ I personally believe that *Rootstrap week* experience was the beginning of somet
 
 Have a happy new Year!!!
 
+[Link](https://medium.com/@mateo.fernandez.cspo/what-ive-learned-from-rootstrap-week-3b55035b848c) to the original article on Medium. 
+
 [Mateo Fernández](https://www.rootstrap.com/blog/author/mateof101) is a Product Manager on the Rootstrap team. You can follow Mateo on [LinkedIn](https://uy.linkedin.com/in/mateo-f-cspo) and [Medium](https://medium.com/@mateo.fernandez.cspo).
