@@ -1,12 +1,12 @@
 # What I've Learned From Rootstrap Week
 
-![RS Week](/images/rsweek1.jpeg)
+![RS Week](images/rsweek1.jpeg)
 
 Three weeks ago we had a massive company retreat in Montevideo denominated *Rootstrap week*. Team members traveling from all around the globe for a one whole week full of laughs, personal stories, lessons learned, *fuck up* tales, and new innovative ideas heading the promising 2020.
 
 A week in which communication and co-creation were the most resonating concepts. One full day of internal talks, shaped as a major conference (attendees needed to select which talks to attend, since three different talks were happening at the same time), followed by an energetic retrospective (based on [liberating structures](http://www.liberatingstructures.com/) to unlock innovation), were the highest moments in my opinion.
 
-![“Selfie time, thank you awesome crowd, good night!!”, Cami and me right after our talk about Product Discovery.](/images/rsweek2.jpeg)
+![“Selfie time, thank you awesome crowd, good night!!”, Cami and me right after our talk about Product Discovery.](images/rsweek2.jpeg)
 
 ## Lessons Learned
 
@@ -20,4 +20,4 @@ I personally believe that *Rootstrap week* experience was the beginning of somet
 
 Have a happy new Year!!!
 
-Mateo Fernández is a Product Manager on the Rootstrap team. You can follow Mateo on [LinkedIn](https://uy.linkedin.com/in/mateo-f-cspo) and [Medium](https://medium.com/@mateo.fernandez.cspo).
+[Mateo Fernández](https://www.rootstrap.com/blog/author/mateof101) is a Product Manager on the Rootstrap team. You can follow Mateo on [LinkedIn](https://uy.linkedin.com/in/mateo-f-cspo) and [Medium](https://medium.com/@mateo.fernandez.cspo).
