@@ -1,4 +1,4 @@
-# Patterns for maintainable Rails applications. Part II
+# How to improve maintainability in Rails applications using patterns. Part II
 
 ![Main image](images/rails_patterns.jpg)
 
@@ -14,7 +14,7 @@ Callbacks are useful as we can place repetitive behavior in a single place when 
 
 Active Record Callbacks however, come with some drawbacks:
 - Additional responsibilities to the model, which goes against SRP.
-- Implicit behavior, which makes testing it isolated impossible, as we need to call the corresponding callback method (for instance, `create` method). This may also trigger a cascade of callbacks that makes testing slower.
+- Implicit behavior, which makes testing it isolated impossible, as we need to call the corresponding callback method (for instance, `create` method). Instantiating the model may also trigger a cascade of callbacks, making testing slower in general.
 - Unwanted side effects, particularly when having a lot of callbacks. This is also a consequence of implicitness.
 - Once we define a callback, every instance of the model is bound to it. If we want to exclude some of them, we shouldn’t use them, as conditional callbacks are a big code smell.
 - They break the linear flow of our code, making testing, debugging and refactoring more difficult. When we run into a problem at controller level or we just want to change its behavior, we start from the controller and keep inspecting methods calls until we reach our model. With callbacks, we also have to know which of these are called, figure out their order and check if they effectively need to be triggered for our instance as they may be conditional.
@@ -55,11 +55,13 @@ I included them together because concerns are basically a form of multi-inherita
 
 The same applies to concerns, but the consequences are even worse as models can have multiple concerns. Also, in these cases, finding where a method is defined can be tough.
 
-There are also some bad practices related to concerns that should be avoided. An example is extracting methods into a concern just to reduce the size of a class. We may be gaining readability from this but we lose explicitness and responsibilities are still in the class, only that they were hidden in another file. Another example are bidirectional dependencies in concerns, which is the same as assuming that a superclass knows the implementation details of its subclasses, something we should avoid. An even worse version of this last case is dependency between concerns. A proper concern should then be free of these dependencies and have a single well-defined responsibility.
+There are also some common bad practices related to concerns that should be avoided. An example is extracting methods into a concern just to reduce the size of a class. We may be gaining readability from this but we lose explicitness and responsibilities are still in the class, only that they were hidden in another file. Another example are bidirectional dependencies in concerns, which is the same as assuming that a superclass knows the implementation details of its subclasses, something we should avoid. An even worse version of this last case is dependency between concerns. A proper concern should then be free of these dependencies and have a single well-defined responsibility.
 
-Rails encourages the use of concerns and there are lots of articles that promote them, but its wrong use has led to even be considered an anti-pattern. Quoting Bryan Helmkamp, CEO at CodeClimate: “Any application with an app/concerns directory is concerning.”
+Rails encourages the use of concerns and there are lots of articles that promote them, but its wrong use has led to even be considered an anti-pattern. Quoting Bryan Helmkamp, CEO at CodeClimate: “Any application with an app/concerns directory is concerning.” [1]
 
-Should we really use concerns then? Properly used I don’t think they are that bad, but there are usually more explicit and more scalable alternatives, including any of the patterns mentioned in the article. The choice between these depends on the context they are going to be used, but if it doesn’t seem like any applies, you can go for the Services/Service Objects pattern.
+Should we really use concerns then? Even when taking into account all the considerations mentioned, it is difficult to apply them properly, and using concerns usually means having multiple places where we hide the complexity of our models, making them more difficult to understand and maintain. There isn't really a reason to use them when we have more explicit, representative and scalable alternatives, including any of the patterns mentioned in the article. The choice between these depends on the context they are going to be used, but if it doesn’t seem like any applies, you can go for the Services/Service Objects pattern.
+
+As a side note, we can use concerns to share behavior between controllers and this may make more sense in some cases, however, remember that controllers shouldn't be complex and having many concerns may also be a sign that we have logic we could move somewhere else.
 
 #### Services
 
@@ -106,3 +108,7 @@ In this article I mentioned recurrent problems in Rails applications that some t
 Also take into account that in some cases, for example, smaller projects with small teams, it may not be worth over-engineering it with all of the patterns. However, some are really easy to apply and we should start using them as early as possible, especially for big projects, as later on changes become more expensive to make.
 
 This article was based on an internal talk given by Santiago Bartesaghi and Leticia Esperón.
+
+## References
+
+[1] [LA Ruby Conference 2013 Refactoring Fat Models with Patterns by Bryan Helmkamp](https://www.youtube.com/watch?v=5yX6ADjyqyE)
