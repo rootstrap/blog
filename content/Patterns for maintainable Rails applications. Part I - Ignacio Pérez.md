@@ -1,4 +1,4 @@
-# Patterns for maintainable Rails applications. Part I
+# How to improve maintainability in Rails applications using patterns. Part I
 
 ![Main image](images/rails_patterns.jpg)
 
@@ -22,7 +22,7 @@ As our Rails application gets more features, models tend to grow larger and comp
 
 Coupling is the degree of interdependence between modules. A high interdependency will mean that changes made to one module will have a higher probability of impacting the others, so our goal should be to have low coupling. Cohesion refers to how the elements of a module belong together. Cohesive modules are easier to maintain. As the elements within the module are directly related to the functionality that module is meant to have, changes are more localized.
 
-We should “design components that are self-contained: independent, and with a single, well-defined purpose”1. In order to reach this, we need to have low coupling and high cohesion. As you may have noticed, this is also part of what SRP principle means to achieve.
+We should “design components that are self-contained: independent, and with a single, well-defined purpose” [1]. In order to reach this, we need to have low coupling and high cohesion. As you may have noticed, this is also part of what SRP principle means to achieve.
 
 ### DRY
 
@@ -70,15 +70,17 @@ https://gist.github.com/PerezIgnacio/b427f353bd8b8bbeb06be7c9e2b222b2
 
 With nested attributes we can save the attributes of a record through an associated record. This makes them useful as we can easily create multiple nested records and automatically handle any error.
 
-One issue with nested associations is that we may need to add additional complexity to our controllers. The biggest problem with them, however, is that it restricts the parameters our controllers must receive, and so it unnecessarily couples the frontend to the database. It's weird for the frontend to know how we designed our models, so we should have an interface for this in the backend. We can achieve this with the Form Objects pattern.
+One issue with nested associations is that we may need to add additional complexity to our controllers. The biggest problem with them, however, is that it restricts the parameters our controllers must receive, and so it unnecessarily couples the frontend to the database. It's weird for the frontend to know how we designed our models, specially if it is a completely separated app, such as React, Ember or Angular apps. We should have an interface for this in the backend, which we can achieve with the Form Objects pattern.
 
 #### Form Objects
 
-A Form Object takes care of the creation of multiple models, attributes mapping and contextual validations. We can define one form object for each form in the frontend. They also give more flexibility to the frontend as we can map fields in the forms to the attributes of the records in the database. Integrity validations should stay on the model, although validations that are only important in the context of the form should go in the form object. In addition, the pattern helps to respect the Single Responsibility Principle by removing logic from our models or controllers.
+A Form Object takes care of the creation of multiple models, attributes mapping and contextual validations. We can define one form object for each form in the frontend. They give more flexibility to the frontend as we can map fields in the forms to the attributes of the records in the database. In addition, the pattern helps to respect the Single Responsibility Principle by removing logic from our models or controllers.
 
-Any changes needed to the forms in the frontend will be much easier to implement as we should only need to modify the related form object, and any new form related to a model may simply require extending our code.
+Regarding validations, it's important to make a clear distinction between **data integrity validations** and **contextual validations**. The former are tied to the constraints defined in our database schema and, as they are related to how a model is always persisted, they should stay in the model. The latter consist in validations that are important only in the context of a particular form flow, becoming part of the business logic defined for it, so they should go in the form object. This, for example, allows us to easily require fields in one form that are not necessary in others and ensure that some validations will still be applied for every record created, even if this doesn't happen through a form.
 
-Continuing the example we used earlier, now the User model has a user_request which Is responsible for knowing the filters the user saves when browsing the store.
+Any changes needed to the forms in the frontend will also be much easier to implement as we should only need to modify the related form object, and any new form related to a model may simply require extending our code.
+
+Continuing the example we used earlier, now the User model has a user_request which is responsible for knowing the filters the user saves when browsing the store.
 
 https://gist.github.com/PerezIgnacio/e1babd9cab20f79131941c142b89b402
 
@@ -92,7 +94,9 @@ https://gist.github.com/PerezIgnacio/da03bb1174565f63d392af570f78b592
 
 As you may have noticed, we need to add more code because nested attributes did things for us that we now have to do manually. However, this code is encapsulated in its own object, so it still is preferable over having code in controllers or models. Basically, the form object must be initialized with the params we receive in our controller and we will map to our models attributes. We define then a save method which is in charge of triggering the model persistence logic.
 
-We also include some validations from ActiveModel, checking the presence of some attributes in the form. All models can also be saved in a transaction, so it rollbacks in case any of the models created has an error. Additionally, we may add code that we want to execute after everything is created correctly, such as triggering a notification.
+Like I previously mentioned, contextual validations should go in the form objects. Let's consider that for this form `phone` is a required attribute, while we have some other cases where it isn't. We need to add a presence check to this particular case, and the best place for it is this form object. In our database, however, phones are unique to each user so we keep the uniqueness validation in the model.
+
+All models can also be saved in a transaction, so it rollbacks in case any of the models created has an error. Additionally, we may add code that we want to execute after everything is created correctly, such as triggering a notification.
 
 The controller which uses the form object doesn’t change much. Here is how the form object could be used:
 
