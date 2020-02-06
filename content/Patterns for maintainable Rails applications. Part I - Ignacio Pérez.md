@@ -108,7 +108,9 @@ Of course, this is a simple example, and the implementation will probably vary d
 
 ## Summary
 
-In this part of the article we went over some techniques used in Rails and the consequences of overusing them, while providing an alternative to each. We also reviewed principles that are necessary in order to understand the problems these solve. In the second part I will mention more of these techniques, and patterns we should use instead to improve our code maintainability.
+In this article I mentioned some recurrent problems in Rails applications that techniques provided by the framework introduce. Using these techniques isn’t bad per se, but we tend to add a lot of logic and complexity to our models when using them, which is contrary to the mentality we should adopt. To avoid this, it is necessary that we justify our design decisions based on well established principles and give thought to how these will impact our project in the long term. For this reason, we covered some of the several patterns that can help us to make the appropriate choices for our applications and reviewed principles that are necessary in order to understand the problems these patterns solve.
+
+This article was based on an internal talk given by Santiago Bartesaghi and Leticia Esperón.
 
 ## References
 
