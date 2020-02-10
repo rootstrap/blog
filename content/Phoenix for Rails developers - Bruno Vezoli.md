@@ -1,6 +1,14 @@
 # Phoenix for Rails developers: a practical example
 
+This is an introductory post to Phoenix, Elixir's web framework. It does not intend to be a complete guide, since it’s a big framework with lots of things to get into, but rather to show a side by side comparison of how things are done in both frameworks using the scaffolding they provide to throw some insight into their best practices with a classic blog example.
+
+It is a two-part blog post, on the first half we'll take a look at the web layer where both frameworks are most alike and in the second half we'll dive into the business layer which is where the frameworks diverge.
+
+The idea is to show how similar they are and get you hyped enough to try it by yourself!
+
 ![Phoenix logo](images/phoenix-header.png)
+
+### Introduction
 
 I started working on Ruby after an exploratory phase of many languages led me to it. The syntax just captivated me, it was so expressive that it could be read like English and it had so many tools that allowed me to do things more productively than ever before. No more string helper functions or awkward loops to manipulate arrays, you could have all those things out of the box and just focus on coding your solution. After a while I found Rails, and it felt right in with Ruby’s philosophy. I felt much more productive than with other tools and it came with batteries included. No hours of configurations or research for a library that just required you to do all the work.
 
@@ -14,12 +22,6 @@ In time, this led to an independent web framework but with that special flavor w
 
 But enough preaching, let’s see some code!
 
-
-### Comparison by example
-
-This post does not intend to be a complete guide on Phoenix, it’s a big framework with lots of things to get into. Instead, I’ll show a side by side comparison of how things are done in both frameworks using the scaffolding they provide to throw some insight into their best practices with a classic blog example.
-
-The idea is to show how similar they are and get you hyped enough to try it by yourself.
 
 ### File structure
 
