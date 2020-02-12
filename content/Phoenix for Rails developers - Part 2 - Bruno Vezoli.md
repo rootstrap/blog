@@ -1,5 +1,7 @@
 # Phoenix for Rails developers: a practical example - Part 2
 
+![Phoenix logo](images/phoenix-header.png)
+
 ### Introduction
 
 On the first part of this blog post we talked about how Rails and Phoenix compare on the web layer, if you haven't read it go and check it out. Following up with the blog example we'll see how data and the business layer are implemented on both frameworks.
@@ -45,7 +47,9 @@ end
 ```
 
 So even though it might be different from the common approach of adding the `index: { unique: true }`, it's still very similar to the way an index is created on an existing table. Mainly because that's what's happening here.
+
 ### Models and schemas
+
 Here we find one of the first great differences. While models are the heart of a Rails app, Phoenix just has schemas. These are basically structs that contain the database data, like the table fields and their types. It is also responsible for validating this data and generating error messages. Aside from that, it doesn't know a thing about the database, it does not save update or delete any records. But enough chatter, let's see how they look:
 
 ```elixir
@@ -78,7 +82,9 @@ end
 ```
 
 But let's use this new uniqueness constraint to show another difference between how data is treated, which I think it's one point where Ecto has improved upon its cousin. If you take a look at the `changeset` function on the article schema you'll see that the last line calls the `unique_constraint` function with the article and the name of the attribute with the constraint. All it's doing here is preparing to receive a possible exception from the database, it doesn't do any queries, it just delegates those validations to the database. This is one of Ecto's philosophies, constraint validations belong in the database, which is much more efficient at checking them and which ends up validating them anyway in most systems.
+
 ### Contexts
+
 Yes! My favorite part, the business logic. Remember how I said schemas on Phoenix do not call the database but are just a bag of data? Well, you must have wondered where are the database calls, right here on the contexts:
 
 ```elixir
