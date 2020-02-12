@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In the first part of this article I mentioned some important design principles and how they are not respected when overusing patterns and techniques that come with Ruby on Rails. In this part of the article I will continue discussing more of these and how we can mitigate the problems they cause to maintainability.
+In the first part of this article I mentioned some important design principles and how they are not respected when overusing patterns and techniques that come with Ruby on Rails. In this part I will continue discussing more of these and how we can mitigate the problems they cause to maintainability.
 
 ## Overused techniques
 
@@ -13,7 +13,7 @@ In the first part of this article I mentioned some important design principles a
 Callbacks are useful as we can place repetitive behavior in a single place when otherwise it would be repeated somewhere else. Also, as they belong to the model we keep the controllers clean. Additionally, we can easily extend our code as they aren’t hard to implement and may not need to modify much of the other code in the model.
 
 Active Record Callbacks however, come with some drawbacks:
-- Additional responsibilities to the model, which goes against SRP.
+- Additional responsibilities to the model, which goes against SRP. In case you don't know what SRP (Single Responsibility Principle) is, it is a principle which states that a class or module should have only one responsibility, which means a single reason to change.
 - Implicit behavior, which makes testing it isolated impossible, as we need to call the corresponding callback method (for instance, `create` method). Instantiating the model may also trigger a cascade of callbacks, making testing slower in general.
 - Unwanted side effects, particularly when having a lot of callbacks. This is also a consequence of implicitness.
 - Once we define a callback, every instance of the model is bound to it. If we want to exclude some of them, we shouldn’t use them, as conditional callbacks are a big code smell.
@@ -103,9 +103,8 @@ These validators are a more reusable than the first, because they also receive t
 
 ## Summary
 
-In this article I mentioned recurrent problems in Rails applications that some techniques provided by the framework introduce. Using these techniques isn’t bad per se, but in the long term we tend to add a lot of logic and complexity to our models, which is contrary to the mentality we should adopt. To avoid this, it is necessary that we justify our design decisions based on well established principles. For this reason, we covered some of the several patterns that can help us to make the appropriate choices for our applications.
-
-Also take into account that in some cases, for example, smaller projects with small teams, it may not be worth over-engineering it with all of the patterns. However, some are really easy to apply and we should start using them as early as possible, especially for big projects, as later on changes become more expensive to make.
+In this article we went over commonly used techniques in Rails and the consequences of overusing them, while describing alternative patterns to each. We justified the use of these patterns based on some principles related to code maintainability such as SRP, which we described with more detail in the first part of the article. The mentioned patterns, when correctly applied, can solve a lot of problems related to the maintainability of our application, but also take into account that in some cases, for example, small projects with small teams, it may not be worth over-engineering it by using all of the patterns.
+However, some are really easy to apply and we should start using them as early as possible, especially for big projects, as later on changes become more expensive to make.
 
 This article was based on an internal talk given by Santiago Bartesaghi and Leticia Esperón.
 
