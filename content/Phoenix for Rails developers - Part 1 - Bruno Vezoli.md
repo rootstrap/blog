@@ -1,12 +1,12 @@
 # Phoenix for Rails developers: a practical example - Part 1
 
+![Small flame](images/small-flame.jpg)
+
 This is an introductory post to Phoenix, Elixir's web framework. It does not intend to be a complete guide since it’s a big framework with lots of things to get into, but rather to show a side by side comparison of how things are done in both frameworks using the scaffolding they provide to throw some insight into their best practices with a classic blog example.
 
 It is a two-part blog post, on the first half we'll take a look at the web layer where both frameworks are most alike and in the second half, we'll dive into the business layer which is where the frameworks diverge.
 
 The idea is to show how similar they are and get you hyped enough to try it by yourself!
-
-![Phoenix logo](images/phoenix-header.png)
 
 ### Introduction
 
