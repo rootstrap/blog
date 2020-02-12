@@ -1,6 +1,6 @@
 # Phoenix for Rails developers: a practical example - Part 2
 
-![Phoenix logo](images/phoenix-header.png)
+![Small flame](images/small-flame.jpg)
 
 ### Introduction
 
