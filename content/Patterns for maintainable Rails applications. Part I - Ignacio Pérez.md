@@ -4,9 +4,9 @@
 
 ## Introduction
 
-Software tends to constantly change, including both specification and implementation. Keeping an extensible and maintainable codebase is then crucial in order to deal with these changes quickly and easily. Ruby on Rails comes with lots of good techniques and patterns out of the box that facilitate this. Nevertheless, some of these are commonly misused or overused and as consequence they end up affecting negatively the quality of our code.
+Software is constantly evolving, both in specification and implementation. Keeping an extensible and maintainable codebase is therefore crucial in order to deal with these changes quickly and easily. Ruby on Rails comes with a lot of good techniques and patterns out of the box that facilitate this. Nevertheless, some of these are commonly misused or overused and consequently they end up negatively affecting the quality of our code.
 
-In this article I will mention some of these techniques and their caveats, and patterns that can help you level up your Rails so that you don't fall into these situations. I will also provide code examples and cases where each pattern may be useful.
+In this article I will discuss some of these techniques and their caveats, and patterns that can help you level up your Rails so that you don't fall into these situations. I will also provide code examples and cases where each pattern may be useful.
 
 But first, let’s review some fundamental concepts we will focus on in this article.
 
@@ -14,19 +14,19 @@ But first, let’s review some fundamental concepts we will focus on in this art
 
 ### SRP (Single Responsibility Principle)
 
-This principle, introduced by Robert C. Martin, states that a class or module should have only one responsibility, which is defined as a single reason to change. This, in other words, means that we should put together the things that change for the same reason and separate those that change for different reasons. The motivation of this principle is limiting the impact of changes by minimizing the modules or classes were these changes occur.
+This principle, introduced by Robert C. Martin, states that a class or module should only have one responsibility, which is defined as a single reason to change. This, in other words, means that we should put together the things that change due to the same reason and separate those that change for different reasons. The motivation of this principle is limiting the impact of changes by minimizing the modules or classes where these changes occur.
 
-As our Rails application gets more features, models tend to grow larger and complex, including responsibilities that should not belong to them, turning into “fat models”. In consequence, code gets harder to understand and change, becoming a problem for maintainability.
+As our Rails application gets more features, models tend to grow larger and more complex, including responsibilities that should not belong to them, turning into “fat models”. Consequently, the code gets harder to understand and change, becoming a problem for maintainability.
 
 ### Low coupling and high cohesion
 
-Coupling is the degree of interdependence between modules. A high interdependency will mean that changes made to one module will have a higher probability of impacting the others, so our goal should be to have low coupling. Cohesion refers to how the elements of a module belong together. Cohesive modules are easier to maintain. As the elements within the module are directly related to the functionality that module is meant to have, changes are more localized.
+Coupling is the degree of interdependence between modules. A high interdependency will mean that changes made to one module will have a higher probability of impacting the other modules, so our goal should be to have low coupling. Cohesion refers to how the elements of a module belong together. Cohesive modules are easier to maintain. As the elements within the module are directly related to the functionality that module is meant to have, changes are more localized.
 
-We should “design components that are self-contained: independent, and with a single, well-defined purpose” [1]. In order to reach this, we need to have low coupling and high cohesion. As you may have noticed, this is also part of what SRP principle means to achieve.
+We should “design components that are self-contained: independent, and with a single, well-defined purpose” [1]. In order to reach this, we need to have low coupling and high cohesion. As you may have noticed, this is also part of what the SRP principle means to achieve.
 
 ### DRY
 
-“Don’t Repeat Yourself” is a well known principle, particularly for Rails developers. It is often associated to “avoiding code duplication”, however the concept is much bigger than this. The principle is about reducing knowledge duplication, which is achieved when every piece of knowledge has a single representation. By saying knowledge, we mean the business logic of our application, which is represented through algorithms.
+“Don’t Repeat Yourself” is a well-known principle, particularly for Rails developers. It is often associated to “avoiding code duplication”, however the concept is much bigger than this. The principle is about reducing knowledge duplication, which is achieved when every piece of knowledge has a single representation. By saying knowledge, we mean the business logic of our application, which is represented through algorithms.
 
 This concept is important because sometimes, thinking our code is not DRY, we end up extracting similar behavior dangerously, while adding unnecessary coupling and complexity to our application.
 
@@ -42,7 +42,7 @@ One of Ruby on Rails advantage compared to other frameworks is the agility with 
 
 ### Scopes
 
-Scopes allow us to encapsulate commonly used queries into single methods in our ActiveRecord models instead of having this query logic repeated. Scopes are easy to implement and also provide readability to our models. However, they tend to increase the size of models, as it is easy to pollute them with a lot of different scopes. This gets worse when some of these do complex queries, like joins with other tables which couples our model to the other models’ attributes, something we shouldn’t. It looks like the responsibility of these queries could belong somewhere else, for which the Query Objects pattern will be useful.
+Scopes allow us to encapsulate commonly used queries into single methods in our ActiveRecord models instead of having this query logic repeated. Scopes are easy to implement and also provide readability to our models. However, they tend to increase the size of models, as it is easy to pollute them with a lot of different scopes. This gets worse when some of these do complex queries, like joins with other tables which couples our model to the other models’ attributes, something we shouldn’t do. It looks like the responsibility of these queries could belong somewhere else, for which the Query Objects pattern will be useful.
 
 #### Query Objects
 
@@ -76,7 +76,7 @@ One issue with nested associations is that we may need to add additional complex
 
 A Form Object takes care of the creation of multiple models, attributes mapping and contextual validations. We can define one form object for each form in the frontend. They give more flexibility to the frontend as we can map fields in the forms to the attributes of the records in the database. In addition, the pattern helps to respect the Single Responsibility Principle by removing logic from our models or controllers.
 
-Regarding validations, it's important to make a clear distinction between **data integrity validations** and **contextual validations**. The former are tied to the constraints defined in our database schema and, as they are related to how a model is always persisted, they should stay in the model. The latter consist in validations that are important only in the context of a particular form flow, becoming part of the business logic defined for it, so they should go in the form object. This, for example, allows us to easily require fields in one form that are not necessary in others and ensure that some validations will still be applied for every record created, even if this doesn't happen through a form.
+Regarding validations, it's important to make a clear distinction between **data integrity validations** and **contextual validations**. The former is tied to the constraints defined in our database schema and, as they are related to how a model is always persisted, they should stay in the model. The latter consists of validations that are important only in the context of a particular form flow, becoming part of the business logic defined for it, so they should go in the form object. This, for example, allows us to easily require fields in one form that are not necessary in others and ensure that some validations will still be applied for every record created, even if this doesn't happen through a form.
 
 Any changes needed to the forms in the frontend will also be much easier to implement as we should only need to modify the related form object, and any new form related to a model may simply require extending our code.
 
@@ -88,7 +88,7 @@ Let’s assume that when the user signs up in our site, we also send a nested us
 
 https://gist.github.com/PerezIgnacio/b5e5212852fcbcff5b5e9c8e9bc74a2c
 
-This looks clean, user creation is simple because we have `accept_nested_attributes_for` in its model. However we are coupling our frontend to our database, while also forcing them to send the `user_request` param with `_attributes`. Also, if the user model and its associations gets more complex we may need to include additional code in the controller and, as we know, controllers should be as thin as possible. As an alternative, we can create a Form object, which could look similar to the following:
+This looks clean, user creation is simple because we have `accept_nested_attributes_for` in its model. However we are coupling our frontend to our database, while also forcing them to send the `user_request` param with `_attributes`. Also, if the user model and its associations get more complex we may need to include additional code in the controller and, as we know, controllers should be as thin as possible. As an alternative, we can create a Form object, which could look similar to the following:
 
 https://gist.github.com/PerezIgnacio/da03bb1174565f63d392af570f78b592
 
@@ -108,7 +108,7 @@ Of course, this is a simple example, and the implementation will probably vary d
 
 ## Summary
 
-In this article I mentioned some recurrent problems in Rails applications that techniques provided by the framework introduce. Using these techniques isn’t bad per se, but we tend to add a lot of logic and complexity to our models when using them, which is contrary to the mentality we should adopt. To avoid this, it is necessary that we justify our design decisions based on well established principles and give thought to how these will impact our project in the long term. For this reason, we covered some of the several patterns that can help us to make the appropriate choices for our applications and reviewed principles that are necessary in order to understand the problems these patterns solve.
+In this article I discussed some recurrent problems in Rails applications that techniques provided by the framework introduce. Using these techniques isn’t bad per se, but we tend to add a lot of logic and complexity to our models when using them, which is contrary to the mentality we should adopt. To avoid this, it is necessary that we justify our design decisions based on well established principles and give thought to how these will impact our project in the long term. For this reason, we covered some of the several patterns that can help us to make the appropriate choices for our applications and reviewed principles that are necessary in order to understand the problems these patterns solve.
 
 This article was based on an internal talk given by Santiago Bartesaghi and Leticia Esperón.
 
