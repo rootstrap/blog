@@ -2,11 +2,11 @@
 
 ![Small flame](images/small-flame.jpg)
 
-This is an introductory post to Phoenix, Elixir's web framework. It does not intend to be a complete guide since it’s a big framework with lots of things to get into, but rather to show a side by side comparison of how things are done in both frameworks using the scaffolding they provide to throw some insight into their best practices with a classic blog example.
+This is an introductory post to Phoenix, Elixir's web framework. It is not intended to be a complete guide since it’s a big framework with lots of things to dive into, but rather to show a side by side comparison of how things are done in both frameworks using the scaffolding they provide to throw some insight into their best practices with a classic blog example.
 
-It is a two-part blog post, on the first half we'll take a look at the web layer where both frameworks are most alike and in the second half, we'll dive into the business layer which is where the frameworks diverge.
+It is a two-part blog post, in the first half we'll take a look at the web layer where both frameworks are most alike and in the second half, we'll dive into the business layer which is where the frameworks diverge.
 
-The idea is to show how similar they are and get you hyped enough to try it by yourself!
+The idea is to show how similar they are and get you hyped enough to try it yourself!
 
 ### Introduction
 
@@ -87,13 +87,13 @@ defmodule BlogWeb.Router do
 end
 ```
 
-That's a lot more code, but just because that's more responsibilities too. The `plug` calls you see here define something that could be compared to middlewares, they get executed serially in the order they are defined. They get grouped together with the `pipeline` function so they can be called inside scopes (which are just like Rails'), to perform things like parsing, authentication, authorization and pretty much anything else you might want to do before an action gets executed.
+That's a lot more code, but just because there are more responsibilities too. The `plug` calls you see here define something that could be compared to middlewares, they get executed serially in the order they are defined. They get grouped together with the `pipeline` function so they can be called inside scopes (which are just like Rails'), to perform things like parsing, authentication, authorization and pretty much anything else you might want to do before an action gets executed.
 
 This allows decoupling controllers from the logic of authorizing users and rejecting requests most of the time, which substitutes `before_action` calls and, in many cases, reduces the need for complex inheritance between controllers.
 
 ### Controllers
 
-Next step is the actual handling, since both fameworks follow the MVC pattern this is done in the controllers. For these I decided just to show some actions and do a quick walkthrough of the differences, there is much to understand on functional programming to decipher what's Phoenix doing and this is not the post for that. If you feel interested to learn some more on Elixir's syntax the [Elixir Getting Started Guide](https://elixir-lang.org/getting-started/introduction.html) is a good place to start. Without further ado, I present to you the controllers: 
+Next step is the actual handling, since both fameworks follow the MVC pattern this is done in the controllers. For these I decided just to show some actions and do a quick walkthrough of the differences, there is a lot to understand on functional programming to decipher what's Phoenix doing and this is not the post for that. If you feel interested to learn some more on Elixir's syntax the [Elixir Getting Started Guide](https://elixir-lang.org/getting-started/introduction.html) is a good place to start. Without further ado, I present to you the controllers: 
 
 ```ruby
 class ArticlesController < ApplicationController
