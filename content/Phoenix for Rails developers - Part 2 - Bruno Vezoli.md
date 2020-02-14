@@ -4,7 +4,7 @@
 
 ### Introduction
 
-On the first part of this blog post we talked about how Rails and Phoenix compare on the web layer, if you haven't read it go and check it out. Following up with the blog example we'll see how data and the business layer are implemented on both frameworks.
+In the first part of this blog post we talked about how Rails and Phoenix compare on the web layer, if you haven't read it go and check it out. Following on from that, we'll see how data and the business layer are implemented on both frameworks.
 
 ### Migrations
 
@@ -50,7 +50,7 @@ So even though it might be different from the common approach of adding the `ind
 
 ### Models and schemas
 
-Here we find one of the first great differences. While models are the heart of a Rails app, Phoenix just has schemas. These are basically structs that contain the database data, like the table fields and their types. It is also responsible for validating this data and generating error messages. Aside from that, it doesn't know a thing about the database, it does not save update or delete any records. But enough chatter, let's see how they look:
+Here we find one of the first great differences. While models are the heart of a Rails app, Phoenix only has schemas. These are basically structs that contain the database data, like the table fields and their types. It is also responsible for validating this data and generating error messages. Aside from that, it doesn't know a thing about the database, it does not save update or delete any records. But enough chatter, let's see how they look:
 
 ```elixir
 defmodule Blog.Articles.Article do
@@ -125,12 +125,15 @@ end
 ```
 
 Again, this follows the functional paradigm so all a context does is provide methods to interact with the data and it does so by using the repository pattern. If you are not familiar with the concept, just think of it as an abstraction of your database (or another kind of storage) where you can query, update and create records by sending the necessary data. This pattern allows separating the data from the way it's saved, after understanding that contexts are straightforward to comprehend.
-This way of managing the data layer and the business logic opens up a world of opportunities in my opinion. Assume for example that we have a process for publishing in our blog, so all articles must be reviewed after they are changed and before they are published. We would probably do some validations in our model to only insert it if it's approved, the same would go in our context here. But we also like to allow admins to bypass these validations, a common case, and publish whenever they want. So in Rails we would probably change our code to reflect this new case while in Phoenix we might wish to create a new context altogether.
+
+This way of managing the data layer and the business logic opens up a world of opportunities. Assume for example that we have a process for publishing in our blog, so all articles must be reviewed after they are changed and before they are published. We would probably do some validations in our model to only insert it if it's approved, the same would go in our context here. But we also like to allow admins to bypass these validations, a common case, and publish whenever they want. So in Rails we would probably change our code to reflect this new case while in Phoenix we might wish to create a new context altogether.
+
 As with any choice, you always have pros and cons, but I really like the way contexts allow you to avoid polluting a model with different responsibilities. If you've been working on Rails long enough you might notice they have a similar purpose as service objects which the community has embraced and which are a part of our daily development cycle.
 
 ### Conclusion
 
 You might be thinking I threw a lot of dirt on Rails and the ways things are done, that I recommend not using Rails anymore and start using Phoenix. This is not one of those "why X sucks and you should migrate all your code to Y", this is one of those "hey look at this cool new tool, you might find it useful/enjoyable". I still use Rails on a daily day basis and love the way it works, there are also many ways to mitigate some of the "bad" things about it, like presenters, services, form objects, and much other stuff.
+
 So if you also like Rails give Phoenix a try, you may struggle with it in the beginning, as with any new technology, but I'm confident it'll grow on you as it did on me. To start learning I recommend the official guides, they are very friendly and complete:
 
 - Elixir: [https://elixir-lang.org/getting-started/introduction.html]()
