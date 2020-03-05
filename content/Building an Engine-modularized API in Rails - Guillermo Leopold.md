@@ -219,7 +219,7 @@ end
 ActiveRecord::Base.observers.disable :all
 ```
 
-On the other hand, testing inside an engine with a rspec it’s quite similar to what we are used to doing and it provides us with some guarantees and the only considerations that took us some time are:
+On the other hand, testing inside an engine with rspec is quite similar to what we are used to doing, it provides us with some guarantees and the only considerations that took us some time are:
   * We will need to load manually factories from other engines when using FactoryBot in our engine
   * We need to require in our rails_helper.rb any development dependency that we are using in our test suite
 
@@ -255,6 +255,5 @@ As a pending feature, we would also like to see how we could take advantage of t
 When we started our investigation on how to build our application, we learned a few things from this Medium post: [The Modular Monolith: Rails Architecture](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
 
 To learn more about engines, the [Ruby on Rails official documentation](https://guides.rubyonrails.org/engines.html) is a good follow-on reading.
-
 
 
