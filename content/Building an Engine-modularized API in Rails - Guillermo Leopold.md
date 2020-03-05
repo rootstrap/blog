@@ -199,7 +199,7 @@ Using the **User** and **Payment** engines where **Payment** can access to **Use
  config.active_record.observers = :'payment/user_customer_observer'
  ```
 
-3. Implement your observer, we need to specify in which model we want to observe and implement an action according that behave similar to a callback in ActiveRecord. It might look like this:
+3. Implement your observer, we need to specify which model we want to observe and implement an action according that behaves similar to a callback in ActiveRecord. It might look like this:
 
 ```Ruby
 module Payment
@@ -255,5 +255,4 @@ As a pending feature, we would also like to see how we could take advantage of t
 When we started our investigation on how to build our application, we learned a few things from this Medium post: [The Modular Monolith: Rails Architecture](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
 
 To learn more about engines, the [Ruby on Rails official documentation](https://guides.rubyonrails.org/engines.html) is a good follow-on reading.
-
 
