@@ -4,7 +4,7 @@
 
 When big development teams build an API, one of the main challenges that we face is being able to work together on different features while avoiding bottle-necks or other common issues such as conflicting perspectives or avoid overlapping efforts on particular features.
 
-Because of this, when we started working on our latest project, we decided to work with a new approach; designed to help us to scale by splitting the app into microservices. I recommend taking a look into this article to learn more about the approach we took: [Monolith First](https://martinfowler.com/bliki/MonolithFirst.html)
+Because of this, when we started working on our latest project, we decided to work with a new approach; designed to help us scale by splitting the app into microservices. I recommend taking a look into this article to learn more about the approach we took: [Monolith First](https://martinfowler.com/bliki/MonolithFirst.html)
 
 We knew from the beginning that it wouldn't be easy since this approach is novel and there aren't too many examples regarding APIs built this way. It forced us to think outside the box from the start as we had to devise an approach from the ground up, by using our Rails base project with some common gems and the signup/signin already ready to use.
 
@@ -183,7 +183,7 @@ There are still a few considerations related to how engines work that are worth 
   * When installing a new gem, in order to be able to use it across the whole engine, we should require it in lib/engine_name.rb
   * As a result of the engine namespace models, services, controllers and even the tables in the database will be namespaced too.
   * Some tips I suggest:
-    * Create an engine that is visible in all the engines across the application. This engine will help us to reduce repeated code and may contain things that we want to use in all the engines. In our case, we have an engine called Api that handles all the requests validations (checking headers, render some common errors, etc) and all the main controller from other engines inherit from a controller located in the Api engine
+    * Create an engine that is visible in all the engines across the application. This engine will help us reduce repeated code and may contain things that we want to use in all the engines. In our case, we have an engine called Api that handles all the requests validations (checking headers, render some common errors, etc) and all the main controller from other engines inherit from a controller located in the Api engine
     * Create “libraries” that work as interfaces between our API and external services. I.e: In our case we have a gem called Catalog Providers and inside it we have services for each provider that we use in our system (like Target, Amazon, BestBuy)
     * It might be useful to create a few scripts to run migrations, run rspec or bundle install across all the engines. The scripts will iterate over the engines folder and run the command inside each one.
   * Finally, it's worth to mention two ways to handle the escenario where we need to trigger an action in an engine where we don't have access from the engine we are currently working:
@@ -242,9 +242,9 @@ It’s been a while since we started working with this project structure. Right 
 
 
 **Cons:**
-  * Lot of configuration and changes are needed when starting working with engines, requires a bit of time during the first weeks.
+  * Lot of configuration and changes are needed when starting working with engines, as a consequence it requires a bit of time during the first weeks.
   * Lack of information on the internet, building an API with engines doesn’t seem to be a popular choice.
-  * Despite our effort to avoid repeating code, we still repeat more code than when working in a monolith api
+  * Despite our effort to avoid repeating code, we repeat even more code than when working in a monolith api.
 
 After overcoming the initial learning curve, we feel quite comfortable working with engines and we found out the benefits of having chosen this architecture instead of a monolith one, so I think that I would use it again if it fits the project requirements. In spite of that, we still have a lot to learn and improve upon what we already did.
 
@@ -252,7 +252,7 @@ As a pending feature, we would also like to see how we could take advantage of t
 
 ## Learning about engines and references
 
-When we started our investigation on how to build our application, we learn a few things from this medium post: [The Modular Monolith: Rails Architecture](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
+When we started our investigation on how to build our application, we learned a few things from this Medium post: [The Modular Monolith: Rails Architecture](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
 
 To learn more about engines, the [Ruby on Rails official documentation](https://guides.rubyonrails.org/engines.html) is a good follow-on reading.
 
