@@ -4,7 +4,7 @@
 
 ### Introduction
 
-In the first part of this blog post we talked about how Rails and Phoenix compare on the web layer, if you haven't read it go and [check it out](link to the first part). Following on from that, we'll see how data and the business layer are implemented on both frameworks.
+In the first part of this blog post we talked about how Rails and Phoenix compare on the web layer, if you haven't read it go and [check it out](https://www.rootstrap.com/blog/2020/02/17/phoenix-for-rails-developers-a-practical-example-part-1/). Following on from that, we'll see how data and the business layer are implemented on both frameworks.
 
 ### Migrations
 
