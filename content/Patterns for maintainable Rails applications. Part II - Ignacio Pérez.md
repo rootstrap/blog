@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In the first part of this article I mentioned some important design principles and how they are not respected when overusing patterns and techniques that come with Ruby on Rails. In this part I will continue discussing more of these and how we can mitigate the problems they cause to maintainability.
+In the [first part of this article](https://www.rootstrap.com/blog/2020/02/14/how-to-improve-maintainability-in-rails-applications-using-patterns-part-i/) we mentioned some important design principles and how they are not respected when overusing patterns and techniques that come with Ruby on Rails. In this part we will continue discussing more of these and how we can mitigate the problems they cause to maintainability.
 
 ## Overused techniques
 
