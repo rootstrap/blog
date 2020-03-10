@@ -1,6 +1,6 @@
 ## Submitting an Idea
 
-For the management of proposals and new ideas for blog posts, we use this repo's [issues](/issues). If you have an idea for an article, either you want to write it yourself or not, you can create a new issue describing it and tagging it accordingly depending on which category the article would fit in.
+For the management of proposals and new ideas for blog posts, we use this repo's [issues](https://github.com/rootstrap/blog/issues). If you have an idea for an article, either you want to write it yourself or not, you can create a new issue describing it and tagging it accordingly depending on which category the article would fit in.
 
 To make this process easier, we provide an issue template where we ask you for some basic information on your proposal: what’s the motivation for writing about the topic, some notes on the idea itself and possible keywords to identify the article with.
 
