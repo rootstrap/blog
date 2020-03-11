@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Like every newbie in Rootstrap, my first assigment was to develop Target MVD application, in my case, in React Native. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I would expected.
+Like every newbie in Rootstrap, my first assignment was to develop Target MVD application, in my case, in React Native. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I expected.
 
 The biggest issue was that all the tutorials said to excecute "react-native link" command and after executing it, the application would stop building successfully.
 
@@ -20,13 +20,19 @@ First you will see all the configurations that need to be done in order to be ab
 
 First of all, you should create a project in react native. To do that, initiate terminal in the folder where you want to create your project and excecute:
 
-https://gist.github.com/ManuViola77/50605886d8c4f2184ea4316cec255b80
+```sh
+react-native init customize_fonts_react_native_tutorial
+```
 
 ### Install libraries
 
 After creating the project, there are some libraries that need to be installed:
 
-https://gist.github.com/ManuViola77/ce547c1d8241a21e536c773a80a6f97e
+```sh
+cd customize_fonts_react_native_tutorial
+npm install --save react-native-global-props
+npm install --save babel-plugin-module-resolver
+```
 
 ### Download and rename fonts
 
@@ -40,23 +46,34 @@ For IOS is important the font's filename, because it should be the same as its P
 
 ### Configurations in React Native
 
-There are some steps that need to be done in order to use your custom fonts in a React Native project. There are also special configuration depending if you want to use android or IOS.
+There are some steps that need to be done in order to use your custom fonts in a React Native project. There are also special configurations depending on if you want to use android or IOS.
 
 #### General
 
-In both cases, you will need to create in your project's root this folders: **src/assets/fonts**. Inside the fonts folder, you should add you custom fonts .ttf files, one for every font you want to use.
+In both cases, you will need to create this folders in your project's root: **src/assets/fonts**. Inside the fonts folder, you should add you custom fonts .ttf files, one for every font you want to use.
 
 Also, modify **babel.config.js** adding this code:
 
-https://gist.github.com/ManuViola77/37e02b2a1da60c8178a67dd1194a941f
+```js
+plugins: [
+    [
+      'module-resolver',
+      {
+        alias: {
+          assets: './src/assets',
+        },
+      },
+    ],
+  ],
+```
 
 #### Android
 
-In android, you need to add into android/app/src/main/ this folders: **assets/fonts**. Also, inside the fonts folder, you should add you custom fonts .ttf files.
+In android, you need to add this folders into android/app/src/main/ : **assets/fonts**. You should also add your `ttf` files to the fonts folder.
 
 #### IOS
 
-In IOS, configuration is a little more tricky. You need to go to **ios/** folder and open the
+In IOS, the configuration is a little more tricky. You need to go to **ios/** folder and open the
 **customize_fonts_react_native_tutorial.xcodeproj** file with Xcode.
 
 Afterwards, you need to press on **customize_fonts_react_native_tutorial -> Build Phases** and find the **Copy Bundle Resources** section.
@@ -83,10 +100,10 @@ https://gist.github.com/ManuViola77/bde10a388c32f40011e7e475a327bd18
 
 Also modify **index.js** to point to new ./src/App instead of ./App.
 
-In this app, you are using the **react-native-global-props** library to set a custom font as default, in case you have an entire app with some default font. This is not necessary if you don't need it, you can just set the customize font only in the texts you want. Note how you can still do this even if you define a default custom text. Also note that there are two different default settings, one for the Text component and another for the TextInput.
+In this app, you are using the **react-native-global-props** library to set a custom font as default, in case you have an entire app with some default font. This is not necessary if you don't need it, you can just set the custom font only in the texts you want. Note how you can still do this even if you define a default custom font. Also note that there are two different default settings, one for the Text component and another for the TextInput.
 
-Now, if you excecute **react-native run-ios** or **react-native run-android** you should see the text with your customize fonts.
+Now, if you execute **react-native run-ios** or **react-native run-android** you should see the text with your custom fonts.
 
 ## Summary
 
-In this tutorial you learned how to add, link and use customized fonts in React Native. You can find [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial) the github project.
+In this tutorial you learned how to add, link and use custom fonts in React Native. You can find [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial) the github project.
