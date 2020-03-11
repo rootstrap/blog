@@ -64,107 +64,25 @@ The script basically does the following:
   * Rename/adapt some filenames to the standard that we are following.
 
 The script looks like this:
-```Ruby
-task :generate_engine do
-  # Get name sent from console
-  name = ENV['name'].downcase
-
-  # Store useful paths
-  engine_path         = "engines/#{name}"
-  dummy_path          = 'spec/dummy'
-  lib_files_path      = 'lib/tasks/files'
-  dummy_relative_path = "#{engine_path}/#{dummy_path}"
-
-  # Generate the new mountable engine with a dummy under 'spec/dummy' path
-  sh "rails plugin new #{engine_path} --mountable --skip-test --dummy-path=#{dummy_path}"
-
-  dummy_folders_to_remove = %w[app bin lib storage public log tmp]
-  dummy_files_to_remove = %w[package.json Rakefile]
-
-  dummy_folders_paths = dummy_folders_to_remove.map { |folder|
-    "#{dummy_relative_path}/#{folder}"
-  }.join(' ')
-
-  dummy_files_paths = dummy_files_to_remove.map { |file|
-    "#{dummy_relative_path}/#{file}"
-  }.join(' ')
-
-  # We copy the Gemfile, Rakefile and Gemspec files from our files folder to the engine
-  puts '------Copying rails files------'
-  sh "yes | cp #{lib_files_path}/generic.gemspec #{engine_path}/#{name}.gemspec"
-  sh "yes | cp #{lib_files_path}/Gemfile #{engine_path}"
-  sh "yes | cp #{lib_files_path}/Rakefile #{engine_path}"
-  sh "yes | cp #{lib_files_path}/lib/engine/engine.rb #{engine_path}/lib/#{name}/engine.rb"
-
-  # Copy our rake tasks for the engine
-  puts '------Copying rake tasks------'
-  sh "yes | cp #{lib_files_path}/lib/tasks/install_rspec.rake #{engine_path}/lib/tasks"
-
-  # We replace "EngineName" place holder with the correct engine name
-  puts '------Adapting system files------'
-  sh "sed -i '' 's/EngineName/#{name.classify}/g' #{engine_path}/Rakefile"
-  sh "sed -i '' 's/EngineName/#{name}/g' #{engine_path}/Gemfile"
-  sh "sed -i '' 's/ClassifiedEngineName/#{name.classify}/g' #{engine_path}/#{name}.gemspec"
-  sh "sed -i '' 's/EngineName/#{name}/g' #{engine_path}/#{name}.gemspec"
-  sh "sed -i '' 's/ClassifiedEngineName/#{name.classify}/g' #{engine_path}/lib/#{name}/engine.rb"
-
-  # Install
-  puts '------Installing gemfile and rspec------'
-  sh "BUNDLE_GEMFILE=#{engine_path}/Gemfile bundle install"
-  sh "cd #{engine_path} && rake install_rspec"
-
-  # We remove unnecessary files
-  puts '------Removing unnecessary files------'
-  sh "rm -rf #{dummy_folders_paths}"
-  sh "rm #{dummy_files_paths}"
-
-  puts '------Copying rspec helpers------'
-  sh "yes | cp #{lib_files_path}/spec/spec_helper.rb #{engine_path}/spec"
-  sh "yes | cp #{lib_files_path}/spec/rails_helper.rb #{engine_path}/spec"
-  sh "yes | cp #{lib_files_path}/spec/helpers.rb #{engine_path}/spec"
-
-  puts '------Adapting helper files------'
-  sh "sed -i '' 's/ClassifiedEngineName/#{name.classify}/g' #{engine_path}/spec/helpers.rb"
-
-  puts '------Engine generated successfully------'
-end
-```
+https://gist.github.com/GuilleLeopold/1d875dc1f6c2e99a4876a1c16a599287
 
 I won’t go deeper on which files we removed or we added as this may change according to the needs of each project but I would like to mention a few configurations that are needed to make this work properly and are going to save you a couple of headaches.
 
   1. Related to the migrations, we want each engine to have it owns migrations files, to achieve this we added the following block of code in lib/engine_name/engine.rb:
 
-```Ruby
-initializer :append_migrations do |app|
-  unless app.root.to_s.match? root.to_s
-    config.paths['db/migrate'].expanded.each do |expanded_path|
-      app.config.paths['db/migrate'] << expanded_path
-    end
-  end
-end
-```
+https://gist.github.com/GuilleLeopold/18a56454cf74d4ec2804ebf77128961f
 
 So, with this code we are telling Rails to look for new migrations in the db/migrate folder that belongs to the engine.
 
   2. We want to be able to define a routes file in each engine and have the ability to have access to those endpoints from the main app. An easy way to achieve this and keeping it generic, is adding this piece of code in the routes.rb in the main application
 
-```Ruby
-Dir.glob(File.expand_path('../engines/*', __dir__)).each do |path|
-  engine = File.basename(path)
-  mount engine.classify.constantize::Engine, at: '/'
-end
-```
+https://gist.github.com/GuilleLeopold/1a47ed22245f7de8b2583ee67594f251
 
 This is iterating over the engines directory and mounting the routes of each engine.
 
   3. A similar approach is taken to load all the engines in the gemfile in the main application.
 
-```Ruby
-Dir.glob(File.expand_path('../engines/*', __FILE__)).each do |path|
-  engine = File.basename(path)
-  gem engine, path: "engines/#{engine}", require: (ENV['ENGINE'].nil? || ENV['ENGINE'] == engine)
-end
-```
+https://gist.github.com/GuilleLeopold/f5e698557009904fc49e2c001afb452e
 
 By creating the script and adding these configurations into the main application, we were able to simplify a lot of the processes to add new engines and we ensured that all the engines are going to follow the same standard.
 
@@ -195,29 +113,14 @@ Using the **User** and **Payment** engines where **Payment** can access to **Use
 1. Create an observer class inside our models folder in the **Payment engine** as we want to trigger an action in this engine as a consequence of an action in the **User** engine.
 
 2. Set up the observer in the **engine.rb** file by adding the following line:
- ```Ruby
- config.active_record.observers = :'payment/user_customer_observer'
- ```
+https://gist.github.com/GuilleLeopold/3988ab6c06c56037aa5f72e3afd01de9
 
 3. Implement your observer, we need to specify which model we want to observe and implement an action according that behaves similar to a callback in ActiveRecord. It might look like this:
 
-```Ruby
-module Payment
-  class UserCustomerObserver < ActiveRecord::Observer
-    observe User::Customer
-    attr_reader :customer
-
-    def after_update(customer)
-      customer.update!(payments: customer.payments + 1)
-    end
-  end
-end
-```
+https://gist.github.com/GuilleLeopold/f04e6d28017f6769e5aff94e2b002a45
 
 4. Finally, if you want to disable observers while running **rspec**, you can add this line in your test suite as a before action:
-```Ruby
-ActiveRecord::Base.observers.disable :all
-```
+https://gist.github.com/GuilleLeopold/25792a0ff54a6648aef2f6564c9ed232
 
 On the other hand, testing inside an engine with rspec is quite similar to what we are used to doing, it provides us with some guarantees and the only considerations that took us some time are:
   * We will need to load manually factories from other engines when using FactoryBot in our engine
