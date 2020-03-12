@@ -4,21 +4,21 @@
 
 ## Introduction
 
-Like every newbie in Rootstrap, my first assignment was to develop Target MVD application, in my case, in React Native. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I expected.
+In Rootstrap, my first assignment was to develop a React Native application, that involved maps, chat and following the design specifications to the letter. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I expected.
 
-The biggest issue was that all the tutorials said to excecute "react-native link" command and after executing it, the application would stop building successfully.
+The biggest issue was that all the tutorials said to execute `react-native link`, which in my experience was a bad idea because afterward the application stopped building successfully. This occurs because since React Native 0.60 released, there is a property called Autolinking that changed how to link a library, as [this](https://aboutreact.com/react-native-autolinking/) post explains.
 
 ## Overview
 
-In this tutorial you will learn how to add and link fonts manually, without using the link command.
+In this tutorial, you will learn how to add and link fonts manually, without using the link command.
 
-First you will see all the configurations that need to be done in order to be able to use customize fonts and then you will learn its usage in a simple application.
+First, you will see all the configurations that need to be done to use custom fonts and then you will learn its usage in a simple application.
 
 ## Configuration
 
 ### Create Project
 
-First of all, you should create a project in react native. To do that, initiate terminal in the folder where you want to create your project and excecute:
+First of all, you should create a project in react native. To do that, open the terminal and navigate to the folder you want to create your project in, and execute:
 
 ```sh
 react-native init customize_fonts_react_native_tutorial
@@ -26,7 +26,7 @@ react-native init customize_fonts_react_native_tutorial
 
 ### Install libraries
 
-After creating the project, there are some libraries that need to be installed:
+After creating the project, some libraries need to be installed:
 
 ```sh
 cd customize_fonts_react_native_tutorial
@@ -38,19 +38,19 @@ npm install --save babel-plugin-module-resolver
 
 Since this is a tutorial about customizing fonts, you will need to have some fonts downloaded, in order to add them to your React Native project.
 
-There are many places where you can get this customized fonts. For this tutorial, I used two different fonts, [GoodFeelingSans](https://www.wfonts.com/font/good-feeling-sans) and [Dan'sDisney](https://www.fontspace.com/dans-disney-font-f24536). In both cases I ended up with a .ttf file.
+There are many places where you can get these customized fonts. For this tutorial, I used two different fonts, [GoodFeelingSans](https://www.wfonts.com/font/good-feeling-sans) and [Dan'sDisney](https://www.fontspace.com/dans-disney-font-f24536). In both cases, I ended up with a .ttf file.
 
-For IOS is important the font's filename, because it should be the same as its PostScript name. To know this, you should open your .ttf file with Font Book, see what its PostScript name is and rename the font to it.
+In iOS is important for the font filename to be the same as its PostScript name. To find the PostScript name, open your `ttf` file with Font Book, see what its PostScript name is and rename the font to it.
 
 ![Font Book](images/customize_fonts_postscript_name.png)
 
 ### Configurations in React Native
 
-There are some steps that need to be done in order to use your custom fonts in a React Native project. There are also special configurations depending on if you want to use android or IOS.
+To use your custom fonts in a React Native project, each platform requires a different configuration, but there are also some general configurations all platforms need.
 
 #### General
 
-In both cases, you will need to create this folders in your project's root: **src/assets/fonts**. Inside the fonts folder, you should add you custom fonts .ttf files, one for every font you want to use.
+In both cases, you will need to create these folders in your project's root: **src/assets/fonts**. Inside the fonts folder, you should add you custom fonts .ttf files, one for every font you want to use.
 
 Also, modify **babel.config.js** adding this code:
 
@@ -69,11 +69,11 @@ plugins: [
 
 #### Android
 
-In android, you need to add this folders into android/app/src/main/ : **assets/fonts**. You should also add your `ttf` files to the fonts folder.
+In Android, you need to add this folders into android/app/src/main/ : **assets/fonts**. You should also add your `ttf` files to the fonts folder.
 
-#### IOS
+#### iOS
 
-In IOS, the configuration is a little more tricky. You need to go to **ios/** folder and open the
+In iOS, the configuration is a little more tricky. You need to go to **ios/** folder and open the
 **customize_fonts_react_native_tutorial.xcodeproj** file with Xcode.
 
 Afterwards, you need to press on **customize_fonts_react_native_tutorial -> Build Phases** and find the **Copy Bundle Resources** section.
@@ -86,7 +86,7 @@ You should add your fonts by pressing the plus symbol, then **Add Other...** opt
 
 ## Usage
 
-Finally, after all this steps you will be able to use customized fonts in your React Native project.
+Finally, after all these steps you will be able to use customized fonts in your React Native project.
 
 As an example, you can create a very simple screen, just to test everything is configured correctly. Add in src folder App.js and styles.js files.
 
@@ -106,4 +106,4 @@ Now, if you execute **react-native run-ios** or **react-native run-android** you
 
 ## Summary
 
-In this tutorial you learned how to add, link and use custom fonts in React Native. You can find [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial) the github project.
+In this tutorial, you learned how to add, link and use custom fonts in React Native. You can find [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial) the GitHub project.
