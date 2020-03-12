@@ -100,9 +100,9 @@ https://gist.github.com/ManuViola77/bde10a388c32f40011e7e475a327bd18
 
 Also modify **index.js** to point to new ./src/App instead of ./App.
 
-In this app, you are using the **react-native-global-props** library to set a custom font as default, in case you have an entire app with some default font. This is not necessary if you don't need it, you can just set the custom font only in the texts you want. Note how you can still do this even if you define a default custom font. Also note that there are two different default settings, one for the Text component and another for the TextInput.
+In this app, you are using the `react-native-global-props` library to set a custom font as default, in case you have an entire app with some default font. This is not necessary if you don't need it, you can just set the custom font only in the texts you want. Note how you can still do this even if you define a default custom font. Also note that there are two different default settings, one for the Text component and another for the TextInput.
 
-Now, if you execute **react-native run-ios** or **react-native run-android** you should see the text with your custom fonts.
+Now, if you execute `react-native run-ios` or `react-native run-android` you should see the text with your custom fonts.
 
 ## Summary
 
