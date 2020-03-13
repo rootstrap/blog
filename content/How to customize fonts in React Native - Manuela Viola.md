@@ -6,7 +6,7 @@
 
 In Rootstrap, my first assignment was to develop a React Native application, that involved maps, chat and following the design specifications to the letter. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I expected.
 
-The biggest issue was that all the tutorials said to execute `react-native link`, which in my experience was a bad idea because afterward the application stopped building successfully. This occurs because since React Native 0.60 released, there is a property called Autolinking that changed how to link a library, as [this](https://aboutreact.com/react-native-autolinking/) post explains.
+The biggest issue was that all the tutorials said to execute `react-native link`, which in my experience was a bad idea because afterward the application stopped building successfully. This occurs because since React Native 0.60 released, there is a property called Autolinking that changed how to link a library, as [this post](https://aboutreact.com/react-native-autolinking/) explains.
 
 ## Overview
 
@@ -106,4 +106,4 @@ Now, if you execute `react-native run-ios` or `react-native run-android` you sho
 
 ## Summary
 
-In this tutorial, you learned how to add, link and use custom fonts in React Native. You can find [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial) the GitHub project.
+In this tutorial, you learned how to add, link and use custom fonts in React Native. You can find the GitHub project [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial).
