@@ -4,9 +4,9 @@
 
 ## Introduction
 
-In Rootstrap, my first assignment was to develop a React Native application, that involved maps, chat and following the design specifications to the letter. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I expected.
+At Rootstrap, my first assignment was to develop a React Native application, that involved maps, chat, and following the design specifications to the letter. While doing this, one of the first things I tried was to set the family font that the application uses, and I found out it wasn't as easy as I expected.
 
-The biggest issue was that all the tutorials said to execute `react-native link`, which in my experience was a bad idea because afterward the application stopped building successfully. This occurs because since React Native 0.60 released, there is a property called Autolinking that changed how to link a library, as [this post](https://aboutreact.com/react-native-autolinking/) explains.
+The biggest issue was that all the tutorials said to execute `react-native link`, which in my experience was a bad idea because afterwards the application stopped building successfully. This occurs because since React Native 0.60 released, there is a property called Autolinking that changed how to link a library, as [this post](https://aboutreact.com/react-native-autolinking/) explains.
 
 ## Overview
 
@@ -40,7 +40,7 @@ Since this is a tutorial about customizing fonts, you will need to have some fon
 
 There are many places where you can get these customized fonts. For this tutorial, I used two different fonts, [GoodFeelingSans](https://www.wfonts.com/font/good-feeling-sans) and [Dan'sDisney](https://www.fontspace.com/dans-disney-font-f24536). In both cases, I ended up with a .ttf file.
 
-In iOS is important for the font filename to be the same as its PostScript name. To find the PostScript name, open your `ttf` file with Font Book, see what its PostScript name is and rename the font to it.
+In iOS, it is important for the font filename to be the same as its PostScript name. To find the PostScript name, open your `ttf` file with Font Book, see what its PostScript name is and rename the font to it.
 
 ![Font Book](images/customize_fonts_postscript_name.png)
 
