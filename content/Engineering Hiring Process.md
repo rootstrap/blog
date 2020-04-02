@@ -1,4 +1,4 @@
-# What I've Learned From Rootstrap Week
+# The Engineering Hiring Process at Rootstrap
 
 To be globally recognized digital masters, that’s our vision at Rootstrap. And we are convinced that in order to get there we should hire the right people, those that will help us create remarkable products, offer a premium service and will make of our office a creative and relaxed environment to work in.
 
