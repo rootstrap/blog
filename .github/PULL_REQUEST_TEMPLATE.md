@@ -18,9 +18,14 @@ Include ideas of potential improvements, questions, concerns, bibliographic refe
 
 ---
 
+#### :file_folder: Categories
+
+Add categories for the post (Department, Technology, etc). For example: `Web/Backend/Mobile/Product/Marketing/Devops/QA`, `React/Python/Rails/Node/iOS/Android`, etc.
+
+---
 #### :mag: Keywords:
 
-List the keywords that can be used to search for this post.
-Remember to also tag the issue with the corresponding categories.
+List the keywords/tags that can be used to search for this post.
+
 
 ---
