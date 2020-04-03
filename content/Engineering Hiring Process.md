@@ -80,3 +80,5 @@ And that is how people have been joining the engineering team at Rootstrap in th
 
 If you’d like to join our team you can contact us at hr@rootstrap.com, or send us a message to our [LinkedIn account](https://www.linkedin.com/company/rootstrap-it).
 
+
+*Thanks to Cami Gimenez for the awesome drawings and my teammates who helped and gave me feedback about this article.*
