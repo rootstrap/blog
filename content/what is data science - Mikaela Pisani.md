@@ -5,7 +5,7 @@
 
 <img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2_b.jpg"
      alt="Data Science"
-     width="350" height="250"
+     width="550" height="450"
      align="middle"/>
 
 &nbsp;    
@@ -26,7 +26,7 @@ Once the processing of the data is done, the icing on the cake is the interpreta
 
 <img src="images/Data_science.png"
      alt="Data Science"
-     width="150" height="120"
+     width="250" height="220"
      align="middle"/>
 
 Data science uses analytical methods and algorithms to extract knowledge and insights from structured and unstructured data. It involves understanding the business in order to get value from the data throughout analysis methods and algorithms based on statistics.   
