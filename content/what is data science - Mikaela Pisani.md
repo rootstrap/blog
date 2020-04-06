@@ -5,7 +5,8 @@
 
 <img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2_b.jpg"
      alt="Data Science"
-     style="margin-right: 10px;"/>
+     width="350" height="250"
+     align="middle"/>
 
 &nbsp;    
 
@@ -25,7 +26,8 @@ Once the processing of the data is done, the icing on the cake is the interpreta
 
 <img src="images/Data_science.png"
      alt="Data Science"
-     style="float: center; margin-right: 10px;width:250px;height:200px"/>
+     width="150" height="120"
+     align="middle"/>
 
 Data science uses analytical methods and algorithms to extract knowledge and insights from structured and unstructured data. It involves understanding the business in order to get value from the data throughout analysis methods and algorithms based on statistics.   
  
@@ -103,7 +105,8 @@ It is crazy the amount of information that is being stored and used without the 
 
 <img src="images/privacy_ethics.png"
      alt="Privacy and Ethics"
-     style="float: right; margin-right: 10px;width:250px;height:200px"/>
+     width="350" height="250"
+     align="right"/>
 
 - Who is the ownership of the data?
 - Who controls the data?
@@ -131,7 +134,8 @@ A basic pipeline is shown in the figure below. Starting from selecting the data 
 
 <img src="images/data_pipeline.png"
      alt="Data Pipeline"
-     style="float: center; margin-right: 10px;"/>
+     width="600" height="200"
+     align="middle"/>
 
 From all the data available which is useful? All data captured from different applications and devices can be useful. The main idea is to focus on the problem, and think about how the data can help to resolve it. *Do not focus on the data*, that is the first mistake. Otherwise, you risk investing money and time on something that is not valuable for anything and for anyone.
 ### How to prepare the data?
