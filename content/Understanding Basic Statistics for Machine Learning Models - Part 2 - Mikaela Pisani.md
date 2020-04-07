@@ -38,7 +38,7 @@ The probability for a discrete random variable can be summarized with a discrete
 ![](https://render.githubusercontent.com/render/math?math=E(X)%3DVar(X)%20%3D%5Clambda)
 
 ## Continuous distributions
-###Normal
+### Normal
 
 <img src="https://storage.needpix.com/rsynced_images/bayesian-2889576_1280.png"
      alt="Normal Distribution"
@@ -46,15 +46,14 @@ The probability for a discrete random variable can be summarized with a discrete
      align="right"/>
 A normal distribution is symmetric about the mean, where data near the mean is more frequent in occurrence than data far from the mean. It has a bell shape. Notation: ![](https://render.githubusercontent.com/render/math?math=N(%5Cmu%2C%5Csigma)), where ![](https://render.githubusercontent.com/render/math?math=%5Cmu) refers to the mean and ![](https://render.githubusercontent.com/render/math?math=%5Csigma) to the standard deviation. 
 
-<center>
+
 [Empirical curve](https://www.statisticshowto.com/empirical-rule-2/)    
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Standard_deviation_diagram.svg/800px-Standard_deviation_diagram.svg.png"
      alt="Normal distribution"
      width="350" height="200"
      align="middle"/>
-     
-</center>
+    
 
 
 The empirical rule establishes:    
@@ -64,30 +63,30 @@ The empirical rule establishes:
 
 ### Truncated normal
 A truncated normal distribution is a variation of the normal distribution, but the random variables are bound from either below or above, or both. 
-<center>
+
 <img src="https://upload.wikimedia.org/wikipedia/en/d/df/TnormPDF.png"
      alt="Truncated normal distribution"
      width="350" height="200"
      align="middle"/>
- </center>
+
 
 ### Uniform
 A uniform distribution describes an experiment with arbitrary outcomes in a certain bounds determined by  a and b, minimum and maximum values for the interval. The interval can be either open (a,b) or closed [a,b].
-<center>
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Uniform_cdf.svg/500px-Uniform_cdf.svg.png"
      alt="Uniform distribution"
      width="200" height="150"
      align="middle"/>
- </center>
+
  
 ### Exponential
 An exponential distribution expresses the probability distribution for time between intervals in a Poisson point process. 
- <center>
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Exponential_probability_density.svg/856px-Exponential_probability_density.svg.png"
      alt="Exponential distribution"
      width="350" height="250"
      align="middle"/>
- </center>
+
  
 ### Triangular
 A triangular distribution is limited by a lower, upper limits and the mode value. 
@@ -115,14 +114,14 @@ Kurtosis measures extreme values in either left or right tail. Measures whether 
 ## Quantiles
 The quantiles are equal portions that divide a distribution. The image shows the 4 quantiles for a normal distribution. When the divisions correspond to 25%, 50% and 75% of the total distribution are called quartiles. The inter-quartile range is the difference between Q3 and Q1, and the 2nd quartile is the median.
 
-<center>
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Iqr_with_quantile.png"
      alt="Triangular distribution"
      width="350" height="200"
      align="middle"/>
- </center>
  
- Confidence interval
+ 
+**Confidence interval** 
 A confidence interval is the level of certainty that the true parameter is in the proposed range. 
 The confidence interval represents the probability of containing the true interval. In other words, it represents the proportion of intervals that contain the true value of the statistical parameter. 
 The graph represents a confidence interval for 95%. The level of confidence is 95% and 
