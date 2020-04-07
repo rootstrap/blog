@@ -1,4 +1,4 @@
-### Animations in react Native
+### Working with animations in React Native
 
 *[Style: Heading 2, Bold, Color: Black]*
 
@@ -42,11 +42,9 @@ After explaining everything, don't just end the post there. If your reader has m
 
 ### References
 
-*[Style: Heading 3, Bold, Color: Black]*
+[1] https://medium.com/react-native-training/react-native-animations-using-the-animated-api-ebe8e0669fae
 
-[1] https://dev.to/yelluw/how-to-do-technical-blogging
-
-[2] https://medium.com/mindorks/presentation-guide-for-technical-posts-eeebedfd6639
+[2] https://reactnative.dev/docs/animated#__docusaurus
 
 ### Guidelines
 
