@@ -86,9 +86,8 @@ Then, the random variable X can take the values {0,1,2}, corresponding to the po
 
 [**Expected value:**](https://towardsdatascience.com/what-is-expected-value-4815bdbd84de) weighted average, based on probability to weigh the possible outcomes. It is the sum of all gains multiplied by each probability. Where x1..xn are values for the sample space of the discrete random variable X. Reaching to the following [formula](https://www.statisticshowto.com/probability-and-statistics/expected-value/):
 
- <center>
-![E(X)=X_1*p(X_1) \+ X_2*p(X_2) + ... + X_n*p(X_n)](https://render.githubusercontent.com/render/math?math=E(X)%3DX_1*p(X_1)%20%5C%2B%20X_2*p(X_2)%20%2B%20...%20%2B%20X_n*p(X_n))
-</center>
+![](https://render.githubusercontent.com/render/math?math=E(X)%3DX_1*p(X_1)%20%5C%2B%20X_2*p(X_2)%20%2B%20...%20%2B%20X_n*p(X_n))
+
 
 **Variance:** intents to describe how spread is the data from the mean value. It is defined as the expected value of the squared deviation of X from the mean m. 
 
