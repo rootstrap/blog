@@ -56,7 +56,8 @@ Firstly, some probability terms are described. Those terms are being used then t
      width="450" height="250"
      align="middle"/>
  </center>    
- Probability table: A probability table is another way  of representing probabilities. 
+ 
+**Probability table:** A probability table is another way  of representing probabilities. 
 
 <center>
 
@@ -65,6 +66,7 @@ Firstly, some probability terms are described. Those terms are being used then t
 | A             | 0.15          | 
 | B             | 0.35          | 
 | C             | 0.50          | 
+
 </center>
 
 ## Random variables
@@ -91,9 +93,9 @@ Then, the random variable X can take the values {0,1,2}, corresponding to the po
 
 **Variance:** intents to describe how spread is the data from the mean value. It is defined as the expected value of the squared deviation of X from the mean m. 
 
-<center>
+
 ![](https://render.githubusercontent.com/render/math?math=Var(X)%3D%20E%5B(X-m)%5E2%5D) 
-</center>
+
 
 So, here the function is ![](https://render.githubusercontent.com/render/math?math=g(X)%3D(X-m)%5E2), applying the formula of the expected value of a function, we get: 
 ![](https://render.githubusercontent.com/render/math?math=Var(X)%3D%20E%5B(X-m)2%5D%3D(x_1-m)%5E2*p(x_1)%2B(x_2-m)%5E2%2B...%2B(x_n-m)%5E2%3D%5Csum(x_i%20-%20m)%5E2p(x_i))
@@ -102,9 +104,9 @@ So, here the function is ![](https://render.githubusercontent.com/render/math?ma
 
 
 [**Covariance:**](https://corporatefinanceinstitute.com/resources/knowledge/finance/covariance/)  measures the variance between two random variables.
-<center>
+
 ![](https://render.githubusercontent.com/render/math?math=COV(X%2CY)%3D%5Csum%5Cfrac%7B(X_i%20-%20%5Cbar%20X)(Y_i%20-%20%5Cbar%20Y)%7D%7Bn%7D)
-</center>
+
 
 - Positive covariance: the variables tend to move in the same direction.
 - Negative covariance: the variables tend to move in inverse directions.
@@ -112,9 +114,9 @@ It is important to notice that the covariance shows the direction of the relatio
 
 **Correlation:** measures the strength of the relationship between variables.
 
-<center>
+
 ![](https://render.githubusercontent.com/render/math?math=COV(X%2CY)%3D%5Csum%5Cfrac%7B(X_i%20-%20%5Cbar%20X)(Y_i%20-%20%5Cbar%20Y)%7D%7Bn%7D)
-</center>
+
 
 - Positive correlation: the variables are correlated and they move in the same direction.
 - Negative correlation: the variables are correlated and they move in opposite directions.
