@@ -1,5 +1,5 @@
 ![](images/business-361126_1280.jpg)
-     
+    
 # UNDERSTANDING BASIC STATISTICS FOR MACHINE LEARNING MODELS - PART 2
 
 In this article you can find the basic information necessary for a data scientist about distributions. It is expected that you have knowledge about random variables and probability concepts such as variance, covariance and expected value. You can find that information on Understanding Basic Statistics for Machine Learning Models - Part 1. 
