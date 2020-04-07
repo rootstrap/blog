@@ -1,8 +1,4 @@
-
-<img src="https://storage.needpix.com/rsynced_images/business-361126_1280.jpg"
-     alt="Skills for Data Scientists"
-     width="550" height="450"
-     align="middle"/>
+![Matrix multiplication](https://storage.needpix.com/rsynced_images/business-361126_1280.jpg)
      
 # UNDERSTANDING BASIC STATISTICS FOR MACHINE LEARNING MODELS - PART 1
 
@@ -85,24 +81,24 @@ Then, the random variable X can take the values {0,1,2}, corresponding to the po
 
 [**Expected value:**](https://towardsdatascience.com/what-is-expected-value-4815bdbd84de) weighted average, based on probability to weigh the possible outcomes. It is the sum of all gains multiplied by each probability. Where x1..xn are values for the sample space of the discrete random variable X. Reaching to the following [formula](https://www.statisticshowto.com/probability-and-statistics/expected-value/):
  
-> `E(X) = X1*p(X1) + X2*p(X2) + … + Xn*p(Xn) `
+<img src="https://render.githubusercontent.com/render/math?math=E(X) = X_1*p(X_1) + X_2*p(X_2) + … + X_n*p(X_n)">
 
 **Variance:** intents to describe how spread is the data from the mean value. It is defined as the expected value of the squared deviation of X from the mean m. 
 
-$$Var(X)= E[(X-m)2]$$
+<img src="https://render.githubusercontent.com/render/math?math=Var(X)= E[(X-m)2]">
 
-So, here the function is $$g(X)=(X-m)^2$$, applying the formula of the expected value of a function, we get: 
-$$Var(X)= E[(X-m)2]=(x_1-m)^2*p(x_1)+(x_2-m)^2+...+(x_n-m)^2$$
-$$=\sum(x_i - m)^2p(x_i)$$
+So, here the function is <img src="https://render.githubusercontent.com/render/math?math=g(X)=(X-m)^2">, applying the formula of the expected value of a function, we get: 
+<img src="https://render.githubusercontent.com/render/math?math=Var(X)= E[(X-m)2]=(x_1-m)^2*p(x_1)+(x_2-m)^2+...+(x_n-m)^2">
+<img src="https://render.githubusercontent.com/render/math?math==\sum(x_i - m)^2p(x_i)">
 
-$$E(X)=Y$$
+<img src="https://render.githubusercontent.com/render/math?math=E(X)=Y">
 
 [**Standard deviation:**] (https://www.youtube.com/watch?v=2egl_5c8i-g)
-it is the square root of Var(X).  It is denoted as $$\sigma_x$$
+it is the square root of Var(X).  It is denoted as <img src="https://render.githubusercontent.com/render/math?math=\sigma_x">
 
 [**Covariance:**](https://corporatefinanceinstitute.com/resources/knowledge/finance/covariance/)  measures the variance between two random variables.
 
-$$COV(X,Y)=\sum\frac{(X_i - \bar X)(Y_i - \bar Y)}{n}$$
+<img src="https://render.githubusercontent.com/render/math?math=COV(X,Y)=\sum\frac{(X_i - \bar X)(Y_i - \bar Y)}{n}">
 
 - Positive covariance: the variables tend to move in the same direction.
 - Negative covariance: the variables tend to move in inverse directions.
@@ -110,7 +106,8 @@ It is important to notice that the covariance shows the direction of the relatio
 
 **Correlation:** measures the strength of the relationship between variables.
 
-$$Corr(X,Y)=\frac{COV(X,Y)}{\sigma_x\sigma_y}$$
+<img src="https://render.githubusercontent.com/render/math?math=COV(X,Y)=\sum\frac{(X_i - \bar X)(Y_i - \bar Y)}{n}">
+
 
 - Positive correlation: the variables are correlated and they move in the same direction.
 - Negative correlation: the variables are correlated and they move in opposite directions.
@@ -124,9 +121,9 @@ $$Corr(X,Y)=\frac{COV(X,Y)}{\sigma_x\sigma_y}$$
 Basic knowledge about matrices is necessary in order to understand some of the math behind the algorithms and handle images. 
 
 
-$$A_{mxn}$$ It is a matrix with m rows and n columns. 
+<img src="https://render.githubusercontent.com/render/math?math=A_{mxn}"> It is a matrix with m rows and n columns. 
 
-**Square matrix:** when $$m=n$$
+**Square matrix:** when <img src="https://render.githubusercontent.com/render/math?math=m=n">
 
 
 **Column vector:** is a matrix with only 1 column
@@ -135,43 +132,43 @@ $$A_{mxn}$$ It is a matrix with m rows and n columns.
 **Row vector:** a matrix with only 1 row
 
 
-**Transpose matrix:** interchange rows and columns. Notation: $$A'=t(A)$$
+**Transpose matrix:** interchange rows and columns. Notation: <img src="https://render.githubusercontent.com/render/math?math=A'=t(A)">
 
 
 **Diagonal matrix:** has 0 values except the main diagonal
 
 
-**Symmetric matrix:** square matrix unchanged when it is transposed. $$A'=A$$
+**Symmetric matrix:** square matrix unchanged when it is transposed. <img src="https://render.githubusercontent.com/render/math?math=A'=A">
 
 
 **Identity matrix:** diagonal matrix with all elements of the diagonal equal to 1. Notation: I
 
 
-**Matrix multiplication:** $$A_{lxm} B_{mxn}= C_{lxn}$$
+**Matrix multiplication:** <img src="https://render.githubusercontent.com/render/math?math=A_{lxm} B_{mxn}= C_{lxn}">
 
 ![Matrix multiplication](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Matrix_multiplication_qtl1.svg/1240px-Matrix_multiplication_qtl1.svg.png)
 
-**Element-wise multiplication:** $$A_{nxm}  B_{nxm}= C_{nxm}$$
+**Element-wise multiplication:** <img src="https://render.githubusercontent.com/render/math?math=A_{nxm}  B_{nxm}= C_{nxm}">
 
 ![Element-wise multiplication](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Hadamard_product_qtl1.svg/440px-Hadamard_product_qtl1.svg.png)
 
-**Inverse matrix:** $$AA-1=I$$
+**Inverse matrix:** <img src="https://render.githubusercontent.com/render/math?math=AA-1=I">
 
 
 **Trace:** sum of the elements of the diagonal.
 
 
-**Determinant:** Notation: $$det(A)=|A|$$
+**Determinant:** Notation: <img src="https://render.githubusercontent.com/render/math?math=det(A)=|A|">
 
 ![Determinant](https://upload.wikimedia.org/wikipedia/commons/d/d2/Determinant_3x3_Example_Barking_Mad_1.jpg)
 
 **Eigenvalues and eigenvectors**
 
-$$A\bar x =\lambda\bar x$$   
-$$\lambda$$ is a scalar and is called the eigenvalue of A    
-$$\bar x$$ is the eigenvector belonging to $$\lambda$$.   
-Any nonzero multiple of  $$\bar x$$ will be an eigenvector.  
-To find : $|A - \lambdaI|=0$
+<img src="https://render.githubusercontent.com/render/math?math=A\bar x =\lambda\bar x">   
+<img src="https://render.githubusercontent.com/render/math?math=\lambda"> is a scalar and is called the eigenvalue of A    
+<img src="https://render.githubusercontent.com/render/math?math=\bar x"> is the eigenvector belonging to <img src="https://render.githubusercontent.com/render/math?math=\lambda">.   
+Any nonzero multiple of  <img src="https://render.githubusercontent.com/render/math?math=\bar x"> will be an eigenvector.  
+To find : <img src="https://render.githubusercontent.com/render/math?math=|A - \lambdaI|=0">
 
 ## Roadmap 
 Cheat sheets are very useful to have all the concepts in one document, [here](images/Probability_and_Matrices_Roadmap.pdf) you can find a cheat sheet for this part. 
