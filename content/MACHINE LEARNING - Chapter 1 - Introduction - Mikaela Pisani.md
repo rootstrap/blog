@@ -1,11 +1,9 @@
 ![](https://c.pxhere.com/images/44/09/96432f86adf24bdf732ac5dad02a-1584997.jpg!d)
 
-<center>
+
 # MACHINE LEARNING
 
 # Chapter 1 - Introduction
-
-</center>
 
 Machine learning is one of the hottest topics nowadays. People talk about machine learning as if it is magic. Organizations are racing to integrate machine learning into their functions. Everyone talks about it, but not too many people know what it really is. It is just math and statistics plus data!  
 
