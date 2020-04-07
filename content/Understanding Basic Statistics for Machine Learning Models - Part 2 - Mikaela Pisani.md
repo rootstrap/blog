@@ -40,7 +40,7 @@ The probability for a discrete random variable can be summarized with a discrete
 ## Continuous distributions
 ### Normal
 
-<img src="https://storage.needpix.com/rsynced_images/bayesian-2889576_1280.png"
+<img src="images/bayesian-2889576_1280.png"
      alt="Normal Distribution"
      width="100" height="100"
      align="right"/>
