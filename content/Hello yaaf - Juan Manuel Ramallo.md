@@ -12,7 +12,7 @@ Most of the time, they don't even have the same interface across form objects in
 We also tend to write validations twice, in the model and in the form object,
 just so that the form object has the errors and the view can display them.
 
-Well, I can say that most of our in-house form objects make well use of database transactions.
+Well, I can say that most of our in-house form objects make good use of database transactions.
 But I bet we rarely provide the controller the ability to use a banged method,
 expecting it to raise an error if things go south.
 
