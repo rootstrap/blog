@@ -3,7 +3,7 @@
 
 # WHAT IS DATA SCIENCE?
 
-<img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2_b.jpg"
+<img src="images/RS-blog-What-Is-Data-Science-v1.png"
      alt="Data Science"
      width="550" height="450"
      align="middle"/>
