@@ -1,6 +1,6 @@
-## "yaaf world, world yaaf"
+## Yet another active form
 
-Introducing yaaf, a gem to ease the usage of the form object pattern in rails apps.
+Introducing [yaaf](https://github.com/rootstrap/yaaf), a gem to ease the usage of the form object pattern in rails apps.
 
 ### ~The~ My pain points
 
@@ -16,10 +16,11 @@ Well, I can say that most of our in-house form objects make well use of database
 But I bet we rarely provide the controller the ability to use a banged method,
 expecting it to raise an error if things go south.
 
-Most of us using Rubocop with the MethodLength cop, or even the dear CyclomaticComplexity cop,
-might have found ourselves in a trouble when writing a form object that deals with several models,
-and have side effects as adding a role to a recently created user,
-or triggering a thank you email after the form submission.
+Business logic is present everywhere in your app, controllers, models, helpers (some hardcore scenarios might
+include rails initializers), but is that right? Many times we find ourselves with the need to add business logic
+around the creation of an object, such as sending an email, updating other records or even calling an external service.
+We know that the controller is not a good place, and the model would be terrible as well because it violates SRP.
+So we end up creating several service objects and throwing the business logic there as if it were a trashcan.
 
 ### Instead of all of that, we can...
 
@@ -39,11 +40,10 @@ yaaf already defines it so that it raises an error just as any Active Record mod
 Of course, it will also trigger a database rollback when the models couldn't be saved.
 Both `save` and `save!` methods are available.
 
-- The main save method from my in-house form object has grown considerably! Rubocop is complaining?
-use callbacks. They work the same way as your model callbacks.
-You can trigger actions like adding a default role to the new user after it is saved,
-or the sending of an email after form submission, or generating associated model instances
-just before validations are run...
+- Not sure where to put business logic related to the creation of an object? well, the form object is the place.
+yaaf will allow you to use callbacks the same way as your model callbacks work. For instance, if you want to send
+an email after the form has been submited and persisted, the `after_commit` callback is the one you're looking for.
+More info can be found in the [readme](https://github.com/rootstrap/yaaf#callbacks).
 
 ### The Bob Ross of form objects
 
@@ -56,8 +56,6 @@ you may not need yaaf if that's the case.
 
 Are you a service-objects-for-all person?
 Then you might feel better writing service objects rather than form objects.
-Or if you are writing an API, software teams usually tend to avoid this pattern given that it is
-hardly coupled to the view.
 
 If you work with Java, well you don't want to use this.
 
