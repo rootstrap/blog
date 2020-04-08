@@ -24,7 +24,7 @@ So we end up creating several service objects and throwing the business logic th
 
 ### Instead of all of that, we can...
 
-use yaaf. yaaf solves all of that in an easy way, let me explain:
+use yaaf, it solves all of that in an easy way, let me explain:
 
 - Same interface? yaaf will encourage you to use `save` and just `save` to, well you know,
 SAVE the data from your form into models.
