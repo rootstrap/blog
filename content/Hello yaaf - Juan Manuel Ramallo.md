@@ -42,7 +42,7 @@ Both `save` and `save!` methods are available.
 
 - Not sure where to put business logic related to the creation of an object? Well, the form object is the place.
 yaaf will allow you to use callbacks the same way as your model callbacks work. For instance, if you want to send
-an email after the form has been submited and persisted, the `after_commit` callback is the one you're looking for.
+an email after the form has been submitted and persisted, the `after_commit` callback is the one you're looking for.
 More info can be found in the [readme](https://github.com/rootstrap/yaaf#callbacks).
 
 ### The Bob Ross of form objects
