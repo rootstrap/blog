@@ -34,7 +34,7 @@ in your service objects, haha no, of course no, in your models!
 yaaf will take the liberty to promote all model errors collections into the form object errors collection,
 so you can show them in your views
 
-- So one the form objects need to raise an error when not saved? As you may have guessed already,
+- So, one of the form objects need to raise an error when not saved? As you may have guessed already,
 use the _dangerous_ `save!` method.
 yaaf already defines it so that it raises an error just as any Active Record model does.
 Of course, it will also trigger a database rollback when the models couldn't be saved.
