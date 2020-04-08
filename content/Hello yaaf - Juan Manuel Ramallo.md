@@ -17,7 +17,7 @@ But I bet we rarely provide the controller the ability to use a banged method,
 expecting it to raise an error if things go south.
 
 Business logic is present everywhere in your app, controllers, models, helpers (some hardcore scenarios might
-include rails initializers), but is that right? Many times we find ourselves with the need to add business logic
+include Rails initializers), but is that right? Many times we find ourselves with the need to add business logic
 around the creation of an object, such as sending an email, updating other records or even calling an external service.
 We know that the controller is not a good place, and the model would be terrible as well because it violates SRP.
 So we end up creating several service objects and throwing the business logic there as if it were a trashcan.
