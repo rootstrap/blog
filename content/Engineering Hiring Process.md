@@ -12,7 +12,7 @@ We see each member of this team as a Rootstrap brand ambassador. Someone that ca
 
 ## Process
 
-We’re going to focus on explaining how we implement this process here at Rootstrap: how it looks like, what are the steps, which areas of the company participate in each of those steps, etc.
+We’re going to focus on explaining how we implement our process here at Rootstrap: we will share our step by step guide and which departments of the company participate in the process, etc.
 
 We have four main steps. Though this may seem quite long, it’s not, a normal flow should not take much longer than 10 days. We try to maximize the interviewee’s experience while still getting the most out of it in terms of quality and information.
 
