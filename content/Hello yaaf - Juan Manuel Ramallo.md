@@ -30,7 +30,7 @@ use yaaf, it solves all of that in an easy way, let me explain:
 SAVE the data from your form into models.
 
 - Contextual validations only? Please put them in your form objects, and keep data integrity validations where they belong,
-in your service objects, haha no, of course no, in your models!
+in your service objects, haha no, of course not, those belong in your models!
 yaaf will take the liberty to promote all model errors collections into the form object errors collection,
 so you can show them in your views
 
