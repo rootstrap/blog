@@ -5,7 +5,7 @@ Introducing [yaaf](https://github.com/rootstrap/yaaf), a gem to ease the usage o
 ### ~The~ My pain points
 
 The form object pattern is widely used across Rails apps,
-and yet we tend to write these form objects in a different manner from project to project.
+and yet we tend to write these form objects in different ways from project to project.
 
 Most of the time, they don't even have the same interface across form objects in the same app.
 
@@ -57,7 +57,7 @@ you may not need yaaf if that's the case.
 Are you a service-objects-for-all person?
 Then you might feel better writing service objects rather than form objects.
 
-If you work with Java, well you don't want to use this.
+If you work with Java, well you won't want to use this.
 
 ### A bit of history
 
