@@ -1,5 +1,7 @@
 ## Access the world's most powerful retail APIs with Best Buy Ruby
 
+![Main image](images/blue_led_connection.jpg)
+
 ### _What's Best Buy Ruby?_
 
 Best Buy Ruby is a new gem developed entirely here, at Rootstrap. It's basically a wrapper for the different [Best Buy APIs](https://bestbuyapis.github.io/api-documentation/). It offers a simple and intuitive interface that allows users to access the required API with as much customizations as they like.
