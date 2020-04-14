@@ -1,10 +1,10 @@
-# Access the world's most powerful retail APIs with Best Buy Ruby
+## Access the world's most powerful retail APIs with Best Buy Ruby
 
-## _What's Best Buy Ruby?_
+### _What's Best Buy Ruby?_
 
 Best Buy Ruby is a new gem developed entirely here, at Rootstrap. It's basically a wrapper for the different [Best Buy APIs](https://bestbuyapis.github.io/api-documentation/). It offers a simple and intuitive interface that allows users to access the required API with as much customizations as they like.
 
-## _Why use it?_
+### _Why use it?_
 
 Best Buy offers a really powerful API. The different options provided range from pagination and sorting methods to incredibly flexible item queries and response formats.
 
@@ -36,6 +36,6 @@ BestBuy::Products.new.get_by(
 )
 ```
 
-## _Great, I want it. Where can I find it?_
+### _Great, I want it. Where can I find it?_
 
 The gem is available in [RubyGems](https://rubygems.org/gems/best_buy_ruby), but be sure to check our own [Github repo](https://github.com/rootstrap/best_buy_ruby), where you'll find the docs to learn how to use it. But of course anyone is welcomed to submit any issues or contribute!
