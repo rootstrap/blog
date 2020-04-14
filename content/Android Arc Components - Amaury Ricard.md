@@ -14,7 +14,7 @@ Let's start:
 
 - ### Life cycle:
 
-Android introduce lifecycle as a way to avoid memory leaks and keep a cleaner code, and each activity|fragment|lifecycle-owner can be abstracted from the behavior of an object at each stage of its life cycle, that object can subscribe to the activity|fragment lifecycle implementing the interface androidx.lifecycle in order to execute certain actions in each state:
+Android introduces lifecycle as a way to avoid memory leaks and keep a cleaner code, and each activity|fragment|lifecycle-owner can be abstracted from the behavior of an object at each stage of its life cycle, that object can subscribe to the activity|fragment lifecycle implementing the interface androidx.lifecycle in order to execute certain actions in each state:
 
 ![LifeCycle](images/lifecycle.jpg)
 
@@ -37,17 +37,18 @@ Note: Each activity|fragment|lifecycle-owner needs to add the object to his own 
 
 - ### Live Data:
 
-This concept is not new for android, this is a new way to see and observable object that was previously introduced with "androidx". With live data they introduce it a owner in order to know when to notify data depending of the owner lifecycle in order to manage consistent data and avid memory leaks. 
+This concept is not new for android, this is a new way to see and observable object that was previously introduced with "androidx". With live data they introduce it to an owner in order to know when to notify data depending on the owner lifecycle in order to manage consistent data and avoid memory leaks. 
 A classic example: for an app it is important to keep the user data updated, if the user changes the name, avatar, permissions, etc... you can observe it and notify the app for those changes.
 
 - ### View Model:
 
-Is the one with the responsibility of provide and keep data save for the UI in each state of the lifecycle of the view or the app for example screen rotations or when the app gone to background or is sleeping, is the one who "talk" with the repository subscribe to  the repository response with LiveData, each view(Activity|Fragment not custom views or Adapters) should have a view model example:
+It's the one with the responsibility of providing and keeping data saved for the UI in each state of the lifecycle of the view or the app for example screen rotations or when the app has gone to background or is sleeping, it is the one who "talks" to the repository and subscribed to the repository response with LiveData, each view (Activity|Fragment not custom views or Adapters) should have a view model example:
+
 MainActivity.kt
 MainActivityViewModel.kt
 
-Nota that you needs to setup the view model with the View in order to register the view as the LifeCycle owner:
-In the view(this case MainActivity):
+Note that you need to setup the view model with the View in order to register the view as the LifeCycle owner:
+In the view (this case MainActivity):
 
 ``` kotlin
 val viewModel = ViewModelProviders.of(this)
@@ -56,7 +57,7 @@ val viewModel = ViewModelProviders.of(this)
 
 - ### Room database:
 
-Android always use Sqlite to storage|manage data but the use of Sqlite required write a lot of code or the use of unsafety third party libraries, also Sqlite didn't check the sql queries at compile time, they created Room to solve that problem and keep data safe and integrated it with LiveData to provide a clean wait to provide data to the ViewModel, to create a db entity all you have to do is add @Entity to a Model class and a create a @Dao interface to manage that entity values:
+Android always uses Sqlite to storage|manage data but the use of Sqlite required to write a lot of code or the use of unsafe third party libraries, also Sqlite didn't check the sql queries at compile time, they created Room to solve that problem and keep data safe and integrated it with LiveData to provide a clean wait to provide data to the ViewModel, to create a db entity all you have to do is add @Entity to a Model class and a create a @Dao interface to manage that entity values:
 
 ``` kotlin
 @Entity
@@ -104,7 +105,7 @@ Android introduced a Data Binding library to provide us a new way to set up the 
 </layout>
 ```
 
-Also the added binding adapters in order to create custom properties or listeners for each layout for example:
+Also they added binding adapters in order to create custom properties or listeners for each layout for example:
 
 ``` kotlin
 @BindingAdapter("app:addPersonAdapter")
