@@ -1,8 +1,8 @@
-## Yet another active form
+## Yet Another Active Form | Using form objects in Rails Apps
 
-Introducing [yaaf](https://github.com/rootstrap/yaaf), a gem to ease the usage of the form object pattern in rails apps.
+Introducing Yet Another Active Form [yaaf](https://github.com/rootstrap/yaaf), a gem to ease the usage of the form object pattern in rails apps.
 
-### ~The~ My pain points
+### Form Object Pain Points
 
 The form object pattern is widely used across Rails apps,
 and yet we tend to write these form objects in different ways from project to project.
@@ -45,7 +45,7 @@ yaaf will allow you to use callbacks the same way as your model callbacks work. 
 an email after the form has been submitted and persisted, the `after_commit` callback is the one you're looking for.
 More info can be found in the [readme](https://github.com/rootstrap/yaaf#callbacks).
 
-### The Bob Ross of form objects
+### Benefit of Using Yet Another Active Form
 
 Using yaaf will allow you to standardize your form object definitions across your project's production code.
 
@@ -59,7 +59,7 @@ Then you might feel better writing service objects rather than form objects.
 
 If you work with Java, well you won't want to use this.
 
-### A bit of history
+### The Background to Yet Another Active Form
 
 We have been using this very same approach on a production app for almost a year now,
 more than 10 form objects written this way,
