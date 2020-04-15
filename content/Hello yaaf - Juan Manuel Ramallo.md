@@ -70,4 +70,4 @@ and we need no more)
 
 Big thanks to [@santib](http://github.com/santib) for shaping up this gem from its very beginning.
 
-https://github.com/rootstrap/yaaf
+For the original published post, visit [DEV Community](https://dev.to/juanmanuelramallo/yet-another-active-form-4874)
