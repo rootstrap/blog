@@ -49,7 +49,7 @@ More info can be found in the [readme](https://github.com/rootstrap/yaaf#callbac
 
 Using yaaf will allow you to standardize your form object definitions across your project's production code.
 
-### Why not use this?
+### Drawbacks of Yet Another Active Form
 
 If you would rather have controllers deal with all these responsibilities, then it's fine to keep doing it,
 you may not need yaaf if that's the case.
