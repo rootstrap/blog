@@ -84,9 +84,9 @@ We can visualize the effect that complexity of a model can have over bias and va
 **Regularization:** regularization consists of the application of penalty to the weights of the model. During the learning process a penalty is added to the loss function in terms of the coefficients of the model. Regularization methods can help to reduce variance. However this will reduce bias. 
 
 Ridge and Lasso regression are methods of regularization which add a penalty term for having large coefficients. 
-While Ridge regression uses L1 norm (Manhattan distance)![](https://render.githubusercontent.com/render/math?math=Error%20%3D%20Error%20%2B%20%5Csum(%7Cbeta_i%7C))
+While Ridge regression uses L1 norm (Manhattan distance) ![](https://render.githubusercontent.com/render/math?math=Error%20%3D%20Error%20%2B%20%5Csum(%7Cbeta_i%7C))
 
-Lasso regression uses the square norm L2 (Euclidean distance)![](https://render.githubusercontent.com/render/math?math=Error%20%3D%20Error%20%2B%20%5Csum(%5Clambda%5Cbeta_i)%5E2)
+Lasso regression uses the square norm L2 (Euclidean distance) ![](https://render.githubusercontent.com/render/math?math=Error%20%3D%20Error%20%2B%20%5Csum(%5Clambda%5Cbeta_i)%5E2)
 
 **Add more training data:** this will help you to reduce variance, taking the considerations mentioned above. Knowing that there is some point when adding more data does not change the values of bias and variance. 
 
