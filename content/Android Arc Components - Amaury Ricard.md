@@ -18,7 +18,7 @@ Android introduces lifecycle as a way to avoid memory leaks and keep a cleaner c
 
 ![LifeCycle](images/lifecycle.jpg)
 
-To subscribe to a lifecycle state you can use annotations like:
+To subscribe to a lifecycle event you can use annotations like:
 
 ``` kotlin
   @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
