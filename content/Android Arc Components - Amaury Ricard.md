@@ -57,7 +57,8 @@ val viewModel = ViewModelProviders.of(this)
 
 - ### Room database:
 
-Android always uses Sqlite to storage|manage data but the use of Sqlite required to write a lot of code or the use of unsafe third party libraries, also Sqlite didn't check the sql queries at compile time, they created Room to solve that problem and keep data safe and integrated it with LiveData to provide a clean wait to provide data to the ViewModel, to create a db entity all you have to do is add @Entity to a Model class and a create a @Dao interface to manage that entity values:
+Android always uses SQLite to storage|manage data, but the use of it required to write a lot of code or the use of unsafe third-party libraries. Also, SQLite didn't check the SQL queries at compile time, causing potential issues. Room was the solution to this problem, while also helping to keep data safe and facilitating the integration with LiveData to provide a clean way to provide data to the ViewModel. 
+To create a DB entity all you have to do is add the @Entity annotation to a Model class and a create a @Dao annotated interface to manage the access to the model data:
 
 ``` kotlin
 @Entity
