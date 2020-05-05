@@ -29,7 +29,7 @@ To subscribe to a lifecycle state you can use annotations like:
 
 Eache states:
 ON_RESUME,ON_START,ON_STOP,ON_DESTROY,ON_PAUSE,ON_CREATE
-Note: Each activity|fragment|lifecycle-owner needs to add the object to his own lifecycle observers:
+Note: Each activity|fragment|lifecycle-owner needs to add the object to its own lifecycle observers:
 
 ``` kotlin 
     this.getLifecycle().addObserver(objectWithLifeCycleListener)
