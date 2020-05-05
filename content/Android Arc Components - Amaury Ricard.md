@@ -135,4 +135,4 @@ Also we can integrate DataBinding with Live data but that's for another post.
 
 - ### Conclusions: 
 
-As we have observed, these libraries come to help us obtain a cleaner, faster, more scalable and easier to maintain code, as I mentioned earlier, in later posts we will delve deeper into each of these components in order to provide a better understanding of each one.
+As we have observed, these libraries come to help us write code that's cleaner, faster, more scalable, and easier to maintain. As I mentioned earlier, in later posts we will delve deeper into each of these components to provide a better understanding.
