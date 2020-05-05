@@ -27,8 +27,14 @@ To subscribe to a lifecycle event you can use annotations like:
   }
 ```
 
-Eache states:
-ON_RESUME,ON_START,ON_STOP,ON_DESTROY,ON_PAUSE,ON_CREATE
+Available states:
+- ON_RESUME
+- ON_START
+- ON_STOP
+- ON_DESTROY
+- ON_PAUSE
+- ON_CREATE
+
 Note: Each activity|fragment|lifecycle-owner needs to add the object to its own lifecycle observers:
 
 ``` kotlin 
@@ -38,11 +44,14 @@ Note: Each activity|fragment|lifecycle-owner needs to add the object to its own 
 - ### Live Data:
 
 LiveData is a new type of Observable that is lifecycle-aware. This means that LiveData takes into account their observer's lifecycle state to notify the changes to them, meaning that only active components (STARTED or RESUMED) will be notified, avoiding potential issues such as Memory Leaks, crashes due to stopped activities and dealing with configuration changes properly. All of this while keeping up to date data everywhere in your app. Isn't it awesome?
+
 A classic example: for an app it is important to keep the user data updated, if the user changes the name, avatar, permissions, etc... you can observe it and notify the app for those changes.
 
 - ### View Model:
 
-It's the one with the responsibility of providing and keeping data saved for the UI in each state of the lifecycle of the view or the app for example screen rotations or when the app has gone to background or is sleeping, it is the one who "talks" to the repository and subscribed to the repository response with LiveData, each view (Activity|Fragment not custom views or Adapters) should have a view model example:
+It's the one with responsible for providing and keeping data saved for the UI in each state of the lifecycle of the view or the app, for example: screen rotations; when the app has gone to background; when is sleeping. 
+It is the one who "talks" to the repository and subscribed to the repository response with LiveData, 
+Each view (Activity|Fragment not custom views or Adapters) should have a view model example:
 
 MainActivity.kt
 MainActivityViewModel.kt
@@ -111,10 +120,10 @@ Also, they added binding adapters to create custom properties or listeners for e
 ``` kotlin
 @BindingAdapter("app:addPersonAdapter")
 fun personAdapter(view: RecyclerView, adapter: PersonAdapter) {
-	view.apply {
-	    it.layoutManager = LinearLayoutManager()
-	    It.adapter = adapter
-    }
+  view.apply {
+    it.layoutManager = LinearLayoutManager()
+	it.adapter = adapter
+  }
 }
 ```
 
