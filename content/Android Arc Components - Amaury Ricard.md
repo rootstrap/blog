@@ -105,7 +105,7 @@ Android introduced a Data Binding library to provide us a new way to set up the 
 </layout>
 ```
 
-Also they added binding adapters in order to create custom properties or listeners for each layout for example:
+Also, they added binding adapters to create custom properties or listeners for each layout. For example:
 
 ``` kotlin
 @BindingAdapter("app:addPersonAdapter")
