@@ -37,7 +37,7 @@ Note: Each activity|fragment|lifecycle-owner needs to add the object to his own 
 
 - ### Live Data:
 
-This concept is not new for android, this is a new way to see and observable object that was previously introduced with "androidx". With live data they introduce it to an owner in order to know when to notify data depending on the owner lifecycle in order to manage consistent data and avoid memory leaks. 
+LiveData is a new type of Observable that is lifecycle-aware. This means that LiveData takes into account their observer's lifecycle state to notify the changes to them, meaning that only active components (STARTED or RESUMED) will be notified, avoiding potential issues such as Memory Leaks, crashes due to stopped activities and dealing with configuration changes properly. All of this while keeping up to date data everywhere in your app. Isn't it awesome?
 A classic example: for an app it is important to keep the user data updated, if the user changes the name, avatar, permissions, etc... you can observe it and notify the app for those changes.
 
 - ### View Model:
