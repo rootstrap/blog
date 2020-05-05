@@ -131,7 +131,7 @@ The view:
         add:addPersonAdapter="@{viewmodel.personAdapter}" />
 ```
 
-Also we can integrate DataBinding with Live data but that's for another post.
+Also, we can integrate DataBinding with LiveData, but that's for another post.
 
 - ### Conclusions: 
 
