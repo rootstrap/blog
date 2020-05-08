@@ -8,7 +8,7 @@ Android Architecture Components are focused to solve many problems that Android 
 
 ![ArchComponets](images/arch_componets.png)
 
-This post is to give a brief introduction to Android Architecture Components, in later posts we will delve deeper into each of these libraries aiming to show the capabilities of each one.
+This post is to give a brief introduction to Android Architecture Components. In later posts, we will delve deeper into each of these libraries aiming to show the capabilities of each one.
 
 Let's start:
 
