@@ -122,7 +122,7 @@ Also, they added binding adapters to create custom properties or listeners for e
 fun personAdapter(view: RecyclerView, adapter: PersonAdapter) {
   view.apply {
     it.layoutManager = LinearLayoutManager()
-	it.adapter = adapter
+    it.adapter = adapter
   }
 }
 ```
