@@ -51,7 +51,7 @@ A classic example: for an app it is important to keep the user data updated, if 
 
 It's the one responsible for providing and keeping data saved for the UI in each state of the lifecycle of the view or the app. For example: screen rotations; when the app has gone to the background; when it's sleeping. 
 It is the one who "talks" to the repository and subscribed to the repository response with LiveData, 
-Each view (Activity|Fragment not custom views or Adapters) should have a view model example:
+Each view (Activity|Fragment not custom views or Adapters) should have a view model. Example:
 
 MainActivity.kt
 MainActivityViewModel.kt
