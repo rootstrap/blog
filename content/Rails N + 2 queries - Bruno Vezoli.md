@@ -79,7 +79,9 @@ Comment Load (0.2ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."pos
 ```
 
 Now we have the N + 1 queries we had in the beginning and also an additional query to preload data we are not going to use
-(which will increase our application's memory footprint but that's a story for another day).
+(which will increase our application's memory footprint but that's a story for another day). You may wonder why doesn't Rails
+just iterate the comments collection and select posts that are not censored. Well, in this simple example, it could. But if we start doing
+some more complex queries and adding raw SQL fragments it's going to get a lot more difficult.
 
 ### Add Bullet, duh
 
@@ -218,6 +220,6 @@ Post Load (0.4ms)  SELECT "posts".* FROM "posts"
 Comment Load (0.4ms)  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5) ORDER BY "comments"."likes" DESC  [["post_id", 1], ["post_id", 2], ["post_id", 3], ["post_id", 4], ["post_id", 5]]
 ```
 
-Notice though that in this case we don't get the limit on the query and so Rails loads all these comments on memory and then
+Notice though that in this case we don't get the `LIMIT` clause on the SQL query and so Rails loads all these comments on memory and then
 loads them on each post, that's also something to consider: memory usage vs SQL query time. As in most cases there's not a clear
 answer and you should really measure to see your specific case.
