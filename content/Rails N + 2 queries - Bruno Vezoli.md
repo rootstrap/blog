@@ -81,7 +81,7 @@ Comment Load (0.2ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."pos
 Now we have the N + 1 queries we had in the beginning and also an additional query to preload data we are not going to use
 (which will increase our application's memory footprint but that's a story for another day)
 
-### Let's add Bullet duh
+### Add Bullet, duh
 
 I agree that [bullet](https://github.com/flyerhzm/bullet) is a must have in any project, no matter how big or small. It's
 very difficult to catch every N + 1 in every query we build and it's even harder to detect cases like this where we should no longer
