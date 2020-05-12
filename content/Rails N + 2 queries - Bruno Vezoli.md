@@ -1,8 +1,8 @@
 ## Rails N + 2 queries
 
 We usually try to solve performance problems by using `#includes` to get rid of N + 1 queries but this doesn't
-always get rid of them; in fact it can even create more queries under some circumstances. This post
-shows some examples of when that happens and how to deal with it.
+always fix the issue; in fact, it can even create more queries under some circumstances. This post
+shows a few examples of when that happens and how to deal with it.
 
 ![Forest with bridge](images/forest_bridge.jpg)
 
@@ -28,8 +28,8 @@ irb> posts = Post.all
 irb> all_comments = posts.map { |p| p.comments }
 ```
 
-Which generates the following queries, where we can clearly see an N + 1 query since it needs to fetch comments for each
-post:
+Which generates the following queries, where we can clearly see the N + 1 query problem: Rails is doing one query
+to retrieve the posts and N additional queries to retrieve the comments, where N is the number of posts.
 
 ```
 Post Load (0.5ms)  SELECT  "posts".* FROM "posts"
@@ -40,7 +40,7 @@ Comment Load (0.2ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."pos
 Comment Load (0.6ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 5]]
 ```
 
-And that the solution is to preload the data by calling the `#includes` method over the posts collection
+And that the solution is to preload the data by calling the `#includes` method over the posts collection:
 
 ```ruby
 irb> posts = Post.includes(:comments)
@@ -79,11 +79,11 @@ Comment Load (0.2ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."pos
 ```
 
 Now we have the N + 1 queries we had in the beginning and also an additional query to preload data we are not going to use
-(which will increase our application's memory footprint but that's a story for another day)
+(which will increase our application's memory footprint but that's a story for another day).
 
 ### Add Bullet, duh
 
-I agree that [bullet](https://github.com/flyerhzm/bullet) is a must have in any project, no matter how big or small. It's
+I agree that [Bullet](https://github.com/flyerhzm/bullet) is a must have in any project, no matter how big or small. It's
 very difficult to catch every N + 1 in every query we build and it's even harder to detect cases like this where we should no longer
 preload the data.
 
@@ -122,7 +122,7 @@ but as you may guess from the `:nodoc:` directive that's a private class not mea
 to even talk about how to preload using that class but if you are curious here's [a nice post](https://blog.rstankov.com/dealing-with-n-1-with-graphql-part-1/)
 on how to deal with N + 1 queries on GraphQL using Rails' preloader.
 
-The second solution, and the one I'm going to explain here, it's using a scoped association and preloading it instead of the
+The second solution, and the one I'm going to explain here, is using a scoped association and preloading it instead of the
 `comments` association. This requires us to add one more line to our Posts model:
 
 ```ruby
