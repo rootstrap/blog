@@ -12,8 +12,8 @@ We learn how to deal with ActiveRecord performance issues with very plain exampl
 look something like this:
 
 ```ruby
-class Comment < ApplicationRecord
-  belongs_to :post
+class Post < ApplicationRecord
+  has_many :comments
 end
 
 class Comment < ApplicationRecord
