@@ -43,7 +43,7 @@ Comment Load (0.6ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."pos
 And that the solution is to preload the data by calling the `#includes` method over the posts collection
 
 ```ruby
-irb> posts = Post.preload(:comments)
+irb> posts = Post.includes(:comments)
 irb> all_comments = posts.map { |p| p.comments }
 ```
 
@@ -62,7 +62,7 @@ Time passes and requirements change, it's only normal. Now we need to only show 
 our query to reflect that:
 
 ```ruby
-irb> posts = Post.preload(:comments)
+irb> posts = Post.includes(:comments)
 irb> all_comments = posts.map { |p| p.comments.where(censored: false) }
 ```
 
@@ -178,7 +178,7 @@ This method also works for cases when you need to just fetch one record. Let's u
 we need the most liked comment from each Post:
 
 ```ruby
-irb> posts = Post.preload(:comments)
+irb> posts = Post.includes(:comments)
 irb> most_liked_comments = posts.map { |p| p.comments.order(likes: :desc).first }
 ```
 
@@ -207,7 +207,7 @@ end
 Bullet now complains about data not being preload us and gives us the solution to our problems
 
 ```ruby
-irb> posts = Post.preload(:most_liked_comment)
+irb> posts = Post.includes(:most_liked_comment)
 irb> most_liked_comments = posts.map { |p| p.most_liked_comment }
 ```
 
