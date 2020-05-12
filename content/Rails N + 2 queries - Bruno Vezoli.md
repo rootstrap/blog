@@ -1,7 +1,7 @@
 ## Rails N + 2 queries
 
 We usually try to solve performance problems by using `#includes` to get rid of N + 1 queries but this doesn't
-always get rid of those extra queries; in fact it can even create more queries under some circumstances. This post
+always get rid of them; in fact it can even create more queries under some circumstances. This post
 shows some examples of when that happens and how to deal with it.
 
 ![Forest with bridge](images/forest_bridge.jpg)
@@ -84,7 +84,7 @@ Now we have the N + 1 queries we had in the beginning and also an additional que
 ### Let's add Bullet duh
 
 I agree that [bullet](https://github.com/flyerhzm/bullet) is a must have in any project, no matter how big or small. It's
-very difficult to catch every N + 1 query we build and it's even harder to detect cases like this where we should no longer
+very difficult to catch every N + 1 in every query we build and it's even harder to detect cases like this where we should no longer
 preload the data.
 
 After installing bullet what we get is the following warning: 
