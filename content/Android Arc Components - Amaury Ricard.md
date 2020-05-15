@@ -2,7 +2,7 @@
 ## Introduction to Android Architecture Components
 
 According to https://developer.android.com:
-"Android architecture components are a collection of libraries that help you design robust, testable, and maintainable apps. Start with classes for managing your UI component lifecycle and handling data persistence."
+"Android architecture components are a collection of libraries that help you design robust, testable, and maintainable apps."
 
 Android Architecture Components are focused to solve many problems that Android developers face on a project. It focuses on a clean and easy to maintain architecture such as MVVM, and trying to take advantage of all the capabilities of the Android framework and how it is structured.
 
