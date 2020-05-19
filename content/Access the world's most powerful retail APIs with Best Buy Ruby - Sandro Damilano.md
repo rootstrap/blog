@@ -1,6 +1,6 @@
 ## Access the world's most powerful retail APIs with Best Buy Ruby
 
-![Main image](images/blue_led_connection.jpg)
+![Main image](images/internet_sign.jpg)
 
 ### _What's Best Buy Ruby?_
 
