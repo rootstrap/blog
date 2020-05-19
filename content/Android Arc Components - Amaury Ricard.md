@@ -1,18 +1,18 @@
 
 ## Introduction to Android Architecture Components
 
-According to https://developer.android.com:
+According to [Android Developers](https://developer.android.com):
 "Android architecture components are a collection of libraries that help you design robust, testable, and maintainable apps."
 
-Android Architecture Components are focused to solve many problems that Android developers face on a project. It focuses on a clean and easy to maintain architecture such as MVVM, and trying to take advantage of all the capabilities of the Android framework and how it is structured.
+Android Architecture Components help solve many problems that Android developers face on a project. It helps create a clean and easy to maintain architecture such as MVVM, with the goal of taking advantage of all the capabilities of the Android framework and it's structure.
 
 ![ArchComponets](images/arch_componets.png)
 
-This post is to give a brief introduction to Android Architecture Components. In later posts, we will delve deeper into each of these libraries aiming to show the capabilities of each one.
+This post will give a brief introduction to Android Architecture Components. In later posts, we will delve deeper into each of the libraries to show the capabilities of each one.
 
 Let's start:
 
-- ### Life cycle:
+- ### Android Lifecycle:
 
 Android introduces lifecycle as a way to avoid memory leaks and keep a cleaner code, and each activity|fragment|lifecycle-owner can be abstracted from the behavior of an object at each stage of its life cycle. That object can subscribe to the activity|fragment lifecycle implementing the interface androidx.lifecycle in order to execute certain actions in each state:
 
@@ -145,4 +145,4 @@ Also, we can integrate DataBinding with LiveData, but that's for another post.
 
 - ### Conclusions: 
 
-As we have observed, these libraries come to help us write code that's cleaner, faster, more scalable, and easier to maintain. As I mentioned earlier, in later posts we will delve deeper into each of these components to provide a better understanding.
+As we have observed, these libraries help us write code that's cleaner, faster, more scalable, and easier to maintain.  In future posts, we will delve deeper into each of these components to provide a better understanding.
