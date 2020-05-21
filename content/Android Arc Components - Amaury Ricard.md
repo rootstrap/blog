@@ -6,7 +6,7 @@ According to [Android Developers](https://developer.android.com):
 
 Android Architecture Components help solve many problems that Android developers face on a project. It helps create a clean and easy to maintain architecture such as MVVM, with the goal of taking advantage of all the capabilities of the Android framework and it's structure.
 
-![ArchComponets](images/arch_componets.png)
+![ArchComponets](images/arch_components.png)
 
 This post will give a brief introduction to Android Architecture Components. In later posts, we will delve deeper into each of the libraries to show the capabilities of each one.
 
