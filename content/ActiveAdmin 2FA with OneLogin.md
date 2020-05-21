@@ -144,7 +144,8 @@ prepend_before_action :verify_signed_out_user, only: :destroy
 prepend_before_action(only: [:create, :destroy]) { request.env["devise.skip_timeout"] = true }
 ```
 
-** How logout works **
+**How logout works**
+
 At this point you have 3 options to logout:
   - destroy your app session
   - destroy saml session
