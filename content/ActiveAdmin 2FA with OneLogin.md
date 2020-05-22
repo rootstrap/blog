@@ -2,7 +2,7 @@
 
 ![main image](images/2fa.jpg)
 
-Here at Rootstrap, security is one of the top priorities, for us and to our clients. We ensure that malicious users can’t access any sensitive information from our client’s web apps.
+Here at [Rootstrap](https://www.rootstrap.com/mobile-app-development-los-angeles/), security is one of the top priorities, for us and for our clients. We ensure that malicious users can’t access any sensitive information from our client’s web apps.
 
 In this blog post, you’ll learn how to configure two factor authentication with OneLogin for your admin panel.
 
