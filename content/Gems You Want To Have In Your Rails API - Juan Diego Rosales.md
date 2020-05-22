@@ -12,7 +12,7 @@ In comparison to other alternatives available, one of the best perks that comes 
 ## Authorization
 I guess authorizing every request on an API can be achieved in the controller, but that is not scalable at all and may ease the introduction of vulnerabilities in an application. Here at Rootstrap, we find [Pundit](https://github.com/varvet/pundit) to be the perfect ally against those issues.
 
-Not only you will have one place in the codebase for the authorization logic, making the system more robust, but also it will help to clean up the controllers, improving the readability.
+Not only will you have one place in the codebase for the authorization logic, making the system more robust, but also it will help to clean up the controllers, improving the readability.
 
 ## Pagination
 When pagination comes into the discussion, I would definitely recommend [Pagy](https://github.com/ddnexus/pagy). Although it was recently added to our Rails API Base, we have been using it in several projects of the company over the last year or so, and the results have been pretty good! It has proven to be a light gem, which is very fast, customizable and easy to use.
