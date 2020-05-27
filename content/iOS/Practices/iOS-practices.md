@@ -4,7 +4,7 @@
 
 ## Introduction 
 
-Have you ever had to maintain or add features to a project you developed in the past and think: who developed this and why do they hate me so much? 
+Have you ever had to maintain or add features to a project you developed in the past and think: who wrote this and why do they hate me so much? 
 
 I think this is quite normal since having in mind that some projects grow way bigger than we initially expected, and even when you have the best intentions, and you put lots of love and hard work in them, as you mature as a developer you start incorporating more and more practices, and the way you develop changes drastically, making it difficult and annoying to go back to older projects.
 
@@ -30,15 +30,21 @@ Within these folders, group files tightly related to the feature in question. I 
 
 In the root, besides the feature-specific folders I like to keep an Extension, Helpers, Common, and Resources folders.
 
-In the Extension folder I keep extensions of the most used native controls and objects. 
+In the Extension folder: keep extensions of the most used native controls and objects. 
 
-In the Helpers you may keep Constant files and classes you use regularly on the whole codebase. 
+In the Helpers folder: keep Constant files and classes you use regularly on the whole codebase. 
 
-In Resources you can keep any resource file your app will consume, these may be: Property lists, JSONs, Images, etc.
+In Resources folder: keep any resource file your app will consume, these may be: Property lists, JSONs, Images, etc.
 
-In Common, you may find classes reused all along the codebase including: views, managers, protocols, as usual separated by type in different folders. 
+In Common folder: keep classes reused all along the codebase including: views, managers, protocols, as usual separated by type in different folders. 
 
 So the next time I want to do an update, by a glance to the root I know the features my app implements and I can easily navigate to the file I want to update.  
+
+### Files Structure
+
+Within file classes keep related functions together in sections organized with Marks. Some examples for controllers are: View Lifecycle, Layout, User Interaction, Protocol Implementation, etc. 
+
+It is also a nice practice to separate private functions into a private extension, so that a client at a glance at the class can differentiate the interface from the implementation.  
 
 ## Architecture Patterns
 
@@ -66,31 +72,35 @@ There are a bunch of variations of this pattern, the most popular ones include a
 
 For an example of this implementation you can check out [Rootstrap's iOS base](https://github.com/rootstrap/ios-base) a very helpful iOS project template to let you jump into your new project quickly. Check this [article](https://www.rootstrap.com/blog/2019/10/25/whats-great-about-our-ios-base/) to find out more about why we did that and how helpful it has been for us.  
 
-Whatever architecture pattern you decide on, it's very important to keep related functions together in sections organized with Marks. Some examples for controllers are: View Lifecycle, Layout, User Interaction, Protocol Implementation, etc. 
-
-It is also a nice practice to separate private functions into a private extension, so that a client at a glance at the class can differentiate the interface from the implementation.  
-
 ## Resource Management 
 
-As we mention before we want to have a folder in the root of the project for the resources our app will need, there are many types of resources so its helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... ant the list goes on.
+As we mentioned before we want to have a folder in the root of the project for the resources our app will need, there are many types of resources so its helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... and the list goes on.
 
 For images, Xcode provides a very helpful resource bundle named xassets. 
 Here we'll store the images our app uses, if your app has a fancy UI and uses loads of them is good to have them grouped in folders that describe their use. 
 
-Images may be heavy, and we want our apps to be as small in size as possible, so if we find yourself having to add the same image in different colors its recommended to use them as templates and color them in code instead of adding different versions of the same image.  
+Images may be heavy, and we want our apps to be as small in size as possible, so if we find yourself having to add the same image in different colors its recommended to use them as templates and color them in code instead of adding different versions of the same image. 
+Same goes for images with borders or different backgrounds, you'll save space by adding those decorations in code.  
 
 Also, the naming of the resource itself should be descriptive enough so that you'll find it quickly and makes sense in the place you reference it. 
 
 ## Storyboards and xibs vs Code
 
 Storyboards and xibs are great when you start learning to code in swift. 
-The visual help does a lot kickstarting your designs and helping you understand `NSLayoutConstraints`.
+The visual help does a lot kickstarting your designs and helping you understand `Auto Layout`.
 Also if well handled, the way they represent the flow helps you understand a lot of the app by having a glance at it.
 
-However... They are heavy and often take a lot to load, connections between storyboard views and code are not checked in compiler time so you may have crashes if not careful, when working in a team the merge conflicts will be very hard to solve, its very annoying to review the autogenerated code in Pull Requests, it doesn't favor reuse and componentization, and most importantly there's not a "single source of truth" for your UI code. UI and navigation code will be divided between storyboards and your view controllers making it way harder to understand and maintain. 
+However... 
+- They are heavy and often take a lot to load. 
+- Connections between storyboard views and code are not checked in compiler time so you may have crashes if not careful.
+- When working in a team the merge conflicts will be very hard to solve.
+- It's very annoying to review the autogenerated code in Pull Requests.
+- It doesn't favor reuse and componentization.
+
+And most importantly there's not a "single source of truth" for your UI code. UI and navigation code will be divided between storyboards and your view controllers making it way harder to understand and maintain. 
 
 So my inclination here is to do all UI work in code.
-Once you understand how `NSLayoutConstraint` works, identify the code you are repeating, and develop helpers to avoid that, you'll find yourself accomplishing results faster, and with fewer lines of code. 
+Once you understand how `Auto Layout` works, identify the code you are repeating, and develop helpers to avoid that, you'll find yourself accomplishing results faster, and with fewer lines of code. 
 Code review processes will go much smoother, you'll find much more opportunities to reuse, and you'll find all UI work in a single place and avoid jumping from storyboards or xibs to code every minute.
 
 If you loved the way you were able to quickly grasp your app's flow in the storyboard my recommendation would be to include flow diagrams in the code base, which may save precious time in the future!  
