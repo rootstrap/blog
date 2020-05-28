@@ -4,7 +4,7 @@
 
 Have you ever had to maintain or add features to a project you developed in the past and think: who wrote this and why do they hate me so much? 
 
-I think this is quite normal since having in mind that some projects grow way bigger than we initially expected, and even when you have the best intentions, and you put lots of love and hard work in them, as you mature as a developer you start incorporating more and more practices, and the way you develop changes drastically, making it difficult and annoying to go back to older projects.
+I think this is quite normal if we have in mind that some projects grow way bigger than we initially expected, and even when you have the best intentions, and you put lots of love and hard work in them, as you mature as a developer you start incorporating more and more practices, and the way you develop changes drastically, making it difficult and annoying to go back to older projects.
 
 I wanted to write this article to help me and others avoid this feeling when retaking an old project.
 
@@ -61,8 +61,8 @@ The problem with this pattern is that a lot of the responsibilities fall in the 
 
 ### MVVM
 
-This pattern divides responsibilities within Models, Views, and View Models, and is one of the most populars.
-Business logic and communication between Models and Views are now responsibility of the ViewModel leaving the Controller responsibility to only handle user interaction, displaying the digested information the View Model provides in Views, and handling navigation. 
+This pattern divides responsibilities within Models, Views, and View Models, and is one of the most popular.
+Business logic and communication between Models and Views are now responsibility of the ViewModel, leaving the Controller job to only handle user interaction, displaying the digested information the View Model provides in Views, and handling navigation. 
 
 This extra separation of concerns allows us to keep a cleaner code base as well as facilitating unit testing.
 
@@ -72,7 +72,7 @@ For an example of this implementation you can check out [Rootstrap's iOS base](h
 
 ## Resource Management 
 
-As we mentioned before we want to have a folder in the root of the project for the resources our app will need, there are many types of resources so its helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... and the list goes on.
+As we mentioned before we want to have a folder in the project's root for the resources our app will need, there are many types of resources so its helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... and the list goes on.
 
 For images, Xcode provides a very helpful resource bundle named xassets. 
 Here we'll store the images our app uses, if your app has a fancy UI and uses loads of them is good to have them grouped in folders that describe their use. 
@@ -112,5 +112,5 @@ When you find yourself integrating a third-party library, make sure you encapsul
 That way your code won't be tangled with it, and when you need to update, replace for another library, or by your own implementation you'll only need to touch a single file. 
 
 
-I hope these practices are so helpful to you as they are to me. 
+I hope these practices are as helpful to you as they are to me. 
 Please share your thoughts and let me know in the comments if you would like to know more about some of these topics or about the ones that were left out.
