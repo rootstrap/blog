@@ -1,6 +1,4 @@
 # A few iOS practices that can go a long way when maintaining your projects.
-*[Germán Stábile](https://www.rootstrap.com/tech-blog/) is an iOS developer on the Rootstrap team who writes about the challenges faced during iOS development. You can also follow Germán on [LinkedIn](https://www.linkedin.com/in/german-stabile-61a1b755/).*
-
 
 ## Introduction 
 
