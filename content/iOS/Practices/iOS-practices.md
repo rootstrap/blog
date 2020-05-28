@@ -77,7 +77,7 @@ As we mentioned before we want to have a folder in the project's root for the re
 For images, Xcode provides a very helpful resource bundle named xassets. 
 Here we'll store the images our app uses. If your app has a fancy UI and uses loads of them is good to have them grouped in folders that describe their use. 
 
-Images may be heavy, and we want our apps to be as small in size as possible, so if we find yourself having to add the same image in different colors its recommended to use them as templates and color them in code instead of adding different versions of the same image. 
+Images may be heavy, and we want our apps to be as small in size as possible, so if you find yourself having to add the same image in different colors its recommended to use them as templates and color them in code instead of adding different versions of the same image. 
 Same goes for images with borders or different backgrounds, you'll save space by adding those decorations in code.  
 
 Also, the naming of the resource itself should be descriptive enough so that you'll find it quickly and makes sense in the place you reference it. 
