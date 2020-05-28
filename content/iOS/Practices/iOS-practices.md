@@ -75,7 +75,7 @@ For an example of this implementation you can check out [Rootstrap's iOS base](h
 As we mentioned before we want to have a folder in the project's root for the resources our app will need, there are many types of resources so its helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... and the list goes on.
 
 For images, Xcode provides a very helpful resource bundle named xassets. 
-Here we'll store the images our app uses, if your app has a fancy UI and uses loads of them is good to have them grouped in folders that describe their use. 
+Here we'll store the images our app uses. If your app has a fancy UI and uses loads of them is good to have them grouped in folders that describe their use. 
 
 Images may be heavy, and we want our apps to be as small in size as possible, so if we find yourself having to add the same image in different colors its recommended to use them as templates and color them in code instead of adding different versions of the same image. 
 Same goes for images with borders or different backgrounds, you'll save space by adding those decorations in code.  
