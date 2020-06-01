@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-Have you ever had to maintain or add features to a project you developed in the past and think: who wrote this and why do they hate me so much? 
+Have you ever had to maintain or add features to a project you developed in the past and thought: who wrote this and why do they hate me so much? 
 
 I think this is quite normal if we have in mind that some projects grow way bigger than we initially expected, and even when you have the best intentions, and you put lots of love and hard work in them, as you mature as a developer you start incorporating more and more practices, and the way you develop changes drastically, making it difficult and annoying to go back to older projects.
 
@@ -42,7 +42,7 @@ So the next time I want to do an update, by a glance to the root I know the feat
 
 Within file classes keep related functions together in sections organized with Marks. Some examples for controllers are: View Lifecycle, Layout, User Interaction, Protocol Implementation, etc. 
 
-It is also a nice practice to separate private functions into a private extension, so that a client at a glance at the class can differentiate the interface from the implementation.  
+It is also a nice practice to separate private functions into a private extension, so that a client can easily differentiate the interface from the implementation.  
 
 ## Architecture Patterns
 
@@ -55,7 +55,7 @@ So, let's stick to the more common ones for now.
 
 Like many others, at first I started coding in MVC, one of the simpler ones. 
 This pattern divides responsibilities into three class types: Models, Views, and Controllers. 
-Models deals with data logic, Views display the UI and the Controllers handles communication between the two, navigation, and business logic.  
+Models deal with data logic, Views display the UI and the Controllers handle communication between the two, navigation, and business logic.  
 
 The problem with this pattern is that a lot of the responsibilities fall in the controllers' job, making them huge and ugly beasts that can be a real pain to maintain, test, and reuse in the future. 
 
@@ -66,18 +66,18 @@ Business logic and communication between Models and Views are now responsibility
 
 This extra separation of concerns allows us to keep a cleaner code base as well as facilitating unit testing.
 
-There are a bunch of variations of this pattern, the most popular ones include a Coordinator that would handle navigation and flow of the app relieving view controllers from this work.  
+There are a bunch of variations of this pattern, the most popular ones include a Coordinator that handles navigation and flow of the app relieving view controllers from this work.  
 
 For an example of this implementation you can check out [Rootstrap's iOS base](https://github.com/rootstrap/ios-base) a very helpful iOS project template to let you jump into your new project quickly. Check this [article](https://www.rootstrap.com/blog/2019/10/25/whats-great-about-our-ios-base/) to find out more about why we did that and how helpful it has been for us.  
 
 ## Resource Management 
 
-As we mentioned before we want to have a folder in the project's root for the resources our app will need, there are many types of resources so its helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... and the list goes on.
+As we mentioned before, we want to have a folder in the project's root for the resources our app will need. There are many types of resources so it's helpful to organize them in different folders according to their type, for example, you may have: property lists, images, gifs, JSONs... and the list goes on.
 
 For images, Xcode provides a very helpful resource bundle named xassets. 
-Here we'll store the images our app uses. If your app has a fancy UI and uses loads of them is good to have them grouped in folders that describe their use. 
+Here we'll store the images our app uses. If your app has a fancy UI and uses loads of them it's good to have them grouped in folders that describe their use. 
 
-Images may be heavy, and we want our apps to be as small in size as possible, so if you find yourself having to add the same image in different colors its recommended to use them as templates and color them in code instead of adding different versions of the same image. 
+Images may be heavy, and we want our apps to be as small in size as possible, so if you find yourself having to add the same image in different colors it's recommended to use them as templates and color them in code instead of adding different versions of the same image. 
 Same goes for images with borders or different backgrounds, you'll save space by adding those decorations in code.  
 
 Also, the naming of the resource itself should be descriptive enough so that you'll find it quickly and makes sense in the place you reference it. 
