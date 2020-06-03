@@ -47,7 +47,7 @@ irb> posts = Post.includes(:comments)
 irb> all_comments = posts.map { |p| p.comments }
 ```
 
-Which in turn produces the following, much optimized, queries:
+Which in turn produces the following optimized queries:
 
 ```
 Post Load (0.5ms)  SELECT  "posts".* FROM "posts"
