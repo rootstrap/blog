@@ -5,7 +5,7 @@ In machine learning, we want to determine something from the available data. Eit
 The basis for ML problems is an equation that tries to define the value of a variable in function of a linear combination of other variables. The variable that we are trying to determine (dependent variable) is called target variable (Y) and the other variables (independent variables) are called predictors (Xi). The terms i are the coefficients or weights. 
 $$Y=\beta_1*X_1+ \beta_2*X_2+ ...$$
 
-The most common regression is when the target variable is numeric the method is called [Linear Regression].(https://towardsdatascience.com/the-fundamental-algorithms-of-data-science-a00dbe2c953)
+The most common regression is when the target variable is numeric the method is called [Linear Regression.](https://towardsdatascience.com/the-fundamental-algorithms-of-data-science-a00dbe2c953)
  
 ## Prediction
 Prediction implies predicting future values from past data. The most simple method used for prediction is the described Linear regression. Several models can be used for prediction, such as trees, neural networks, etc. Those models will be described in other sections.
