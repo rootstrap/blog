@@ -39,7 +39,7 @@ Then tell `saml_authenticable` module which SAML fields you want to map to your 
 "urn:mace:dir:attribute-def:email": "email"
 ```
 
-Almost done, add some configuration to your devise initializer to configure the comunication between your third party provider and devise.
+Almost done, add some configuration to your devise initializer to configure the communication between your third party provider and devise.
 You can customize the named routes generated in case of named route collisions with other Devise modules or libraries. Set the saml_route_helper_prefix to a string that will be appended to the named route.
 If saml_route_helper_prefix = 'saml' then the new_user_session route becomes new_saml_user_session
 ``` ruby
@@ -67,7 +67,7 @@ config.saml_configure do |settings|
 end
 ```
 
-Finally we need to modify devise to use our new login strategy. To achive this we will modify session management so it redirect to our third party provider like this:
+Finally, we need to modify devise to use our new login strategy. To achieve this we will modify session management so it redirects to our third party provider like this:
 
 ```ruby
 # app/controllers/admin_users/sessions_controller.rb
@@ -151,7 +151,7 @@ At this point you have 3 options to logout:
   - destroy saml session
   - force logout from your third party auth partner
 
-For this specific case we needed to perform the first one only, because logging someone out of OneLogin means they will be logged out of a lot of apps, and that was not desired.
+For this specific case, we needed to perform the first one only, because logging someone out of OneLogin means they will be logged out of a lot of apps, and that was not desired.
 Actually it was a pain in the neck to do this, because `devise_saml_authenticable` gem adds routes using `class_eval` approach directly to `Devise` engine, leaving you with almost no way to configure which routes you really want or not. You will be asking yourself `Why would I like to remove a route?`, well... that's because at this point you have 2 `admin/logout` routes in your app, and we know this is not a good practice at all.
 I ended up with this solution as the "cleanest":
 
