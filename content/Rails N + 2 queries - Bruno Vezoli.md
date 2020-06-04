@@ -168,7 +168,7 @@ Comment Load (0.9ms)  SELECT "comments".* FROM "comments" WHERE "comments"."cens
 ### Caveats
 
 As with most performance optimizations you should really measure and evaluate the changes you are about to make. It doesn't
-really make sense to add an association to your models every time you want to preload, sometimes is better to have a small
+really make sense to add an association to your models every time you want to preload, sometimes it is better to have a small
 performance penalty rather than a model full of associations.
 
 But if your queries are taking too long I really encourage you to add the corresponding associations and preload the data you need.
