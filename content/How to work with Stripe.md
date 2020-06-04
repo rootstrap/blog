@@ -48,7 +48,7 @@ Add your Stripe wrapper
 
 https://gist.github.com/fedeagripa/f2f64556a820abf9b377fa16f256d0d2
 
-## 3) START USING IT
+## 3) START USING PAYMENTS WITH STRIPE
 
 ### CREDIT CARDS
 
@@ -119,7 +119,7 @@ This is a really important one! It tells us when a payment is actually accepted 
 There are a lot of them and they will solve most of your problems, the only downcase is the headache trying to understand which exactly to use.
 I'm sorry to dissapoint you if you reached here trying to answer this question but up to now I only know [this page](https://stripe.com/docs/api/events/types) that explains the different existing webhooks and what they do. The other option is when you go to create a webhook from the developer's Stripe dashboard, they explain a bit more in detail what each event does.
 
-## 4) SPECIAL RECOMMENDATIONS
+## 4) SPECIAL RECOMMENDATIONS FOR FURTHER PAYMENT IMPLEMENTATION
 Keep these Stripe documentation pages as your friends:
  - [Devs api](https://stripe.com/docs/api/)
  - [Events types](https://stripe.com/docs/api/events/types)
