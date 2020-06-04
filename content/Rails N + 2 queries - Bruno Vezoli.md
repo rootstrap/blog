@@ -56,7 +56,7 @@ Comment Load (1.4ms)  SELECT "comments".* FROM "comments" WHERE "comments"."post
 
 And so we start using `#includes` on all our ActiveRecord queries and move on.
 
-### A little ways down the road
+### A little ways down the road: changes to queries invalidate data preloading
 
 Time passes and requirements change, it's only normal. Now we need to only show posts that are uncensored and we change
 our query to reflect that:
@@ -83,7 +83,7 @@ Now we have the N + 1 queries we had in the beginning and also an additional que
 just iterate the comments collection and select posts that are not censored. Well, in this simple example, it could. But if we start doing
 some more complex queries and adding raw SQL fragments it's going to get a lot more difficult.
 
-### Add Bullet, duh
+### Adding Bullet to log N + 1 queries
 
 I agree that [Bullet](https://github.com/flyerhzm/bullet) is a must have in any project, no matter how big or small. It's
 very difficult to catch every N + 1 in every query we build and it's even harder to detect cases like this where we should no longer
@@ -117,7 +117,7 @@ Comment Load (0.2ms)  SELECT  "comments".* FROM "comments" WHERE "comments"."pos
 
 So we are back to square one but this time we have no bullet warnings, so what should we do?
 
-### Solution: scoped associations
+### What are the solutions to preloading custom queries?
 
 There are two solutions (at least that I know of) to this performance problem. The first one is to use [Rails' preloader](https://github.com/rails/rails/blob/master/activerecord/lib/active_record/associations/preloader.rb#L45)
 but as you may guess from the `:nodoc:` directive that's a private class not meant to be used outside the framework. I'm not going
@@ -165,7 +165,7 @@ Post Load (0.5ms)  SELECT  "posts".* FROM "posts"
 Comment Load (0.9ms)  SELECT "comments".* FROM "comments" WHERE "comments"."censored" = $1 AND "comments"."post_id" IN ($2, $3, $4, $5, $6)  [["censored", false], ["post_id", 1], ["post_id", 2], ["post_id", 3], ["post_id", 4], ["post_id", 5]]
 ```
 
-### Caveats
+### Caveats: Evaluate performance optimizations
 
 As with most performance optimizations you should really measure and evaluate the changes you are about to make. It doesn't
 really make sense to add an association to your models every time you want to preload, sometimes is better to have a small
@@ -174,7 +174,7 @@ performance penalty rather than a model full of associations.
 But if your queries are taking too long I really encourage you to add the corresponding associations and preload the data you need.
 
 
-#### Bonus
+#### Bonus: how to preload belongs_to associations
 
 This method also works for cases when you need to just fetch one record. Let's use the blog example and add a use case where
 we need the most liked comment from each Post:
