@@ -8,7 +8,7 @@ In this blog post, you’ll learn how to configure two factor authentication wit
 
 
 ##
-**1) Some key concepts**
+**1) Some key concepts to security**
 
  - SLO (Single log out): SLO is a process that allows users to be logged out in one place and spread it over multiple applications
 
@@ -18,7 +18,7 @@ In this blog post, you’ll learn how to configure two factor authentication wit
 
 
 ##
-**2) How to start with all this work?**
+**2) How to start implementing two factor authentication?**
 
 
 First take a look at this lovely [gem](https://github.com/apokalipto/devise_saml_authenticatable), you will notice that all the examples are for the `User` class, but don't worry we will show some examples for admin specifically
