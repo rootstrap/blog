@@ -20,17 +20,12 @@
 
 #### :file_folder: Categories
 
-<!--- Please, add a category for the post. Select one of the following: `Web apps`, `Mobile apps`, `Backend`, `Design`, `Machine Learning`, `QA`,`DevOps` --->
-<!--- If it's not included there, you can use `Engineering`--->
+<!--- Please, add a category for the post. Select one of the following: Web apps, Mobile apps, Backend, Design, Machine Learning, QA, DevOps, Project Management, Agile --->
 <!--- Let us know if you think we need to create a new category. --->
-
-- [ ] Category added
 ---
 #### :mag: Keywords:
 
 <!--- List the keywords/tags that can be used to search for this post. --->
-<!--- Try to add at least one of the following tags (if apply): `ruby`, `rails`, `python`, `django`, `ios`, `swift`, `android`, `react`, `machine learning`, `data science`, `reactjs`, `artificial intelligence`.--->
+<!--- Try to add at least one of the following tags (if apply): ruby, rails, python, django, ios, swift, android, react, machine learning, data science, reactjs, artificial intelligence.--->
 <!--- You can add more tags. For example: performance, gem, algorithms, etc. --->
-
-- [ ] Technology tag added
 ---
