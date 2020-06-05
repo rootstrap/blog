@@ -16,32 +16,38 @@ This method is based on the eigenvectors. It tries to represent the maximum vari
 These are steps followed to find the principal components:    
 **Step 1** Standardize data.      
 **Step 2** Calculate the correlation matrix.      
-**Step 3** Find eigenvalues $$1,2,...,p$$ -> variance and eigenvectors $$a1,a2,...,ap$$ -> principal components.
+**Step 3** Find eigenvalues ![](https://render.githubusercontent.com/render/math?math=%5Clambda_1%2C%5Clambda_2%2C...%2C%5Clambda_p) -> variance and eigenvectors ![](https://render.githubusercontent.com/render/math?math=a_1%2Ca_2%2C...%2Ca_p) -> principal components.
 
-$$Z_i= a_{i1}*x_1\space + \space a_{i2}*x2\space +\space ...\space +\space a_{ip}*xp\space$$      
+![](https://render.githubusercontent.com/render/math?math=Z_i%3D%20a_%7Bi1%7D*x_1%2B%20a_%7Bi2%7D*x_2%20%2B...%20%2Ba_%7Bip%7D*x_p)
 
-$$\lambda_1 >= \lambda_2>=...>=\lambda_p>=0$$    
+![](https://render.githubusercontent.com/render/math?math=%5Clambda_1%20%5Cgeq%20%5Clambda_2%5Cgeq...%5Cgeq%20%5Clambda_p%5Cgeq%200)
 
-$$a_{i1}^2+a_{i2}^2+...+a_{ip}^2=1$$    
+![](https://render.githubusercontent.com/render/math?math=a_%7Bi1%7D%5E2%2Ba_%7Bi2%7D%5E2%2B...%2Ba_%7Bip%7D%5E2%3D1)
 
-$$Maximize\space Var(Z_i)= i$$   
+Maximize ![](https://render.githubusercontent.com/render/math?math=Var(Z_i)%3D%20i)
 
 
 * **First principal component**     
-$$Z1= a_{11}*x_1+a_{12}*x_2+...+a_{1p}*xp$$  
-$$Maximize \space Var(Z_1)$$                
+![](https://render.githubusercontent.com/render/math?math=Z1%3D%20a_%7B11%7D*x_1%2Ba_%7B12%7D*x_2%2B...%2Ba_%7B1p%7D*xp)
+
+Maximize ![](https://render.githubusercontent.com/render/math?math=Var(Z_i))    
+               
 Linear combination of the original variables which maximize the variance of the data.
 
 * **Second principal component**      
-$$Z2= a_{21}*x_1+a_{22}*x_2+...+a_{2p}*x_p$$      
+$$$$      
 $$Corr(Z_1,Z_2)=0$$        
 Is chosen perpendicular to the first principal component.
 
 
-* **Third principal component**.   
-$$Z_3=a_{31}*x_1+a_{32}*x_2+...+a_{3p}*x_p$$            
-$$Corr(Z1,Z3)=0$$     
-$$Corr(Z2,Z3)=0$$       
+* **Third principal component**         
+![](https://render.githubusercontent.com/render/math?math=Z_2%3D%20a_%7B21%7D*x_1%2Ba_%7B22%7D*x_2%2B...%2Ba_%7B2p%7D*x_p)
+
+![](https://render.githubusercontent.com/render/math?math=Z_3%3Da_%7B31%7D*x_1%2Ba_%7B32%7D*x_2%2B...%2Ba_%7B3p%7D*x_p)
+![](https://render.githubusercontent.com/render/math?math=Corr(Z_1%2CZ_3)%3D0)
+
+![](https://render.githubusercontent.com/render/math?math=Corr(Z_2%2CZ_3)%3D0)
+
 Uncorrelated with the other 2 principal components. 
 
 **Step 4:** Discard any components that account for a small proportion of the variance in the data.
@@ -57,16 +63,16 @@ Retain just enough components to explain a large percentage of total variation o
 
 **Confirmatory Factor Analysis:** Test whether a specific factor model provides an adequate fit for the covariances or correlations between the manifest variables. 
 
-$$Z_i=\lambda_{i1}*f1+i2f2+...+ikfk +ui$$
+![](https://render.githubusercontent.com/render/math?math=Z_i%3D%5Clambda_%7Bi1%7D*f_1%2B%5Clambda_%7Bi2%7Df_2%2B...%2B%5Clambda_%7Bik%7Df_k%20%2Bu_i)
 
-$$Z_i=x_i-x_{ii}$$ z-score  
-$$\lambda_{ij}$$ coefficients (loadings)              
+![](https://render.githubusercontent.com/render/math?math=Z_i%3Dx_i-x_%7Bii%7D) z-score  
+![](https://render.githubusercontent.com/render/math?math=%5Clambda_%7Bij%7D) coefficients (loadings)                 
 k<q k number of factors, q number of variables        
-$$f_i$$ factors(latent variables):      
-$$f_1, f_2,...,f_k$$   uncorrelated
+![](https://render.githubusercontent.com/render/math?math=f_i) factors(latent variables):      
+![](https://render.githubusercontent.com/render/math?math=f_1%2C%20f_2%2C...%2Cf_k)  uncorrelated
 scaled (mean=0 and standard deviation=1)              
-$$u_i$$ error
-$$u_i, u_2,...,u_k$$ uncorrelated with each other and with factors $$f_1, f_2,...,f_k$$
+![u_i](https://render.githubusercontent.com/render/math?math=u_i) error
+![](https://render.githubusercontent.com/render/math?math=u_i%2C%20u_2%2C...%2Cu_k) uncorrelated with each other and with factors ![](https://render.githubusercontent.com/render/math?math=f_1%2C%20f_2%2C...%2Cf_k)
 
 
 
