@@ -127,6 +127,6 @@ Keep these Stripe documentation pages as your friends:
 Sometimes there are two or even three ways of solving a problem, so consider this and take your time to analyze each requirement properly before you start coding.
 
 ## 5) CONCLUSIONS
-You can easily add online payments to your app and test it in just 1 week (or so), thats amazing! The other amazing thing is that you can start managing most of the daily based situations like fraud of disputes just from the dashboard (you don't need to keep coding).
+You can easily add online payments to your app and test it in just 1 week (or so), that's amazing! The other amazing thing is that you can start managing most of the daily based situations like fraud of disputes just from the dashboard (you don't need to keep coding).
 
 The difficult part of this is when you start adding more concrete and detailed transactions and supporting multiple transfer types (like bank account transfers instead of just Visa or MasterCard). So if you liked this post and want to know more don't hesitate to leave some comments asking for it!
