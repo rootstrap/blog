@@ -100,7 +100,7 @@ There are two types of coupons `percentage` & `fixed amount`, and any of them ca
 Another useful case that is worth mentioning is to apply a coupon to a user, this means that they will have a positive balance for any future invoice (be careful if you charge users with multiple products)
 
 ### SUBSCRIPTION ITEMS
-These are your billing items, so for the case of a web subscription you will just have 1 subscription item. For specific cases like an amazon cart or any complicated use case (where you have multiple items being added to a purchase) is where you have to start considering adding some specific logic to your app.
+These are your billing items, so for the case of a web subscription, you will just have 1 subscription item. For specific cases like an amazon cart or any complicated use case (where you have multiple items being added to purchase) is where you have to start considering adding some specific logic to your app.
 I won't get really into detail about this, I just wanted to show the general concept behind this, maybe I will write more in detail in a future post.
 
 ##### RENEWALS
