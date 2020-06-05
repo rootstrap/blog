@@ -74,13 +74,41 @@ scaled (mean=0 and standard deviation=1)
 ![u_i](https://render.githubusercontent.com/render/math?math=u_i) error
 ![](https://render.githubusercontent.com/render/math?math=u_i%2C%20u_2%2C...%2Cu_k) uncorrelated with each other and with factors ![](https://render.githubusercontent.com/render/math?math=f_1%2C%20f_2%2C...%2Cf_k)
 
+![](https://render.githubusercontent.com/render/math?math=Var(Zi)%3D%5Clambda_%7Bi1%7D%5E2Var(f_1)%2B%5Clambda_%7Bi2%7D%5E2Var(f_2)%2B...%2B%5Clambda_%7Bik%7D%5E2Var(f_k)%20%2BVar(u_i)%20)
+
+![](https://render.githubusercontent.com/render/math?math=Var(Z_i)%3D1%2C%20Var(f_i)%20%3D1)
+
+![](https://render.githubusercontent.com/render/math?math=%5CRightarrow%201%3D%5Clambda_%7Bi1%7D%5E2%2B%5Clambda_%7Bi2%7D%5E2%2B...%2B%5Clambda_%7Bik%7D%5E2%20%2BVar(u_i))
+
+![](https://render.githubusercontent.com/render/math?math=%5CRightarrow%201-(%5Clambda_%7Bi1%7D%5E2%2B%5Clambda_%7Bi2%7D%5E2%2B...%2B%5Clambda_%7Bik%7D%5E2)%20%3D%20Var(u_i))
+
+*Observations:
+Lower uniqueness is better
+If uniqueness is negative, the model is wrong.*
+
+**EFA vs PCA:**        
+* EFA explains the *covariance* or correlation of the observed variables. PCA explains the *variance* of observed variables.       
+* In EFA If the number of factors changes, there might be changes on the factors. Whereas in PCA, for different numbers of PCs, the first principal components do not change.
 
 
+### Factor rotation
+For the purpose of easier interpretation, we can change the value of the factors loadings without changing the mathematical properties. Either for EFA or PCA, we can apply a rotation. 
 
+There are two types of rotation:          
+* **Orthogonal rotation:** restricts factors to be uncorrelated. Multiplies the loading matrix by an orthogonal matrix. The correlation matrix for the factors after the rotation is the identity matrix. An example of this method is the **varimax rotation**, which maximizes the sum of the variances of squared loadings of all factors.      
+* **Oblique rotation:** allows correlated factors. Multiplies the loadings matrix by a non orthogonal matrix.        
 
+**Degree of freedom:** corresponds to the number of variables that are free to change.
 
+![](https://render.githubusercontent.com/render/math?math=df%3D%5Cfrac%7B1%7D%7B2%7D(q-k)%5E2-%5Cfrac%7B1%7D%7B2%7D(q%2Bk))
 
+* If df>0 There are multiple solutions.      
+* If df=0 The rotation has no effect. Always gets the same solution.
 
+While PCA and EFA are the basic dimension reduction methods, there are other techniques that can be used:     
+* T-SNE that works well for visualizing high dimensional datasets.    
+* LSA for text processing.     
+* SVD for noise reduction in digital signal processing       
 
-
-
+# Conclusion
+So, applying dimension reduction can be the solution for overfitting as well as multicollinearity problems. Since datasets nowadays are very complex with too many variables, its usage is very common and has been the key to prevent many headaches. In addition, reducing the dimension of your data can help you to better understand your model and be able to explain it more clearly.  
