@@ -20,7 +20,7 @@
 
 #### :file_folder: Categories
 
-<!--- Please, add a category for the post. Select one of the following: Web apps, Mobile apps, Backend, Design, Machine Learning, QA, DevOps, Project Management, Agile --->
+<!--- Please, add a category for the post. Select one of the following: Web apps, Mobile apps, Backend, Design, Machine Learning, Data Science, QA, DevOps, Project Management, Agile --->
 <!--- Let us know if you think we need to create a new category. --->
 ---
 #### :mag: Keywords:
