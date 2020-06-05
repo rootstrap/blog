@@ -35,18 +35,20 @@ Maximize ![](https://render.githubusercontent.com/render/math?math=Var(Z_i))
 Linear combination of the original variables which maximize the variance of the data.
 
 * **Second principal component**      
-$$$$      
-$$Corr(Z_1,Z_2)=0$$        
+
+![](https://render.githubusercontent.com/render/math?math=Corr(Z_1%2CZ_2)%3D0)
+       
 Is chosen perpendicular to the first principal component.
 
 
 * **Third principal component**         
-![](https://render.githubusercontent.com/render/math?math=Z_2%3D%20a_%7B21%7D*x_1%2Ba_%7B22%7D*x_2%2B...%2Ba_%7B2p%7D*x_p)
+![](https://render.githubusercontent.com/render/math?math=Z_2%3D%20a_%7B21%7D*x_1%2Ba_%7B22%7D*x_2%2B...%2Ba_%7B2p%7D*x_p)        
 
 ![](https://render.githubusercontent.com/render/math?math=Z_3%3Da_%7B31%7D*x_1%2Ba_%7B32%7D*x_2%2B...%2Ba_%7B3p%7D*x_p)
-![](https://render.githubusercontent.com/render/math?math=Corr(Z_1%2CZ_3)%3D0)
 
-![](https://render.githubusercontent.com/render/math?math=Corr(Z_2%2CZ_3)%3D0)
+![](https://render.githubusercontent.com/render/math?math=Corr(Z_1%2CZ_3)%3D0)      
+
+![](https://render.githubusercontent.com/render/math?math=Corr(Z_2%2CZ_3)%3D0)      
 
 Uncorrelated with the other 2 principal components. 
 
