@@ -26,7 +26,7 @@ These mental shortcuts are applied when there is uncertainty during the decision
 
 **Anchoring and Adjustment:** when an initial piece of information is used as an anchor or reference point then adjustments are made to post judgments around that anchor. Thus, there is a tendency to rely too heavily on the reference point and this can lead people to make wrong estimations.      
 
-1. **Insufficient anchor adjustment:** making estimates for values basing on an initial value derived from past data, and make insufficient adjustment form that anchor when establishing the final value.      
+1. **Insufficient anchor adjustment:** making estimates for values based on an initial value derived from past data, and making insufficient adjustment from that anchor when establishing the final value.      
 2. **Conjunctive and disjunctive events:** overestimating the probability of conjunctive events and underestimating the probability of disjunctive events.     
 3. **Overconfidence:** people usually are overconfident about the infallibility of their judgments. 
 
