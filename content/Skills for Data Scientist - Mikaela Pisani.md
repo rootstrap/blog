@@ -3,11 +3,8 @@
 
 # SKILLS FOR DATA SCIENTISTS
 
-<img src="https://cdn.pixabay.com/photo/2018/09/15/19/52/analytics-3680198_960_720.png"
-     alt="Skills for Data Scientists"
-     width="550" height="450"
-     align="middle"/>
-
+![Data Scientists](images/Skills-Data-Scientist-v1.png)
+  
 Being a data scientist requires a mix of skills that anyone can develop. You only need patience, time and be willing to undergo a process of trial and error. You need to understand businesses and be able to adapt to different situations according to the business’ needs. Another important skill is basic statistics to understand how the algorithms work and remove the idea that the algorithms are magic, it’s just math and computational power. Although some programming skills are needed to develop the models, you do not need to be a programmer. 
 
 ## Business 
