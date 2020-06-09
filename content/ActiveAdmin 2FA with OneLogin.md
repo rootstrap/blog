@@ -26,98 +26,24 @@ First take a look at this lovely [gem](https://github.com/apokalipto/devise_saml
 The specific lines you need to add are just a few ones:
 
 First add the devise `saml_authenticable` module from our choosen gem, this will inject most of the needed capabilities.
-``` ruby
-# app/models/admin_user.rb
 
-devise :recoverable, :rememberable, :trackable, :validatable, :lockable, :saml_authenticatable
-```
+https://gist.github.com/fedeagripa/063d8ba4294aa19d95a18372ef6768f8
 
 Then tell `saml_authenticable` module which SAML fields you want to map to your model ones
-``` ruby
-# config/attribute-map.yml
 
-"urn:mace:dir:attribute-def:email": "email"
-```
+https://gist.github.com/fedeagripa/4f1567469b1310afced11af949fb511c
 
 Almost done, add some configuration to your devise initializer to configure the communication between your third party provider and devise.
 You can customize the named routes generated in case of named route collisions with other Devise modules or libraries. Set the saml_route_helper_prefix to a string that will be appended to the named route.
 If saml_route_helper_prefix = 'saml' then the new_user_session route becomes new_saml_user_session
-``` ruby
-# config/initializers/devise.rb
 
-config.saml_route_helper_prefix = 'saml'
-callback = Rails.env.development? ? 'http://localhost:3000' : ENV['SAML_CALLBACK_ADDRESS']
-# SAML configuration
-config.saml_create_user = true
-config.saml_update_user = true
-config.saml_default_user_key = :email
-config.saml_session_index_key = :session_index
-config.saml_use_subject = true
-config.idp_settings_adapter = nil
-config.saml_configure do |settings|
-  settings.assertion_consumer_service_url     = "#{callback}/admin/saml/auth"
-  settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-  settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
-  settings.issuer                             = "#{callback}/admin/saml/metadata"
-  settings.authn_context                      = ""
-  settings.idp_slo_target_url                 = "https://company.onelogin.com/trust/saml2/http-redirect/slo/#{Rails.env.development? ? '1234' : ENV['SLO_TARGET']}"
-  settings.idp_sso_target_url                 = "https://company.onelogin.com/trust/saml2/http-post/sso/#{Rails.env.development? ? 'you_sso_string' : ENV['SSO_TARGET']}"
-  settings.idp_cert_fingerprint               = Rails.env.development? ? 'your_cert_fingerprint' : ENV['IDP_CERT_FINGERPRINT']
-  settings.idp_cert_fingerprint_algorithm     = 'http://www.w3.org/2000/09/xmldsig#sha256'
-end
-```
+https://gist.github.com/fedeagripa/8ac3e511401d718661d60c8bb185682b
 
 Finally, we need to modify devise to use our new login strategy. To achieve this we will modify session management so it redirects to our third party provider like this:
 
-```ruby
-# app/controllers/admin_users/sessions_controller.rb
+https://gist.github.com/fedeagripa/dbcc29097f3e4c2d0b75c36a16af3c6e
 
-module AdminUsers
-  class SessionsController < Devise::SessionsController
-    # As you are overwriting devise session controller you need this to allow to login with user & pass (dev mode)
-    prepend_before_action :require_no_authentication, only: [:new, :create]
-
-    layout 'active_admin_logged_out'
-    helper ::ActiveAdmin::ViewHelpers
-
-    def new
-      unless Rails.env.development? || Rails.env.test?
-        return redirect_to :new_saml_admin_user_session
-      end
-
-      super
-    end
-  end
-end
-```
-
-```ruby
-# config/initializers/active_admin_devise.rb
-module ActiveAdmin
-  module Devise
-    def self.controllers
-      {
-        sessions: "admin_users/sessions",
-        passwords: "active_admin/devise/passwords",
-        unlocks: "active_admin/devise/unlocks",
-        registrations: "active_admin/devise/registrations",
-        confirmations: "active_admin/devise/confirmations"
-      }
-    end
-
-    def self.controllers_for_filters
-      [
-        ::AdminUsers::SessionsController,
-        SessionsController,
-        PasswordsController,
-        UnlocksController,
-        RegistrationsController,
-        ConfirmationsController,
-      ]
-    end
-  end
-end
-```
+https://gist.github.com/fedeagripa/fdf179b625787ee4b9287d82ee59da51
 
 ###
 **And that's all? wow!!!**
@@ -135,14 +61,7 @@ We need to check:
 
 To perform the first two points I ended up adding the next lines to our overridden sessions_controller, seems that they are lost from super as you override it
 
-``` ruby
-# app/controllers/admin_users/sessions_controller.rb
-
-prepend_before_action :require_no_authentication, only: [:new, :create]
-prepend_before_action :allow_params_authentication!, only: :create
-prepend_before_action :verify_signed_out_user, only: :destroy
-prepend_before_action(only: [:create, :destroy]) { request.env["devise.skip_timeout"] = true }
-```
+https://gist.github.com/fedeagripa/69a868ad03da582a17a4593848a5aecf
 
 **How logout works**
 
@@ -155,31 +74,8 @@ For this specific case, we needed to perform the first one only, because logging
 Actually it was a pain in the neck to do this, because `devise_saml_authenticable` gem adds routes using `class_eval` approach directly to `Devise` engine, leaving you with almost no way to configure which routes you really want or not. You will be asking yourself `Why would I like to remove a route?`, well... that's because at this point you have 2 `admin/logout` routes in your app, and we know this is not a good practice at all.
 I ended up with this solution as the "cleanest":
 
-``` ruby
-# config/initializers/devise.rb
+https://gist.github.com/fedeagripa/00b1f67f762008677a71ea4913568c23
 
-ActionDispatch::Routing::Mapper.class_eval do
-  protected
-  def devise_saml_authenticatable(mapping, controllers)
-    if ::Devise.saml_route_helper_prefix
-      prefix = ::Devise.saml_route_helper_prefix
-      resource :session, only: [], controller: controllers[:saml_sessions], path: '' do
-        get :new, path: 'saml/sign_in', as: "new_#{prefix}"
-        post :create, path: 'saml/auth', as: prefix
-        get :metadata, path: 'saml/metadata'
-        match :idp_sign_out, path: 'saml/idp_sign_out', as: "idp_destroy_#{prefix}", via: [:get, :post]
-      end
-    else
-      resource :session, only: [], controller: controllers[:saml_sessions], path: '' do
-        get :new, path: 'saml/sign_in', as: 'new'
-        post :create, path: 'saml/auth'
-        get :metadata, path: 'saml/metadata'
-        match :idp_sign_out, path: 'saml/idp_sign_out', via: [:get, :post]
-      end
-    end
-  end
-end
-```
 You can add last lines at the end of your devise initializer, or even better create a new initializer that run after devise one.
 
 
