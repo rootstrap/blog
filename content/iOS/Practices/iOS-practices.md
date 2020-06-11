@@ -46,7 +46,7 @@ It is also a nice practice to separate private functions into a private extensio
 
 ## Architecture Patterns
 
-Be very mindful of the pattern you are gonna follow in your new project and stick with it! 
+Be very mindful of the pattern you are going to follow in your new project and stick with it! 
 
 There's no right answer on what pattern to follow, it depends a lot on your project. I won't be enumerating every option as there are so many, and new ones keep being invented every day according to the new challenges we face as time passes, and we start seeing flaws in the existent ones.
 So, let's stick to the more common ones for now. 
