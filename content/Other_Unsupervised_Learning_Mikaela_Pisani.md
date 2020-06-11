@@ -23,9 +23,13 @@ The anomalies can be classified into three categories:
 - Collective: when a set of data points is anomalous in comparison to the rest of the data.
 
 ## Association rules
-The objective for [association rules](https://towardsdatascience.com/association-rules-2-aa9a77241654) is to discover relationships between variables by identifying rules in the data. For example, people who generally buy A and B, also buy C. From this discovery,  promotions can be offered or develop a marketing strategy. 
-![](images/OtherUnsupervisedLearning.jpg)
+The objective for [association rules](https://towardsdatascience.com/association-rules-2-aa9a77241654) is to discover relationships between variables by identifying rules in the data. For example, people who generally buy A and B, also buy C. From this discovery,  promotions can be offered or develop a marketing strategy.          
 
+<img src="images/OtherUnsupervisedLearning.png"
+     alt="Probability tree"
+     width="250" height="200"
+     align="middle"/>
+ </center>    
 
 The rules are represented in a IF-THEN format. In the example of the image, A and B are called antecedent (the IF part), and C the consequent (the THEN part). The list of items in the antecedent and the consequent is called itemset.  
 
