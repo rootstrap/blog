@@ -1,0 +1,16 @@
+# **Refactoring**
+
+In this blog post, ...
+
+
+## 1) WHY TO DO REFACTORING?
+
+## 2) WHEN TO DO REFACTORING?
+
+## 3) CODE SMELLS
+
+## 4) ROLE OF TESTING
+
+## 5) MECHANICS OF A REFACTORING
+
+## 6) SOME EXAMPLES
