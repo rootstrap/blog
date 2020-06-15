@@ -45,7 +45,7 @@ Here are examples of how using those hooks might look like versus their plain An
 
 ##### Example of sequence animation
 
-https://giphy.com/gifs/hQcYhmrFy7aXFReeR7
+![](https://media.giphy.com/media/hQcYhmrFy7aXFReeR7/giphy.gif)
 
 https://gist.github.com/fernandatoledo/4e0b35f95745bdc0ea3ab8ba24cc1776
 
@@ -55,7 +55,7 @@ In this example there are two animations taking place in sequence, an horizontal
 
 ##### Example of parallel animation
 
-https://giphy.com/gifs/QTxxds3ZqTedzYYFFr
+![](https://media.giphy.com/media/QTxxds3ZqTedzYYFFr/giphy.gif)
 
 https://gist.github.com/fernandatoledo/8b136ef05d67ac73836a8615130f68ca
 
@@ -99,8 +99,14 @@ Please leave a comment, we would love to know your thoughts on this.
 ### References
 
 [1] https://medium.com/react-native-training/react-native-animations-using-the-animated-api-ebe8e0669fae
+
 [2] https://reactnative.dev/docs/animations
+
 [3] https://medium.com/@benjamintodts/react-natives-animated-loop-invoking-a-callback-whenever-an-iteration-finishes-1c3581d38d54
+
 [4] https://medium.com/@GroundControl/animating-gradients-in-react-native-8853dbd97d02
+
 [5] https://blog.bitsrc.io/making-animations-in-react-native-the-simplified-guide-6580f961f6e8
+
 [6] https://blog.bitsrc.io/top-5-animation-libraries-in-react-native-d00ec8ddfc8d
+
