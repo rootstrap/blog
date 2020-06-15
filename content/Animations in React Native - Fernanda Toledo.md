@@ -1,9 +1,5 @@
 ### Working with animations in React Native
 
-*[Style: Heading 2, Bold, Color: Black]*
-
-The title in a post is very important. Generally, it is what catches the reader's attention, particularly for those who are searching for a solution among many posts. It should be clear, straightforward, and avoid any confusing terminology.
-
 ### The cover image
 
 Always try to include a cover image at the beginning of the post, as it helps catching the attention of the reader.
@@ -11,55 +7,100 @@ Here are some links to find images: https://unsplash.com, https://www.pexels.com
 
 ### The introduction
 
-*[Style: Heading 3, Bold, Color: Black]*
+As mobile developers who have worked with animations before, we know how hard it can be to implement complex animations from scratch. That's why we decided to engineer a simple yet powerful React Native animation hooks library that can give you a head start when developing your animations. It will also help you understand how animations work at their core and break down more complex animations.
 
-The first paragraph or two, after the cover image, will either convince the reader to stay on or lose their attention. Start off with a little bit of context to help people understand where your post fits into the big picture.
+### Animated API
 
-Try not to include technical details. You can talk about your background, why you are writing and which is the target audience of the post.
+React Native provides us with an Animated API that allows us to animate several of their components. It does that by exposing a broad range of animation types and auxiliary functions. That being said it can be a bit daunting if you are trying to tackle your first animation. 
 
-### Writing the details
+Our hook library uses this API under the hood but simplifies how animations are implemented by the developer.
 
-Now that you’ve told your readers what to expect, give it to them! Feel free to go into as much detail as you need.
+#### The Basics
 
-Use sections to help people understand where they are, and enable them to skip around to the content they are most interested in. Breaking sections down into subsections makes things easier to manage for you as a writer and allows readers to quickly pick up where they stop.
+To understand how the Animated API works let's just show a basic example of `Animated.timing()`, which is the most commonly used animation type.
+ 
+<script src="https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e.js"></script>
 
-*Sections titles*  
-*[Style: Heading 3, Bold, Color: Black]*   
-*Subsections titles*  
-*[Style: Heading 4, Bold, Color: Black]*
+What we are doing here is creating a variable that will contain the value that we will be animating. We use `useRef` since the returned value will persist for the full lifetime of the component.
+Then we take that variable and feed it to the `animated.timing()` method that transitions the initial value we set in the variable to the final value we provide in `toValue`.
+By passing the current value of the ref variable to a style property of a given animated component, said component is re-rendered on a high priority thread, which will make your animations run smoothly.
+Did you get lost already? The same happened to us, that's why we created our hook library.
 
-Use [Github Gists](https://help.github.com/en/articles/about-gists) for displaying code if necessary. Don’t be lazy and use the native code block. Code presentation matters for your readers to read properly.
+### Our first animation hook
 
-Avoid talking about things which the reader may already know. Basically, take into account who is supposed to read the post when explaining your ideas. Also, when using images always ask yourself: does this image add any value? If the answer is no, then you should omit it.
+Given our experience, we've identified a repetitive pattern among React Native animations. Opacity, translations, rotations, size, scale, and background color transition. All of these animations share very similar code. That's why we started this project by creating a simple hook that is much easier to use in hopes that more developers would be willing to give animations a try. The hook covers the basics but you would be surprised how much value a simple animation can add.
 
-Keep the length of the post between 1200 and 1500 words. If it takes more than that, consider separating it into parts and have links to each of them.
+Let's take a look at the first example we provided above but this time using the `useAnimate` hook:
+<script src="https://gist.github.com/aguscha333/956eeed3d174351f8fddde25aa60888a.js"></script>
+
+As you can see with just a few simple lines you can have your opacity animation. With the same simplicity, you can start animating background colors, translations to get objects moving, rotations, and much more.
+
+#### How to handle a bit more complex animations?
+
+Although the useAnimate hook covers most transitions that you would want to do, there are some limitations to it. The useAnimate hook is most useful for atomic transitions and by that we mean that it is perfect for animating one thing at a time. If you want to run parallel animations or sequences, you might need to use some functionalities that the basic hook simply does not cover. For these cases, we have two extra hooks that can help.
+
+This project started as just one basic animation hook. Later on, while developing a demo app for showcasing purposes, we started fiddling around with what the Animated API has to offer and we ended up creating two more hooks, one for running parallel animations and one for running them in sequence.
+
+Here are examples of how using those hooks might look like versus their plain Animated API counterparts. 
+
+##### Example of sequence animation
+
+https://giphy.com/gifs/hQcYhmrFy7aXFReeR7
+
+https://gist.github.com/fernandatoledo/4e0b35f95745bdc0ea3ab8ba24cc1776
+
+https://gist.github.com/fernandatoledo/2b2813757178ecae28851457e15b1160
+
+In this example there are two animations taking place in sequence, an horizontal and a vertical translation, each happening one at a time, the following one starts right after the current animation is finished.
+
+##### Example of parallel animation
+
+https://giphy.com/gifs/QTxxds3ZqTedzYYFFr
+
+https://gist.github.com/fernandatoledo/8b136ef05d67ac73836a8615130f68ca
+
+<script src="https://gist.github.com/fernandatoledo/cf154351050339d862798b043c3cfeb9.js"></script>
+
+In this example multiple animations are taking place in parallel, there's a vertical and horizontal translation, along with rotation.
+
+#### Our Library
+
+In order to make our hooks readily available to any developer that wants to start their React Native animations journey, we created a library that contains the hooks described in this article. You can try it out by just running on your react native project folder:
+```
+yarn add @rootstrap/react-native-use-animate
+```
+Or
+```
+npm install @rootstrap/react-native-use-animate --save
+```
+
+#### Alternatives
+
+While reading this post you might have asked yourself, are there any alternative libraries out there that do this? And the answer is yes. To name a few of the most well-known ones we have [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated), [react-native-animatable](https://github.com/oblador/react-native-animatable), [react-native-motion](https://github.com/xotahal/react-native-motion), [Lottie](https://airbnb.io/lottie).
+
+They all serve different purposes and depending on what you need to implement you might decide to go for one or the other. One thing that they all have in common is that they cover a lot of ground with their APIs and that is good. At the same time if you are just getting started and want to do a simple animation there are two drawbacks that we found. First, kind of the same issue we mentioned about React Native's own Animated API, there are too many options and a lot to read in order to get used to it which could be overwhelming. Second, these are rather big libraries, some bigger than others but overall, they all pack things that are not needed if you are just looking to lift up your application a bit by adding a simple animation here and there.
+
+This is why we believe that our library has its own distinct purpose and can coexist with the other alternatives out there. As we mentioned before our library is ideal for people that are just getting started or want to implement simple animations.
+
 
 ### Summary
 
-*[Style: Heading 3, Bold, Color: Black]*
+Getting started with animations in React Native can be a bit overwhelming so we created a library to simplify this process and make it more inviting for developers that might have been on the fence about adding animations to their apps.
 
-After explaining everything, don't just end the post there. If your reader has made it all the way there, they really care. Give them a quick summary of what they learned, a pat on the back for reading, and maybe even some possible applications. Also, if it's a series of posts, give a general overview of the next part and make clear if it is ready by adding the link.
+We hope that the React Native community starts using this library and that we start getting feedback so we can continue to improve the library and provide a better experience for beginners.
+
+Remember that to get started you can just simply add the library by using `npm` or `yarn`.
+
+You can always check the source code here and contributions are always welcomed.
+
+Please leave a comment, we would love to know your thoughts on this.
+
 
 ### References
 
 [1] https://medium.com/react-native-training/react-native-animations-using-the-animated-api-ebe8e0669fae
-
-[2] https://reactnative.dev/docs/animated#__docusaurus
-
-### Guidelines
-
-- Define a good title.
-- Use sections and subsections.
-- Images:
-    - Should act as a further explainer of your main point.
-    - Omit them if they don't add any value.
-    - Utilize diagrams to get your points across for complex ideas.
-    - Include references if they are from another post or article.
-    - Center them if they are not wide enough.
-- Enumerate figures and tables so that they can be easily identified when making reference to them in the text.
-- 1200 - 1500 words. Separate in parts if necessary and link each part. [Here](https://www.rootstrap.com/tech-blog/2018/12/05/moving-from-java-spring-framework-to-a-reactjsapis-architecture) is an example of 1500.
-- Mark tech keywords.
-- Keep consistency along the post with the personal pronoun you are using (1st, 2nd or 3rd person).
-- Use Github Gists code blocks.
-- Include links to more information.
-- Take into account who should read the post when using the terminology. If you’re writing a ruby post, is it for advanced or beginner developers?
+[2] https://reactnative.dev/docs/animations
+[3] https://medium.com/@benjamintodts/react-natives-animated-loop-invoking-a-callback-whenever-an-iteration-finishes-1c3581d38d54
+[4] https://medium.com/@GroundControl/animating-gradients-in-react-native-8853dbd97d02
+[5] https://blog.bitsrc.io/making-animations-in-react-native-the-simplified-guide-6580f961f6e8
+[6] https://blog.bitsrc.io/top-5-animation-libraries-in-react-native-d00ec8ddfc8d
