@@ -1,9 +1,6 @@
 ### Working with animations in React Native
 
-### The cover image
-
-Always try to include a cover image at the beginning of the post, as it helps catching the attention of the reader.
-Here are some links to find images: https://unsplash.com, https://www.pexels.com. Remember that they should be public.
+![](https://github.com/rootstrap/blog/blob/fernandatoledo-RN-animations/content/images/animation.jpeg)
 
 ### The introduction
 
