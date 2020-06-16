@@ -95,7 +95,7 @@ We hope that the React Native community starts using this library and that we st
 
 Remember that to get started you can just simply add the library by using `npm` or `yarn`.
 
-You can always check the source code here and contributions are always welcomed.
+You can always check the source code [here](https://github.com/rootstrap/react-native-use-animate#readme) and contributions are always welcomed.
 
 Please leave a comment, we would love to know your thoughts on this.
 
