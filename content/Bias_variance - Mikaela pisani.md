@@ -3,7 +3,7 @@
 Whenever you want to analyze the performance of machine learning algorithms, you would need to study the root cause of the error. Concepts like bias and variance would help you to understand this cause and take a notion about how to improve your model. 
 
 ## What is Bias error?
-Bias error corresponds to errors in the assumptions made in the model to make the target function faster to learn. **High bias can cause underfitting**, when the model misses the relevant relations between features and the targets variables.
+Bias error corresponds to errors in the assumptions made in the model to make the target function faster to learn. **High bias can cause underfitting**, when the model misses the relevant relations between features and the target variables.
 For instance, generally linear regression models have high bias (more assumptions about the form of the target function), which makes them easier to understand than faster to learn, but less flexible and with a lower performance for complex problems. 
 
 ## What is Variance error?
@@ -103,7 +103,6 @@ In conclusion, do not panic if you have one of these problems, take your time to
 # References
 - [ISLR - An Introduction to Statistical Learning with Applications in R](http://faculty.marshall.usc.edu/gareth-james/ISL/)
 - [Machine Learning Yearning, Andrew Ng](https://www.deeplearning.ai/machine-learning-yearning/)
-
 
 
 
