@@ -11,7 +11,7 @@ In this tutorial, you will learn how to customize the `display_name` of a `searc
 
 ### Before start
 
-We have to have in our `Gemfile` the `activeadmin` gem and `activeadmin-addons` gem.
+We have to include in our `Gemfile` the `activeadmin` gem and `activeadmin-addons` gem.
 
 In this example we are going to use a search select to filter people and search a person, our `person` model has two fields named `first_name` and `last_name`, and we want to display the full name of the person when we are searching it. The `full_name` is the concatenation of `first_name` and `last_name`.
 
@@ -32,7 +32,7 @@ First of all, you should create a search select input in ActiveAdmin. This can b
 
 The fields array indicates the fields that are used to filter, our input will be matched with the `first_name` of a person or their `last_name`.
 
-The display name is the field that our filter is showing to us meanwhile we search.
+The `display_name` is the field that our filter is showing to us meanwhile we search.
 
 ### Setting up the returned JSON
 
@@ -64,14 +64,14 @@ Just write the method that we want in `app/models/person.rb`:
 
 ```ruby
 def full_name
-    "#{first_name} #{last_name}"
+    [first_name, last_name].compact.join(' ')
 end
 ```
 And now our search select input is ready to display the person full name!
 
 ## Summary
 
-In this article, we learn how to display a custom field in our search select inputs this will help us to give better search feedback to the user and it can be used in many different scenarios, It also helps us to take the control on the JSON returned by ActiveAdmin to the input, by default all attributes are returned and maybe that's not good for us.
+In this article, we learned how to display a custom field in our search select inputs. This will help us to give better search feedback to the user and it can be used in many different scenarios. It also helps us to take the control on the JSON returned by ActiveAdmin to the input (by default, all attributes are returned and maybe that's not good for us).
 
 ## References
 
