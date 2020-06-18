@@ -37,7 +37,7 @@ As you can see with just a few simple lines you can have your opacity animation.
 
 #### How to handle a bit more complex animations?
 
-Although the useAnimate hook covers most transitions that you would want to do, there are some limitations to it. The useAnimate hook is most useful for atomic transitions and by that we mean that it is perfect for animating one thing at a time. If you want to run parallel animations or sequences, you might need to use some functionalities that the basic hook simply does not cover. For these cases, we have two extra hooks that can help.
+Although the `useAnimate` hook covers most transitions that you would want to do, there are some limitations to it. The `useAnimate` hook is most useful for atomic transitions and by that we mean that it is perfect for animating one thing at a time. If you want to run parallel animations or sequences, you might need to use some functionalities that the basic hook simply does not cover. For these cases, we have two extra hooks that can help.
 
 This project started as just one basic animation hook. Later on, while developing a demo app for showcasing purposes, we started fiddling around with what the Animated API has to offer and we ended up creating two more hooks, one for running parallel animations and one for running them in sequence.
 
