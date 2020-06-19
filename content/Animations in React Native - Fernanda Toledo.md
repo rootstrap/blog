@@ -35,6 +35,8 @@ https://gist.github.com/aguscha333/956eeed3d174351f8fddde25aa60888a
 
 As you can see with just a few simple lines you can have your opacity animation. With the same simplicity, you can start animating background colors, translations to get objects moving, rotations, and much more.
 
+And in this case, we wanted to show the most basic example, but there are other options you can customize. The number of iterations, bounce (if you want your animation to return to its initial state, the easing function, a callback function and a delay before your animation starts.
+
 #### How to handle a bit more complex animations?
 
 Although the `useAnimate` hook covers most transitions that you would want to do, there are some limitations to it. The `useAnimate` hook is most useful for atomic transitions and by that we mean that it is perfect for animating one thing at a time. If you want to run parallel animations or sequences, you might need to use some functionalities that the basic hook simply does not cover. For these cases, we have two extra hooks that can help.
