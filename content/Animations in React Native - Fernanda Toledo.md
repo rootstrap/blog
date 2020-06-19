@@ -35,7 +35,7 @@ https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-sim
 
 As you can see with just a few simple lines you can have your opacity animation. With the same simplicity, you can start animating background colors, translations to get objects moving, rotations, and much more.
 
-And in this case, we wanted to show the most basic example, but there are other options you can customize. The number of iterations, bounce (if you want your animation to return to its initial state, the easing function, a callback function and a delay before your animation starts.
+And in this case, we wanted to show the most basic example, but there are other options you can customize. The number of iterations, bounce (if you want your animation to return to its initial state), the easing function, a callback function and a delay before your animation starts.
 
 #### How to handle a bit more complex animations?
 
@@ -112,4 +112,3 @@ Please leave a comment, we would love to know your thoughts on this.
 [5] https://blog.bitsrc.io/making-animations-in-react-native-the-simplified-guide-6580f961f6e8
 
 [6] https://blog.bitsrc.io/top-5-animation-libraries-in-react-native-d00ec8ddfc8d
-
