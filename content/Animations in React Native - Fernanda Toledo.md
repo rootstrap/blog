@@ -16,7 +16,7 @@ Our hook library uses this API under the hood but simplifies how animations are 
 
 To understand how the Animated API works let's just show a basic example of `Animated.timing()`, which is the most commonly used animation type.
  
-https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e
+https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-animatedview-js
 
 
 What we are doing here is creating a variable that will contain the value that we will be animating. We use `useRef` since the returned value will persist for the full lifetime of the component.
@@ -30,7 +30,7 @@ Given our experience, we've identified a repetitive pattern among React Native a
 
 Let's take a look at the first example we provided above but this time using the `useAnimate` hook:
 
-https://gist.github.com/aguscha333/956eeed3d174351f8fddde25aa60888a
+https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-simpleanimationwithhook-js
 
 
 As you can see with just a few simple lines you can have your opacity animation. With the same simplicity, you can start animating background colors, translations to get objects moving, rotations, and much more.
@@ -49,9 +49,9 @@ Here are examples of how using those hooks might look like versus their plain An
 
 ![](https://media.giphy.com/media/hQcYhmrFy7aXFReeR7/giphy.gif)
 
-https://gist.github.com/fernandatoledo/2b2813757178ecae28851457e15b1160
+https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-sequencewithouthook-js
 
-https://gist.github.com/fernandatoledo/4e0b35f95745bdc0ea3ab8ba24cc1776
+https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-sequencewithhook-js
 
 
 In this example there are two animations taking place in sequence, an horizontal and a vertical translation, each happening one at a time, the following one starts right after the current animation is finished.
@@ -60,9 +60,9 @@ In this example there are two animations taking place in sequence, an horizontal
 
 ![](https://media.giphy.com/media/QTxxds3ZqTedzYYFFr/giphy.gif)
 
-https://gist.github.com/fernandatoledo/cf154351050339d862798b043c3cfeb9
+https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-parallelwithouthook-js
 
-https://gist.github.com/fernandatoledo/8b136ef05d67ac73836a8615130f68ca
+https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-parallelwithhook-js
 
 In this example multiple animations are taking place in parallel, there's a vertical and horizontal translation, along with rotation.
 
