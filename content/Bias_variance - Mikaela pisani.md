@@ -81,20 +81,13 @@ We can visualize the effect that the complexity of a model can have over bias an
      width="500" height="250"
      align="middle"/>
 
-**Regularization:** regularization consists of the application of penalty to the weights of the model. During the learning process a penalty is added to the loss function in terms of the coefficients of the model. Regularization methods can help to reduce variance. However this will increases bias. 
-
-Ridge and Lasso regression are methods of regularization which add a penalty term for having large coefficients. 
-While Ridge regression uses L2 norm (Euclidean distance)      
+**Regularization:** regularization consists of the application of penalty to the weights of the model. During the learning process a penalty is added to the loss function in terms of the coefficients of the model. Regularization methods can help to reduce variance. However this will increases bias. Ridge is a regression method of regularization which add a penalty term for having large coefficients. It uses L2 norm (Euclidean distance)      
 
 ![](https://render.githubusercontent.com/render/math?math=Error%20%3D%20Error%20%2B%20%5Csum(%5Clambda%5Cbeta_i)%5E2)
 
-Lasso regression uses the square norm L1 (Manhattan distance)       
-![](https://render.githubusercontent.com/render/math?math=Error%20%3D%20Error%20%2B%20%5Csum%5Clambda%7C%5Cbeta_i%7C)
-
-
 **Add more training data:** this will help you to reduce variance, taking the considerations mentioned above. Knowing that there is some point when adding more data does not change the values of bias and variance. 
 
-**Feature seleccion:** decrease the number of features by finding the most relevant variables for the analysis. This can help to reduce variance, you have to be careful to not reduce relevant features because in that case you might suffer from high bias.   
+**Feature selection:** decrease the number of features by finding the most relevant variables for the analysis. This can help to reduce variance, you have to be careful to not reduce relevant features because in that case you might suffer from high bias.   
 
 **Dimension reduction:** apply dimension reduction techniques to reduce the amount of input variables to your model. For instance, use Principal Component Analysis to find factors that explain the variance in the data. This might help you to improve your model error performance as well as reduce the computation time.
 
