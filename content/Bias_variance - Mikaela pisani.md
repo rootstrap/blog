@@ -81,7 +81,7 @@ We can visualize the effect that the complexity of a model can have over bias an
      width="500" height="250"
      align="middle"/>
 
-**Regularization:** regularization consists of the application of penalty to the weights of the model. During the learning process a penalty is added to the loss function in terms of the coefficients of the model. Regularization methods can help to reduce variance. However this will reduce bias. 
+**Regularization:** regularization consists of the application of penalty to the weights of the model. During the learning process a penalty is added to the loss function in terms of the coefficients of the model. Regularization methods can help to reduce variance. However this will increases bias. 
 
 Ridge and Lasso regression are methods of regularization which add a penalty term for having large coefficients. 
 While Ridge regression uses L2 norm (Euclidean distance)      
