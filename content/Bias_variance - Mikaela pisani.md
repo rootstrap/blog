@@ -48,7 +48,7 @@ You would need to run the algorithm several times, changing the training set siz
 You can figure out how much closer you can get to the desired performance “optimal error rate” by adding more data. There is some point when adding more data does not improve performance. Graphically you can notice this point when the error curve is plateaued, it means that the error states the same.
 
 The training error can also help you to understand the point when adding more data is useless. 
-Your validation error should decrease as the training increases. But your training set error usually ​increases​ as the training set size grows. But, as we can see in the graph, It also grows up to a point. There is a point where the validation and training error do not change when adding more data. It means that from that point, it does not matter how much data we add, we cannot improve the error performance of the algorithm. 
+Your validation error should decrease as the training increases, and your training error usually ​increases​ as the training set size grows. But, as we can see in the graph, this happens up to a point. There is a point where the validation and training error do not change when adding more data. It means that from that point, it does not matter how much data we add, we cannot improve the error performance of the algorithm. 
 
 <img src="images/plot_bias_variance_trainingsize.png"
      alt="Plot error vs training size - bias_variance"
