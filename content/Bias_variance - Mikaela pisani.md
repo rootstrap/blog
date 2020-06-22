@@ -98,7 +98,7 @@ Lasso regression uses the square norm L1 (Manhattan distance)
 
 **Dimension reduction:** apply dimension reduction techniques to reduce the amount of input variables to your model. For instance, use Principal Component Analysis to find factors that explain the variance in the data. This might help you to improve your model error performance as well as reduce the computation time.
 
-**Early stopping:** stopping the learning process before the variance starts going up, might help you to avoid overfitting and have a good performance. However, it is recommended to apply other techniques before reaching this point, since in this case is  
+**Early stopping:** stopping the learning process before the variance starts going up, might help you to avoid overfitting and have a good performance. However, it is recommended to apply other techniques before reaching this point.
 
 
 In conclusion, do not panic if you have one of these problems, take your time to analyze the graphs and investigate where might be the issue. Several techniques to reduce bias and variance exist that will help you to improve your model. From the graphs, you will have insights about what is going on, and from there you might make decisions about what actions perform. 
