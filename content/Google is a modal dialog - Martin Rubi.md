@@ -2,7 +2,7 @@
 
 ### The shame of being a modal dialog
 
-Modal dialogs are windows that pops-up on top of every other window freezing the
+Modal dialogs are windows that pop-up on top of every other window freezing the
 underlying user interface until the user dismisses them.
 
 Their use was quite frequent back in the early days of desktop windows apps but with the
@@ -43,7 +43,7 @@ Whichs is pretty much the same workflow that we use to search for things in Goog
 
 How do we google things?
 
-Usually we are doing something like writting a blog post and we find the need to
+Usually we are doing something like writing a blog post and we find the need to
 search for information.
 
 We open a new tab with a clean and very specific design to do just one thing,
