@@ -15,10 +15,16 @@ A Stratified sample refers to forcing the sample to have the **same proportion o
 [Cross-validation](https://dziganto.github.io/cross-validation/data%20science/machine%20learning/model%20tuning/python/Model-Tuning-with-Validation-and-Cross-Validation/) (CV) refers to any method that divides the data into different sets in order to evaluate how the model performs for new data, and define if the model is overfitting or it does not generalize well. 
 
 ## Test-Train-Validation sets
-This technique in each iteration of the learning process divides the training set into two sets: training and validation. During each iteration, trains the model with the training set, followed by a validation phase with the validation set corrects errors made by the training. Once the iterations are finished, the test set is used to test the model with new data.
+This technique in each iteration of the learning process divides the training set into two sets: training and validation. During each iteration, trains the model with the training set, followed by a validation phase with the validation set corrects errors made by the training. Once the iterations are finished, the test set is used to test the model with new data.     
 
-![](https://upload.wikimedia.org/wikipedia/commons/1/12/Train-Test-Validation.png)
+<div id="div2">
 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Train-Test-Validation.png"
+     alt="Skills for Data Scientists"
+     width="250" height="250"
+     align="middle" style="transform:rotate(90deg);"/>  
+     
 ## K-folds
 In K-folds cross validation method the data set is divided into k groups and the training and testing phases are repeated. Each time one set is selected for testing and the other k-1 folds for training. 
 
