@@ -1,5 +1,7 @@
 # SOLUTIONS FOR COMMON PROBLEMS IN DATA SCIENCE & MACHINE LEARNING
 
+![](https://cdn.pixabay.com/photo/2018/01/08/21/19/idea-3070332_960_720.jpg)
+
 # PART 2 - OVERFITTING
 
 ## What is overfitting? 
