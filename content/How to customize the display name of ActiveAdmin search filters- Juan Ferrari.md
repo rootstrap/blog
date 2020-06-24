@@ -1,13 +1,13 @@
 
-## Introduction
+## Working with ActiveAdmin
 
 At Rootstrap, my first assignment was to develop a Ruby on Rails application which uses ActiveAdmin (with ActiveAdmin Addons) as a framework to implement the user interface.
 
 I had never used ActiveAdmin before and I found myself reading a lot of documentation of the gem, in some cases, the documentation was not enough. For example, when I tried to display a custom name on an AJAX's search select filter at first it was a little tricky. So today I will show you how to do it, in the end, it's really simple!
 
-## Overview
+## Showing our custom display_name
 
-In this tutorial, you will learn how to customize the `display_name` of a `search_select` filter provided by ActiveAdmin Addons
+In this tutorial, you will learn how to customize the `display_name` of a `search_select` filter provided by ActiveAdmin Addons.
 
 ### Before start
 
@@ -15,7 +15,7 @@ We have to include in our `Gemfile` the `activeadmin` gem and `activeadmin-addon
 
 In this example we are going to use a search select to filter people and search a person, our `person` model has two fields named `first_name` and `last_name`, and we want to display the full name of the person when we are searching it. The `full_name` is the concatenation of `first_name` and `last_name`.
 
-## Let's do it
+## Steps to show our custom display_name
 
 ### Create a Search Select
 
@@ -69,7 +69,7 @@ end
 ```
 And now our search select input is ready to display the person full name!
 
-## Summary
+## What we learned about Search Select Inputs?
 
 In this article, we learned how to display a custom field in our search select inputs. This will help us to give better search feedback to the user and it can be used in many different scenarios. It also helps us to take the control on the JSON returned by ActiveAdmin to the input (by default, all attributes are returned and maybe that's not good for us).
 
