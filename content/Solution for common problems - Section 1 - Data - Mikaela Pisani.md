@@ -62,10 +62,10 @@ Therefore, if some of these problems are presented, you would need to apply dime
 ## Feature selection
 Which type of correlation to use? Depending on the type of variables, which type of correlation you will need to use. Here there is a table that shows the possible cases. 
 
-|   |  Continuous |  Categorical | 
-|---|---|---|---|---|
-| Continuous | Pearson’s correlation | LDA | 
-| Categorical | Anova | Chi-Square |
+|             |  Continuous           |  Categorical | 
+|-------------|-----------------------|--------------|
+| Continuous  | Pearson’s correlation | LDA          | 
+| Categorical | Anova                 | Chi-Square   |
 
 
 - Pearson correlation: it is a number between -1 and 1 which indicates the level at which the variables are linearly related.    
