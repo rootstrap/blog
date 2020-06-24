@@ -71,7 +71,7 @@ And now our search select input is ready to display the person full name!
 
 ## Summary
 
-In this article, we learned how to display a custom field in our search select inputs. This will help us to give better search feedback to the user and it can be used in many different scenarios. It also helps us to take the control on the JSON returned by ActiveAdmin to the input (by default, all attributes are returned and maybe that's not good for us).
+In this article, we learned how to display a custom field in our search select inputs. This will help us to give better search feedback to the user and it can be used in many different scenarios. It also helps us take control of the JSON returned by ActiveAdmin to the input (by default, all attributes are returned and maybe that's not good for us).
 
 ## References
 
