@@ -20,15 +20,15 @@ One fun little experiment we did at Rootstrap was developing a very silly app. T
 
 - Gave our UI an intuitive hierarchy structure: Group UI elements that make sense together to provide a faster and better navigation
 
-- isAccessibleElement: make non relevant UI elements not focusable by Voice Over, like shadows and images, anything that's decorative.
+- isAccessibleElement: Make non relevant UI elements not focusable by Voice Over, like shadows and images, anything that's decorative
 
 - accessibilityLabel: Provide a useful description to Voice Over to read when the item is focused
 
 - accessibilityHint: Provide additional context or actions for the selected element
 
-- accessibilityTraits: tells Voice Over how the elements behave or should be treated, this can be button, isSelected, text, etc
+- accessibilityTraits: Tells Voice Over how the elements behave or should be treated, this can be button, isSelected, text, etc
 
-- UIAccessibilityLayoutChangedNotification: notified Voice Over about changes in layout, so that the last item added to the list gets focused. 
+- UIAccessibilityLayoutChangedNotification: Notifies Voice Over about changes in layout, so that the last item added to the list gets focused
 
 
 These improvements that didn't take long to develop made a huge difference in UX, and we were able to prove it with our guinea pig who completed his mission successfully.
