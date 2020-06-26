@@ -37,7 +37,7 @@ As you can see with just a few simple lines you can have your opacity animation.
 
 And in this case, we wanted to show the most basic example, but there are other options you can customize. The number of iterations, bounce (if you want your animation to return to its initial state), the easing function, a callback function and a delay before your animation starts.
 
-#### How to handle a bit more complex animations?
+#### How to handle more complex animations?
 
 Although the `useAnimate` hook covers most transitions that you would want to do, there are some limitations to it. The `useAnimate` hook is most useful for atomic transitions and by that we mean that it is perfect for animating one thing at a time. If you want to run parallel animations or sequences, you might need to use some functionalities that the basic hook simply does not cover. For these cases, we have two extra hooks that can help.
 
@@ -54,7 +54,7 @@ https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-seq
 https://gist.github.com/fernandatoledo/3a656f21eb16f01b0f963a7fec1fb09e#file-sequencewithhook-js
 
 
-In this example there are two animations taking place in sequence, an horizontal and a vertical translation, each happening one at a time, the following one starts right after the current animation is finished.
+In this example there are two animations taking place in sequence, a horizontal and a vertical translation, each happening one at a time, the following one starts right after the current animation is finished.
 
 ##### Example of parallel animation
 
