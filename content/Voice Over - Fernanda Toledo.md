@@ -50,7 +50,7 @@ Why stop now? Voice Over is great for blind people, but it's not something we wa
 
 Using an app with Voice Over can be a real challenge, and making an app accessible even tougher. Luckily for us, iOS provides useful and powerful tools to make our job easier. But at the end of the day, it is up to us to make use of their potential to the fullest.
 
-By implementing just a few changes on our code and UI we can make a huge impact on blind and visually impaired users. As developers, and designers, together we should become more conscious, think about all our possible users and make it easier for everyone. Excluding people from the content we create is self sabotage.
+By implementing just a few changes on our code and UI we can make a huge impact on blind and visually impaired users. As developers and designers, together we should become more conscious, think about all our possible users and make it easier for everyone. Excluding people from the content we create is self sabotage.
 
 ### References
 
