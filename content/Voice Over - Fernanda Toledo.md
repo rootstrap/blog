@@ -8,7 +8,7 @@ So, what makes an app accessible? According to the [Web Accessible Initiative](h
 
 ### What is Voice Over?
 
-For users that have a very low or no sight, there's Voice Over, a gesture-based screen reader that allows users to know what's on the screen by playing audible descriptions, the user can navigate through the screen by swiping and they can trigger different actions depending on a given [set of gestures](https://support.apple.com/guide/iphone/learn-Voice Over-gestures-iph3e2e2281/13.0/ios/13.0).
+For users that have a very low or no sight, there's Voice Over, a gesture-based screen reader that allows users to know what's on the screen by playing audible descriptions. The user can navigate through the screen by swiping and they can trigger different actions depending on a given [set of gestures](https://support.apple.com/guide/iphone/learn-Voice Over-gestures-iph3e2e2281/13.0/ios/13.0).
 
 ### Try it on one of your apps!
 
