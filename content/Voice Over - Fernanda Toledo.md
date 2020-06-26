@@ -44,7 +44,7 @@ What's more, it does not only help you to detect issues with Voice Over, you can
 
 ### Other tools
 
-Why stop now? Voice Over is great for blind people, but it's not something we want our users to use unless they really need it. For those visually impaired there are a lot of adjustments they can make to their screens and we should check them within our app and adapt accordingly. A great range of new settings was introduced in iOS 14, you can check some of them on this [great WWDC2020 talk](https://developer.apple.com/videos/play/wwdc2020/10020/) that I invite you to watch, and if you want we can make another article about those.
+Why stop there? Although Voice over is really useful for blind people, there are other types and degrees of visual impairment that not necessarily require the use of Voice Over and can have a much better experience if other accessibility adjustments are provided. To name a few: adjust the contrast, dynamic types, or even the color scheme for those who are color blind. A great range of new settings was introduced in iOS 14, you can check some of them on this [great WWDC2020 talk](https://developer.apple.com/videos/play/wwdc2020/10020/) that I invite you to watch
 
 ### Summary
 
