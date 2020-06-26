@@ -2,17 +2,13 @@
 
 ![](https://github.com/rootstrap/blog/blob/fernandatoledo-RN-animations/content/images/animation.jpeg)
 
-### The introduction
-
 As mobile developers who have worked with animations before, we know how hard it can be to implement complex animations from scratch. That's why we decided to engineer a simple yet powerful React Native animation hooks library that can give you a head start when developing your animations. It will also help you understand how animations work at their core and break down more complex animations.
 
-### Animated API
+### The basics of Animated API
 
 React Native provides us with an Animated API that allows us to animate several of their components. It does that by exposing a broad range of animation types and auxiliary functions. That being said it can be a bit daunting if you are trying to tackle your first animation. 
 
 Our hook library uses this API under the hood but simplifies how animations are implemented by the developer.
-
-#### The Basics
 
 To understand how the Animated API works let's just show a basic example of `Animated.timing()`, which is the most commonly used animation type.
  
