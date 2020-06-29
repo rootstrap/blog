@@ -16,7 +16,7 @@ recap with a few definitions.
 
 **What is TLS/SSL?**
 
-Transport Layer Security (TLS), formerly known as Secure Sockets Layer (SSL) is
+TLS (Transport Layer Security), formerly known as Secure Sockets Layer (SSL) is
 a standard security protocol for establishing an encrypted link between a server
 and a client. This is typically used to secure communications between web
 servers and a browser, or a mail server and a mail client.
@@ -41,10 +41,10 @@ middle SSLstrip"** and **"session hijacking"** attacks.
 Let’s suppose this scenario, an user of our application log into a free WiFi
 access point at an airport and start surfing the web, visiting our online
 banking service to make some transactions, and pay a couple of bills.
-Unfortunately, the access point they’re using can be sniffed by an attacker, and
-it’s really easy to intercept all the original HTTP requests and redirect them
-to a clone of your bank's site instead of the real thing. Then, the user’s data
-is exposed to the attacker.
+Unfortunately, that access point can be sniffed by an attacker, and it’s really
+easy to intercept all the original HTTP requests and redirect them to a clone of
+the bank's site instead of the real thing. Then, the user’s data is exposed to
+the attacker.
 
 Well maybe you are thinking, it is not supposed that anyone access to its bank
 account on a public Wifi network, and you are completely right, but the same
@@ -56,17 +56,17 @@ steps:
 
 ![White or black hat?](images/https-not-enough-mitm.png)
 
-1.  User asks for https://somedomain.com
-2.  MITM intercept that, and ask for https://somedomain.com to the Server
-3.  The server responds to MITM https://somedomain.com
-4.  MITM responds to the User with http://somedomain.com
+1.  User asks for `https://somedomain.com`
+2.  MITM intercept that, and ask for `https://somedomain.com` to the Server
+3.  The server responds to MITM `https://somedomain.com`
+4.  MITM responds to the User with `http://somedomain.com`
 
 After that, the attacker can see plain data over the requests made by the user.
 
 ## How can we mitigate HTTPS vulnerabilities?
 
 Whenever a browser requests a page from a web server, the server answers to the
-browser with the content along with some useful information, contained
+browser with the content along with some useful information, contained in
 **headers**. Many SSL-related vulnerabilities can be mitigated with a special
 type of headers, called security headers that can tell browsers how to treat
 content on a web page such as “whitelist certain types of content from trusted
@@ -100,7 +100,7 @@ secure transmission.
 
 Everything looks fine still here, but the first time an user visits an unknown
 site, the browser relies on the server’s responses to determine the correct
-protocol. Attackers could intercept this first visit to redirect you to an
+protocol. Attackers could intercept this first visit and redirect it to an
 insecure website using a man-in-the-middle attack. This is not as rare as it
 seems – it just means that the site is not present in the browser’s HSTS
 database. While this can be the result of a time-based attack via NTP, it can
