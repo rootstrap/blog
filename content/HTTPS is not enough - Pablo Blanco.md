@@ -57,7 +57,7 @@ steps:
 ![White or black hat?](images/https-not-enough-mitm.png)
 
 1.  User asks for `https://somedomain.com`
-2.  MITM intercept that, and ask for `https://somedomain.com` to the Server
+2.  MITM intercepts that, and asks for `https://somedomain.com` to the Server
 3.  The server responds to MITM `https://somedomain.com`
 4.  MITM responds to the User with `http://somedomain.com`
 
