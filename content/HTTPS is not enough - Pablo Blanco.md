@@ -158,7 +158,8 @@ Here we are saying that all content to come from the site's own origin
 We can check server response headers by using curl or nmap (more detailed
 information), here are a few examples:
 
-**_An example of a redirection without HSTS or CSP_**
+**_An example of a redirection without HSTS or CSP_** -
+[(Gists reference)](https://gist.github.com/pablanco/0f299835b207db93b39f108bbb4fe87e)
 
 ```
 $> curl --head https://www.not-hsts-header.com
@@ -180,7 +181,8 @@ PORT    STATE SERVICE
 |_
 ```
 
-**_An example with HSTS_**
+**_An example with HSTS_** -
+[(Gists reference)](https://gist.github.com/pablanco/765821aa10128d3e57c4847c070c38f4)
 
 ```
 $> curl --head https://www.hsts-header-enabled.com
