@@ -46,7 +46,7 @@ easy to intercept all the original HTTP requests and redirect them to a clone of
 the bank's site instead of the real thing. Then, the user’s data is exposed to
 the attacker.
 
-Well maybe you are thinking, it is not supposed that anyone access to its bank
+Well maybe you are thinking, no-one is supposed to access their bank
 account on a public Wifi network, and you are completely right, but the same
 scenario can be considered if someone hacks into our **private Wifi network**
 too.
