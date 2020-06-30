@@ -35,7 +35,7 @@ To improve accessibility, most secure websites run an HTTP(301) service to
 redirect users from HTTP to HTTPS endpoints. That redirection **does not** fully
 protect the user since it can be intercepted between when the visitor
 requests the HTTP version of the site, and when it reaches the HTTPS
-destination, this gives the attacker the opportunity of implement **"man in the
+destination, this gives the attacker the opportunity to implement **"man in the
 middle SSLstrip"** and **"session hijacking"** attacks.
 
 Let’s suppose this scenario, an user of our application log into a free WiFi
