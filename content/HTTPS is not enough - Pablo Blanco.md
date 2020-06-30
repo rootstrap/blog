@@ -157,7 +157,7 @@ Here we are saying that all content to come from the site's own origin
 **How can I check if any site uses security headers?**
 
 We can check server response headers by using curl or nmap (more detailed
-information), here a few examples:
+information), here are a few examples:
 
 **_An example of a redirection without HSTS or CSP_**
 
