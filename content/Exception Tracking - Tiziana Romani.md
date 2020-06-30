@@ -38,11 +38,13 @@ $ rails generate exception_hunter:install
 ```
 
 And don't forget to include [devise](https://github.com/heartcombo/devise), in case you intend to use our built-in authentication. 
-Oh but if you do, don't worry, we will include it for you. 
+Oh but if you do forget, don't worry, we will include it for you.
 
 
 ### Motivation
 So what exactly drove us to undertake such a proyect? We don't intend to reinvent the wheel, a wide variety of versions for this tool already exist, as said. Yet in our company, we can perceive a strong and growing open source culture that we identify with and support. 
 We hope that by sharing this project, we can give back to the community and help anyone developing hobby projects and small MVPs, where you may not want to pay for an external serivce, to get exception tracking right out of the box, without much effort.
+
+In case you are interested in the subject, stay tuned for incoming posts where we explain how we built ExceptionHunter from the ground up, along with some technical matters.
 
 Happy tracking.
