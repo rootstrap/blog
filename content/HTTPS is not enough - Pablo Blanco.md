@@ -143,7 +143,7 @@ like authorizing only truly trusted sources and blocking others.
 Using CSP also makes sure that we don’t have mixed content errors on your site.
 For example, if we have a HTTPS site and HTTP is embedded in the site (like a
 video), then we will wind up with mixed content errors in the browser console. A
-CSP could direct a website to make all URLs are always HTTPS, to avoid any mixed
+CSP could direct a website to set all URLs as HTTPS, to avoid any mixed
 content errors.
 
 This header contains only the policy, and can be defined this way:
