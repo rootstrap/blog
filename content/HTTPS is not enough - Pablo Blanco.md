@@ -209,7 +209,7 @@ If our site uses HSTS, the browser would connect over HTTPS automatically,
 without needing a redirect, so apart from gaining in security, we also gain
 in performance because we don’t need to make server redirections. HSTS headers
 like any other data that handles time records are vulnerable to NTM attacks
-(tempering attack that modified machine time to trick browser). HSTS and CSP
+(tampering attack that modifies the machine's clock to trick the  browser). HSTS and CSP
 headers provide the user with a good level of security by minimizing some
 vulnerabilities present at HTTPS.
 
