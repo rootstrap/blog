@@ -97,7 +97,7 @@ secure transmission.
 
 #### Keep browsers updated
 
-Everything looks fine still here, but the first time an user visits an unknown
+Everything looks fine still here, but the first time a user visits an unknown
 site, the browser relies on the server’s responses to determine the correct
 protocol. Attackers could intercept this first visit and redirect it to an
 insecure website using a man-in-the-middle attack. This is not as rare as it
