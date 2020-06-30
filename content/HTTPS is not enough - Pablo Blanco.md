@@ -38,8 +38,8 @@ requests the HTTP version of the site, and when it reaches the HTTPS
 destination, this gives the attacker the opportunity to implement **"man in the
 middle SSLstrip"** and **"session hijacking"** attacks.
 
-Let’s suppose this scenario, an user of our application log into a free WiFi
-access point at an airport and start surfing the web, visiting our online
+Let’s suppose this scenario, a user of our application logs into a free WiFi
+access point at an airport and starts surfing the web, visiting our online
 banking service to make some transactions, and pay a couple of bills.
 Unfortunately, that access point can be sniffed by an attacker, and it’s really
 easy to intercept all the original HTTP requests and redirect them to a clone of
