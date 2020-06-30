@@ -151,7 +151,7 @@ This header contains only the policy, and can be defined this way:
 `Content-Security-Policy: default-src 'self'`
 
 Here we are saying that all content to come from the site's own origin
-(excluding subdomains.) The policy provides many options that can be found
+(excluding subdomains). The policy provides many options that can be found
 [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
 **How can I check if any site uses security headers?**
