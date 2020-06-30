@@ -1,7 +1,7 @@
 # HTTPS is not enough
 
 _[Pablo Blanco](https://www.rootstrap.com/blog/author/pabloblancorootstrapcom/)
-is Full-Stack developer on the Rootstrap team and writes about his experience
+is a Full-Stack developer on the Rootstrap team and writes about his experience
 with ethical hacking and information security. You can also follow Pablo on
 [LinkedIn](https://www.linkedin.com/in/pablo-blanco-a6b5a371/)._
 
@@ -33,10 +33,10 @@ financial and other applications where information security is crucial.
 
 To improve accessibility, most secure websites run an HTTP(301) service to
 redirect users from HTTP to HTTPS endpoints. That redirection **does not** fully
-protect the user since it can be intercepted between when the visitor
-requests the HTTP version of the site, and when it reaches the HTTPS
-destination, this gives the attacker the opportunity to implement **"man in the
-middle SSLstrip"** and **"session hijacking"** attacks.
+protect the user since it can be intercepted between when the visitor requests
+the HTTP version of the site, and when it reaches the HTTPS destination, this
+gives the attacker the opportunity to implement **"man in the middle SSLstrip"**
+and **"session hijacking"** attacks.
 
 Let’s suppose this scenario, a user of our application logs into a free WiFi
 access point at an airport and starts surfing the web, visiting our online
@@ -46,10 +46,9 @@ easy to intercept all the original HTTP requests and redirect them to a clone of
 the bank's site instead of the real thing. Then, the user’s data is exposed to
 the attacker.
 
-Well maybe you are thinking, no-one is supposed to access their bank
-account on a public Wifi network, and you are completely right, but the same
-scenario can be considered if someone hacks into our **private Wifi network**
-too.
+Well maybe you are thinking, no-one is supposed to access their bank account on
+a public Wifi network, and you are completely right, but the same scenario can
+be considered if someone hacks into our **private Wifi network** too.
 
 This kind of man in the middle attack is basically performed by the following
 steps:
@@ -76,7 +75,7 @@ there are 2 types of headers we can use, **HSTS** and **CSP**.
 ### HTTP Strict Transport Security (HSTS)
 
 The HTTP Strict-Transport-Security response header, lets a website tell browsers
-that it should only be accessed using HTTPS strictly, instead of using HTTP and
+that it should only be accessed using HTTPS strictly, instead of using HTTP, and
 should automatically convert all attempts to access the site using HTTP to HTTPS
 requests instead.
 
@@ -129,7 +128,7 @@ HTTPS enforcement, ensuring end-to-end encryption.
 3. Include the HSTS header in any additional HTTPS redirects
 4. Serve all subdomains over HTTPS
 5. Specify all header directives: max-age must be at least 31536000 seconds (1
-   year), and includesubdomains and preload must be present
+   year), and **includesubdomains** and **preload** must be present
 
 ### Content Security Policy (CSP)
 
@@ -140,11 +139,11 @@ malicious content in the trusted web page context. A CSP can be used for simple
 purposes like enforcing HTTPS on SSL-enabled sites, to more sophisticated uses
 like authorizing only truly trusted sources and blocking others.
 
-Using CSP also makes sure that we don’t have mixed content errors on your site.
+Using CSP also makes sure that we don’t have mixed content errors on our site.
 For example, if we have a HTTPS site and HTTP is embedded in the site (like a
 video), then we will wind up with mixed content errors in the browser console. A
-CSP could direct a website to set all URLs as HTTPS, to avoid any mixed
-content errors.
+CSP could direct a website to set all URLs as HTTPS, to avoid any mixed content
+errors.
 
 This header contains only the policy, and can be defined this way:
 
@@ -206,12 +205,12 @@ PORT    STATE SERVICE
 ## Summary
 
 If our site uses HSTS, the browser would connect over HTTPS automatically,
-without needing a redirect, so apart from gaining in security, we also gain
-in performance because we don’t need to make server redirections. HSTS headers,
+without needing a redirect, so apart from gaining in security, we also gain in
+performance because we don’t need to make server redirections. HSTS headers,
 like any other data that handles time records are vulnerable to NTM attacks
-(tampering attack that modifies the machine's clock to trick the  browser). HSTS and CSP
-headers provide the user with a good level of security by minimizing some
-vulnerabilities present at HTTPS.
+(tampering attack that modifies the machine's clock to trick the browser). HSTS
+and CSP headers provide the user with a good level of security by minimizing
+some vulnerabilities present at HTTPS.
 
 ## References
 
