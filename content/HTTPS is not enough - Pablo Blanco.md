@@ -207,7 +207,7 @@ PORT    STATE SERVICE
 
 If our site uses HSTS, the browser would connect over HTTPS automatically,
 without needing a redirect, so apart from gaining in security, we also gain
-in performance because we don’t need to make server redirections. HSTS headers
+in performance because we don’t need to make server redirections. HSTS headers,
 like any other data that handles time records are vulnerable to NTM attacks
 (tampering attack that modifies the machine's clock to trick the  browser). HSTS and CSP
 headers provide the user with a good level of security by minimizing some
