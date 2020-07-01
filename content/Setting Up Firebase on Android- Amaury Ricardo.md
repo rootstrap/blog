@@ -62,7 +62,7 @@ On your module (app) Gradle file "build.gradle"
 
 2. #### reate the project on your Firebase console**
 
-    Open your [firebase console](https://console.firebase.google.com/)  and add a new project:
+    Open the [firebase console](https://console.firebase.google.com/) and add a new project:
 
     ![Add firebase](images/fb1.png)
 
