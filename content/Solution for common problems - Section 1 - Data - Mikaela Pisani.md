@@ -1,10 +1,6 @@
 ![](https://cdn.pixabay.com/photo/2018/01/08/21/19/idea-3070332_960_720.jpg)
 
-# SOLUTIONS FOR COMMON PROBLEMS IN DATA SCIENCE & MACHINE LEARNING 
-
-## SECTION 1 - DATA
-
-# SOLUTION TO COMMON PROBLEMS
+# SOLUTIONS FOR COMMON PROBLEMS IN DATA SCIENCE & MACHINE LEARNING REGARDING DATA
 
 The theory  is not always the same as the reality. When applying data science in practice, you will have to deal with several problems. Fortunately, you are not alone!, other people might be in a similar situation and there are blogs, slack channels and information around that might help you to resolve your problems. 
  
