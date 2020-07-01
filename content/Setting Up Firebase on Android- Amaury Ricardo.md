@@ -34,10 +34,10 @@ On your project  Gradle file "build.gradle"
     }
 
     dependencies {
-    		....        
-    		classpath 'com.google.gms:google-services:4.3.2'  // Google Services plugin
+    	....        
+        classpath 'com.google.gms:google-services:4.3.2'  // Google Services plugin
         classpath 'io.fabric.tools:gradle:1.31.2'  // Crashlytics plugin
-    		....
+    	....
     }
 
     ```
@@ -52,15 +52,15 @@ On your module (app) Gradle file "build.gradle"
     }
     dependencies {
     		.....
-    	// Add the Firebase SDK for Google Analytics
-      implementation 'com.google.firebase:firebase-analytics:17.2.1'
+        // Add the Firebase SDK for Google Analytics
+        implementation 'com.google.firebase:firebase-analytics:17.2.1'
     }
 
     // Add the following line to the bottom of the file
     apply plugin: 'com.google.gms.google-services'
     ```
 
-2. #### reate the project on your Firebase console**
+2. #### Create the project on your Firebase console:
 
     Open the [firebase console](https://console.firebase.google.com/) and add a new project:
 
@@ -79,6 +79,7 @@ On your module (app) Gradle file "build.gradle"
         defaultConfig {
             applicationId "com.rootstrap.android"
     		....
+        }    
     ```
 
     **Note: In case you configure several build types with different package names you need to add an Android app to the current Firebase console for each of them.**
@@ -99,11 +100,11 @@ On your module (app) Gradle file "build.gradle"
 Once you create the app, download the google-services.json file and copy it to your module folder (app).
 
 3. #### Finally run your app.
-You should be able to see on your project overview 1 daily active user (your current device or emulator)**
+You should be able to see on your project overview 1 daily active user (your current device or emulator)
 
 ## That's it.
 
-Firebase has several tools to improve your code and productivity in order to get better performance and user experience. lay around with the console to see which ones could be helpful for your Project.
+Firebase has several tools to improve your code and productivity in order to get better performance and user experience. Play around with the console to see which ones could be helpful for your Project.
 
 For more info please check:
 [Firebase](https://firebase.google.com/)
