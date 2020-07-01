@@ -3,8 +3,7 @@
 
 # MACHINE LEARNING
 
-# Chapter 1 - Introduction
-
+**What is Machine learning? **
 Machine learning is one of the hottest topics nowadays. People talk about machine learning as if it is magic. Organizations are racing to integrate machine learning into their functions. Everyone talks about it, but not too many people know what it really is. It is just math and statistics plus data!  
 
 Machine learning is an analytical method that automates model building by learning from the available data, identifying patterns and making decisions with minimal human intervention. Since lots of articles in the industry take some words for granted, in this article important definitions and concepts are clarified. Once you are clear about these concepts, it is going to be easier to read more specific details about each machine learning technique.  
