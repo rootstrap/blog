@@ -1,8 +1,8 @@
-# SOLUTIONS FOR COMMON PROBLEMS IN DATA SCIENCE & MACHINE LEARNING
+
 
 ![](https://cdn.pixabay.com/photo/2018/01/08/21/19/idea-3070332_960_720.jpg)
 
-# PART 2 - OVERFITTING
+# RESOLVING OVERFITTING PROBLEMS
 
 ## What is overfitting? 
 One of the most common problems that you would need to deal with is overfitting the model that you are building. [Overfitting](https://towardsdatascience.com/what-are-overfitting-and-underfitting-in-machine-learning-a96b30864690) occurs when the model fits the training set so well that it learns very specific details from the training set. But those details are not representation for the whole data, and as consequence the model makes bad predictions for new data. Now, you might be questioning, **how to avoid overfitting?** A variety of [techniques](https://towardsdatascience.com/handling-overfitting-in-deep-learning-models-c760ee047c6e) are used in order to avoid it, which are presented in this article.
