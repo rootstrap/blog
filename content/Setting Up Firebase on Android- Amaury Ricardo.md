@@ -70,7 +70,7 @@ On your module (app) Gradle file "build.gradle"
 
     ![Add android plattform](images/fb2.png)
 
-    In the next step enter the Android applicationId , you can find it on the Gradle file:
+    In the next step enter the Android application id. You can find it on the Gradle file:
 
     ```java
     ....
