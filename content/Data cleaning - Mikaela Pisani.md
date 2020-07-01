@@ -64,7 +64,7 @@ In the case that there is no order for the categories, techniques like one-hot e
 
 Another technique used in this case is **binary encoding**, which consists of the concatenation of all the results from one-hot encoding into one column.
 
-<img src="images/one_hot.png"
+<img src="images/one_hot.jpg"
      alt="One Hot Encoding"
      width="550" height="350"
      align="middle"/>
