@@ -1,4 +1,4 @@
-# Evaluate models
+# Evaluating models
 Once that we have executed the model, we would need to know if it works correctly and measure how well it works. So, here several questions come up:           
 
 - How can we know if the algorithm is working correctly?       
