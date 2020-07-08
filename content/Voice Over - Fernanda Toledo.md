@@ -1,4 +1,4 @@
-# How to make your app accessible using Voice Over
+# How to make your app accessible using VoiceOver
 
 ![](https://github.com/rootstrap/blog/blob/voice-over/content/images/glasses.jpg)
 
@@ -44,11 +44,11 @@ It does not only help you to detect issues with VoiceOver, but you can also run 
 
 ### Other tools
 
-Why stop there? Although Voice over is really useful for blind people, there are other types and degrees of visual impairment that do not necessarily require the use of VoiceOver and can have a much better experience if other accessibility adjustments are provided. To name a few: adjust the contrast, dynamic types, or even the color scheme for those who are color blind. A great range of new settings was introduced in iOS 14, you can check some of them on this [great WWDC2020 talk](https://developer.apple.com/videos/play/wwdc2020/10020/) that I invite you to watch
+Why stop there? Although VoiceOver is really useful for blind people, there are other types and degrees of visual impairment that do not necessarily require the use of VoiceOver and can have a much better experience if other accessibility adjustments are provided. To name a few: adjust the contrast, dynamic types, or even the color scheme for those who are color blind. A great range of new settings was introduced in iOS 14, you can check some of them on this [great WWDC2020 talk](https://developer.apple.com/videos/play/wwdc2020/10020/) that I invite you to watch
 
 ### Summary
 
-Using an app with Voice Over can be a real challenge, and making an app accessible even tougher. Luckily for us, iOS provides useful and powerful tools to make our job easier. But at the end of the day, it is up to us to make use of their potential to the fullest.
+Using an app with VoiceOver can be a real challenge, and making an app accessible even tougher. Luckily for us, iOS provides useful and powerful tools to make our job easier. But at the end of the day, it is up to us to make use of their potential to the fullest.
 
 By implementing just a few changes on our code and UI we can make a huge impact on blind and visually impaired users. As developers and designers, together we should become more conscious, think about all our potential end-users and make it easier for everyone. Excluding people from the content we create is self-sabotage.
 
