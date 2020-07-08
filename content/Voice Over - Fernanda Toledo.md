@@ -35,7 +35,7 @@ These improvements that didn't take long to develop made a huge difference in UX
 
 ![](https://github.com/rootstrap/blog/blob/voice-over/content/images/blindfold.jpg)
 
-### Debug it
+### Debug your app using the Accessibility Inspector
 
 The Accessibility Inspector belongs to the deck of developer tools, and one of the most powerful features provided by this tool is the ability to simulate VoiceOver, this was introduced in [xCode11](https://developer.apple.com/videos/play/wwdc2019/257/#:~:text=Menu%20Close%20Menu-,Accessibility%20Inspector,Voice%20Over%20user%20would%20experience.). And it's fantastic. You can simulate VoiceOver thanks to a feature that was added recently by tapping on the speaker button. The auto-navigate button will navigate through all accessible views and read them for you so that you can debug it. A basic example that will provide a poor experience for users is when there’s a custom button with an image and VoiceOver will read the image file name, because no accessibility label was provided.
 
