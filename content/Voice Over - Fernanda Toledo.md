@@ -14,7 +14,7 @@ For users that are visually impaired, there's VoiceOver, a gesture-based screen 
 
 Open one of the apps you've developed and turn on VoiceOver, read the entire content of the screen by swiping up using two fingers and voila, by default VoiceOver will read some things, so that's a good head start, some buttons can be tapped by using double tap and some labels may be read correctly, but I can guarantee you that if accessibility was not taken into account in the design and development stages, then there will be issues. There might be things that are not being read in the correct order, things that are not being read at all, and some elements might not be grouped correctly because of a wrong view hierarchy. Some common mistakes can be that an uppercase text is by default read one letter at a time (OMG, for instance, should be read Oh my god, but instead the 3 letters will be read), and in case you have checkboxes probably the state of the checkbox is not being announced. If your app has those issues, users with disabilities won't be able to properly use it, because those things make it impossible for them to move forward.
 
-### Get your hands dirty
+### Using the UIAccessibilityElement properties
 
 One fun little experiment we did at Rootstrap was developing a very silly app. The purpose of it was to create to-do lists, users could add items that consisted of just a checkbox and a text and they could mark them as either complete or incomplete by checking on the checkbox, classic to-do stuff. We handed a blindfold to our CTO and asked him to add one item and mark it as complete, it was painful to watch, he struggled for a while to figure out how to open the keyboard. Then, we improved the default implementation a little:
 
