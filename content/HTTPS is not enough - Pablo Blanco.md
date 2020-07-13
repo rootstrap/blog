@@ -9,7 +9,7 @@ with ethical hacking and information security. You can also follow Pablo on
 
 Nowadays it is common to implement HTTPS for the sites and APIs we develop, well
 that’s fine but it is not enough to protect users from being hacked because
-there are chances of identity getting stolen, and an extra security layer should
+there are still chances of identities getting stolen, and an extra security layer should
 be applied. In this post, we are going to explain why only HTTPS is not enough
 to secure our sites and how can we improve user’s protection. But first, let’s
 recap with a few definitions.
@@ -69,7 +69,7 @@ browser with the content along with some useful information, contained in
 **headers**. Many SSL-related vulnerabilities can be mitigated with a special
 type of headers, called security headers that can tell browsers how to treat
 content on a web page such as “whitelist certain types of content from trusted
-sites” or “only load this site over HTTPS”, for this particular vulnerabilities
+sites” or “only load this site over HTTPS”, for these particular vulnerabilities
 there are 2 types of headers we can use, **HSTS** and **CSP**.
 
 ### HTTP Strict Transport Security (HSTS)
@@ -112,7 +112,7 @@ To remedy this issue and also improve page load speeds,
 Firefox, Safari, among others) check if a certain domain is HSTS-enabled against
 a common preloaded list called [hstspreload.org](https://hstspreload.org/).
 
-There, webmasters and site administrators can submit it’s domains for inclusion
+There, webmasters and site administrators can submit their domains for inclusion
 in Chrome's HTTP Strict Transport Security (HSTS) preload list. By including our
 domains to that list we are sure to force the user’s browser to navigate our
 site over HTTPS **strictly**.
