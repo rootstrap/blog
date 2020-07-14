@@ -53,9 +53,9 @@ Probably you’ve heard about them, and for sure you have already seen tons of t
 
 See the example below (it’s written in Ruby but should be simple enough for anyone). I know the white text boxes already grab much attention, just cover them with your hand and look at the code for no more than 10 seconds, thinking of the code smells that you can find. Then uncover the white boxes. I’m quite sure that in that amount of time you could find the same code smells (or even more). What I’m trying to show, is exactly what code smells are, they are something very quick to spot, and they are not a problem by themselves (think that this code actually works perfectly fine).
 
-**PUT IMAGE HERE**
+![Code Smells Example](images/code_smells_example.png)
 
-Here you can find a catalog of code smells, defined mainly by Martin Fowler and Kent Beck: **SEARCH FOR LINK**
+Here you can find a [catalog of code smells](https://github.com/lee-dohm/code-smells/blob/master/README.md), defined mainly by Martin Fowler and Kent Beck.
 
 I highly recommend reading, understanding and memorizing them. If you do, whenever you are doing code review to another person, or just reviewing your own code, you will see much more easily the possible improvements.
 
@@ -92,7 +92,7 @@ Mechanics of a refactoring:
 - Test after every step. 
 - In practice, if you want to take larger steps, you can, but if the tests fail, then you should go backwards and take smaller steps.
 
-In the book they are presented within 6 different categories which may not be worth it to explain them. Here you can find a [catalog of refactoring](https://refactoring.com/catalog/).
+In the book they are presented within 6 different categories which may not be worth it to explain them in this article. Here you can find a [catalog of refactoring](https://refactoring.com/catalog/).
 
 **Conclusion: There is no conclusion here.**
 
@@ -105,7 +105,7 @@ I will present just 2 simple refactoring as examples. I don’t think the purpos
 You have a complicated conditional (if-then-else) statement.
 → Extract methods from the condition, “then” part, and “else” part.
 
-**PUT IMAGES**
+![Decompose Conditional Expression Example](images/decompose_conditional_expression.png)
 
 - Motivation: Conditional logic adds complexity to the code. You can make your intention clearer by decomposing it and replacing chunks of code with a method call named after the intention of that block of code.
 - Mechanic:
@@ -118,7 +118,11 @@ You have a complicated conditional (if-then-else) statement.
 You have one class doing work that should be done by two.
 → Create a new class and move the relevant fields and methods from the old class into the new class.
 
-**PUT IMAGES**
+![Exctact Class Example](images/extract_class_1.png)
+
+![Exctact Class Example](images/extract_class_2.png)
+
+![Exctact Class Example](images/extract_class_3.png)
 
 - Motivation: In practice, classes grow over time. One class with lots of methods and data is too big to understand easily, so it becomes hard to maintain.
 - Mechanic:
