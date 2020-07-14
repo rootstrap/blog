@@ -17,7 +17,7 @@ I see growth as a way of working around data analysis based decisions. So first 
 
 `Data analysis is defined as a process of cleaning, transforming, and modeling data to discover useful information for business decision-making. The purpose of Data Analysis is to extract useful information from data and taking the decision based upon the data analysis`
 
-You may see that `data` word came up a lot, that's not because I want to be redundant, instead is because I want to emphasize it as a really important concept. Nowadays the more data you have the more power you have to make better decisions.
+You may see that `data` word came up a lot, that's not because I want to be redundant but because I want to emphasize it as a really important concept. Nowadays the more data you have the more power you have to make better decisions.
 
 
 ## 2) How to start?
@@ -26,10 +26,10 @@ As I mentioned before, start gathering data, it doesn't need to be super high-qu
 A simple step you can take at a really low cost is adding some forms and analytics to your landing page. This way you will start getting feedback from users and also start knowing your users interactions and interests.
 
 First, see an initial approach on how you should approach your changes:
-![hypothesis process](images/build-measure-learn.jpg)
+![build measure learn](images/build-measure-learn.jpg)
 
-You will start building something as small as possible (to lessen the number of mistakes you can make).
-Then you measure it (please! test it with users, they are the only ones with the truth on this).
+You will start building something as small as possible to lessen the number of mistakes you can make.
+Then you measure it by testing it with users since they are the only ones with the truth on whether it will succeed or not.
 Finally, learn from your measures and keep building, but now with a clearer idea of what users want.
 
 To plan what to build you can follow this simple process, also to manage each specific change.
@@ -44,9 +44,9 @@ The most important step at the end is to make decisions based on your learnings,
 
 ## 3) Common mistakes
 
-#### First and most usual mistake: assume you know how users will behave
+#### First and most usual mistake: assuming you know how users will behave
 
-You will probably be wrong, instead of that write a hypothesis and try to prove it. It can be as simple as "I want to prove that I get more sales if I place the BUY button in some place with some color" or more complex like "I think users are tempted to buy if I offer discounts after 10 minutes looking items in my store"
+You will probably be wrong, instead of that write a hypothesis and try to prove it. It can be as simple as "I want to prove that I get more sales if I place the BUY button at the top with a brighter color" or more complex like "I think users are tempted to buy if I offer discounts after 10 minutes of looking at items in my store"
 
 #### Misread data
 
@@ -61,12 +61,12 @@ I see this as a simple process that prevents you to take wrong decisions, so you
 
 ## 4) Do I need an engineer?
 
-Actually you don't, but having one will provide you a different perspective from a structured data result mindset. Let's see what does this means...
+Actually you don't, but having one will provide you a different perspective from a structured data result mindset. Let's see what does this mean...
 You as a product owner, sales manager, investor, etc. will probably be the one with the most knowledge about users and your product, but, do you know how to measure your product performance and record your users interactions over your app? Probably not.
 So here is where an engineer can help you:
   - Adding metrics on your app
   - Recording user journeys to provide you a better understanding of their experience
-  - Crossing information from different inputs (social media, adds, etc)
+  - Crossing information from different inputs (social media, ads, etc)
   - Generating reports
   - Processing data so you can take more time on your business instead of the product development
 
@@ -79,7 +79,7 @@ So my recommendation for you is to look for a complete engineer, not just a deve
 Be curious, be analytic and try to validate as much as possible as you introduce changes.
 
 #### Changes
-Changes are good! make as much as possible so you learn more. But keep in mind you need to organize them to don't become anarch
+Changes are good! Make as much as possible so you learn more. But keep them organized so it doesn't become anarchical
 
 #### Organization
 "Diversity is a source of wealth" we all know that, so the only problem to deal with is how to work with other roles keeping an open mindset.
