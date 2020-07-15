@@ -29,7 +29,7 @@ Post.where { |post| post.created_at.gt(1.month.ago) }
 
 Wouldn't you agree that's much better writing/parsing SQL strings? If you know what Arel is, you'll notice that I purposely used its syntax when comparing values. If you don't know what Arel is, a quick explanation is that it's what ActiveRecord uses to build queries under the hood.
 
-I used Arel syntax because I think it's great and I find myself using it a lot in complex queries. I also believe it has become very stable and that it provides great power with a good syntax. Although we could also just alias some comparison methods and have something that looks much more natural:
+I used Arel syntax because I think it's great and I find myself using it a lot in complex queries. I also believe it has become very stable and that it provides great capabilities with a good syntax. Although we could also just alias some comparison methods and have something that looks much more natural:
 
 ```ruby
 Post.where { |post| post.created_at > 1.month.ago }
@@ -77,6 +77,6 @@ Post.where { |post| similarity(post.title, "search string" > 0.78 }
 
 And there are a bunch of other functions and functionalities from our DBMS we might be missing out just because we would need to use raw SQL strings to use them.
 
-## How do I get this new syntax?
+## How do I get this ActiveRecord block querying syntax?
 
 As I said I took the chance to transform the idea into actual code and made a PR about it. If you want to see how this could be brought to like check out [this PR](https://github.com/rails/rails/pull/39445). And of course, if you have any opinions on this, good or bad, feel free to comment here or on Github.
