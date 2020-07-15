@@ -1,4 +1,4 @@
-# A take on empowering ActiveRecord
+# A Take on Empowering ActiveRecord
 
 I think we are quite underpowered when it comes to doing queries on Rails, having this in mind I proposed my opinion on how we could improve this and made a PR. I also wanted to share it here to know what others think and maybe get some traction.
 
