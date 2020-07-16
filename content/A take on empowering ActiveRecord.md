@@ -2,6 +2,8 @@
 
 I think we are quite underpowered when it comes to doing queries on Rails, having this in mind I proposed my opinion on how we could improve this and made a PR. I also wanted to share it here to know what others think and maybe get some traction.
 
+![Railroad](images/rail_road.jpg)
+
 ## The reasoning behind this idea
 
 The problem I was trying to solve is one I usually face, and I think all of us do, where I have to use raw SQL strings for simple queries like:
