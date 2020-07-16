@@ -11,7 +11,7 @@ Well, if you found yourself saying any of those without any numbers that support
 So is like you are playing roulette, due to lacking data to prove your hypothesis.
 Give growth a try! And find out how to move smarter with your development team along with really learning what your users want!
 
-## 1) What's GROWTH
+## What's GROWTH
 
 I see growth as a way of working around data analysis based decisions. So first let's explain a bit what data analysis is:
 
@@ -20,7 +20,7 @@ I see growth as a way of working around data analysis based decisions. So first 
 You may see that `data` word came up a lot, that's not because I want to be redundant but because I want to emphasize it as a really important concept. Nowadays the more data you have the more power you have to make better decisions.
 
 
-## 2) How to start?
+## How to start?
 
 As I mentioned before, start gathering data, it doesn't need to be super high-quality data, you will start learning from your users and your business reality and improve step by step.
 A simple step you can take at a really low cost is adding some forms and analytics to your landing page. This way you will start getting feedback from users and also start knowing your users interactions and interests.
@@ -42,7 +42,7 @@ To plan what to build you can follow this simple process, also to manage each sp
 
 The most important step at the end is to make decisions based on your learnings, adjusting your upcoming features/hypothesis based on learnings.
 
-## 3) Common mistakes
+## Common mistakes
 
 #### First and most usual mistake: assuming you know how users will behave
 
@@ -53,13 +53,21 @@ You will probably be wrong, instead of that write a hypothesis and try to prove 
 Actually is really easy to fall on this error, as you have an idea in your mind and naturally, you want it to end up with that being truth.
 So my proposal for this is to again write down your ideas based on hypothesis and set up expected metrics for each of them, so you can properly check against something objectively.
 
+Here are some tips to prevent falling into misreading data:
+  - Write down your findings, don't make decisions on the go (just reading data)
+  - Do multiple rounds of data check (like reading something multiple times before releasing)
+    - First round: check the more granular data
+    - Second one: try to detect patterns or contradictions between previous deductions
+    - Third one: take into account the "big picture", you are analyzing data and users under a certain context, so think about how your context may compromise your data
+    - Last one: remember you are evaluating a subset of your universe, so consider you may have some deviation and so don't make absolute decisions
+
 #### Think you have finished
 
 This is a continuous delivery process that never ends. User preferences changes and you can always detect new opportunities or tends to look at data.
 I see this as a simple process that prevents you to take wrong decisions, so you only can win from using it.
 
 
-## 4) Do I need an engineer?
+## Do I need an engineer?
 
 Actually you don't, but having one will provide you a different perspective from a structured data result mindset. Let's see what does this mean...
 You as a product owner, sales manager, investor, etc. will probably be the one with the most knowledge about users and your product, but, do you know how to measure your product performance and record your users interactions over your app? Probably not.
@@ -73,7 +81,7 @@ So here is where an engineer can help you:
 And honestly depending on the level of expertise of the engineer I can continue providing good reasons to work with one of them.
 So my recommendation for you is to look for a complete engineer, not just a developer. That will help you look at your business from more points of view
 
-## 5) Conclusions
+## Conclusions
 
 #### Mindset
 Be curious, be analytic and try to validate as much as possible as you introduce changes.
