@@ -74,7 +74,7 @@ A bit verbose but I really like the power Ecto gives to the developer.
 There's much more we could be using on the database side, we could delegate much more to it and speed up our application or use functions that are very powerful and we generally forget about. How about implementing search functionality with Postgres? I think using functionalities like `pg_trgm` should be as easy as
 
 ```ruby
-Post.where { |post| similarity(post.title, "search string" > 0.78 }
+Post.where { |post| similarity(post.title, "search string") > 0.78 }
 ```
 
 And there are a bunch of other functions and functionalities from our DBMS we might be missing out just because we would need to use raw SQL strings to use them.
