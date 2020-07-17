@@ -1,11 +1,11 @@
 ## A prediction experiment with Machine Learning
 
-I recently participated in a Machine Learning workshop at Rootstrap, where my coworkers and I learned about the basics of data science, did some research, and created interesting experiments. We had the opportunity to choose among the studied Machine Learning algorithms and work with them. So, I decided to do an experiment where a mathematical model predicts the life expectancy of a country in a given year. That is, given some data of a given country, we can make a prediction of its life expectancy in a determined year. The experiment was made in a [jupyter notebook](https://jupyter.org/), using the [python programming language](https://www.python.org/), and the [scikit learn library](https://scikit-learn.org/stable/). In this blog, I’m going to talk about my experience and explain a little bit about the work I did and the new things that I have learned.
+I recently participated in a Machine Learning workshop at Rootstrap, where my coworkers and I learned about the basics of data science, did some research, and created interesting experiments. We had the opportunity to choose among the studied Machine Learning algorithms and work with them. So, I decided to do an experiment where a mathematical model predicts the life expectancy of a country. That is, given some data of a given country, we can make a prediction of its life expectancy in a determined year. The experiment was made in a [jupyter notebook](https://jupyter.org/), using the [python programming language](https://www.python.org/), and the [scikit learn library](https://scikit-learn.org/stable/). In this blog, I’m going to talk about my experience and explain a little bit about the work I did and the new things that I have learned.
 
 ### Prediction in Machine Learning
 
 The word prediction in machine learning refers to the output of a trained model, representing the most likely value that will be obtained for a given input. The model is trained with historical data, and then predicts a selected property of the data for new inputs.
-Prediction is used in lots of different areas, since it allows us to make highly accurate guesses about many things, such as predicting what the stock markets will do on any given day, or predict results in sports, or even help the medical industry predict diseases.
+Prediction is used in lots of different areas, since it allows us to make highly accurate guesses about many things, such as predicting what the stock markets will do on any given day, predict results in sports, or even help the medical industry predict diseases.
 The algorithms for prediction are classified as supervised learning algorithms since they need a training dataset with correct examples to learn from them. This means that the first thing I had to do to start the experiment was finding a dataset, which contains information about countries, including, of course, their life expectancy.
 
 ### The dataset
@@ -35,7 +35,7 @@ In the next section, I talk about the problems I had to face, and how they can b
 
 ### Preprocessing the dataset
 
-The process of applying the necessary transformations to the data in order to prepare the data for the model is called data cleaning. There are several kinds of problems addressed in data cleaning, the ones that I faced are:
+The process of applying the necessary transformations to the data in order to prepare it for the model is called data cleaning. There are several kinds of problems addressed in data cleaning, the ones that I faced are:
 
 - Null values: some of the rows in the dataset had null values, and given that machine learning models are mathematical models, they can’t work with that kind of input.
 - Unnormalized data: some machine learning models don't work well if they have variables that have many different ranges of values.
@@ -87,7 +87,7 @@ ranges_list = [
 probs = [0.05, 0.02, 0.03, 0.05, 0.1, 0.2, 0.55]
 ```
 
-After those definitions, I created a function that gets one interval from the ranges_list according to the probabilities set and returns a randomly selected value within that interval. That value is the one that fills the empty space.
+After those definitions, I created a function that gets one interval from the `ranges_list` according to the probabilities set and returns a randomly selected value within that interval. That value is the one that fills the empty space.
 
 #### One hot-encoding
 
@@ -120,17 +120,17 @@ On the other hand, the Ridge regression performs L2 regularization, that is, a p
 #### Decision trees
 
 In regression, a decision tree is a type of model that builds a regression in the form of a tree structure. It breaks down the dataset into smaller subsets while at the same time develops an associated decision tree. In that tree, the leaf nodes are results, and the other nodes are decisions.
-In the experiment, I used the Random Forest model, which builds several decision trees (that is why it is called forest) and then ensembles them. Each tree takes only a random subset of the features and makes the decisions from it. What does “ensembles” mean in machine learning? Well, ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Random forest it’s also [implemented in scikit learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html?highlight=random%20forest%20regressor#sklearn.ensemble.RandomForestRegressor) and has the fit and predict functions.
+In the experiment, I used the Random Forest model, which builds several decision trees (that is why it is called forest) and then ensembles them. Each tree takes only a random subset of the features and makes the decisions from it. What does “ensembles” mean in machine learning? Well, ensemble methods use multiple learning algorithms to obtain better predictive performance than the one that could be obtained from any of the constituent learning algorithms alone. Random forest it’s also [implemented in scikit learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html?highlight=random%20forest%20regressor#sklearn.ensemble.RandomForestRegressor) and has the fit and predict functions.
 
 ### Metrics and results
 
 How do we know if the regression model works well? We can use some metrics to analyze that. As I mentioned, it’s a common practice to split the dataset into training and testing datasets. The training dataset it’s used by the model to learn, and the testing dataset it’s used to evaluate the correctness of the resultant model.
-How do we do this evaluation? By the moment of the evaluation, we have a trained model, and a testing dataset that has two main parts: a set of instances of the data, let’s say X_test, and a set of the corresponding correct result for each instance in X_test, let’s call it Y_test. A good way to measure how well our model works is by applying the predict function on X_test, and comparing that result with the correct one (Y_test). To make the comparison we have a couple of metrics that we can use:
+How do we do this evaluation? By the moment of the evaluation, we have a trained model, and a testing dataset that has two main parts: a set of instances of the data, let’s say `X_test`, and a set of the corresponding correct result for each instance in `X_test`, let’s call it `Y_test`. A good way to measure how well our model works is by applying the predict function on `X_test`, and comparing that result with the correct one (`Y_test`). To make the comparison we have a couple of metrics that we can use:
 
 <img src="images/prediction-error-definitions.png" alt="Errors" width="800" />
 
 As you can figure out, the closer to 0, the better results.
-In the experiment I used R-squared, Mean squared, and Root mean squared error. For each trained model, I did a measurement of those errors, and also, I used the created scalers for the target variable to scale back the result and compare the values in the original range. Here I show you can see the results of each model:
+In the experiment I used R-squared, Mean squared, and Root mean squared error. For each trained model, I did a measurement of those errors, and also, I used the created scalers for the target variable to scale back the result and compare the values in the original range. In these tables you can see the results of each model:
 
 Results with scaled data
 | Model | R-squared error | Mean squared error | Root mean squared error |
@@ -150,4 +150,4 @@ The conclusion is that Ridge and Random Forest regression work better than Lasso
 
 ### Summary
 
-In this blog I talked about a prediction experiment with machine learning. It was very interesting to me and I learned a lot. I hope that at this point you enjoyed your reading, and understood the main ideas of the general process of prediction. Also, I mentioned important concepts of machine learning such as supervised learning, preprocessing the data, training and testing the models, etc. We saw some of the most used models in regression, and a way to evaluate them in order to see how well they are working. Finally, after reading this blog I hope that you can feel inspired to work with machine learning because it’s fun and helps us to solve lots of amazing and interesting problems.
+In this blog I talked about a prediction experiment with machine learning. It was very interesting to me and I learned a lot. I hope that at this point you enjoyed your reading, and understood the main ideas of the general process of prediction. Also, I mentioned important concepts of machine learning such as supervised learning, preprocessing the data, training and testing the models, etc. We saw some of the most used models in regression, and a way to evaluate them in order to see how well they are working. Finally, after reading this blog I hope that you feel inspired to work with machine learning because it’s fun and helps us solve lots of amazing and interesting problems.
