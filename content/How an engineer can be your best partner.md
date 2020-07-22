@@ -1,4 +1,4 @@
-# **GROWTH - Data Analysis based decisions**
+# **GROWTH - Data-Driven Decisions
 
 ![main image](images/growth.jpg)
 
