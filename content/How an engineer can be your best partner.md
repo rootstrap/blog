@@ -90,5 +90,5 @@ Be curious, be analytic and try to validate as much as possible as you introduce
 Changes are good! Make as much as possible so you learn more. But keep them organized so it doesn't become anarchical
 
 #### Organization
-"Diversity is a source of wealth" we all know that, so the only problem to deal with is how to work with other roles keeping an open mindset.
+"Diversity is a source of wealth" we all know that, so the only problem to deal with is how to work with other roles while keeping an open mindset.
 Invest some time explaining your team what you want and why. People understanding what they are doing is way more effective.
