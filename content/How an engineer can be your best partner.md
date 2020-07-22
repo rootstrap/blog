@@ -87,7 +87,7 @@ So my recommendation for you is to look for a complete engineer, not just a deve
 Be curious, be analytic and try to validate as much as possible as you introduce changes.
 
 #### Changes
-Changes are good! Make as much as possible so you learn more. But keep them organized so it doesn't become anarchical
+Changes are good! Make them as much as possible so you learn more, but keep them organized so it doesn't become anarchic. 
 
 #### Organization
 "Diversity is a source of wealth" we all know that, so the only problem to deal with is how to work with other roles while keeping an open mindset.
