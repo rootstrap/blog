@@ -11,7 +11,7 @@ Well, if you found yourself saying any of those without any numbers that support
 So is like you are playing roulette, due to lacking data to prove your hypothesis.
 Give growth a try! And find out how to move smarter with your development team along with really learning what your users want!
 
-## What's GROWTH
+## What's GROWTH?
 
 I see growth as a way of working around data analysis based decisions. So first let's explain a bit what data analysis is:
 
