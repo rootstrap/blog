@@ -23,7 +23,7 @@ You may see that the word `data` came up a lot, that's not because I want to be 
 ## How to start?
 
 As I mentioned before, start gathering data, it doesn't need to be super high-quality data, you will start learning from your users and your business reality and improve step by step.
-A simple step you can take at a really low cost is adding some forms and analytics to your landing page. This way you will start getting feedback from users and also start knowing your users interactions and interests.
+A simple step you can take at a really low cost is adding some forms and analytics to your landing page. This way you will start getting feedback from users and also start knowing your user's interactions and interests.
 
 First, see an initial approach on how you should approach your changes:
 ![build measure learn](images/build-measure-learn.jpg)
