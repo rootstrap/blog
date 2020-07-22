@@ -3,7 +3,7 @@
 ![main image](images/growth.jpg)
 
 Have you ever said one of these tricky phrases?
-  - I'm sure this feature is going to rock it!
+  - I'm sure this feature is going to rock!
   - We need this feature before going live, it is a must!
   - Users will use this for sure!
 
