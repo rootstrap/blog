@@ -84,7 +84,7 @@ So my recommendation for you is to look for a complete engineer, not just a deve
 ## Conclusions
 
 #### Mindset
-Be curious, be analytic and try to validate as much as possible as you introduce changes.
+Be curious, be analytical, and try to validate as much as possible as you introduce changes.
 
 #### Changes
 Changes are good! Make them as much as possible so you learn more, but keep them organized so it doesn't become anarchic. 
