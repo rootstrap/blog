@@ -17,7 +17,7 @@ I see growth as a way of working around data analysis based decisions. So first 
 
 `Data analysis is defined as a process of cleaning, transforming, and modeling data to discover useful information for business decision-making. The purpose of Data Analysis is to extract useful information from data and taking the decision based upon the data analysis`
 
-You may see that `data` word came up a lot, that's not because I want to be redundant but because I want to emphasize it as a really important concept. Nowadays the more data you have the more power you have to make better decisions.
+You may see that the word `data` came up a lot, that's not because I want to be redundant but because I want to emphasize it as a really important concept. Nowadays the more data you have the more power you have to make better decisions.
 
 
 ## How to start?
