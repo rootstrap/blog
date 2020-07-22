@@ -79,7 +79,7 @@ So here is where an engineer can help you:
   - Processing data so you can take more time on your business instead of the product development
 
 And honestly depending on the level of expertise of the engineer I can continue providing good reasons to work with one of them.
-So my recommendation for you is to look for a complete engineer, not just a developer. That will help you look at your business from more points of view
+So my recommendation for you is to look for a well-rounded engineer, not just a developer. That will help you look at your business from more points of view.
 
 ## Conclusions
 
