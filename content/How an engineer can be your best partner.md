@@ -69,7 +69,7 @@ I see this as a simple process that prevents you to take wrong decisions, so you
 
 ## Do I need an engineer?
 
-Actually you don't, but having one will provide you a different perspective from a structured data result mindset. Let's see what does this mean...
+Actually you don't, but having one will provide you a different perspective from a structured data result mindset. Let's see what does this means...
 You as a product owner, sales manager, investor, etc. will probably be the one with the most knowledge about users and your product, but, do you know how to measure your product performance and record your users interactions over your app? Probably not.
 So here is where an engineer can help you:
   - Adding metrics on your app
