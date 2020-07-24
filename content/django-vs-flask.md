@@ -63,7 +63,7 @@ If you need a more custom solution, or your project features are out of the ordi
 At the end of the day, you should choose the framework that adjusts more into your project idea and particular situation,
 taking into consideration their strengths and weaknesess.
 
-Do you have any experience that you want to share with any of this frameworks?
+Do you have any experience that you want to share with any of these frameworks?
 Are there any extra pros or cons that you feel are missing?
 If you do I invite you to discuss them in the comment section.
 
