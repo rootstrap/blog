@@ -149,4 +149,4 @@ With this simple tool and without any installation or setup, we can know where a
 
 ## Conclusion
 
-Accessibility is a big problem on the web right now, our industry does not perceive the decrease of the value on the products for the simple reason that a big part of the potential users can't access to the features we develop every day. With simple tools and practices, we can increase the quality of our products and make society more inclusive for everyone.
+Accessibility is a big problem on the web right now, our industry does not perceive the decrease of the value on the products we build for the simple reason that a big part of the potential users can't access to the features we develop every day. With simple tools and practices, we can increase the quality of our products and make society more inclusive for everyone.
