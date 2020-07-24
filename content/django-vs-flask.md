@@ -21,7 +21,7 @@ with very little configuration.
 - A built in mailing system.
 
 ## Pitfalls
-- Tightly coupled with it's toolset, django it's sort of difficult to use in combination with other tools (replacing the form library for example)
+- Tightly coupled with its toolset, Django is sort of difficult to use in combination with other tools (replacing the form library for example)
 - The default scafolding, while not bad for small projects, does not scales without modification when trying to manage things such as multiple environments.
 - It implements the Model View Template pattern, and requires some effort to implement other architecture types with it
 
