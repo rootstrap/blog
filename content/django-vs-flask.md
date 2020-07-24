@@ -7,9 +7,7 @@ In this article we're going to review their main strengths and weaknesses to hel
 
 ## Approach
 Django opts for an all batteries included approach.
-This means that we have everything we need to build our project included into the framework.
-from a powerful ORM to an authentication system or a templating engine.
-Django takes care of it all without the need to learn any extra libraries.
+From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
 
 It also has the concept of pluggable apps, that means that you can drop an app folder inside your project and get its functionality right away
 with very little configuration.
