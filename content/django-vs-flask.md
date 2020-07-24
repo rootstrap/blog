@@ -57,7 +57,7 @@ This makes flask very easy to extend with practically whatever you want.
 - Microservices
 - Non MVT or MVC projects
 
-#So?, Wich one should i choose?
+# So?, Which one should I choose?
 To properly answer this question you need to take into consideration all the project requirements and make a decision based on that.
 If development speed is the most important thing because you need to go to the market fast, then Django probably will be the better choice,
 since you get a more complete feature set out of the box.
