@@ -4,7 +4,7 @@ In this article we're going to review their main strengths and weaknesses to hel
 
 
 # Django
-![django logo](images/flask-vs-django-django-logo.png)
+![django-logo](images/flask-vs-django-django-logo.png)
 ## Approach
 Django opts for an all batteries included approach.
 From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
