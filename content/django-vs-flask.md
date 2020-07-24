@@ -34,7 +34,7 @@ It provides some minimal structure, but leaves the decisions up to you.
 This makes flask very easy to extend with practically whatever you want.
 
 ## Main features
-- Very ligthweight.
+- Very lightweight.
 - It requires little to no configuration.
 - Not opinionated, you have total freedom to decide the project structure, from a single file to an elaborate folder system.
 - When you need some structure, you have blueprints to structure your app.
