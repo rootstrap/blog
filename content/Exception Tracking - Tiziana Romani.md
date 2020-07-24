@@ -14,15 +14,15 @@ Honeybadger, Sentry, Rollbar, are just a few names that resonate in this excepti
 
  >“I think we can build a rocket ourselves.” 
  
-Said Elon Musk on the plane back from Russia. 
-Pursuing Mars-related dreams, Elon Musk, Adeo Ressi and Jim Cantrell intended to make business with a Russian company in order to acquire rockets. The original deal consisted of 3 ICBM for US$21M. But in the last meeting, Russians turned that into US$21M per ICBM, along with the taunt: "Oh, little boy, you don’t have the money?"
+Elon Musk said on the plane back from Russia. 
+Pursuing Mars-related dreams, Elon Musk, Adeo Ressi, and Jim Cantrell intended to make business with a Russian company in order to acquire rockets. The original deal consisted of 3 ICBMs for US$21M. But in the last meeting, Russians turned that into US$21M per ICBM, along with the taunt: "Oh, little boy, you don’t have the money?"
 So... not exactly rockets, but similar words came out of my teammate's mouth.
 
 >"I think we can build an exception monitoring tool ourselves."
 
 And what's more, why not offer it to our whole community? Let's make this Open Source. 
 
-And that is how [ExceptionHunter](https://github.com/rootstrap/exception_hunter) was born. A simple dashboard, containing exceptions and errors occurred at your application grouped by similarity, along with tags differentiating among web-related, worker-related and manual. All distributed in a different tabs so the look up is easier. And you might also search through well-detailed independant paginated incidences from each error group.
+And that is how [ExceptionHunter](https://github.com/rootstrap/exception_hunter) was born. A simple dashboard, containing exceptions and errors occurred at your application grouped by similarity, along with tags differentiating among web-related, worker-related, and manual. All distributed in different tabs so the lookup is easier. And you might also search through well-detailed independent paginated incidences from each error group.
 
 
 [![ExceptionHunter](https://github.com/rootstrap/exception_hunter/blob/develop/app/assets/images/exception_hunter/logo.png?raw=true)](https://github.com/rootstrap/exception_hunter)
@@ -42,8 +42,8 @@ Oh but if you do forget, don't worry, we will include it for you.
 
 
 ### Motivation
-So what exactly drove us to undertake such a proyect? We don't intend to reinvent the wheel, a wide variety of versions for this tool already exist, as said. Yet in our company, we can perceive a strong and growing open source culture that we identify with and support. 
-We hope that by sharing this project, we can give back to the community and help anyone developing hobby projects and small MVPs, where you may not want to pay for an external serivce, to get exception tracking right out of the box, without much effort.
+So what exactly drove us to undertake such a project? We don't intend to reinvent the wheel, a wide variety of versions for this tool already exist, as said. Yet in our company, we can perceive a strong and growing open-source culture that we identify with and support. 
+We hope that by sharing this project, we can give back to the community and help anyone developing hobby projects and small MVPs, where you may not want to pay for an external service, to get exception tracking right out of the box, without much effort.
 
 In case you are interested in the subject, stay tuned for incoming posts where we explain how we built ExceptionHunter from the ground up, along with some technical matters.
 
