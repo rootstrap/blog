@@ -11,7 +11,7 @@ This means that we have everything we need to build our project included into th
 from a powerful ORM to an authentication system or a templating engine.
 Django takes care of it all without the need to learn any extra libraries.
 
-It also has the concept of plugabble apps, that means that you can drop an app folder inside your project and get it's functionality right away
+It also has the concept of pluggable apps, that means that you can drop an app folder inside your project and get its functionality right away
 with very little configuration.
 
 ## Main features
