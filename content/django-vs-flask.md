@@ -4,7 +4,7 @@ In this article we're going to review their main strengths and weaknesses to hel
 
 
 # Django
-
+![django logo](images/flask-vs-django-django-logo.png)
 ## Approach
 Django opts for an all batteries included approach.
 From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
@@ -25,7 +25,7 @@ with very little configuration.
 
 
 # Flask
-
+![flask logo](images/django-vs-flask-flask-logo.png)
 ## Approach
 Born as a combination of an http server with a template engine zipped together, Flask opts for a very minimalistic approach.
 It provides some minimal structure, but leaves the decisions up to you.
