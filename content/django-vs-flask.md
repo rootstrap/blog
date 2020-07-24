@@ -42,7 +42,7 @@ This makes flask very easy to extend with practically whatever you want.
 
 ## Pitfalls
 - Since it's very lightweigth, while the framework itself doesn't need any special configuration, the used libraries often do require config.
-- You have to mix and match libraries to get the desired functionality this also means that different parts of your project have different support from the community.
+- You have to mix and match libraries to get the desired functionality. This also means that different parts of your project have different support from the community.
 - The lack of opinion can lead to complicated architectures, or to very big single file projects.
 
 # Wrapping up
