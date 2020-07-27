@@ -56,7 +56,7 @@ https://gist.github.com/nsantos16/1c3159e118a2d8af754d2a57b5e732dd
 
 This makes the DOM confusing for visual interpretations programs that are used by people with visual disabilities.
 
-A solution for this is using the API that React provides, more particularly, `</Fragment>`, let's see:
+A solution for this is using the API that React provides, `</Fragment>`, let's see:
 
 https://gist.github.com/nsantos16/c097d8e791ad91ff45b0f835f5ab0219
 
