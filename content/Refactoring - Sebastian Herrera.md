@@ -72,7 +72,7 @@ By definition, refactoring is the process of changing the code structure, withou
 
 You may be asking other things like whether it's better to have more unit tests or integration tests, or if it's necessary to have near 100% code coverage on tests.
 
-The short answer is, there is no specific technique or condition to be met in order to be sure that your code works exactly as expected. There is a quote from Dijkstra that says *"Program testing can be used to show the presence of bugs, but never to show their absence."*
+As a short answer, take this quote from Dijkstra: *"Program testing can be used to show the presence of bugs, but never to show their absence."* It means that there is no specific technique or condition to be met, in order to be sure that your program works exactly as expected without any errors.
 
 So test the way you prefer, and try to cover as much as possible without adding unnecessary duplicated tests. Keep in mind that this will allow you to apply refactoring with much more confidence.
 
