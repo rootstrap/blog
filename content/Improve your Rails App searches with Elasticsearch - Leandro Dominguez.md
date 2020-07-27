@@ -10,7 +10,7 @@ It would be reasonable to wait for a user query containing fields from different
 
 We’ll try to answer these and more questions in this post using Elasticsearch in our Ruby on Rails app.
 
-In this tutorial I will assume you have a basic understanding of Ruby on Rails applications and have Elasticsearch server installed and a Rails app we will integrate with. If is not your case, you can [follow the official Elastic documentation]([https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)) and use [our awesome Ruby on Rails boilerplate]([https://github.com/rootstrap/rails_api_base](https://github.com/rootstrap/rails_api_base)).
+In this tutorial we will assume you have a basic understanding of Ruby on Rails applications and have Elasticsearch server installed and a Rails app we will integrate with. If is not your case, you can [follow the official Elastic documentation]([https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)) and use [our awesome Ruby on Rails boilerplate]([https://github.com/rootstrap/rails_api_base](https://github.com/rootstrap/rails_api_base)).
 
 ## But first… What is Elasticsearch?
 
@@ -58,11 +58,11 @@ The second include adds callbacks in our model, so every time we create, delete 
 
 This last point is very important. Take into account we have two independent databases: one in which we’re gonna persist all the model data as you’re used to (Postgres) and this other new one for making fast searches, suggestions and use all other Elasticsearch fantastic features.
 
-Sometimes (for performance or even business requirements), you don’t want to update data in Elasticsearch instantaneously every time a record has been changed in our main database (this is customizable but we won’t tackle this in the current article).
+Sometimes (for performance or even business requirements), we don’t want to update data in Elasticsearch instantaneously every time a record has been changed in our main database (this is customizable but we won’t tackle this in the current article).
 
 **Step 3: Defining our Elasticsearch index**
 
-In Elasticsearch we don’t have tables or rows. Our models are stored in ‘_indexes’_ and each instance is called ‘_document’_. Although Elastic can automatically detect the attributes types of our model, we are going to declare them explicitly so we have more control over them by adding the following to your model:
+In Elasticsearch we don’t have tables or rows. Our models are stored in _`indexes`_ and each instance is called _`document`_. Although Elastic can automatically detect the attributes types of our model, we are going to declare them explicitly so we have more control over them by adding the following to your model:
 
 ```ruby
  settings do
@@ -81,13 +81,13 @@ In the second line, with `dynamic: false` we are avoiding new fields to be creat
 
 In the third line we are telling Elastic we want to take our `id` attribute and add it to the `Post`’ index as an index but without analyzing it. This means it won’t apply any filter or transformation to it.
 
-In the fourth and fifth line, we’re saying we are adding both `title` and `body` as text type and with an English analyzer. This will automatically run text tokenizers, analyzers and will apply a lot of natural language processing tools every time we insert or edit a document in our index, making the searches faster, easier and typo-resistant (be aware all these things take an extra time). Follow these links if you’re interested in learning more about [language analyzers]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html)) and [tokenizers]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html))
+In the fourth and fifth line, we're adding both `title` and `body` as text type and with an English analyzer. This will automatically run text tokenizers, analyzers and will apply a lot of natural language processing tools every time we insert or edit a document in our index, making the searches faster, easier and typo-resistant (be aware all these things take an extra time). Follow these links if you’re interested in learning more about [language analyzers]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html)) and [tokenizers]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html))
 
 And last but not least, we are declaring `topic` as a _keyword_, meaning we are expecting this field only to be tokenized (and not processed or analyzed) making the inserts and edits faster. This is because we are not expected to search through this field, but feel free to play with different options.
 
 **Step 4: Starting our Elasticsearch instance and creating our index**
 
-Assuming you already installed Elasticsearch, start an instance of Elastic by just executing in a terminal **elasticsearch** (remember I’m using _homebrew_). This will launch a server in the 9200 port by default. To check if everything is working as expected make a get request with `curl "http://localhost:9200/"` (or could be just opening the URL in a browser).
+Assuming we already installed Elasticsearch, we'll start an instance of Elastic by just executing in a terminal **elasticsearch** (remember I’m using _homebrew_). This will launch a server in the 9200 port by default. To check if everything is working as expected we can make a `GET` request with `curl "http://localhost:9200/"` (or could be just opening the URL in a browser).
 
 The response should see something like this:
 
@@ -111,7 +111,7 @@ The response should see something like this:
 }
 ```
 
-Now we have our Elastic instance up and running, open a Rails console and create the corresponding index by executing:
+Now we have our Elastic instance up and running, let's open a Rails console and create the corresponding index by executing:
 
 ```ruby
 Post.__elasticsearch__.create_index!
@@ -127,7 +127,7 @@ This can take A LOT of time if you have too many records, since Elastic has to a
 
 **Step 5: define the search method we will call from the controller**
 
-In the Posts’ model define this basic method that will execute a query in our Elasticsearch instance, taking a string and looking in the specified fields.
+In the Posts’ model we'll define this basic method that will execute a query in our Elasticsearch instance, taking a string and looking in the specified fields.
 
 ```ruby
    def self.our_first_query(query)
@@ -211,4 +211,4 @@ Let’s now search for ‘_dakrness_’: a word that is neither in our database 
 
 Although in this post we’ve just covered the tip of the iceberg, we can see the potential of this search engine and how easy it is to integrate it to a Rails application. I encourage you to get lost into the wide [Elastic documentation]([https://www.elastic.co/guide/index.html](https://www.elastic.co/guide/index.html)) and discover the huge potential that it can add to our applications.
 
-We have being using Elasticsearch through some of our applications not only to admit typos and make searches smarter and faster but to adding [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’.
+We have being using Elasticsearch through some of our applications not only to admit typos and make searches smarter and faster but also to adding [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’.
