@@ -10,11 +10,11 @@ It would be reasonable to wait for a user query containing fields from different
 
 We’ll try to answer these and more questions in this post using Elasticsearch in our Ruby on Rails app.
 
-In this tutorial we will assume you have a basic understanding of Ruby on Rails applications and have Elasticsearch server installed and a Rails app we will integrate with. If is not your case, you can [follow the official Elastic documentation]([https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)) and use [our awesome Ruby on Rails boilerplate]([https://github.com/rootstrap/rails_api_base](https://github.com/rootstrap/rails_api_base)).
+In this tutorial we will assume you have a basic understanding of Ruby on Rails applications and have Elasticsearch server installed and a Rails app we will integrate with. If this is not your case, you can [follow the official Elastic documentation]([https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)) and use [our awesome Ruby on Rails boilerplate]([https://github.com/rootstrap/rails_api_base](https://github.com/rootstrap/rails_api_base)).
 
 ## But first… What is Elasticsearch?
 
-In their [official web]([https://www.elastic.co/elasticsearch/](https://www.elastic.co/elasticsearch/)) they describe Elasticsearch as a “_distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. (...) it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease”_ and in my humble opinion that’s pretty true due to its scalable and distributed architecture.
+In their [official web]([https://www.elastic.co/elasticsearch/](https://www.elastic.co/elasticsearch/)) they describe Elasticsearch as a _"distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. (...) it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease”_ and in my humble opinion that’s pretty true due to its scalable and distributed architecture.
 
 This [open source project]([https://github.com/elastic/elasticsearch](https://github.com/elastic/elasticsearch)) was built under the full-featured text search engine [Apache Lucene]([https://lucene.apache.org/core/](https://lucene.apache.org/core/)) and there is where most of the efficient magic happens.
 
@@ -22,13 +22,13 @@ In a nutshell, we’ll use Elasticsearch as a secondary database (a non-relation
 
 ## A small disclaimer
 
-Although there are lots of interesting and useful gems in Rails to work with Elasticsearch like [chewy](https://github.com/toptal/chewy), [searchkick](https://github.com/ankane/searchkick) or [search_flip](https://github.com/mrkamel/search_flip) (which I encourage you to take a look at), in this project we are going to use the two basic libraries provided by the Elasticsearch team: [elasticsearch-rails](https://github.com/elastic/elasticsearch-rails) and [elasticsearch-model](https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model). These two gems will let us both interact with the Elastic server instance using an ActiveRecord like syntax without having to write all the specific DSL and also update our records in the Elastic instance so we always keep as synchronized as possible with our relational database.
+Although there are lots of interesting and useful gems in Rails to work with Elasticsearch like [chewy](https://github.com/toptal/chewy), [searchkick](https://github.com/ankane/searchkick) or [search_flip](https://github.com/mrkamel/search_flip) (which I encourage you to take a look at), in this project we are going to use the two basic libraries provided by the Elasticsearch team: [elasticsearch-rails](https://github.com/elastic/elasticsearch-rails) and [elasticsearch-model](https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model). These two gems will let us both interact with the Elastic server instance using an ActiveRecord-like syntax without having to write all the specific DSL and also update our records in the Elastic instance so we always keep as synchronized as possible with our relational database.
 
 ## Let’s get down to work!
 
 ### What are we going to build?
 
-We’re gonna build a really simple microblogging searcher, where we are going to be available to find posts accepting possible typos and highlighting the matching results really fast and performant. For this, we will use text analyzers and tokenizers ([natural language processing tools]([https://en.wikipedia.org/wiki/Natural_language_processing](https://en.wikipedia.org/wiki/Natural_language_processing))) that come out the box with Elastic.
+We’re gonna build a really simple microblogging searcher, where we are going to make available to find posts accepting possible typos and highlighting the matching results really fast and performantly. For this, we will use text analyzers and tokenizers ([natural language processing tools]([https://en.wikipedia.org/wiki/Natural_language_processing](https://en.wikipedia.org/wiki/Natural_language_processing))) that come out the box with Elastic.
 
 **Step 1: Including required gems**
 
@@ -54,7 +54,7 @@ end
 
 The first `include` will let us make Elasticsearch calls in a friendly ActiveRecord-like syntax. This way we can, for example, just call `Post.search(query)` for searching. Otherwise we should manually make an API call to the Elastic server instance every time we want to interact with our data.
 
-The second include adds callbacks in our model, so every time we create, delete or edit a `Post`, this action will be replicated into Elasticsearch data.
+The second `include` adds callbacks in our model, so every time we create, delete or edit a `Post`, this action will be replicated into Elasticsearch data.
 
 This last point is very important. Take into account we have two independent databases: one in which we’re gonna persist all the model data as you’re used to (Postgres) and this other new one for making fast searches, suggestions and use all other Elasticsearch fantastic features.
 
@@ -81,7 +81,7 @@ In the second line, with `dynamic: false` we are avoiding new fields to be creat
 
 In the third line we are telling Elastic we want to take our `id` attribute and add it to the `Post`’ index as an index but without analyzing it. This means it won’t apply any filter or transformation to it.
 
-In the fourth and fifth line, we're adding both `title` and `body` as text type and with an English analyzer. This will automatically run text tokenizers, analyzers and will apply a lot of natural language processing tools every time we insert or edit a document in our index, making the searches faster, easier and typo-resistant (be aware all these things take an extra time). Follow these links if you’re interested in learning more about [language analyzers]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html)) and [tokenizers]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html))
+In the fourth and fifth line, we're adding both `title` and `body` as text type and with an English analyzer. This will automatically run text tokenizers, analyzers and will apply a lot of natural language processing tools every time we insert or edit a document in our index, making the searches faster, easier and typo-resistant (be aware all these things take an extra time). Follow these links if you’re interested in learning more about [language analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html) and [tokenizers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html).
 
 And last but not least, we are declaring `topic` as a _keyword_, meaning we are expecting this field only to be tokenized (and not processed or analyzed) making the inserts and edits faster. This is because we are not expected to search through this field, but feel free to play with different options.
 
@@ -197,11 +197,11 @@ def self.highlight(query)
 end
 ```
 
-In this case we are basically adding new two features: _fuzziness_ and _highlight_.
+In this case we are basically adding two new features: _fuzziness_ and _highlight_.
 
-With fuzziness we are making Elastic know that errors may appear in the query. This way, it will try to match similar words, so we now will not only cover semantic but syntactic errors too.
+With `fuzziness` we are making Elastic know that errors may appear in the query. This way, it will try to match similar words, so we now will not only cover semantic but syntactic errors too.
 
-With the second part, we are making the match to be highlighted by adding pre and post tags (in this case HTML bold, but you can add whatever you want).
+With `highlight` we are making the match to be highlighted by adding pre and post tags (in this case HTML bold, but you can add whatever you want).
 
 Let’s now search for ‘_dakrness_’: a word that is neither in our database nor is well written.
 
@@ -211,4 +211,4 @@ Let’s now search for ‘_dakrness_’: a word that is neither in our database 
 
 Although in this post we’ve just covered the tip of the iceberg, we can see the potential of this search engine and how easy it is to integrate it to a Rails application. I encourage you to get lost into the wide [Elastic documentation]([https://www.elastic.co/guide/index.html](https://www.elastic.co/guide/index.html)) and discover the huge potential that it can add to our applications.
 
-We have being using Elasticsearch through some of our applications not only to admit typos and make searches smarter and faster but also to adding [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’.
+Check out there for other multiple uses. We have being using it in some of our applications not only to admit typos and make searches smarter and faster but also to adding [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’. It also has several interesting uses in [geospacial queries](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html) including geodistances and geoshapes.
