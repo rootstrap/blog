@@ -1,7 +1,7 @@
 
 # Simulation Methods
 Simulation can be used for emulating situations. It is used to simulate systems to be studied. This can be applied in any kind of system, banks, supermarkets, biological systems, traffic, etc. And also is used to generate data with certain characteristics, either to complete missing information, to generate data more “similar” to the original one, or to generate “fake” data to be detected by your model. 
-## Monte Carlo simulation 
+## Monte Carlo Simulation 
 
 Monte Carlo simulation refers to the process of incorporating randomness into the model by generating random values. Thus, it is a probability model of different outcomes based on the probability distribution of the random variable. A probability distribution describes the frequency and patterns in the values that the variable takes. 
 It is very useful in business and finance where there are many random variables in play. 
@@ -66,7 +66,6 @@ This might be useful when you have missing values or you have very little data.
 # Conclusion 
 Simulating data can be helpful in many areas. You can simulate different situations to be analyzed, and find optimizations or improvements in the systems that operate those situations.
 You can generate more data that can be used in many ways, either to simulate incoming data to test a product, to fill missing information or to test your machine learning model. 
-
 
 
 
