@@ -25,7 +25,7 @@ The [Markov chain](http://setosa.io/ev/markov-chains/) is a stochastic process w
 This can be written like: ![](https://render.githubusercontent.com/render/math?math=p(X_%7Bt%2B1%7D%7CX_t%2C%20X_%7Bt-1%7D%2C...%2CX_1)%20%3Dp(X_%7Bt%2B1%7D%7CX_t))
 
 The chain can be represented as a state machine. 
-A transition corresponds to the changes of state, and the probabilities related to each transition are called transition probability. For example, in the image the transition probability from state A to E is 0.4. In this machine it is assumed that there is no final state, the process does not terminate.
+A transition corresponds to the changes of state, and the probabilities related to each transition are called transition probability. For example, in the image, the transition probability from state A to E is 0.4. In this machine it is assumed that there is no final state, the process does not terminate.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Markovkate_01.svg/1126px-Markovkate_01.svg.png"
      alt="Skills for Data Scientists"
@@ -66,6 +66,5 @@ This might be useful when you have missing values or you have very little data.
 # Conclusion 
 Simulating data can be helpful in many areas. You can simulate different situations to be analyzed, and find optimizations or improvements in the systems that operate those situations.
 You can generate more data that can be used in many ways, either to simulate incoming data to test a product, to fill missing information or to test your machine learning model. 
-
 
 
