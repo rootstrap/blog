@@ -44,7 +44,7 @@ Transition matrix: it is a table which indicates the probability ![](https://ren
 
 The transition matrix is useful to find the following steps’ probabilities. For instance, if you want to find ![](https://render.githubusercontent.com/render/math?math=p(X_%7Bt%2B2%7D%3DA%7CX_t%3DE)). This can be done by multiplying the transition matrix by itself n times, where n is the amount of steps further that you want to go, in this case 2. 
 
-## Discrete event simulation (DES)  
+## Discrete Event Simulation (DES)  
 A discrete-event simulation (DES) models the operation of a system as a discrete sequence of events in time. Each of the events occurring at a particular instant in time and means a change of state in the system.
 
 Examples are simulating queues in supermarkets, health centers, banks, simulating product production in a fabric. 
@@ -66,4 +66,3 @@ This might be useful when you have missing values or you have very little data.
 # Conclusion 
 Simulating data can be helpful in many areas. You can simulate different situations to be analyzed, and find optimizations or improvements in the systems that operate those situations.
 You can generate more data that can be used in many ways, either to simulate incoming data to test a product, to fill missing information or to test your machine learning model. 
-
