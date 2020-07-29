@@ -89,7 +89,7 @@ And last but not least, we are declaring `topic` as a _keyword_, meaning we are 
 
 Assuming we already installed Elasticsearch, we'll start an instance of Elastic by just executing in a terminal **elasticsearch** (remember I’m using _homebrew_). This will launch a server in the 9200 port by default. To check if everything is working as expected we can make a `GET` request with `curl "http://localhost:9200/"` (or could be just opening the URL in a browser).
 
-The response should see something like this:
+The response should look something like this:
 
 ```json
 {
@@ -162,7 +162,7 @@ Also, I did this simple view with a little of Bootstrap.
 
 As you can see, I created a bunch of posts using [faker]([https://github.com/faker-ruby/faker](https://github.com/faker-ruby/faker)).
 
-Take a look into that search again… Don’t you see something special? We looked for ‘_darkness_’ and although we don’t have any matching result, we can see that the ones containing ‘_dark_’ were displayed. This is because of the text analyzers. They know these two words are not the same but they do have similar semantics.
+Take a look into that search again… Don’t you see anything special? We looked for ‘_darkness_’ and although we don’t have any matching result, we can see that the ones containing ‘_dark_’ were displayed. This is because of the text analyzers. They know these two words are not the same but they do have similar semantics.
 
 Pretty easy, wasn’t it?
 
@@ -209,8 +209,8 @@ Let’s now search for ‘_dakrness_’: a word that is neither in our database 
 
 ## Conclusions
 
-Although in this post we’ve just covered the tip of the iceberg, we can see the potential of this search engine and how easy it is to integrate it to a Rails application.
+Although in this post we’ve just covered the tip of the iceberg, we can see the potential of this search engine when it comes to full-text searches thanks to its cutting-edge natural language processing tools. Also, we could see how easy it is to integrate it to our Rails application using the official Ruby gems they provide.
 
-Elastic also has several other applications. For example, we have been using it in some of our applications not only to admit typos and make searches smarter and faster but also to add [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’. It also has several interesting uses in [geospacial queries](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html) including geodistances and geoshapes.
+But that's not all. Elastic also has several other applications. For example, we have been using it in some of our applications not only to admit typos and make searches smarter and faster but also to add [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’. It also has several interesting uses in [geospacial queries](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html) including geodistances and geoshapes.
 
 I encourage you to get lost into the wide [Elastic documentation]([https://www.elastic.co/guide/index.html](https://www.elastic.co/guide/index.html)) and discover the huge potential that it can add to our applications.
