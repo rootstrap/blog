@@ -19,7 +19,7 @@ An application of Monte Carlo simulation is New Product Development. It correspo
 - d = discount rate        
 - R = profit     
 
-### Markov chain
+### Markov Chain
 The [Markov chain](http://setosa.io/ev/markov-chains/) is a stochastic process where the future behavior (probability of an event) depends only on the current state of the process (the previous event). It means that the assumption is given all the past history of the probability distribution for a random variable, the probability on the next step only depends on the current variable. 
 
 This can be written like: ![](https://render.githubusercontent.com/render/math?math=p(X_%7Bt%2B1%7D%7CX_t%2C%20X_%7Bt-1%7D%2C...%2CX_1)%20%3Dp(X_%7Bt%2B1%7D%7CX_t))
