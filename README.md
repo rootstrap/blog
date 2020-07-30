@@ -1,32 +1,29 @@
-## Submitting an Idea
+# How to write and publish an article in the Rootstrap blog
 
-For the management of proposals and new ideas for blog posts, we use this repo's [issues](https://github.com/rootstrap/blog/issues). If you have an idea for an article, either you want to write it yourself or not, you can create a new issue describing it and tagging it accordingly depending on which category the article would fit in.
+Publishing an article help us to improve the Rootstrap brand with quality content on the web. Also writing about a topic, enhance your knowledge of it. If you want to write and publish an article, please follow these simple steps:
 
-To make this process easier, we provide an issue template where we ask you for some basic information on your proposal: what’s the motivation for writing about the topic, some notes on the idea itself and possible keywords to identify the article with.
+1. If you have an idea, [submit it](https://github.com/rootstrap/blog/blob/master/SUBMIT-AN-IDEA.md) as an [issue](https://github.com/rootstrap/blog/issues). Otherwise, you can choose a submitted iddea from this repository issues and assign it to yourself.
+2. Write the article. Please take a look at the [guides](https://github.com/rootstrap/blog/blob/master/GUIDE.md).
+3. [Create a PR to `master`](https://github.com/rootstrap/blog/blob/master/CREATE-PR.md) and set the [corresponding labels](https://github.com/rootstrap/blog/blob/master/LABELS.md).
 
-Once you create the issue, you can either assign it to yourself if you’re planning on writing the article, or you can leave it unassigned for anyone interested to pick it up. The blog maintainers will reach out to the reporter and assignee to further refine the idea and eventually decide to include it on a blog release.
+   - Create the `.md` file with the article under the `content` folder with the filename: `<article-title> - <author-name>`.
+   - Suggested name for the branch: `article/<title>`.
 
-**IMPORTANT:** We highly recommend you create an issue before starting to write an article. During the submitting process the idea may change a bit and new ideas may come up, causing the scope of the article to change. This is not to discourage you to start writing articles, but to be aware that changes may happen when going through the pipeline.
+4. Ask for reviewers in the `technical-blog` channel. If it's possible, choose reviewers that have knowledge about the blog topic. Try to get at least two approves.
+5. After the approval of the PR, go to the [trello content board](https://trello.com/b/qdyCLffW/content) and create a card in the `Copy Write` column. Put in the card the title of the article and link to the PR. Please add a good quality picture for the article. You can wait for the design team to make a picture for the blog, or you can choose a public one on internet.
+6. The copywriter will move the card to the `Wordpress` column so Dinesh can upload the article to the [Rootstrap page](https://www.rootstrap.com/blog/). You can merge now the PR and close the issue.
 
-## Article Guide
+## Proccess flow
 
-Please, follow our [guide](https://github.com/rootstrap/blog/blob/master/GUIDE.md) to structure your post according to the standards we have defined.
+<img src="tech-blog-process.png" alt="Flow" />
 
-## Pushing your article for review
+## Promote your article
 
-Once you decided to write an article, you can start working directly into the repository by creating a markdown formatted file in `content/<article-title> - <author-name>.md` and start writing!
+It's very important to promote the created articles. After the blog is published in the Rootstrap site, please share it on LinkedIn and in the #company channel.
 
-When you think your article is ready to be reviewed, you can open up a Pull Request on the repo. The same as when creating an issue, you will have a basic template to follow and include some extra information about your article. It’s very important to include a reference to the originating issue to be able to keep a trace of the work being done on the blog.
+## Notion links
 
-At that point, one or more content reviewers will be assigned by the blog maintainers to the article. They will take care of reviewing the technical content of the article, making sure everything makes sense and nothing important is missing.
-Once the content is reviewed and considerd ready for publishing, one last review will be done by Austin, who will make sure the grammar, structure and story telling of the article is top notch, taking care of enhancing it's readadbility and appeal.
+If you want, you can read the [Notion page](https://www.notion.so/rootstrap/Technical-Blog-a57fe28696dd409595e43f1d0a3ed866) to understand better the different parts of the proccess of creating and publishing a technical blog.
 
-Other than that, all the same practices we’re already following for [code reviews](https://github.com/rootstrap/tech-guides/tree/master/code-review) should be taken into account on this process.
-
-Lastly, when the review process has been completed, your article will be merged into the repo, the originating issue will be closed, and your article will be scheduled to be released. To finish the process, you should work with the person in charge of the blog styling to work on your content and get it ready to be presented to the world!
-
-## How to Use Labels
-
-Usually issues will not need any labels, but still there are a few labels that can be used for them. An issue can be labeled with ![](https://img.shields.io/badge/low_hanging_fruit-d655af.svg) when it's an article that should be easy and fast to write. It can also be added the ![](https://img.shields.io/badge/duplicate-cfd3d7.svg) label if there has already been an article about the same subject, and it can be an ![](https://img.shields.io/badge/update-055c66.svg), when it's an update or enhacement to an already existing article.
-
-Regarding pull requests, we have a few labels that define in which step of the process the article is. If the PR was created but it's a work in progress, you would add the ![](https://img.shields.io/badge/WIP-82abd8.svg) label, so that reviewers know that it's not the final result. After the assignee finished writing it, ![](https://img.shields.io/badge/content_review-c1db1a.svg) can be used so that its content can be reviewed. When this is done, ![](https://img.shields.io/badge/style_review-d4c5f9.svg) can be added so that the style of the article (grammar, diction, readability, appeal) can be assessed. Once all this is finished, the ![](https://img.shields.io/badge/ready-48eaa9.svg) label will be added, so that the PR can be merged into the repo and published. There are other labels that can be used throughout this process, which are ![](https://img.shields.io/badge/help_wanted-e5676d.svg), if the assignee needs any kind of help (whether someone to finish writing the article or just to clear out some doubts), and ![](https://img.shields.io/badge/on_hold-dee510.svg), in the case the article is not being worked on right now (for example if the person used to have more free time to do this but know is currently working on something with a higher priority). ![](https://img.shields.io/badge/low_hanging_fruit-d655af.svg) and ![](https://img.shields.io/badge/update-055c66.svg) also apply for PRs. 
+- [How to prepare an article?](https://www.notion.so/rootstrap/How-to-prepare-an-article-2e2469176cb542f3b79289937cf07127)
+- [Promoting an article?](https://www.notion.so/rootstrap/Promoting-an-article-bd82086d2dc6486bb2a14a5527c9574d)
