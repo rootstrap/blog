@@ -1,7 +1,7 @@
 # Link Tracking with StimulusReflex - Part I
 
 This is the introduction to a series on using StimulusReflex, a new tool to bring Rails to the
-era of the backend-managed-frontends. This might sound weird but there's been a couple of projects, starting with [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) and following with things like [Motion](https://github.com/unabridged/motion) and [Sockpuppet](https://github.com/jonathan-s/django-sockpuppet), which use WebSockets to push updates from the server to the client and update the DOM accordingly.
+era of the backend-side-managed frontends. This might sound weird but there's been a couple of projects, starting with [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) and following with things like [Motion](https://github.com/unabridged/motion) and [Sockpuppet](https://github.com/jonathan-s/django-sockpuppet), which use WebSockets to push updates from the server to the client and update the DOM accordingly.
 
 This is better defined by the [StimulusReflex's folks](https://docs.stimulusreflex.com) which as you may have guessed is a gem that does just that. I'm not going to explain this any further in words but rather I'll show you how to use it by building a link shortener with this
 new and exciting technology. In this part of the series, we'll focus on getting up and running so we can build awesome features for our project.
@@ -16,7 +16,7 @@ To get started we are just going to follow the [original docs](https://docs.stim
 rails new sho_lin --webpack=stimulus -d postgresql
 ```
 
-By the way, StimuluJS it's a frontend framework concerned with adding functionality to the HTML rather than controlling the whole DOM. If you wish to learn more about it, there's a [recent post](https://www.smashingmagazine.com/2020/07/introduction-stimulusjs/) that explains how it works.
+By the way, StimuluJS is a frontend framework concerned with adding functionality to the HTML rather than controlling the whole DOM. If you wish to learn more about it, there's a [recent post](https://www.smashingmagazine.com/2020/07/introduction-stimulusjs/) that explains how it works.
 
 ## Testing that StimulusJS works
 
@@ -28,7 +28,7 @@ First, we'll create a basic controller with an index action to just render some 
 rails g controller pages index
 ```
 
-And we'll make this action our new root
+And we'll make this action our new root in our `config/routes.rb`
 
 ```ruby
 # change
@@ -70,7 +70,7 @@ So in this case when we set the `textContent` of our `outputTarget` the text wil
 
 ## Adding Reflex to our previous example
 
-Now that we've seen how StimulusJS works let's get down to business. The first step it's to install it, which is extremely simple
+Now that we've seen how StimulusJS works let's get down to business. The first step is to install it, which is extremely simple
 
 ```bash
 bundle add stimulus_reflex
@@ -145,7 +145,7 @@ export default class extends Controller {
 }
 ```
 
-You can test it again and you should get back "Hello, StimulusReflex!". How did it happen? Behind the scenes, StimulusReflex opens up a WebSocket connection and runs the Reflex's action and then the Controller's action sending the resulting HTML over the wire. On the client's side it does a diff between the result and the current DOM and does the needed minimum updates to update the latter.
+You can test it again and you should get back "Hello, StimulusReflex!". How did it happen? Behind the scenes, StimulusReflex opens up a WebSocket connection and runs the Reflex's action and then the Controller's action sending the resulting HTML over the wire. On the client's side it does a diff between the result and the current DOM performing the minimum updates to update the latter.
 
 ## Up next
 
