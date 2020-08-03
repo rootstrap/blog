@@ -1,29 +1,29 @@
-# Refactoring
-If you are reading this article I can assume that you are a software developer, you have probably both heard the term “refactoring” and applied it yourself (conscious or not) several times in the code you have written. To begin, let's see the definition:
+# Refactoring: improve your code quality
+If you are reading this article I can assume that you are a software developer, you have probably both heard the term “refactoring” and applied it yourself (conscious or not) several times while coding. To begin, let's review the definition:
 
 **Refactoring (noun):
 A change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior.**
 
-I became interested in the topic once in my early years as a developer, when I was asked to refactor a piece of code that had plenty of opportunities for improvement. It was a very long method with several steps that performed different things, even with multiple responsibilities.
+I became interested in the topic in my early years as a developer when I was asked to refactor a piece of code that had plenty of opportunities for improvement. It was a very long method with several steps that performed different things, even with multiple responsibilities.
 
-My first approach to that refactoring was to apply lots of “Extract Method” to that long method, giving those extracted the most representative names that I could find, for them and for the parameters. When I finished doing that, I felt that the code was much better and that I had accomplished the task I was assigned.
+My first approach to this code refactoring was to apply the “Extract Method” multiple times to that long method, giving those extracted the most representative names that I could find, for them, and for the parameters. When I finished doing that, I felt that the code was much better and that I had accomplished the task I was assigned.
 
 Then I presented it to the architect of the project, and he instantly noticed that my refactoring skills were similar to my guitar-playing skills (FYI: I don't play guitar, I just play air guitar). As any good mentor should do, he saw an opportunity for me to improve, so we paired up, and had about 3 different 1-2 hours long working sessions, designing a new solution together, applying some design patterns here and there.
 
-After reaching a really much better solution than the original, I really liked what we had done, and I saw a lot of potential in this technique. A code that already worked, now it still worked the same, but it was much easier to understand and modify when needed.
+After reaching a much better solution than the original, I really liked what we had done, and I saw a lot of potential in this technique. A code that already worked, now was much easier to understand and modify when needed.
 
-Last year, I felt that I definitely could keep improving my skills, so after searching for book recommendations, I reached one very well known: "Refactoring" by Martin Fowler. Now I can say that I understand why it is so recommended. This topic I became interested long ago, now made much more sense to me.
+Last year, I felt that I definitely could keep improving my skills, so after searching for book recommendations, I found one very well known: "Refactoring" by Martin Fowler. After reading it, I can understand why it's so often recommended. This topic I became interested long ago, now made much more sense to me.
 
-For you interested in the origins of things, refactoring wasn’t invented by Martin Fowler as some people might think. He says that he learned this technique from Kent Beck and a group of developers of a community of Smalltalk language back in the 90s, and by that time there were just a few articles and thesis about it, but there were no books.
+For those interested in the origin of things, refactoring wasn’t invented by Martin Fowler as some people might think. He shared that he learned this technique from Kent Beck and a group of developers of a community of Smalltalk language back in the 90s, and during that time there were just a few articles and thesis about refactoring, but there were no books.
 
 So, enough introduction, this is about what I learned from that book.
 
-## 1) WHY TO DO REFACTORING?
+## 1) WHY IS REFACTORING IMPORTANT?
 Maybe the most important question to ask yourself before doing anything, is why should you do it, meaning what value does it give in return.
 
 These are some of the main reasons why doing refactoring is recommended:
 - Refactoring improves the design of software.
-  - Creating software that has a good architecture isn't something that can be done the first time. The design we believe that best fits today, might not be the one that best fits next week.
+  - Creating software that has good architecture isn't something that can be done the first time. The design we believe that best fits today, might not be the one that best fits next week.
   - Without refactoring the design of the program will decay over time.
 - Refactoring makes software easier to understand.
   - *“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”* - Martin Fowler
@@ -59,7 +59,7 @@ Below is an example written in Ruby (it should be simple enough for anyone to fo
 
 Here you can find a [catalog of code smells](https://github.com/lee-dohm/code-smells/blob/master/README.md), defined mainly by Martin Fowler and Kent Beck.
 
-I highly recommend reading, understanding and memorizing them. If you do, whenever you are doing code review to another person, or just reviewing your code, you will see much more easily the possible improvements.
+I highly recommend reading, understanding, and memorizing them. If you do, whenever you are doing code review to another person, or just reviewing your code, you will see much more easily the possible improvements.
 
 **Conclusion: Pay attention to code smells. They might be whispering (or even shouting!) asking for a better solution :warning: :eyes:**
 
@@ -98,7 +98,7 @@ In the book they are presented within 6 different categories which may not be wo
 
 **Conclusion: There is no conclusion here :sweat_smile:**
 
-## 6) SOME EXAMPLES
+## 6) EXAMPLES OF REFACTORING
 If you read up to here, first thank you, and second, now you have to finish it.
 
 I will present just 2 simple refactorings as examples. I don’t think the purpose of this article should be for you to learn many of them or learning some complex ones. I believe that is something you can learn by yourself somewhere else, but you will do it only if you feel enough motivation to do it.
@@ -139,8 +139,8 @@ You have one class doing work that should be done by two.
   9. Decide whether multiple clients will be able to access the class. If you do allow access to multiple clients, decide whether to expose the new class as a reference object or as an immutable value object.
 
 ## 7) FINAL THOUGHTS
-In my own experience as a software engineer, I have seen many projects grow a lot over time, and by the hand, their code became harder to understand, harder to maintain, harder to work with and more prone to introducing bugs. And I know for as long as I work in this industry, I will continue to see this happen.
+In my own experience as a software engineer, I have seen many projects grow a lot over time, and as a result, their code became harder to understand, harder to maintain, harder to work with, and more prone to introducing bugs. And I know for as long as I work in this industry, I will continue to see this happen.
 
 There is no magic trick for that. However, so far I have also seen that refactoring the code as part of your daily programming, is probably the best technique you and your team can apply to counter those undesired effects.
 
-Give it a chance, and practice it until it just becomes a habit. I can assure that you will live the benefits of it.
+Give it a chance, and practice it until it just becomes a habit. I can assure you that you will experience the benefits of it.
