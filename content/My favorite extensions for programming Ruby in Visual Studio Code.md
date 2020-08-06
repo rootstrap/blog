@@ -4,7 +4,7 @@
 
 It may be a tough decision, as a programmer, to choose a text editor, since it will be your main tool to do your work, and you will use it every day in your work-life.
 
-Everybody has their favorite text editor, I have known people who use **Vim, Notepad++, Sublime Text, Atom**, and many others.
+Everybody has their favorite text editor, I have known people who use **[Vim](https://www.vim.org/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)**, and many others.
 
 I tried different text editors in my career, always looking for the perfect one. At first, I started with Sublime Text, later the pretty UI of Atom hooked me, and for the last year I have been coding with **Visual Studio Code**.
 
