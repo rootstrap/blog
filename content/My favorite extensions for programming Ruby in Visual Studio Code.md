@@ -97,7 +97,7 @@ I fully understand you, I missed the Atom shortcut keymap so much when I made th
 
 ## [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
 
-This extension ports popular Atom keyboard shortcuts to Visual Studio Code and helps a lot making easier the switch between both code editors.
+This extension ports popular Atom keyboard shortcuts to Visual Studio Code and helps to make the switch between code editors a lot easier.
 
 ## [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
 
