@@ -93,7 +93,7 @@ A very simple one, adds icons to your files and it personally helps me a lot to 
 
 # I&#39;ve been using atom and now I switched to Visual Studio Code, I&#39;m a bit lost
 
-I fully understand you, I miss so much the Atom shortcut keymap when I made the switch, but here is your salvation.
+I fully understand you, I missed the Atom shortcut keymap so much when I made the switch, but here is your salvation.
 
 ## [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
 
