@@ -24,7 +24,7 @@ I love Gitlens because it allows me to detect who wrote the code that I am readi
 - Authorship code lens showing the most recent commit and # of authors to the top of files and/or on code blocks
 - A status bar blame annotation showing author and date for the current line
 - On-demand gutter blame annotations, including a heatmap, for the whole file
-- On-demand gutter heatmap annotations to show how recently lines were changed, relative to all the other changes in the file and to now (hot vs. cold)
+- On-demand gutter heatmap annotations to show how recently lines were changed, relative to all the other changes in the file (hot vs. cold)
 - On-demand recent changes annotations to highlight lines changed by the most recent commit
 - And much [more](https://gitlens.amod.io/#features).
 
