@@ -86,7 +86,7 @@ This extension will help you to format the code of Javascript, HTML, CSS, JSON, 
 
 ## [VSCode Great Icons](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons)
 
-A very simple one, adds icons to your files and it personally helps me a lot to know instantly which kind of file I'm seeing.
+A very simple one, adds icons to your files and it personally helps me a lot to know instantly which kind of file I'm viewing.
 
 ![VSCode Great Icons](images/vscodegreaticons.jpg)
 
