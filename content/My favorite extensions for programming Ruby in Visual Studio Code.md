@@ -101,7 +101,7 @@ This extension ports popular Atom keyboard shortcuts to Visual Studio Code and h
 
 ## [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
 
-And the last extension that I will share with you is an aesthetic one, when I started using Visual Studio Code I missed the theme that Atom has, so this extension fix that problem for me.
+And the last extension that I will share with you is an aesthetic one, when I started using Visual Studio Code I missed the theme that Atom provides, so this extension fixed that problem for me.
 
 # Conclusion
 
