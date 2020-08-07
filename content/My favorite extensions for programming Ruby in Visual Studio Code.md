@@ -63,7 +63,7 @@ Another **vital** extension if you are a Ruby developer, which gives Visual Stud
 
 ## [ruby-rubocop](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop)
 
-Having RuboCop configured in your ruby project will help you to maintain the quality of the code, especially if your project is being developed by a team. This extension will let you autoformat and correct your code basing it the directives written in the .rubucop.yml file. With only a key shortcut your code will be formatted in a second, is fast, is good, is an **essential** extension.
+Having RuboCop configured in your ruby project will help you maintain the quality of the code, especially if your project is being developed by a team. This extension will let you autoformat and correct your code basing it the directives written in the .rubucop.yml file. With only a key shortcut your code will be formatted in a second, it's fast, it's good, it's an **essential** extension.
 
 **Features:**
 
