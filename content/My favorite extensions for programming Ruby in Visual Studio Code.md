@@ -10,7 +10,7 @@ I tried different text editors in my career, always looking for the perfect one.
 
 I was enjoying Atom, but in some cases, my computer at the time couldn't handle it very well and it was getting a bit laggy to open the text editor or work with it. So a friend of mine told me that maybe Visual Studio Code could fit my needs, and he was right.
 
-# I use Visual Studio Code too! Tell me about its extensions
+# Visual Code Studio Extensions
 
 ## [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
