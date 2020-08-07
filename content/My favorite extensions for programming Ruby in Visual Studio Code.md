@@ -1,4 +1,4 @@
-# Choosing a text editor for Ruby
+# Choosing a Text Editor for Ruby
 
 ## Choosing a Text Editor
 
