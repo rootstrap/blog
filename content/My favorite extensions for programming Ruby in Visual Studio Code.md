@@ -1,6 +1,6 @@
 # Choosing a text editor for Ruby
 
-## Choosing a text editor
+## Choosing a Text Editor
 
 It may be a tough decision, as a programmer, to choose a text editor, since it will be your main tool to do your work, and you will use it every day in your work-life.
 
