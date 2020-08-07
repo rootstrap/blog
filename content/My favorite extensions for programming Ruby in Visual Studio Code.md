@@ -105,4 +105,4 @@ And the last extension that I will share with you is an aesthetic one, when I st
 
 # Conclusion
 
-These are my favorite extension for Visual Studio Code at the moment that I'm writing this. I hope that they help you to improve your experience using this famous code editor and please feel free to comment below this article if you have any other extensions recommendation!
+These are currently my favorite extensions for Visual Studio Code. I hope this famous code editor will help you improve your experience. Please feel free to comment below if you have any other extension recommendations!
