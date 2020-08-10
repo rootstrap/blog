@@ -6,7 +6,7 @@ Firebase is a mobile platform that helps you quickly develop high-quality apps, 
 
 ### What can we do with Firebase?
 
-Firebase provides a lot of tools that we will talk about in next posts but resuming Firebase allow as to:
+Firebase provides a lot of tools that we will talk about in next posts. Some of them are:
 - Push notifications
 - Analytics
 - A/B Testing
