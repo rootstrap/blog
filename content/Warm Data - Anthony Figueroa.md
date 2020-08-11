@@ -14,7 +14,7 @@ It is information about the interrelationships that integrate elements of a comp
 
 A good way to understand it is through an example. Let’s think for a minute about our diet and nutritional data about our food. 
 
-We can think about what are the relationships in which this food came to be. 
+We can ask ourselves what are the relationships in which this food came to be? 
 
 Is it economic, cultural, political, family habits? 
 
@@ -25,9 +25,9 @@ How does it affect your community’s economy? And your own economy?
 A lot of information about your food actually matters. This information doesn’t give you the same cold facts. It gives you context. 
 
 ## Why is Warm Data important?
-Our way to study the world has largely been to study things out of context. Research has developed since the 1600s, researchers now pull things out of context and study them in great detail, generating a lot of knowledge out of them but it’s simply not enough.
+Our way to study the world has largely been to study things out of context. Research has developed a lot since the 1600s, researchers now pull things out of context and study them in great detail, generating a lot of new knowledge out of them but it’s simply not enough.
 
-In order to interface with any complex system without disrupting the circuitry of the interdependencies that give it its integrity, we must look at the spread of relationships that make the system robust. Using only analysis of statistical data will offer conclusions that can point to actions that are out of sync with the complexity of the situation. Information that doesn’t interrelate is likely to lead us toward misinformed actions, thereby creating further destructive patterns.
+In order to interfere with any complex system without disrupting the circuitry of the interdependencies that give it its integrity, we must look at the spread of relationships that make the system robust. Using only analysis of statistical data will offer conclusions that can point to actions that are out of sync with the complexity of the situation. Information that doesn’t interrelate is likely to lead us toward misinformed actions, thereby creating further destructive patterns.
 
 ## In which fields might Warm Data be important?
 It can be applied to virtually everything, such as economics, sociology, ecology, business, healthcare, etc. 
