@@ -37,7 +37,7 @@ As you can see, our project already has a `__tests__` folder with an `App-test.j
 
 To actually create a test, we should create a file with a `.spec.js` extension inside the `__tests__` folder. We could also have folders inside for organizing the tests, for example, one folder called `screens` and have inside one test per screen.
 
-Inside this tests, we are going to use `describe()` just to describe what we want to test, `it()` (same as `test()`) to create the tests we want to have and `expect()` to create our expected behaviour. Also, we will be using `beforeEach()` to excecute some code before each `it()` test. [Here](https://jestjs.io/docs/en/api) is a complete list of `jest` methods to use inside tests.
+Inside these tests, we are going to use `describe()` just to describe what we want to test, `it()` (same as `test()`) to create the tests we want to have and `expect()` to create our expected behaviour. Also, we will be using `beforeEach()` to execute some code before each `it()` test. [Here](https://jestjs.io/docs/en/api) is a complete list of `jest` methods to use inside tests.
 
 Also, we use the `@testing-library/react-native` library to test our components behaviour. We could use `fireEvent` to fire a button pressed event or `waitFor()` to wait for promises results. [Here](https://www.native-testing-library.com/docs/cheat-sheet) is a cheat sheet with the possible methods to use.
 
@@ -51,7 +51,7 @@ Also, we are going to need some extra files to handle navigation and screen para
 
 ### Navigation helper
 
-To test our app we need to start in some screen. If we use a simple `render AppStack` we would always start in the same screen and we would need to have some flow to go to a different screen. To avoid this, we could just start our stack with the screen we want and if we need to test our screen redirecting to some other screen we just need to add that other screen to the stack for the test to work.
+To test our app we need to start on some screen. If we use a simple `render AppStack` we would always start on the same screen and we would need to have some flow to go to a different one. To avoid this, we could just start our stack with the screen we want and if we need to test our screen redirecting to some other screen we just need to add that other screen to the stack for the test to work.
 
 Keeping this in mind, we will create a `helpers.js` file inside the `extras` folder that looks like this:
 
@@ -81,7 +81,7 @@ https://gist.github.com/ManuViola77/809d28c61fdad272d2ce1b3d3147bde5
 
 Inside the `screens` folder we should create the `AnotherScreen.spec.js` file.
 
-Since we are not in the AppStack's first screen and our screen receives parameters, we are going to take advantage of the helper we created. We will call the funtion `renderWithNavigation` with `AnotherScreen` as its `mainComponent` and as second parameter we will give `MainScreen` as `otherComponents` and `screenParameters` as `screenConfig initialParams`. We will create a `data.js` file inside the `extras` folders to have our `screenParameters` set:
+Since we are not in the AppStack's first screen and our screen receives parameters, we are going to take advantage of the helper we created. We will call the function `renderWithNavigation` with `AnotherScreen` as its `mainComponent` and as second parameter we will give `MainScreen` as `otherComponents` and `screenParameters` as `screenConfig initialParams`. We will create a `data.js` file inside the `extras` folders to have our `screenParameters` set:
 
 https://gist.github.com/ManuViola77/2871545d426cdda330f322e517c46b0e
 
@@ -120,7 +120,7 @@ Finally, we can debug our tests by running `npm run test:debug` and this will in
 
 ## Mocks
 
-Since our app was really simple, we didn't need to implement mocks, but it's really an important part of testing react native apps, so I will explain why we need them and how can we create them.
+Since our app was really simple, we didn't need to implement mocks, but it's really an important part of testing react native apps, so I will explain why we need them and how we can create them.
 
 The first thing you need to know is that there are lots of functionalities you will have to mock in order to use and test. For this purpose, you can create the `__mocks__` folder inside the `__tests__` one. Every file in there will be named after a react native library, so when you are testing something that uses that library, jest will take and use the implementation made in the mock.
 
