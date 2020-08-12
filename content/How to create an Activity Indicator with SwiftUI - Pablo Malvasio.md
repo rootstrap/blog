@@ -1,4 +1,4 @@
-![Main image](images/spinner-cover.jpg)
+![Main image](images/spinner-cover.png)
 
 # How to create an Activity Indicator with SwiftUI
 
@@ -29,7 +29,7 @@ So, to start if you don’t a have a project to add the spinner, you can create 
 
 In this case we’ll be creating a rounded square with a spinning view in the middle, a full blurred background and some shadows just in order to say that we made something fancy. The final result will look like this: 
 
-![Final result](images/spinner-final-result.jpg)
+![Final result](images/spinner-final-result.png)
 
 
 ### The middle spinning thing 
