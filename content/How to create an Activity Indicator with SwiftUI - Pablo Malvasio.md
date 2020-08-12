@@ -36,25 +36,7 @@ In this case we’ll be creating a rounded square with a spinning view in the mi
 
 Starting from a Circle() view, we can trim it to get the final spinning shape. Now we can embed that inside a `ZStack` and add a background color with opacity bellow the trimmed shape. Final details for this step: we can modify the frame, color and corner radius of our `ZStack`. 
 
- ```swift
- ZStack {
-    Color.gray.opacity(0.5)
-          
-    Circle()
-        .trim(from: 0.2, to: 1)
-        .stroke(
-            Color.white,
-            style: StrokeStyle(
-            lineWidth: 5,
-            lineCap: .round
-            )
-        )
-        .frame(width: 40, height: 40)
-    }
-    .frame(width: 80, height: 80)
-    .background(Color.white)
-    .cornerRadius(30)
- ```
+https://gist.github.com/pMalvasio/bad867cbc86e099ffe38458056568daf
 
 
 ### The Background
@@ -62,99 +44,31 @@ Starting from a Circle() view, we can trim it to get the final spinning shape. N
 Now that we have the middle part done, we can work on the blurred background so when the Spinner is called the current content will be blocked by this view but barely visible on the background.
 To accomplish this we can embed our current code on a new `ZStack` and add the blurred color background ignoring the safe areas in order to cover the entire screen.
 
-```swift
-ZStack {
-    Color.black.opacity(0.8)
-        .edgesIgnoringSafeArea(.all)
-        .blur(radius: 200)
-    
-    ...
-} 
-```
+https://gist.github.com/pMalvasio/d1d8c8fb0c3f33abcdfb7469314ad5a2.js
 
 
 ### Shadows to look fancy
 
 Feel free to try any color combination. I’m sticking to this monochromatic palette just to avoid overthinking the design. Don’t forget that the idea is to have a pretty simple SpinnerView to use right away.
 
-```swift
-ZStack {
-    Color.black.opacity(0.8)
-        .edgesIgnoringSafeArea(.all)
-        .blur(radius: 200)
-    
-    ZStack {
-        Color.gray.opacity(0.5)
-        
-        Circle()
-            .trim(from: 0.2, to: 1)
-            .stroke(
-                Color.white,
-                style: StrokeStyle(
-                lineWidth: 5,
-                lineCap: .round
-                )
-            )
-            .frame(width: 40, height: 40)
-            .shadow(color: Color.black.opacity(0.1), radius: 3, x: 0, y: 3)
-    }
-    .frame(width: 80, height: 80)
-    .background(Color.white)
-    .cornerRadius(30)
-    .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5)
-    .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 2)
-}
-```
+Spining view shadow:
+
+https://gist.github.com/pMalvasio/c662b9223766795031a7173b7607e98a
+
+And rounded rectangle shadows:
+
+https://gist.github.com/pMalvasio/ffd666101cbe09637cd9cce05cc6aebf
 
 
 ### Animation
 
 To create the already known spinning animation we’ll use a combination of `animate` and `rotation` modifiers and a `@State` variable in order to trigger the animation as soon as the view is loaded with the `.onAppear` modifier.
 
-So, we need to add the following code before the body of our view: 
-
-```swift
-@State var isAnimating = false
-```
+So, we need to add the following code before the body of our view: `@State var isAnimating = false`
 
 Now we can add the animation depending on the value of that state. That working together with an `.onAppear` modifier will do the trick.
 
-```swift
-ZStack {
-    Color.black.opacity(0.8)
-        .edgesIgnoringSafeArea(.all)
-        .blur(radius: 200)
-    
-    ZStack {
-        Color.gray.opacity(0.5)
-        
-        Circle()
-        .trim(from: 0.2, to: 1)
-        .stroke(
-            Color.white,
-            style: StrokeStyle(
-            lineWidth: 5,
-            lineCap: .round
-            )
-        )
-        .frame(width: width, height: height)
-        .shadow(color: Color.black.opacity(0.1), radius: 3, x: 0, y: 3)
-        .rotationEffect(.degrees(isAnimating ? 360 : 0))
-        .animation(
-            Animation.linear(duration: 1)
-                .repeatForever(autoreverses: false)
-        )
-    }
-    .frame(width: 80, height: 80)
-    .background(Color.white)
-    .cornerRadius(30)
-    .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5)
-    .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 2)
-    .onAppear {
-        self.isAnimating = true
-    }
-}
-```
+https://gist.github.com/pMalvasio/12952b393bdb6e207104d3d7448e8ba4.js
 
 Done. You can now call your brand new SpinnerView() from where ever you want and see how is working. Usually you will want to call it when you detect you're waiting for some task to end (like a backend request) or any local task that needs to block the user and indicates that you are performing some action in order to continue.
 
@@ -164,26 +78,14 @@ Done. You can now call your brand new SpinnerView() from where ever you want and
 In a few steps we can make our new view customizable so you can call SpinnerView() with any combination of colors, size or even rotation speed.
 First we need to create a SpinnerConfiguration `struct` to allocate all the configurable parameters to call the SpinnerView.
 
-```swift
-struct SpinnerConfiguration {
-  var spinnerColor: Color = .white
-  var blurredBackground: Color = .black
-  var spinnerBackgroundColor: Color = .gray
-  var backgroundCornerRadius: CGFloat = 30
-  var width: CGFloat = 50
-  var height: CGFloat = 50
-  var speed: Double = 1
-}
-````
+https://gist.github.com/pMalvasio/8be5fd2ed3f23169fb19690ff55fd85d.js
 
 Now that we successfully extracted this values from the code we can start replacing them. 
 
 Quick note: given that we code/design all in a specific set of values regarding size, we'll calculate a multiplier using that base value to accomplish a proper resize for new values.
 This multiplier will be: 
 
-```swift
-let multiplier = configuration.width / 40
-``` 
+`let multiplier = configuration.width / 40`
 
 And given that we need calculate this inside the body of our view, we also will be adding a `return` before the paren view.
 
@@ -194,13 +96,7 @@ Last, but not least, we will add the following line: `var configuration: Spinner
 
 You can now use this on any of your views just putting all your content inside a `ZStack` and drawing the SpinnerView() below that, based on any state control you have.
 
-Something like:
-
-```swift
-if showSpinner {
-    SpinnerView()
-}
-```
+Something like: `if showSpinner { SpinnerView() }`
 
 Being `showSpinner` a state var on my main view that's updated depending on any blocking task I'm running
 
