@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Have you ever had a bug introduced by solving another problem and didn't realize it until weeks later? This could have been easily avoided if you had unit tests for your App.
+Have you ever had a bug introduced by solving another problem and didn't realize it until weeks later? This could have been easily avoided if you had tests for your App.
 
 In a project with a tight schedule, unit tests are generally the first one to disappear, but they are being underestimated. Once you make that click and understand how to make the tests, it's not that complicated to make them and avoid future problems.
 
@@ -45,7 +45,7 @@ Notice that to know how to ask for a specific component, we can simply add the `
 
 ## Creating tests for our App
 
-Now we need to create our own tests, so we can test our `MainScreen` and `AnotherScreen`. We can create the `screens` folder inside the `__tests__` folder to have better organized tests.
+Now we need to create our own tests, so we can test our `MainScreen` and `SecondaryScreen`. We can create the `screens` folder inside the `__tests__` folder to have better organized tests.
 
 Also, we are going to need some extra files to handle navigation and screen parameters data, so we can create an `extras` folder inside the `__tests__` folder for this purpose. If you paid attention you may have noticed that we had added `modulePathIgnorePatterns: ['extras']` to the `jest.config.js` file. This is to tell jest to ignore the `.js` files that this folder contains, otherwise, it will consider them tests and we don't want that.
 
@@ -57,7 +57,7 @@ Keeping this in mind, we will create a `helpers.js` file inside the `extras` fol
 
 https://gist.github.com/ManuViola77/ebb7e47769a54b2fb6759eeefc912809
 
-We will get more into detail when we use it in the `AnotherScreen` test.
+We will get more into detail when we use it in the `SecondaryScreen` test.
 
 ### MainScreen test
 
@@ -68,8 +68,8 @@ Since we are in the AppStack's first screen we can just render the entire `AppSt
 This file should test the `MainScreen` components existence and behaviour:
 
 - Rendering component `MainScreen`
-- Rendering component `button-to-another-screen`
-- Pressing component `button-to-another-screen` and redirecting to `AnotherScreen`
+- Rendering component `button-to-secondary-screen`
+- Pressing component `button-to-secondary-screen` and redirecting to `SecondaryScreen`
 - Rendering component `alert-button`
 - Pressing component `alert-button` and showing an alert
 
@@ -77,17 +77,17 @@ Each of this items should translate to an `it()` jest method and so our `MainScr
 
 https://gist.github.com/ManuViola77/809d28c61fdad272d2ce1b3d3147bde5
 
-### AnotherScreen test
+### SecondaryScreen test
 
-Inside the `screens` folder we should create the `AnotherScreen.spec.js` file.
+Inside the `screens` folder we should create the `SecondaryScreen.spec.js` file.
 
-Since we are not in the AppStack's first screen and our screen receives parameters, we are going to take advantage of the helper we created. We will call the function `renderWithNavigation` with `AnotherScreen` as its `mainComponent` and as second parameter we will give `MainScreen` as `otherComponents` and `screenParameters` as `screenConfig initialParams`. We will create a `data.js` file inside the `extras` folders to have our `screenParameters` set:
+Since we are not in the AppStack's first screen and our screen receives parameters, we are going to take advantage of the helper we created. We will call the function `renderWithNavigation` with `SecondaryScreen` as its `mainComponent` and as second parameter we will give `MainScreen` as `otherComponents` and `screenParameters` as `screenConfig initialParams`. We will create a `data.js` file inside the `extras` folders to have our `screenParameters` set:
 
 https://gist.github.com/ManuViola77/2871545d426cdda330f322e517c46b0e
 
-This file should test the `AnotherScreen` components existence and behaviour:
+This file should test the `SecondaryScreen` components existence and behaviour:
 
-- Rendering component `AnotherScreen`
+- Rendering component `SecondaryScreen`
 - Rendering component `back-button`
 - Pressing component `back-button` and redirecting to `MainScreen`
 - Rendering component `title`
@@ -96,7 +96,7 @@ This file should test the `AnotherScreen` components existence and behaviour:
 
 Notice that our `param-one` and `param-two-content` only render if they have content to render, so if our tests pass means that the screen is getting the parameters right!
 
-Our `AnotherScreen.spec.js` file should look like this:
+Our `SecondaryScreen.spec.js` file should look like this:
 
 https://gist.github.com/ManuViola77/84c055e49f70d48423d5db302bb2fefd
 
