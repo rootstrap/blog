@@ -103,4 +103,4 @@ Being `showSpinner` a state var on my main view that's updated depending on any 
 
 ## Summary
 
-In this tutorial, you learned how to create a small but robust SpinnerView 100% made on SwiftUI. As I already mentioned before, you can see the final code (here)[https://github.com/rootstrap/spinner-playground] on a small project with a tiny demo app.
+In this tutorial, you learned how to create from scratch a SpinnerView 100% made on SwiftUI. As I already mentioned before, you can find the final code (here)[https://github.com/rootstrap/spinner-playground] on a small project with a tiny demo app.
