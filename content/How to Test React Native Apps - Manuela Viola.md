@@ -1,5 +1,7 @@
 # How to Test React Native Apps
 
+![Main image](images/how_to_test_rn_apps_cover.jpg)
+
 ## Introduction
 
 Have you ever had a bug introduced by solving another problem and didn't realize it until weeks later? This could have been easily avoided if you had tests for your App.
