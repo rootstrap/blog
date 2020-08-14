@@ -6,7 +6,7 @@
 
 Have you ever had a bug introduced by solving another problem and didn't realize it until weeks later? This could have been easily avoided if you had tests for your App.
 
-In a project with a tight schedule, tests are generally the first one to disappear, but they are being underestimated. Once you make that click and understand how to make the tests, it's not that complicated to make them and avoid future problems.
+In a project with a tight schedule, tests are generally the first thing to disappear, but they are being underestimated. Once you make that click and understand how to create tests, it's not that complicated to add them and avoid future problems.
 
 ## Overview
 
