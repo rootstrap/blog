@@ -15,14 +15,14 @@ In this tutorial, we’ll create a simple SwiftUI view using `UIViewRepresentabl
 
 ### Installation
 
-In order to use Lottie inside your project, we need to install the library. For this we have a few different options like Cocapods, Carthage, or the one we will use in this tutorial Swift Package Manager.
+In order to use Lottie inside your project, we need to install the library. For this, we have a few different options like Cocapods, Carthage, or the one we will use in this tutorial Swift Package Manager.
 
 First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code), hit next and leave the major version that is selected by default to use the latest Lottie release.
 
 
 ### Hosting Lottie on SwiftUI 
 
-Now that you have Lottie already installed in your project we can start creating the view. For this you'll need to create a new Swift file. Call it `LottieView`, add the `import SwiftUI` statement on top and then the following:
+Now that you have Lottie already installed in your project, we can start creating the view. For this, you'll need to create a new Swift file. Call it `LottieView`, add the `import SwiftUI` statement on top and then the following:
 
 https://gist.github.com/pMalvasio/93a02c5fb8d2f35509d78df8571915cd
 
@@ -31,7 +31,7 @@ So far we're using a `UIViewRepresentable` to allocate an empty `UIView` with fr
 
 ### Loading the Animation
 
-Next, you'll need to import Lottie on your code, so you have add `import Lottie` below the SwiftUI import that's already there. In the `makeUIView(...)` method you can now call Lottie, to load the animation and add it to the view we already created.
+Next, you need to import Lottie on your code, so you have to add `import Lottie` below the SwiftUI import that's already there. In the `makeUIView(...)` method you can now call Lottie to load the animation and add it to the view we already created.
 
 https://gist.github.com/pMalvasio/82ec0abbdcf9b1776a533e673e8f6533
 
@@ -54,7 +54,7 @@ Add `var filename: String` below the `typealias` line and use it to call the ani
 
 Done. You successfully created a `LottieView` with SwiftUI that can load any animation you want into your project and start playing it. Now you only need to call `LottieView(filename: YOUR_ANIMATION)` and you will see it.
 
-The final result is the following:
+This is the final result:
 
 https://gist.github.com/pMalvasio/73184eb5142139cad9a92a7752fb2752
 
