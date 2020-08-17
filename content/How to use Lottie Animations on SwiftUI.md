@@ -17,7 +17,7 @@ In this tutorial, we’ll create a simple SwiftUI view using `UIViewRepresentabl
 
 In order to use Lottie inside your project, we need to install the library. For this we have a few different options like Cocapods, Carthage, or the one we will use in this tutorial Swift Package Manager.
 
-First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code) and then just hit next and leave the major version that is selected by default to use the more recent release for Lottie.
+First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code), hit next and leave the major version that is selected by default to use the latest Lottie release.
 
 
 ### Hosting Lottie on SwiftUI 
