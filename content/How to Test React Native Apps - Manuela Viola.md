@@ -10,22 +10,22 @@ In a project with a tight schedule, tests are generally the first thing to disap
 
 ## Overview
 
-In this article you will learn how to test React Native Apps using [jest](https://jestjs.io/docs/en/getting-started) and [@testing-library/react-native](https://www.npmjs.com/package/@testing-library/react-native).
+In this article, you will learn how to test React Native Apps using [jest](https://jestjs.io/docs/en/getting-started) and [@testing-library/react-native](https://www.npmjs.com/package/@testing-library/react-native).
 
 ## About @testing-library/react-native
 
-One important thing to point out is that this testing library has changed many times and with migrations needed from one version to another. This tutorial will work with the latest version at the time of writing it (`7.0.1`). For migrations you can check their [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users)
+One important thing to point out is that this testing library has changed many times and with migrations needed from one version to another. This tutorial will work with the latest version at the time of writing it (`7.0.1`). For migrations, you can check their [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users)
 
 ## App to be tested
 
-For this tutorial, we are going to use [this](https://github.com/ManuViola77/testing_react_native_apps) simple app, but of course you can apply everything learned in any app you want. In this app we just have two simple screens with some components we can test.
+For this tutorial, we are going to use [this](https://github.com/ManuViola77/testing_react_native_apps) simple app, but of course, you can apply everything learned in any app you want. In this app, we just have two simple screens with some components we can test.
 
 ## Configuration
 
 Since we are going to use the `@testing-library/react-native` library, we need to install it. To use the specific `7.0.1` version we can install it like this:
 `npm install @testing-library/react-native@7.0.1`
 
-Also, we need to configure jest. We should create a `jest.config.js` file in the projects root folder and for our example we can fill it with this content:
+We also need to configure jest. We should create a `jest.config.js` file in the projects root folder and for our example, we can fill it with this content:
 
 https://gist.github.com/ManuViola77/d98f577c8ea35655d96dcd4654ab398e
 
@@ -37,11 +37,11 @@ As you can see, our project already has a `__tests__` folder with an `App-test.j
 
 ## Creating tests
 
-To actually create a test, we should create a file with a `.spec.js` extension inside the `__tests__` folder. We could also have folders inside for organizing the tests, for example, one folder called `screens` and have inside one test per screen.
+To actually create a test, we should create a file with a `.spec.js` extension inside the `__tests__` folder. We could even add folders inside for organizing the tests, for example, one folder called `screens` and have inside one test per screen.
 
-Inside these tests, we are going to use `describe()` just to describe what we want to test, `it()` (same as `test()`) to create the tests we want to have and `expect()` to create our expected behaviour. Also, we will be using `beforeEach()` to execute some code before each `it()` test. [Here](https://jestjs.io/docs/en/api) is a complete list of `jest` methods to use inside tests.
+Inside these tests, we are going to use `describe()` just to describe what we want to test, `it()` (same as `test()`) to create the tests we want to have, `expect()` to create our expected behavior and `beforeEach()` to execute some code before each `it()` test. [Here](https://jestjs.io/docs/en/api) is a complete list of `jest` methods to use inside tests.
 
-Also, we use the `@testing-library/react-native` library to test our components behaviour. We could use `fireEvent` to fire a button pressed event or `waitFor()` to wait for promises results. [Here](https://www.native-testing-library.com/docs/cheat-sheet) is a cheat sheet with the possible methods to use.
+Correspondingly, we use the `@testing-library/react-native` library to test our components behavior. We could use `fireEvent` to fire a button pressed event or `waitFor()` to wait for promises results. [Here](https://www.native-testing-library.com/docs/cheat-sheet) is a cheat sheet with the possible methods to use.
 
 Notice that to know how to ask for a specific component, we can simply add the `testID="componentId"` property to the component we want to identify. To simplify, I already added this property to all the components we are testing.
 
@@ -63,11 +63,11 @@ We will get more into detail when we use it in the `SecondaryScreen` test.
 
 ### MainScreen test
 
-Inside the `screens` folder we should create the `MainScreen.spec.js` file.
+Inside the `screens` folder, we should create the `MainScreen.spec.js` file.
 
 Since we are in the AppStack's first screen we can just render the entire `AppStack` and it would start rendering the screen we want.
 
-This file should test the `MainScreen` components existence and behaviour:
+This file should test the `MainScreen` components existence and behavior:
 
 - Rendering component `MainScreen`
 - Rendering component `button-to-secondary-screen`
@@ -75,7 +75,7 @@ This file should test the `MainScreen` components existence and behaviour:
 - Rendering component `alert-button`
 - Pressing component `alert-button` and showing an alert
 
-Each of this items should translate to an `it()` jest method and so our `MainScreen.spec.js` file should look like this:
+Each of these items should translate to an `it()` jest method and so our `MainScreen.spec.js` file should look like this:
 
 https://gist.github.com/ManuViola77/809d28c61fdad272d2ce1b3d3147bde5
 
@@ -87,7 +87,7 @@ Since we are not in the AppStack's first screen and our screen receives paramete
 
 https://gist.github.com/ManuViola77/2871545d426cdda330f322e517c46b0e
 
-This file should test the `SecondaryScreen` components existence and behaviour:
+This file should test the `SecondaryScreen` components existence and behavior:
 
 - Rendering component `SecondaryScreen`
 - Rendering component `back-button`
@@ -114,7 +114,7 @@ We can see how our tests run successfully:
 
 If we want to debug our tests we can use [ndb](https://www.npmjs.com/package/ndb).
 
-To use this, first we need to install it, as the documentation explains, by running `npm install ndb` and you can add the `-g` option to make it global.
+To use this, first, we need to install it, as the documentation explains, by running `npm install ndb` and you can add the `-g` option to make it global.
 
 Then, we can configure our project by setting the value `"test:debug": "ndb jest",` inside our `package.json` file under the `"scripts"` section (we can put it right after the `"test"` value).
 
@@ -138,8 +138,8 @@ What we are doing here is mocking our `openPicker` function, by saying it is a f
 
 https://gist.github.com/ManuViola77/00899b450baebb8ef676c69a31af1b67
 
-By using the method `mockImplementationOnce()` we can give different behaviours to our function, depending on each time you call it. So in this case, the first time we call it we would get a rejected promise (for example to mock that we don't have access to the gallery yet), the second time would be a successful case with our expected result and if we were to call it more times it would use the default implementation inside the `fn()` method, which in this case would also be successful.
+By using the method `mockImplementationOnce()` we can give different behaviors to our function, depending on each time you call it. So in this case, the first time we call it we would get a rejected promise (for example to mock that we don't have access to the gallery yet), the second time would be a successful case with our expected result and if we were to call it more times it would use the default implementation inside the `fn()` method, which in this case would also be successful.
 
 ## Summary
 
-In this tutorial we saw how to use `jest` and `@testing-library/react-native` to test React Native Apps. You can find the complete GitHub project (with tests included) [here](https://github.com/ManuViola77/testing_react_native_apps_with_tests).
+In this tutorial, we saw how to use `jest` and `@testing-library/react-native` to test React Native Apps. You can find the complete GitHub project (with tests included) [here](https://github.com/ManuViola77/testing_react_native_apps_with_tests).
