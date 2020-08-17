@@ -17,7 +17,7 @@ In this tutorial, we’ll create a simple SwiftUI view using `UIViewRepresentabl
 
 In order to use Lottie inside your project we need to install the library. For this we have a few different options like Cocapods, Carthage or the one we will use in this tutorial Swift Package Manager.
 
-First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code) and then just hit next and leave the major version thats selected by default to use the more recent release for Lottie.
+First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code) and then just hit next and leave the major version that is selected by default to use the more recent release for Lottie.
 
 
 ### Hosting Lottie on SwiftUI 
@@ -52,7 +52,7 @@ Add `var filename: String` bellow the `typealias` line and use it to call the an
 
 ### Ready to go
 
-Done. You successfully created a `LottieView` with SwiftUI that can call any animation you want into your project and start playing it. Now you only need to call `LottieView(filename: YOUR_ANIMATION)` and you will see it.
+Done. You successfully created a `LottieView` with SwiftUI that can load any animation you want into your project and start playing it. Now you only need to call `LottieView(filename: YOUR_ANIMATION)` and you will see it.
 
 The final result is the following:
 
@@ -61,4 +61,4 @@ https://gist.github.com/pMalvasio/73184eb5142139cad9a92a7752fb2752
 
 ## Tons of animations
 
-Usually, these animations are provided by a designer, but if you wanna dive into tons of animations that are already there for you to use and most of them are free, you can visit [LottieFiles](https://lottiefiles.com), create an account and start using pretty cool animations. And, if you feel like this a nice opportunity to contribute with that huge community of designers, you can also buy some animations to support them.
+Usually, these animations are provided by a designer, but if you wanna dive into tons of animations that are already there for you to use you can visit [LottieFiles](https://lottiefiles.com). Most of them are free, but, if you want to contribute with that huge community of designers, you can also buy some animations to support them.
