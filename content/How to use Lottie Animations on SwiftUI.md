@@ -38,21 +38,21 @@ https://gist.github.com/pMalvasio/82ec0abbdcf9b1776a533e673e8f6533
 
 ### Adding the constraints
 
-To ensure that it takes the full height and width of the container, we'll specify constraints. To do so, add the following to before returning the view:
+To ensure that it takes the full height and width of the container, we'll specify constraints. To do so, add the following before returning the view:
 
 https://gist.github.com/pMalvasio/06844e05841cc42cc26797e9e6d38ff1
 
 
 ### Almost there
 
-The last part will be allow the `LottieView` to load any animation you import into your project. To do it we can add a new var and pass it at the moment of calling the animation inside the `makeUIView(...)` method:
+The last part will be to allow the `LottieView` to load any animation you import into your project. To do it we can add a new var and pass it at the moment of calling the animation inside the `makeUIView(...)` method:
 
-Add `var filename: String` bellow the typealias line and use it to call the animation replacing the curren call for: `let animation = Animation.named(filename)`
+Add `var filename: String` bellow the `typealias` line and use it to call the animation replacing the current call for: `let animation = Animation.named(filename)`
 
 
 ### Ready to go
 
-Done. You successfuly created a `LottieView` with SwiftUI that can call any animation you want into your project and start plying it. Now you only need to call `LottieView(filename: YOUR_ANIMATION)` and you will see it.
+Done. You successfully created a `LottieView` with SwiftUI that can call any animation you want into your project and start playing it. Now you only need to call `LottieView(filename: YOUR_ANIMATION)` and you will see it.
 
 The final result is the following:
 
@@ -61,4 +61,4 @@ https://gist.github.com/pMalvasio/73184eb5142139cad9a92a7752fb2752
 
 ## Tons of animations
 
-Usually this animations are privided by a designer, but if you wanna dive into tons of animations that are already there for you to use and most of them are free, you can visit [LottieFiles](https://lottiefiles.com), create an account and start using pretty cool animations. And, if you feel like this a nice oportunity to contribute with that huge comunity of designers, you can also buy some animations to support them.
+Usually, these animations are provided by a designer, but if you wanna dive into tons of animations that are already there for you to use and most of them are free, you can visit [LottieFiles](https://lottiefiles.com), create an account and start using pretty cool animations. And, if you feel like this a nice opportunity to contribute with that huge community of designers, you can also buy some animations to support them.
