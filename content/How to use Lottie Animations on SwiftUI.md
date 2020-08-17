@@ -1,6 +1,6 @@
 ![Main image](images/lottie-cover.png)
 
-# How to use Lottie Animations on SwiftUI
+# How to use Lottie Animations in SwiftUI
 
 ## Introduction
 
