@@ -22,7 +22,7 @@ First of all, on Xcode click on `File` and then select the `Add Package Dependen
 
 ### Hosting Lottie on SwiftUI 
 
-Now that you have Lottie already installed on your project we can start creating the view. For this you'll need to create a new SwiftUI file. Call it `LottieView` and delete everything except the import statement and add the following:
+Now that you have Lottie already installed on your project we can start creating the view. For this you'll need to create a new swift file. Call it `LottieView`, on top add `import SiwftUI` statement and then the following:
 
 https://gist.github.com/pMalvasio/93a02c5fb8d2f35509d78df8571915cd
 
@@ -31,7 +31,7 @@ So far we're using a `UIViewRepresentable` to allocate an empty `UIView` with fr
 
 ### Loading the Animation
 
-Next, you'll need to import Lottie on your code, so yo can add `import Lottie` below the SwiftUI import that's already there. On the `makeUIView(...)` method you can now call Lottie and load an animation and add it to the view we already created.
+Next, you'll need to import Lottie on your code, so yo can add `import Lottie` below the SwiftUI import that's already there. On the `makeUIView(...)` method you can now call Lottie, load an animation and add it to the view we already created.
 
 https://gist.github.com/pMalvasio/82ec0abbdcf9b1776a533e673e8f6533
 
