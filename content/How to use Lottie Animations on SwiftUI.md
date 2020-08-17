@@ -31,7 +31,7 @@ So far we're using a `UIViewRepresentable` to allocate an empty `UIView` with fr
 
 ### Loading the Animation
 
-Next, you need to import Lottie on your code, so you have to add `import Lottie` below the SwiftUI import that's already there. In the `makeUIView(...)` method you can now call Lottie to load the animation and add it to the view we already created.
+Next, you need to import Lottie on your code. Add `import Lottie` below the SwiftUI import that's already there. In the `makeUIView(...)` method you can now call Lottie to load the animation and add it to the view we already created.
 
 https://gist.github.com/pMalvasio/82ec0abbdcf9b1776a533e673e8f6533
 
