@@ -8,13 +8,13 @@ In these cases, we want to retrieve data from our database given a query a user 
 
 It would be reasonable to wait for a user query containing fields from different models’ attributes and in these cases queries start to get complex and inefficient. What happens when our model's attributes and their relationships start to grow? How do we manage user typos in those queries? What happens when a user looks for ‘ps4’ instead of ‘playstation 4’?
 
-We’ll try to answer these and more questions in this post using Elasticsearch in our Ruby on Rails app.
+We’ll try to answer this along with more questions about using Elasticsearch in a Ruby on Rails app.
 
 In this tutorial we will assume you have a basic understanding of Ruby on Rails applications and have Elasticsearch server installed and a Rails app we will integrate with. If this is not your case, you can [follow the official Elastic documentation]([https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)) and use [our awesome Ruby on Rails boilerplate]([https://github.com/rootstrap/rails_api_base](https://github.com/rootstrap/rails_api_base)).
 
 ## But first… What is Elasticsearch?
 
-In their [official web]([https://www.elastic.co/elasticsearch/](https://www.elastic.co/elasticsearch/)) they describe Elasticsearch as a _"distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. (...) it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease”_ and in my humble opinion that’s pretty true due to its scalable and distributed architecture.
+ [Elasticsearch]([https://www.elastic.co/elasticsearch/](https://www.elastic.co/elasticsearch/))  is described as a _"distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. (...) it centrally stores your data for lightning-fast search, fine‑tuned relevancy, and powerful analytics that scale with ease”_ and in my humble opinion that’s pretty true due to its scalable and distributed architecture.
 
 This [open source project]([https://github.com/elastic/elasticsearch](https://github.com/elastic/elasticsearch)) was built under the full-featured text search engine [Apache Lucene]([https://lucene.apache.org/core/](https://lucene.apache.org/core/)) and there is where most of the efficient magic happens.
 
@@ -52,7 +52,7 @@ class Post < ApplicationRecord
 end
 ```
 
-The first `include` will let us make Elasticsearch calls in a friendly ActiveRecord-like syntax. This way we can, for example, just call `Post.search(query)` for searching. Otherwise we should manually make an API call to the Elastic server instance every time we want to interact with our data.
+The first `include` will let us make Elasticsearch calls in a friendly ActiveRecord-like syntax. This way we can, for example, just call `Post.search(query)` for searching. Otherwise, we should manually make an API call to the Elastic server instance every time we want to interact with our data.
 
 The second `include` adds callbacks in our model, so every time we create, delete or edit a `Post`, this action will be replicated into Elasticsearch data.
 
@@ -123,11 +123,11 @@ If you already had some posts created, you will need to reindex them by running 
 Post.import
 ```
 
-This can take A LOT of time if you have too many records, since Elastic has to analyze and tokenize all of them.
+This can take A LOT of time if you have too many records since Elastic has to analyze and tokenize all of them.
 
 **Step 5: define the search method we will call from the controller**
 
-In the Posts’ model we'll define this basic method that will execute a query in our Elasticsearch instance, taking a string and looking in the specified fields.
+In the Posts’ model, we'll define this basic method that will execute a query in our Elasticsearch instance, taking a string and looking in the specified fields.
 
 ```ruby
    def self.our_first_query(query)
@@ -197,7 +197,7 @@ def self.highlight(query)
 end
 ```
 
-In this case we are basically adding two new features: _fuzziness_ and _highlight_.
+In this case, we are basically adding two new features: _fuzziness_ and _highlight_.
 
 With `fuzziness` we are making Elastic know that errors may appear in the query. This way, it will try to match similar words, so we now will not only cover semantic but syntactic errors too.
 
