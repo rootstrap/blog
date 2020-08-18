@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When it comes to apps with a lot of data, some SQL queries take more time than expected, especially when we want to search text through several model attributes. The most known examples are e-commerces, but this kind of complex queries can happen in apps like social media or any other one that implies making suggestions based on user information or interaction with the platform.
+When it comes to apps with a lot of data, some SQL queries take more time than expected, especially when we want to search text through several model attributes. This most commonly happens with e-commerce stores, but these kinds of complex queries can happen in social media apps or any query that makes suggestions based on user information or interaction with the platform.
 
 In these cases, we want to retrieve data from our database given a query a user made.
 
