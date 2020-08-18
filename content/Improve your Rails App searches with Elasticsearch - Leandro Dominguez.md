@@ -6,7 +6,7 @@ When it comes to apps with a lot of data, some SQL queries take more time than e
 
 In these cases, we want to retrieve data from our database given a query a user made.
 
-It would be reasonable to wait for a user query containing fields from different models’ attributes and in these cases queries start to get complex and inefficient. What happens when our models attributes and their relationships start to grow? How do we manage user typos in those queries? What happens when a user looks for ‘ps4’ instead of ‘playstation 4’?
+It would be reasonable to wait for a user query containing fields from different models’ attributes and in these cases queries start to get complex and inefficient. What happens when our model's attributes and their relationships start to grow? How do we manage user typos in those queries? What happens when a user looks for ‘ps4’ instead of ‘playstation 4’?
 
 We’ll try to answer these and more questions in this post using Elasticsearch in our Ruby on Rails app.
 
