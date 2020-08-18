@@ -1,4 +1,4 @@
-# Improve your Rails Apps searches with Elasticsearch
+# How to Improve Ruby on Rails Apps Searches with Elasticsearch 
 
 ## Introduction
 
