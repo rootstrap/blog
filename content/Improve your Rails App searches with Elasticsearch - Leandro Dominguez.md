@@ -26,7 +26,7 @@ Although there are lots of interesting and useful gems in Rails to work with Ela
 
 ## Let’s get down to work!
 
-### What are we going to build?
+### Tutorial to Build a Microblogging Searcher
 
 We’re gonna build a simple microblogging searcher, where we are going to make it possible to find posts despite potential typos and highlighting the matching results really fast and performantly. For this, we will use text analyzers and tokenizers ([natural language processing tools](https://en.wikipedia.org/wiki/Natural_language_processing) that come out of the box with Elastic.
 
