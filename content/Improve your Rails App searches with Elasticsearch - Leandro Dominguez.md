@@ -10,13 +10,13 @@ It would be reasonable to wait for a user query containing fields from different
 
 We’ll try to answer this along with more questions about using Elasticsearch in a Ruby on Rails app.
 
-In this tutorial we will assume you have a basic understanding of Ruby on Rails applications and have Elasticsearch server installed and a Rails app we will integrate with. If this is not your case, you can [follow the official Elastic documentation]([https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)) and use [our awesome Ruby on Rails boilerplate]([https://github.com/rootstrap/rails_api_base](https://github.com/rootstrap/rails_api_base)).
+In this tutorial, we will assume you have a basic understanding of Ruby on Rails applications, have Elasticsearch server installed, and a Rails app we will integrate it with. If this is not the case, you can [follow the official Elastic documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html) and use [our awesome Ruby on Rails boilerplate](https://github.com/rootstrap/rails_api_base)).
 
 ## But first… What is Elasticsearch?
 
  [Elasticsearch]([https://www.elastic.co/elasticsearch/](https://www.elastic.co/elasticsearch/))  is described as a _"distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. (...) it centrally stores your data for lightning-fast search, fine‑tuned relevancy, and powerful analytics that scale with ease”_ and in my humble opinion that’s pretty true due to its scalable and distributed architecture.
 
-This [open source project]([https://github.com/elastic/elasticsearch](https://github.com/elastic/elasticsearch)) was built under the full-featured text search engine [Apache Lucene]([https://lucene.apache.org/core/](https://lucene.apache.org/core/)) and there is where most of the efficient magic happens.
+This [open source project](https://github.com/elastic/elasticsearch) was built under the full-featured text search engine [Apache Lucene](https://lucene.apache.org/core/) and there is where most of the efficient magic happens.
 
 In a nutshell, we’ll use Elasticsearch as a secondary database (a non-relational one), taking advantage of its text pre-processing and indexing power.
 
@@ -28,7 +28,7 @@ Although there are lots of interesting and useful gems in Rails to work with Ela
 
 ### What are we going to build?
 
-We’re gonna build a really simple microblogging searcher, where we are going to make available to find posts accepting possible typos and highlighting the matching results really fast and performantly. For this, we will use text analyzers and tokenizers ([natural language processing tools]([https://en.wikipedia.org/wiki/Natural_language_processing](https://en.wikipedia.org/wiki/Natural_language_processing))) that come out the box with Elastic.
+We’re gonna build a simple microblogging searcher, where we are going to make it possible to find posts despite potential typos and highlighting the matching results really fast and performantly. For this, we will use text analyzers and tokenizers ([natural language processing tools](https://en.wikipedia.org/wiki/Natural_language_processing) that come out of the box with Elastic.
 
 **Step 1: Including required gems**
 
@@ -81,7 +81,7 @@ In the second line, with `dynamic: false` we are avoiding new fields to be creat
 
 In the third line we are telling Elastic we want to take our `id` attribute and add it to the `Post`’ index as an index but without analyzing it. This means it won’t apply any filter or transformation to it.
 
-In the fourth and fifth line, we're adding both `title` and `body` as text type and with an English analyzer. This will automatically run text tokenizers, analyzers and will apply a lot of natural language processing tools every time we insert or edit a document in our index, making the searches faster, easier and typo-resistant (be aware all these things take an extra time). Follow these links if you’re interested in learning more about [language analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html) and [tokenizers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html).
+In the fourth and fifth lines, we're adding both `title` and `body` as text type and with an English analyzer. This will automatically run text tokenizers, analyzers and will apply a lot of natural language processing tools every time we insert or edit a document in our index, making the searches faster, easier and typo-resistant (be aware all these things take extra time). Follow these links if you’re interested in learning more about [language analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html) and [tokenizers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html).
 
 And last but not least, we are declaring `topic` as a _keyword_, meaning we are expecting this field only to be tokenized (and not processed or analyzed) making the inserts and edits faster. This is because we are not expected to search through this field, but feel free to play with different options.
 
@@ -160,7 +160,7 @@ Also, I did this simple view with a little of Bootstrap.
 
 ![Search by semantic information](images/semantic_search.png)
 
-As you can see, I created a bunch of posts using [faker]([https://github.com/faker-ruby/faker](https://github.com/faker-ruby/faker)).
+As you can see, I created a bunch of posts using [faker](https://github.com/faker-ruby/faker).
 
 Take a look into that search again… Don’t you see anything special? We looked for ‘_darkness_’ and although we don’t have any matching result, we can see that the ones containing ‘_dark_’ were displayed. This is because of the text analyzers. They know these two words are not the same but they do have similar semantics.
 
@@ -211,6 +211,6 @@ Let’s now search for ‘_dakrness_’: a word that is neither in our database 
 
 Although in this post we’ve just covered the tip of the iceberg, we can see the potential of this search engine when it comes to full-text searches thanks to its cutting-edge natural language processing tools. Also, we could see how easy it is to integrate it to our Rails application using the official Ruby gems they provide.
 
-But that's not all. Elastic also has several other applications. For example, we have been using it in some of our applications not only to admit typos and make searches smarter and faster but also to add [synonyms to some list of words]([https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html)) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’. It also has several interesting uses in [geospacial queries](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html) including geodistances and geoshapes.
+But that's not all. Elastic also has several other applications. For example, we have been using it in some of our applications not only to admit typos and make searches smarter and faster but also to add [synonyms to some list of words](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html) in our e-commerce apps where we expect searches like ‘ps4’ to match with ‘playstation 4’, ‘playstation four’, or ‘ipad’ to match ‘i pad’ or ‘i-pad’. It also has several interesting uses in [geospacial queries](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html) including geodistances and geoshapes.
 
-I encourage you to get lost into the wide [Elastic documentation]([https://www.elastic.co/guide/index.html](https://www.elastic.co/guide/index.html)) and discover the huge potential that it can add to our applications.
+I encourage you to get lost into the wide [Elastic documentation](https://www.elastic.co/guide/index.html) and discover the huge potential that it can add to our applications.
