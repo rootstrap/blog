@@ -6,14 +6,14 @@
 Not long ago I finished working on a small project in Django when I realized that it could be improved greatly by adding a single feature.
 There were a few functionalities depending directly on constant values defined in the *settings* file but given their nature it seemed like a good idea to be able to modify them on runtime, that way the application's behavior could be altered without having to edit its settings file and deploy the project again.
 
-After doing some research on the topic I learned that there were a few libraries that provide an implementation to handle editable or dynamic settings, but I felt they were a little overkill for the purposes of this project. Given that, I decided to implement my own solution which is simpler than the ones that are already implemented.
+After doing some research on the topic I learned that there are a few libraries that provide an implementation to handle editable or dynamic settings, but I felt they are a little overkill for the purposes of this project. Given that, I decided to implement my own solution which is simpler than the ones that are already implemented.
 
 
 ### Editing periodic celery tasks schedules
 
 The project included a couple periodic tasks running with Celery and I wanted to be able to edit those tasks' schedules, in this case the solution was very straightforward thanks to [django-celery-beat](https://github.com/celery/django-celery-beat).
 
-Django-celery-beat is a library for Django that provides us with models for periodic tasks and models that helps us define and modify with a great degree of freedom when and how those tasks will be executed. It can be done through code or the Django admin page, which results very helpful.
+Django-celery-beat is a library for Django that provides us with models for periodic tasks and models that help us to define and modify when and how those tasks will be executed; having a great degree of freedom. It can be done through code or the Django admin page, which results very helpful.
 
 Assuming you already have Celery integrated to your Django project all you have to do is install django-celery-beat and modify your settings file re-assigning or defining the `CELERY_BEAT_SCHEDULER` to be `'django_celery_beat.schedulers:DatabaseScheduler'`. After that all you have to do is run the `manage.py migrate` command and you are done.
 
@@ -46,7 +46,7 @@ class Singleton(models.Model):
 ```
 
 - The `save` method assigns a value of 1 to the primary key field of any instance of `Singleton` before saving it, overwriting any previously saved register in the database's singleton table.
-- The `load` method returns an instance of `Singleton` that represents the only existing register in the table (if there are no registers it creates one).
+- The `load` method returns an instance of `Singleton` that represents the only existing record in the table (if there are no records then creates one).
 - Finally the `delete` method does nothing.
 
 As previously said, this implementation does not correspond to the Singleton pattern because it is possible for multiple instances of the model to exist at the same time, but it guarantees that in any moment at most one register associated to `Singleton` can exist in the database, wich gives us the consistency that we wanted.
@@ -60,7 +60,7 @@ class EditableSettings(Singleton):
     settings_value_3 = models.CharField()
 ```
 
-Personally, I'd recommend to assign a default value to every field to have a default configuration set.
+Personally, I recommend to assign a default value to every field in order to have a default configuration set.
 Now we can register this model in the admin page and modify it from the Django admin page.
 
 
@@ -87,7 +87,7 @@ Further research is needed in order to find a fix to this issue.
 
 ### Summary
 
-A simple implementation was proposed to be able to modify a project's configuration on runtime, while this implementation has clear limitations it is worth mentioning that when it is combined with django-celery-beat it provides an easy and effective solution to customize a Django application's functionality.
+A simple implementation was proposed to be able to modify a project's configuration on runtime. While this implementation has clear limitations it is worth mentioning that when it is combined with django-celery-beat it provides an easy and effective solution to customize a Django application's functionality.
 
 
 ### Annex
