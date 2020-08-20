@@ -127,7 +127,7 @@ DRIP_MESSAGE_CLASSES = {
 
 ```
 
-This will allow you to choose in the admin, for each drip, whether the `default` (`Dripmessage`) or `plain` message class should be used for generating and sending the messages to users.
+This will allow you to choose in the admin, for each drip, whether the `default` (`DripMessage`) or `plain` message class should be used for generating and sending the messages to users.
 
 #### Send drips
 
@@ -149,7 +149,7 @@ In the open source initiative we wanted to publish this app as a pypi package, s
 
 ### Publish a pypi package
 
-Although there is work to do with the Django Drip Campaigns project, we already published the package in pypi. It's not something very hard to do, but it's important to know a few things before starting, so in this section I'm going to talk about the main points of publishing the app as a package.
+Despite Django Drip Campaigns is still a work in progress, we already published the package in PyPI. It's nothing fancy, but it's a must to know a few things before starting, so in this section, I'll be talking about the main steps for publishing an app.
 
 - Project structure: Your project needs a couple of files in a determined place to be published correctly. An appropriate structure could be:
 
