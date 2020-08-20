@@ -83,7 +83,7 @@ https://gist.github.com/ManuViola77/809d28c61fdad272d2ce1b3d3147bde5
 
 Inside the `screens` folder we should create the `SecondaryScreen.spec.js` file.
 
-Since we are not in the AppStack's first screen and our screen receives parameters, we are going to take advantage of the helper we created. We will call the function `renderWithNavigation` with this parameters:
+Since we are not in the AppStack's first screen and our screen receives parameters, we are going to take advantage of the helper we created. We will call the function `renderWithNavigation` with these parameters:
 
 - `mainComponent`: `SecondaryScreen`
 - `otherComponents`: `[{name: 'MainScreen', component: MainScreen}]`
