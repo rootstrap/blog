@@ -2,7 +2,7 @@
 
 ![Main image](images/accessibility.jpg)
 
-Accessibility is one of the main points when you develop an application (and one of those points that **developers tend to forget or not to know how to implement**). In this article, we will make a review of some of the tools, libraries, and standards that make it easier to integrate the best practices associated with accessibility on the web, making your application usable by as many people as possible.
+Accessibility is one of the main points when you develop an application (and one of those points that **developers tend to forget or not know how to implement**). In this article, we will make a review of some of the tools, libraries, and standards that make it easier to integrate the best practices associated with accessibility on the web, making your application usable by as many people as possible.
 
 ## Why is accessibility important?
 
@@ -38,7 +38,7 @@ Also, make your application accessible for everyone benefits those without disab
 
 - And many more cases that we didn't know!
 
-After reading this you're probably thinking that it's impossible to contemplate these kinds of disabilities for all the features that you implement every day. And that's true, it's impossible to create the perfect feature for everyone (in general, not only regarding accessibility), but it's totally possible to create a feature to which the majority of the users can access to it, applying only a some practices and tools.
+After reading this you're probably thinking that it's impossible to contemplate these kinds of disabilities for all the features that you implement every day. And that's true, it's impossible to create the perfect feature for everyone (in general, not only regarding accessibility), but it's totally possible to create a feature to which the majority of the users can access to it, by simply applying a few practices and tools.
 
 ## Introducing accessibility to your React application
 
@@ -76,11 +76,11 @@ https://gist.github.com/nsantos16/02cee7facd1f13004c38c4def1deac46
 
 ### Accessibility auditing with react-axe
 
-Integrate tools on the development process like linters, formatter codes, pre-commit hooks, and other things that ensure code-quality and allow an agile implementation.
+Integrate tools on the development process like linters, code formatters, pre-commit hooks, and other things that ensure code-quality and allow an agile implementation.
 
-[`react-axe`](<[https://github.com/dequelabs/react-axe](https://github.com/dequelabs/react-axe)>) is one of them, this linter/analyzer will improve the process of including accessibility in your application in a fast way.
+[`react-axe`](<[https://github.com/dequelabs/react-axe](https://github.com/dequelabs/react-axe)>) is one of them, this linter/analyzer will improve the process of supporting accessibility in your application in a fast way.
 
-This tool in its latest version, apart from statically analyzing the code of your application, also _analyzes in run-time_, that means that if, for example, the gradient of a screen is not sufficient for people with visual disabilities, the linter will throw a warning when you are running your application.
+In its latest version, this tool both analyzes statically and in run-time your application. Meaning that, for example, the gradient of a screen is not sufficient for people with visual disabilities, the linter will throw a warning when you are running your application.
 
 To integrate this tool, first, you need to add it as a dev dependency to your project
 
@@ -104,7 +104,7 @@ Here in [Rootstrap](https://www.rootstrap.com/) we have guidelines about accessi
 
 ![Button states](https://i.ibb.co/N7Cxy7K/Captura-de-Pantalla-2020-07-24-a-la-s-17-59-19.png)
 
-The states of the buttons in React are very important. Three states are essential for correct behavior on accessibility, these are:
+The state of buttons in React is very important. Three states are essential for correct behavior on accessibility, these are:
 
 - **Focus**: When our user puts the target on a button, it's necessary to give the feedback through the color of the border, this allows users with visual disabilities to have a reference.
 
