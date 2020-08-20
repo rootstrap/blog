@@ -1,6 +1,6 @@
 # Link Tracking with StimulusReflex - Part II
 
-In the [first part of this series](TODO: Add link ot first part) we took care of setting up our project to use Stimulus Reflex. Now it's time to get our hands dirty and write some code. The first thing we are going to do is take care of managing our shortened links.
+In the [first part of this series](TODO: Add link to first part) we took care of setting up our project to use Stimulus Reflex. Now it's time to get our hands dirty and write some code. The first thing we are going to do is take care of managing our shortened links.
 
 ![Header image](images/stimulus_reflex.jpeg)
 
@@ -37,7 +37,7 @@ Notice how we added some simple validations to make it more fun.
 
 ## Listing links
 
-Let's start by the simplest of actions: listing the links. To do so we'll create the following files:
+Let's start by the simplest of actions: listing the links. To do so, we'll create the following files:
 
 ```ruby
 # app/controllers/shortened_links_controller.rb
@@ -81,7 +81,7 @@ We are also going to add [Bootstrap](https://getbootstrap.com/) styling so it do
 
 ## The link form
 
-What we did in the last section was pretty normal, huh? Let's keep going. Now we'll add a button to create new links by stimulating a Reflex. To do so we add this markup and the corresponding StimulusReflex code:
+What we did in the last section was pretty normal, huh? Let's keep going. Now we'll add a button to create new links by stimulating a Reflex. To do so, we add this markup and the corresponding StimulusReflex code:
 
 ```erb
 # app/views/shortened_links/index.html.erb
@@ -145,9 +145,9 @@ The only thing left is to actually render the form when we need to by adding the
 <% end %>
 ```
 
-For the actual form let's do something special. We don't want to redirect to another page but rather allow creating them in the spot. It seems like a modal it's what we need, but in the interest of using less Javascript and leveraging StimulusReflex we'll take a different approach. You'll get it in a minute.
+For the actual form, let's do something special. We don't want to redirect to another page but rather allow creating them on the spot. It seems like a modal it's what we need, but in the interest of using less Javascript and leveraging StimulusReflex we'll take a different approach. You'll get it in a minute.
 
-This idea of using backend-managed modals it's taken from LiveView's modal and I'll admin that the code here is basically a copy paste of that 😅. So let's just add the basic modal markup in `app/views/shortened_links/_form.html.erb`
+This idea of using backend-managed modals it's taken from LiveView's modal and I'll admit that the code here is basically a copy paste of that 😅. So let's just add the basic modal markup in `app/views/shortened_links/_form.html.erb`
 
 ```html
 <div class="live-modal" data-controller="shortened-link-form">
@@ -192,7 +192,7 @@ This idea of using backend-managed modals it's taken from LiveView's modal and I
 </div>
 ```
 
-With the needed css in `app/assets/stylesheets/modal.css`
+With the needed CSS in `app/assets/stylesheets/modal.css`
 
 ```css
 .live-modal-backdrop {
@@ -232,7 +232,9 @@ With the needed css in `app/assets/stylesheets/modal.css`
 
 ```
 
-There's not much to be said here, the only interesting part is `<div class="live-modal" data-controller="shortened-link-form">` where we are actually using a new controller. This is just to decompose our code in more reusable units. Let's go ahead and add that Stimulus controller in `app/javascript/controllers/shortened_link_form_controller.js` with a method to close the modal
+There's not much to be said here, the only interesting part is `<div class="live-modal" data-controller="shortened-link-form">` where we are actually using a new controller. This is just to decompose our code in more reusable units.
+
+Let's go ahead and add that Stimulus controller in `app/javascript/controllers/shortened_link_form_controller.js` with a method to close the modal
 
 ```javascript
 import { Controller } from "stimulus"
@@ -308,7 +310,7 @@ Cool! Now we have a form inside a working modal and all with just a few lines of
 
 ## Adding validations
 
-ActiveRecord validations rule! That's why we want to use them as much as possible. To do so we first need to send the values to the Reflex by binding them in the JS controller and adding a validation action
+ActiveRecord validations rule! That's why we want to use them as much as possible. To do so we first need to send the values to the Reflex by binding them in the JS controller and adding a validation action.
 
 ```javascript
 // app/javascript/controllers/shortened_link_form_controller.js
@@ -334,7 +336,7 @@ export default class extends Controller {
 }
 ```
 
-Again, this means we need to change our `app/reflexes/shortened_link_form_reflex.rb` to handle this
+Again, this means we need to change our `app/reflexes/shortened_link_form_reflex.rb` to handle this.
 
 ```ruby
   def validate(params)
@@ -350,7 +352,7 @@ Again, this means we need to change our `app/reflexes/shortened_link_form_reflex
   end
 ```
 
-We need to add the action again or it'll get overridden later in the controller. For now we can just hardcode it. Then we just need to bind for each attribute
+We need to add the action again or it'll get overridden later in the controller. For now, we can just hard-code it. Then we just need to bind for each attribute.
 
 ```erb
 <div class="form-group">
@@ -392,7 +394,7 @@ We need to add the action again or it'll get overridden later in the controller.
 
 ## Saving the links
 
-As a last step we just need to add code to actually save the link. First in the `FormController` and then in the `ShortenedLinkFormReflex`:
+As a last step, we just need to add code to actually save the link. First in the `FormController` and then in the `ShortenedLinkFormReflex`:
 
 ```javascript
 // app/javascript/controllers/shortened_link_form_controller.js
@@ -449,15 +451,15 @@ Then set the message after creating the link
   end
 ```
 
-And that's it, we can now create shoretened links!
+And that's it, we can now create shortened links!
 
 ## Joined sessions
 
-If you open a new ingonito session you'll see there's some funny business going on. When working on one session it will also trigger actions on the other side, so opening a modal will magically make it appear on othe users' screens. Like so:
+If you open a new incognito session, you'll see there's some funny business going on. When working on one session it will also trigger actions on the other side, so opening a modal will magically make it appear on other users' screens. Like so:
 
 ![Joined Sessions](stimulus_reflex_joined_sessions.png)
 
-That's alright the fix is quite simple, we just need to set a `CableReady` identifier in our `ApplicationController`
+That's alright, the fix is quite simple, we just need to set a `CableReady` identifier in our `ApplicationController`
 
 ```ruby
 class ApplicationController < ActionController::Base
@@ -525,7 +527,7 @@ And to use it on the StimulusJS controller `app/javascript/controllers/shortened
   }
 ```
 
-We also need to add a method to load the link correclty in `app/reflexes/shortened_link_form_reflex.rb`
+We also need to add a method to load the link correctly in `app/reflexes/shortened_link_form_reflex.rb`
 
 ```ruby
   def load_shortened_link(params)
@@ -540,7 +542,7 @@ We also need to add a method to load the link correclty in `app/reflexes/shorten
   end
 ```
 
-There's also the issue of how do we determine the current form action, to do se we can do a simple method
+There's also the issue of how do we determine the current form action, to do so we can do a simple method
 
 ```ruby
   def determine_form_action
@@ -577,7 +579,7 @@ The only thing left to do is change the modal's title according to the action `a
 <% end %>
 ```
 
-Destroying a record should be pretty simple so I'll just show you the code. Change `app/views/shortened_links/index.html.erb`
+Destroying a record should be pretty simple, so I'll just show you the code. Change `app/views/shortened_links/index.html.erb`
 
 ```html
 <div class="col">
@@ -608,4 +610,4 @@ And add the method in the Reflex `app/reflexes/shortened_links_reflex.rb`
 
 ## Up next
 
-We've learn how to do the basic CRUD operations that can be applied to any domain. All that's left is actually tracking the views which we'll cover in the next and last part of this series. And as always here's a link to [the complete code on this post](https://github.com/brunvez/sho_lin/commit/202b2215ff6cfdb53351f2c3f39783d6b7c31af0).
+We've learned how to do the basic CRUD operations that can be applied to any domain. All that's left is actually tracking the views which we'll cover in the next and last part of this series. And as always, here's a link to [the complete code on this post](https://github.com/brunvez/sho_lin/commit/202b2215ff6cfdb53351f2c3f39783d6b7c31af0).
