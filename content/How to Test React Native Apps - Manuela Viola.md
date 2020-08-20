@@ -87,7 +87,7 @@ Since we are not in the AppStack's first screen and our screen receives paramete
 
 - `mainComponent`: `SecondaryScreen`
 - `otherComponents`: `[{name: 'MainScreen', component: MainScreen}]`
-- `screenConfig`: `initialParams: { screenParameters }`
+- `screenConfig`: `{initialParams: { screenParameters }}`
 
 We will create a `data.js` file inside the `extras` folders to set our `screenParameters`:
 
