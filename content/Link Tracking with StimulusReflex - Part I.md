@@ -6,7 +6,7 @@ era of the backend-side-managed frontends. This might sound weird but there's be
 This is better defined by the [StimulusReflex's folks](https://docs.stimulusreflex.com) which as you may have guessed is a gem that does just that. I'm not going to explain this any further in words but rather I'll show you how to use it by building a link shortener with this
 new and exciting technology. In this part of the series, we'll focus on getting up and running so we can build awesome features for our project.
 
-![Header image](images/stimulus reflex - part I.jpeg)
+![Header image](images/stimulus_reflex.jpeg)
 
 ## Initializing the project
 
