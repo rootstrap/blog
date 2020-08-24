@@ -120,7 +120,7 @@ First, you should check your **info.plist** file, located in the **ios/customize
 	</array>
 ```
 
-If your project has multiple build targets, you should apply this change to their respective info.plist files. 
+If your project has multiple build targets, you should apply this change to their respective **info.plist** files.
 
 After this, if you are still getting the error, you could try doing some (or all) of the things listed below:
 
