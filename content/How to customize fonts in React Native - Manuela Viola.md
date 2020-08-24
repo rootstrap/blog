@@ -1,6 +1,6 @@
 # How to customize fonts in React Native
 
-![Main image](images/customize_fonts_main.png)
+![Main image](images/customize_fonts_main.jpg)
 
 ## Introduction
 
