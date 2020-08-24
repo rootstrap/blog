@@ -104,6 +104,31 @@ In this app, you are using the `react-native-global-props` library to set a cust
 
 Now, if you execute `react-native run-ios` or `react-native run-android` you should see the text with your custom fonts.
 
+![IOS](images/customize_fonts_result.png)
+
+## iOS "Unrecognized font family" error
+
+For some of you, maybe you are done (it used to work a few months ago), but if you are still getting the very common **Unrecognized font family** error, there are still some things you can check or do.
+
+First, you should check your **info.plist** file, located in the **ios/customize_fonts_react_native_tutorial** folder. This file must have a section with key **UIAppFonts** that contains an array of strings with your fonts. If this is missing, then you should add it:
+
+```xml
+<key>UIAppFonts</key>
+	<array>
+		<string>GoodFeelingSans.ttf</string>
+		<string>Dan'sDisneyUI.ttf</string>
+	</array>
+```
+
+After this, if you are still getting the error, you could try doing some (or all) of the things listed below:
+
+- Uninstall app from simulator (or device)
+- Delete **node_modules** folder, **package-lock.json** file and execute **npm install**
+- In **ios** folder delete **Pods** folder, **Podfile.lock** file and execute **pod install**
+- Reset cache by runnning **npm start --reset-cache** command
+
+I hope after doing all this, you now have your new custom fonts working!
+
 ## Summary
 
 In this tutorial, you learned how to add, link and use custom fonts in React Native. You can find the GitHub project [here](https://github.com/ManuViola77/customize_fonts_react_native_tutorial).
