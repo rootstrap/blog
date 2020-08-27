@@ -104,7 +104,7 @@ Here are some of the facilities and obstacles you might face:
 ##### 1. Mobile
 - HLS playback is natively supported in both, iOS and Android.
 - MPEG-DASH is not supported and third party player.
-- RTMP is not supported and since it is Flash based you will need to find a third party player to use in your native app.
+- RTMP is not supported and since it is Flash-based you will need to find a third-party player to use in your native app.
 - RTSP playback is supported in Android but not in iOS.
 - WebRTC is kind of in the same place that RTMP. It is designed for the web therefore you will also need a third party library. This technology is gaining popularity rapidly so it will not be hard to find projects to bring support to the other platforms.
 
