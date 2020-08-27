@@ -144,7 +144,7 @@ By doing this we are surpassing a couple of challenges at the same time. A CDN w
 
 <br/>
 
-So, what happens if you choose to stream via RTMP, RTSP or WebRTC to the end users?
+So, what happens to the end users if you choose to stream via RTMP, RTSP, or WebRTC?
 Unfortunately, traditional CDNs aren't prepared for these protocols. We need to design our own server infrastructure to handle the load and scale properly, but don't worry; this is not a new problem.
 
 A broadly used concept is the **origin-edge** configuration for the core of the architecture. This defines a clear separation of responsibilities between the live streaming servers. A **origin** server would be the one in charge of ingesting the stream, and in some cases, also transcoding it to the delivery formats. On the other hand, **edge** servers will fetch the stream from the origin (or a designated transcoder) and distribute it to the end users.
