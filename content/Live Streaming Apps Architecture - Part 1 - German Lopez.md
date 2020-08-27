@@ -106,7 +106,7 @@ Here are some of the facilities and obstacles you might face:
 - MPEG-DASH is not supported and third party player.
 - RTMP is not supported and since it is Flash-based you will need to find a third-party player to use in your native app.
 - RTSP playback is supported in Android but not in iOS.
-- WebRTC is kind of in the same place that RTMP. It is designed for the web therefore you will also need a third party library. This technology is gaining popularity rapidly so it will not be hard to find projects to bring support to the other platforms.
+- WebRTC is kind of in the same place that RTMP. It is designed for the web therefore you will also need a third-party library. This technology is gaining popularity rapidly so it will not be hard to find projects to bring support to the other platforms.
 
 For React Native apps, you can find ports for the most common libraries in iOS and Android. Have in mind that they usually don't offer the same flexibility or expose all the features from the original ones.
 
