@@ -73,7 +73,7 @@ Without much details on scaling and other mechanisms, a live streaming platform 
 There are some questions that we must ask ourselves before thinking about a solution or anything else.
 
 - How critical is it to achieve the lowest latency possible?
-- Where will the end users be watching the live streaming?
+- Where will the end-users be watching live streams?
 - Should my platform support thousands or even millons of users?
 
 The answers to these questions will set a starting point for your investigations, POCs and even technologies and tools to use.
