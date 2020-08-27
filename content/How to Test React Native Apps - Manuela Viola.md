@@ -14,7 +14,7 @@ In this article, you will learn how to test React Native Apps using [jest](https
 
 ## About @testing-library/react-native
 
-One important thing to point out is that this testing library has changed many times and with migrations needed from one version to another. This tutorial will work with the latest version at the time of writing it (`7.0.1`). For migrations, you can check their [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users)
+One important thing to point out is that this testing library has changed many times and migrations were needed from one version to another. This tutorial will work with the latest version at the time of writing it (`7.0.1`). For migrations, you can check their [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users)
 
 ## App to be tested
 
@@ -29,7 +29,7 @@ We also need to configure jest. We should create a `jest.config.js` file in the 
 
 https://gist.github.com/ManuViola77/d98f577c8ea35655d96dcd4654ab398e
 
-I will mention some of these configurations later in this tutorial and [here](https://jestjs.io/docs/en/configuration) you can find more information.
+I will mention some of these configurations later in this tutorial and you can find more information [here](https://jestjs.io/docs/en/configuration).
 
 ## Tests folder
 
@@ -37,7 +37,7 @@ As you can see, our project already has a `__tests__` folder with an `App-test.j
 
 ## Creating tests
 
-To actually create a test, we should create a file with a `.spec.js` extension inside the `__tests__` folder. We could even add folders inside for organizing the tests, for example, one folder called `screens` and have inside one test per screen.
+To actually create a test, we should create a file with a `.spec.js` extension inside the `__tests__` folder. We could even add folders inside to better organize the tests, for example, add a folder called `screens` and have one test per screen inside.
 
 Inside these tests, we are going to use `describe()` just to describe what we want to test, `it()` (same as `test()`) to create the tests we want to have, `expect()` to assert our expected behavior and `beforeEach()` to execute some code before each `it()` test. [Here](https://jestjs.io/docs/en/api) is a complete list of `jest` methods to use inside tests.
 
