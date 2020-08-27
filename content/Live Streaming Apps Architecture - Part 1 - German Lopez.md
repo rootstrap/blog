@@ -86,7 +86,7 @@ In this particular scenario achieving low latencies is not necessary, and embrac
 HTTP Live Streaming (HLS), Dynamic Adaptive Streaming over HTTP (DASH or MPEG-DASH), and Microsoft Smooth Streaming are some of the technology standards designed to stream media content to clients. They all work over  HTTP and in a very similar way, the media consists of a playlist of small chunks of data. The duration of the chunks, the number of chunks in each segment, amongst other things defines the theoretical delay mentioned above, making these standards worth considering for the current scenario.
 
 
-Then we have the second scenario, where your platform will need support for user engagement and interaction during the live streaming, and the real time factor is critical. The most common real time features we see in nowadays apps are chats, polls, reactions and screen sharing/collaboration.
+Then we have the second scenario, where your platform will need support for user engagement and interaction during the live streaming, and the real-time factor is critical. The most common real-time features we see in today’s apps are chats, polls, reactions, and screen sharing/collaboration.
 This requirement makes things more complex, specifically if we talk about scalability and syncronization.
 
 Real Time Messaging Protocol (RTMP), Real Time Streaming Protocol (RTSP) and Web Real-Time Communication (WebRTC) are the best options out there when ultra low latency is in play.
