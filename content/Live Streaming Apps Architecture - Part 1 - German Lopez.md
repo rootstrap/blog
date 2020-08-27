@@ -26,7 +26,7 @@ These are proven to be a great launch pad for startups and also more complex sol
 
 ### PaaS
 
-There are a few PaaS around that allow you quickly build your streaming app and take some sort of control on specific aspects of the streaming process, the audience, etc.
+There are a few PaaS around that allow you to quickly build your streaming app and take some sort of control on specific aspects of the streaming process, the audience, etc.
 The most popular are:
 - [Wowza Streaming Cloud](https://www.wowza.com/products/streaming-cloud).
 - [AntMedia](https://antmedia.io/).
