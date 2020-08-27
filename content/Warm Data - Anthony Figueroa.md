@@ -1,4 +1,14 @@
-# Warm Data — 5 Things You Have to Know
+# Warm Data: explained in different levels of complexity
+
+## Explain like I'm five
+The simplest way is to start with an example.
+Climate is the study of the weather in an area over a long period. 
+Linguistics is the study of language, its structure and evolution. 
+Is there any relation between climate and language? Can we say that languages in tropical countries tend to have more vowels? or less? And what about speed of speech? and volume? If any correlation is found, then why?
+
+All this questions belong to the warm data field of study because it involves totally different domains. 
+
+## What is Warm Data? - A formal definition
 We are living in a time where ‘data is the new oil’ has become a common phrase. However, we usually see one dimension of data, categorizing its types, and creating basic hypotheses about supposed correlations. Understanding its implications and providing data-backed decisions is not an easy matter. Big Data usually derives [information and knowledge](https://towardsdatascience.com/rootstrap-dikw-model-32cef9ae6dfb) by pulling things out of context. 
 We can go one level deeper, though. We can choose to do it because it’s hard and insightful. 
 
@@ -9,7 +19,6 @@ We don’t have a way to derive knowledge from that very important interrelation
 > “Interesting phenomena occur when two or more rhythmic patterns are combined, and these phenomena illustrate very aptly the enrichment of information that occurs when one description is combined with another.” 
 > - Gregory Bateson
 
-## What is Warm Data?
 It is information about the interrelationships that integrate elements of a complex system. It has found the qualitative dynamics and offers another dimension of understanding of what is learned through quantitative data (cold data).
 
 A good way to understand it is through an example. Let’s think for a minute about our diet and our foods nutritional data. 
@@ -34,7 +43,7 @@ It can be applied to virtually everything, economics, sociology, ecology, busine
 
 Warm Data is specific kind of information about the way parts of a complex system, such as members of a family, organisms in the oceans, institutions in society, or departments of an organization, come together to give vitality to that system. By contrast, other data will describe only the parts, while Warm Data describes their interplay in context.
 
-## What are we trying to achieve?
+## Applications of warm data
 Our purpose is to look in other ways so that we potentially find other species of information and new patterns of connection not visible though current methodologies.
 
 It allows people to see new patterns, new causations, and to respond to them with a much broader comprehension. This way, it enables new societal responses to complex challenges.
@@ -43,6 +52,10 @@ As a methodology, gathering warm data is useful for those interested in strength
 
 > How do we think our way through the messes we’re in when the way we think is part of the mess? 
 > — Nora Bateson
+
+**Why Warm Data can be important for Software Development?**
+
+In the time of Machine Learning, we are replacing manually created algorithms by neural networks and other types of models. Establish new correlations and being able to use information from different contexts to achieve better predictability can be a game changer. We can predict a stock market trend by processing not only the latest news or companys' earnings, but also more obscure variations in the market, analyzing sentiments in social networks or studying the impact of new government policies. 
 
 ## What’s next?
 The definition and scope of Warm Data is not even close to being fully defined. The realization that this kind of problem requires a different approach, and it’s actually a different kind of data, it’s the foundation to embrace the research. 
