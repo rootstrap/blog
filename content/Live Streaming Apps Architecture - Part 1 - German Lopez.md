@@ -123,7 +123,7 @@ Of course, you are not alone in this world, there are a few decent JavaScript im
 
 Making your platform/app able to support more concurrent users than the estimate is key. This is one of the success metrics for your live streaming app and means that your end-users will not suffer from huge delays, video stuttering, and connection drops when the numbers get high.
 
-Here is when the delivery formats play an important role. If we will be streaming to our end users via HLS(or any of the HTTP based protocols) we are one step closer to the goal. The fact that the media chunks are sent over HTTP makes these protocols way mor easy to scale. The solution recommended is to put a well-known Content Delivery Network (CDN) to do all the work for us.
+Here is when the delivery formats play an important role. If we will be streaming to our end users via HLS(or any of the HTTP based protocols) we are one step closer to the goal. The fact that the media chunks are sent over HTTP makes these protocols way easier to scale. The solution recommended is to put a well-known Content Delivery Network (CDN) to do all the work for us.
 
 The high availability servers of the CDN will allow the delivery of our streaming to scale undefinitely.
 
