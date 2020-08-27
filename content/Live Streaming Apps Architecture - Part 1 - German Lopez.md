@@ -167,7 +167,7 @@ We hope you were able to learn more about building live-streaming apps.  In the 
 
 ## Open Source
 
-If you decide to build your own platform, you want to build a quick POC or maybe your are just curious about the technologies; there are a few Open Source projects that worth looking at.
+If you decide to build your own platform, want to build a quick POC, or maybe are just curious about the technologies; there are a few Open Source projects that are worth looking at.
 
 - [Red5](https://github.com/red5pro)
 - [WebRTC](https://github.com/webrtc)
