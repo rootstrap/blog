@@ -159,7 +159,7 @@ With this in mind, a common practice is to horizontally scale the core of the pl
 
 Bear in mind this is not the only way to scale a live streaming application when using the previously mentioned protocols.
 
-**Take Away No.5:** Scaling ultra low latency live streaming applications is way more expensive than using HTTP-Based protocols.
+A key take away is knowing that scaling ultra low latency live streaming applications is way more expensive than using HTTP-Based protocols.
 
 ## Is that it?
 
