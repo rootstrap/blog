@@ -50,7 +50,7 @@ A simple architecture preview using one of the PaaS above would look like this:
 The following media server software gives you all the capabilities required to live stream(ingest, transcode/transrate, output, etc).
 Pros: These are very flexible and allow you to tweak almost every parameter of the streamflow, add custom behaviors, and integrate with third-party tools.
 
-Contrary to the platforms, they don't provide any infrastructure and you will be in charge of putting all this together in your cloud service. All the installation, configuration, and the design of a solution design that scales correctly is on you.
+Cons: Contrary to the platforms, they don't provide any infrastructure and you will be in charge of the installation, configuration, and design along with putting all of this together in your cloud service. You are responsible for whether or not the solution scales. 
 
 Some of them provide software based load balancers and other mechanisms that helps you to ease all the work previously mentioned.
 
