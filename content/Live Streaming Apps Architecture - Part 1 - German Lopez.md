@@ -18,7 +18,7 @@ There are different approaches you can take to build your live streaming platfor
 2. Use one of the existing [**Platform as a Service (PaaS)**](#paas) solutions.
 3. Use an existing software solution that you can run on your own **Infrastructure as a Service (IaaS)**.
 
-While the first option sounds complicated (it is), it might be the best choice if you have the time, resources, and super specific requirements for your live streaming app. Since I wouldn't recommend to code the entire streaming software from scratch; a good starting point would be the [open source solutions](#open-source).
+While the first option sounds complicated (it is), it might be the best choice if you have the time, resources, and super specific requirements for your live streaming app. Since I wouldn't recommend coding the entire streaming software from scratch; a good starting point would be the [open source solutions](#open-source).
 
 Now, let's take a look at the pros and cons for the options 2 and 3.
 These are proven to be a great launch pad for startups and also more complex solutions.
