@@ -6,7 +6,7 @@
 
 ## Live streaming
 
-The term implies that the media(audio, video or both) is broadcasted to the end users in real time. This is different than just _streaming_ which could refer to previously recorded content such as VOD(Video On Demand), music streaming, etc. The later means that the media is delivered and played on demand rather than being generated simoultaneously.
+The term implies that the media(audio, video, or both) is broadcasted to the end-users in real-time. This is different than just _streaming_ which could refer to previously recorded content such as VOD(Video On Demand), music streaming, etc. Streaming media is delivered and played on demand rather than being generated simultaneously.
 
 This specific difference makes **live streaming** a lot harder to design, implement and scale.
 
