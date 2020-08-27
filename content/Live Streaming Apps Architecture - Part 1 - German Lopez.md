@@ -47,7 +47,7 @@ A simple architecture preview using one of the PaaS above would look like this:
 
 ### SaaS
 
-The following media server softwares give you all the capabilites required to live stream(ingest, transcode/transrate, output, etc).
+The following media server software gives you all the capabilities required to live stream(ingest, transcode/transrate, output, etc).
 These are very flexibile and allow you to tweak almost every parameter of the stream flow, add custom behaviours and integrate with third party tools.
 
 Contrary to the platforms, they don't provide any infrastructure and you will be in charge of putting all this together in your cloud service. All the installation, configuration, and the design of a solution design that scales correctly is on you.
