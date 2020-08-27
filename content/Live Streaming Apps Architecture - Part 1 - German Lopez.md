@@ -1,6 +1,6 @@
 <img src="images/live-streaming-architecture.png" alt="Live Streaming Architecturing"/>
 
-# Live Streaming apps architecture - Part 1
+# How to Create a Live Streaming Platform
 
 **Abstract:** A few ideas and considerations for architecting a live streaming application based on our previous experience.
 
