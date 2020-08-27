@@ -112,7 +112,7 @@ For React Native apps, you can find ports for the most common libraries in iOS a
 
 ##### 2. Web browsers
 - Apple HLS is supported by Safari(as you should expect) in its iOS and MacOS versions.
-- RTMP lacks of support in this area as well. With Flash out of the picture, it is not a common choice for today's browsers.
+- RTMP lacks support in this area as well. With Flash out of the picture, it is not a common choice for today's browsers.
 Of course, you are not alone in this world, there are a few decent JavaScript implementations that you can use to play RTMP in your web.
 - MPEG-DASH and RTSP are not supported out of the box in any browser. You still can find open source or propietary libraries though.
 - Being WebRTC the most modern one, it is supported by pretty much every browser out there.
