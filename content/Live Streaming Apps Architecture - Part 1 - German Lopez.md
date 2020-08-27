@@ -52,7 +52,7 @@ Pros: These are very flexible and allow you to tweak almost every parameter of t
 
 Cons: Contrary to the platforms, they don't provide any infrastructure and you will be in charge of the installation, configuration, and design along with putting all of this together in your cloud service. You are responsible for whether or not the solution scales. 
 
-Some of them provide software based load balancers and other mechanisms that helps you to ease all the work previously mentioned.
+Some of them provide software-based load balancers and other mechanisms that help you to ease all the work previously mentioned.
 
 - [Wowza Streaming Engine](https://www.wowza.com/products/streaming-engine)
 - [AntMedia Server - Enterprise Edition](https://github.com/ant-media/Ant-Media-Server/wiki)
