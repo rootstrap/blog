@@ -125,7 +125,7 @@ Making your platform/app able to support more concurrent users than the estimate
 
 Here is when the delivery formats play an important role. If we will be streaming to our end users via HLS(or any of the HTTP based protocols) we are one step closer to the goal. The fact that the media chunks are sent over HTTP makes these protocols way easier to scale. The solution recommended is to put a well-known Content Delivery Network (CDN) to do all the work for us.
 
-The high availability servers of the CDN will allow the delivery of our streaming to scale undefinitely.
+The high availability servers of the CDN will allow the delivery of our streaming to scale indefinitely.
 
 By doing this we are surpassing a couple of challenges at the same time. A CDN will reduce the number of connections to our live streaming servers, allowing us to make better use of those and get the costs down. Since CDNs have servers all around the globe, it will also reduce the latency for already cached chunks when requested from regions too far from the origin servers.
 
