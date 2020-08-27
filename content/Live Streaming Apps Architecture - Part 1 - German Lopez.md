@@ -163,7 +163,7 @@ A key take away is knowing that scaling ultra low latency live streaming applica
 
 ## Conclusion
 
-Let's keep it short. In the next post of this series we will go a bit more technical. Stay tuned to see how we solved challenges on a real Live Streaming app, test scalability and more.
+We hope you were able to learn more about building live-streaming apps.  In the next post of this series, we will provide more technical insights. Stay tuned to see how we solve challenges on a real Live Streaming app, test scalability, and more.
 
 ## Open Source
 
