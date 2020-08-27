@@ -14,7 +14,7 @@ In this article, you will learn how to test React Native Apps using [jest](https
 
 ## About @testing-library/react-native
 
-One important thing to point out is that this testing library has changed many times and migrations were needed from one version to another. This tutorial will work with the latest version at the time of writing it (`7.0.1`). For migrations, you can check their [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users)
+One important thing to point out is that this testing library has changed many times and migrations were needed from one version to another. This tutorial will work with the latest version at the time of writing it (`7.0.1`). For migrations, you can check their [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users).
 
 ## App to be tested
 
