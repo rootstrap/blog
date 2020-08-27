@@ -35,7 +35,7 @@ The most popular are:
 
 Pros: these platforms will take care of all the scalability, configuration, and infrastructure.
 
-However, if your solution requires the live transmissions to start right away; these solutions won't work for you most of the times. The warm-up times are usually up to several minutes.
+Cons: if your solution requires the live transmissions to start right away; these solutions won't work for you most of the time. The warm-up times are usually up to several minutes.
 
 A simple architecture preview using one of the PaaS above would look like this:
 <br/>
