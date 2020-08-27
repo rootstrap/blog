@@ -10,7 +10,7 @@ The term implies that the media(audio, video or both) is broadcasted to the end 
 
 Is this difference what makes **live streaming** a lot harder to design, implement and scale.
 
-## From our experience
+## Building a Live Streaming App
 
 There are different approaches you can take to build your live streaming platform:
 
@@ -179,4 +179,3 @@ If you decide to build your own platform, you want to build a quick POC or maybe
     <a href="http://www.freepik.com/" title="Freepik">Freepik</a> at <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
   </sup>
 </sub>
-
