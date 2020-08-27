@@ -161,7 +161,7 @@ Bear in mind this is not the only way to scale a live streaming application when
 
 A key take away is knowing that scaling ultra low latency live streaming applications is way more expensive than using HTTP-Based protocols.
 
-## Is that it?
+## Conclusion
 
 Let's keep it short. In the next post of this series we will go a bit more technical. Stay tuned to see how we solved challenges on a real Live Streaming app, test scalability and more.
 
