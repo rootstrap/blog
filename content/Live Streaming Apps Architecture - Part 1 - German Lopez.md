@@ -87,13 +87,13 @@ HTTP Live Streaming (HLS), Dynamic Adaptive Streaming over HTTP (DASH or MPEG-DA
 
 
 Then we have the second scenario, where your platform will need support for user engagement and interaction during the live streaming, and the real-time factor is critical. The most common real-time features we see in today’s apps are chats, polls, reactions, and screen sharing/collaboration.
-This requirement makes things more complex, specifically if we talk about scalability and syncronization.
+This requirement makes things more complex, specifically if we talk about scalability and synchronization.
 
 Real Time Messaging Protocol (RTMP), Real Time Streaming Protocol (RTSP) and Web Real-Time Communication (WebRTC) are the best options out there when ultra low latency is in play.
 They all support really low latencies, but the clear winner is WebRTC with its sub-second delay capabilities, closely followed by RSTP with just above 1 second delay. This is because WebRTC is based on UDP rather than TCP like RTMP does.
 Of course there are more differences and technical factors to consider. [Here](https://blog.streamaxia.com/rtmp-versus-webrtc-which-one-to-choose-2020-report-fed7e4d84b18) is a short reading on those.
 
-#### Playback and end users
+#### Live streaming Playback Feature
 
 Live streaming apps often allow users to watch the content from their mobile devices, computers, laptops and smart TVs.
 To support all these your streaming servers could transcode the original media into various streams to provide multiple playback formats.
@@ -103,7 +103,7 @@ Here are some of the facilities and obstacles you might face:
 
 ##### 1. Mobile
 - HLS playback is natively supported in both, iOS and Android.
-- MPEG-DASH is not supported and third party player.
+- MPEG-DASH is not supported and a third party player is needed.
 - RTMP is not supported and since it is Flash-based you will need to find a third-party player to use in your native app.
 - RTSP playback is supported in Android but not in iOS.
 - WebRTC is kind of in the same place that RTMP. It is designed for the web therefore you will also need a third-party library. This technology is gaining popularity rapidly so it will not be hard to find projects to bring support to the other platforms.
@@ -149,7 +149,7 @@ Unfortunately, traditional CDNs aren't prepared for these protocols. We need to 
 
 A broadly used concept is the **origin-edge** configuration for the core of the architecture. This defines a clear separation of responsibilities between the live streaming servers. A **origin** server would be the one in charge of ingesting the stream, and in some cases, also transcoding it to the delivery formats. On the other hand, **edge** servers will fetch the stream from the origin (or a designated transcoder) and distribute it to the end users.
 
-This allow us to use our computing resources more efficiently. In the case of 1:many streaming applications it also allows to distribute the connections between the edge servers, instead of overburden the origin.
+This allows us to use our computing resources more efficiently. In the case of 1:many streaming applications, it allows for the distribution of connections between the edge servers, instead of overburdening the origin.
 
 With this in mind, a common practice is to horizontally scale the core of the platform architecture. This means we will be adding more **origin-edge** groups as the application needs them. For the orchestration, a load balancer and an auto-scaling group can be placed around all the streaming groups.
 
