@@ -42,7 +42,7 @@ A simple architecture preview using one of the PaaS above would look like this:
 <img src="images/PaaS-arch.png" alt="Live Streaming Architecture using PaaS"/>
 <br/>
 
-**Take Away No.1:** These platforms are the best fit if you plan to broadcast scheduled live events. i.e: Sport events, concerts, TV Channels.
+**These platforms are the best fit if you plan to broadcast scheduled live events. i.e: Sport events, concerts, TV Channels.**
 
 
 ### SaaS
@@ -66,7 +66,7 @@ Without much details on scaling and other mechanisms, a live streaming platform 
 <br/>
 <br/>
 
-**Take Away No.2:** This approach requires more work and resources to get your final solution working properly, but the possibilities are endless.
+**This approach requires more work and resources to get your final solution working properly, but the possibilities are endless.**
 
 ### Considerations
 
@@ -117,7 +117,7 @@ Of course, you are not alone in this world, there are a few decent JavaScript im
 - MPEG-DASH and RTSP are not supported out of the box in any browser. You still can find open source or propietary libraries though.
 - Being WebRTC the most modern one, it is supported by pretty much every browser out there.
 
-**Take Away No.3:** HLS and WebRTC are the options to have in mind when it comes to the playback with broad compatibility. It basically boils down to your latency needs.
+**HLS and WebRTC are the options to have in mind when it comes to the playback with broad compatibility. It basically boils down to your latency needs.**
 
 #### Scalability
 
@@ -140,7 +140,7 @@ By doing this we are surpassing a couple of challenges at the same time. A CDN w
 <br/>
 <br/>
 
-**Take Away No.4:** Delivering the content over HTTP is probably the best option for making your platform easily scalable.
+**Delivering the content over HTTP is probably the best option for making your platform easily scalable.**
 
 <br/>
 
@@ -159,7 +159,7 @@ With this in mind, a common practice is to horizontally scale the core of the pl
 
 Bear in mind this is not the only way to scale a live streaming application when using the previously mentioned protocols.
 
-A key take away is knowing that scaling ultra low latency live streaming applications is way more expensive than using HTTP-Based protocols.
+**A key take away is knowing that scaling ultra low latency live streaming applications is way more expensive than using HTTP-Based protocols.**
 
 ## Conclusion
 
