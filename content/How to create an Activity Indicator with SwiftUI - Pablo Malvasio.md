@@ -75,7 +75,7 @@ Done. You can now call your brand new SpinnerView() from wherever you want and s
 
 ### Extra time? Cool, we can make this view customizable.
 
-In a few steps we can make our new view customizable so you can call SpinnerView() with any combination of colors, size or even rotation speed.
+In a few steps, we can make our new view customizable so you can call SpinnerView() with any combination of colors, size, or even rotation speed.
 First we need to create a SpinnerConfiguration `struct` to allocate all the configurable parameters to call the SpinnerView.
 
 https://gist.github.com/pMalvasio/8be5fd2ed3f23169fb19690ff55fd85d
