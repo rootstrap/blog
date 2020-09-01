@@ -8,7 +8,7 @@ The year was 2019 (before the unimaginable arrival of COVID-19 and natural disas
 
 That's when SwiftUI took us by storm. We were delighted by this new way to create our UI in a declarative way and let the data flow between the views with all the new tools SwiftUI and Combine provide. This new addition to the Apple family was huge, and even though it wasn't production-ready, we couldn’t stop ourselves from playing around with it. However, we noticed it was truly "beta" when we encountered some performance issues and a lack of support for some primitive components that were part of our daily work.
 
-One of them is the lack of a native Activity Indicator. Lucky us, we can host UIKit views on our SwiftUI code. Nevertheless, it's tempting to create our own Spinner made 100% with these new tools.
+One of them is the lack of a native Activity Indicator. Lucky us, we can host UIKit views on our SwiftUI code. Nevertheless, it was tempting to create our own Spinner made 100% with these new tools.
 
 
 ## Overview
