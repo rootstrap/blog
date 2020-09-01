@@ -23,7 +23,7 @@ Down below you can follow the steps to create the Spinner, but if you’re too l
 
 ### The Basics
 
-For this tutorial I’ll assume you already have some knowledge about SwiftUI and how the view behaves, or what is a modifier. 
+For this tutorial, I’ll assume you already have some knowledge about SwiftUI, how the view behaves, and what is a modifier. 
 
 So, to start, if you don’t have a project to add the spinner, you can create one with SwiftUI as the base framework, or you can just go to your existing project and create a new SwiftUI file to start working.
 
