@@ -4,7 +4,7 @@
 
 ## Introduction
 
-If you're here already, there's a 99.999% chance you know what Lottie is. For those still confused on what this article is about: Lottie is an awesome iOS, Android, and React Native library created by Airbnb that renders After Effects animations in real time, allowing you to use animations as easily as you use static images. You can find more info on their [website](https://airbnb.design/lottie/) and all the technical documentation you want on their [github](https://github.com/airbnb/lottie) page.
+If you're here already, there's a 99.999% chance you know what Lottie is. For those still confused, Lottie is an awesome iOS, Android, and React Native library created by Airbnb that renders After Effects animations in real-time, allowing you to use animations as easily as you use static images. You can find more info on their [website](https://airbnb.design/lottie/) and all the technical documentation you want on their [github](https://github.com/airbnb/lottie) page.
 
 
 ## Overview
@@ -17,7 +17,7 @@ In this tutorial, we’ll create a simple SwiftUI view using `UIViewRepresentabl
 
 In order to use Lottie inside your project, we need to install the library. For this, we have a few different options like Cocapods, Carthage, or the one we will use in this tutorial Swift Package Manager.
 
-First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code), hit next and leave the major version that is selected by default to use the latest Lottie release.
+First of all, on Xcode click on `File` and then select the `Add Package Dependency...` option in Swift Packages. In the input box, enter: `https://github.com/airbnb/lottie-ios.git` (this is the library repository from where Xcode will download the code), hit next, and leave the major version that is selected by default to use the latest Lottie release.
 
 
 ### Hosting Lottie on SwiftUI 
