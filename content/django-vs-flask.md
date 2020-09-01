@@ -61,7 +61,7 @@ If development speed is the most important thing because you need to go to the m
 since you get a more complete feature set out of the box.
 If you need a more custom solution, or your project features are out of the ordinary Flask might be the better choice.
 At the end of the day, you should choose the framework that adjusts more into your project idea and particular situation,
-taking into consideration their strengths and weaknesess.
+taking into consideration their strengths and weaknesses.
 
 Do you have any experience that you want to share with any of these frameworks?
 Are there any extra pros or cons that you feel are missing?
