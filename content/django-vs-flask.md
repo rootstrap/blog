@@ -9,14 +9,14 @@ In this article, we're going to review their main strengths and weaknesses to he
 Django opts for an all batteries-included approach.
 From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
 
-It also has the concept of pluggable apps, that means that you can drop an app folder inside your project and get its functionality right away
+It also has the concept of pluggable apps, which means that you can drop an app folder inside your project and get its functionality right away
 with very little configuration.
 
 ## Main features
 - Django has a very powerful ORM that exposes a lot of SQL to the python programming language.
-- Authentication and Authorization built in, without any extra configuration.
-- A built in admin site.
-- A built in mailing system.
+- Authentication and Authorization built-in, without any extra configuration.
+- A built-in admin site.
+- A built-in mailing system.
 
 ## Pitfalls
 - Tightly coupled with its toolset, Django is sort of difficult to use in combination with other tools (replacing the form library for example).
