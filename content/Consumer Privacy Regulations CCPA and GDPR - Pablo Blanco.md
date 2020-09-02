@@ -1,0 +1,241 @@
+# Consumer Privacy Regulations CCPA and GDPR
+
+_[Pablo Blanco](https://www.rootstrap.com/blog/author/pabloblancorootstrapcom/)
+is a Full-Stack developer on the Rootstrap team and writes about his experience
+with ethical hacking and information security. You can also follow Pablo on
+[LinkedIn](https://www.linkedin.com/in/pablo-blanco-a6b5a371/)._
+
+![Data privacy](images/internet-privacy.jpg)
+
+California is considered the world’s 5th biggest economy, ranking higher than
+some European countries. This is not a surprise given it’s home not only to
+entertainment mecca Hollywood but also Silicon Valley, the world’s premier
+innovation hub and the headquarters of famous tech giants that handle
+information about millions of people. Given numerous data breaches,
+inappropriate use of customer’s information for targeted advertising, and other
+areas of concern such as usage of personal data for political benefit, there is
+a growing public concern about misuse of personal information, security, and
+privacy.
+
+Data privacy regulations are becoming a primary element in any data security
+conversation: from the European Union GDPR (2018) to the new ones Brazilian LGPD
+(2020) and California Consumer Privacy Act (2020), the ability to protect
+consumer data is top of mind. For companies that base their business around
+consumer data, trust becomes an essential part of their business model.
+
+In this article, we are going to explore some concepts of the California
+Consumer Privacy Act (CCPA), similarities and differences between CCPA and GDPR
+regulations, and the generated impacts.
+
+## CCPA OverviewWhy only HTTPS is not enough?
+
+While the GDPR was created to protect citizens of the EU (with a wider impact),
+CCPA is an outcome of the GDPR, changing government priorities, and making them
+more willing to protect individual privacy. Although the CCPA is really new
+(went into effect on January 1, 2020), it’s important to be aware of the
+policies and processes necessary for compliance and to analyze the current and
+future impact it will have in comparison to GDPR.
+
+This California state law establishes new consumer rights relating to the access
+of personal information that is held by businesses. The meaning of Personal
+information is quite broad, the definition given in
+[CCPA](https://oag.ca.gov/privacy/) says:
+
+_Personal information is information that identifies, relates to, or could
+reasonably be linked with you or your household._
+
+Some examples of that are customer name, social security number, email address,
+phone number, records of products purchased, internet browsing history
+(including cookies), geolocation data, fingerprints, IP and MAC address (or any
+device identifier), among others.
+
+Personal information does not include publicly available information from
+federal, state, or local government records, such as professional licenses and
+public real estate/property records. It’s also prohibited selling the personal
+information of consumers ages 13–16 (unless the consumer opts-in). For consumers
+under the age of 13, consent from a parent is a must.
+
+Businesses have a track record of using personal information to benefit their
+agenda, CCPA will serve to protect California consumer rights and encourage
+stronger privacy, traceability, and greater transparency overall. CCPA allows
+consumers to have control, ownership, gain security over their personal
+information, and also the ability to request that any business disclose (and
+delete) the personal information collected.
+
+These data protection gives consumers the right to:
+
+- Know what personal information is being collected
+- Access the personal information that is collected, and request its deletion
+- Know if their personal information is being shared, and if so, with whom
+  opt-out of the sale of their personal information
+- Have equal service and price, whether or not they choose to exercise their
+  privacy rights (aka right to non-discrimination)
+
+## Who does the CCPA apply to?
+
+CCPA defines a business as a for-profit entity that collects consumer personal
+data and applies to all companies that serve California residents, whether they
+are physically placed in California or not. If the company meets at least one of
+the following thresholds, may be subject to compliance:
+
+- Companies with at least \$25 million in annual revenue (applies to total
+  revenue, not just revenue in California).
+- Companies that annually buy, sell, receive, or share personal information of
+  at least 50,000 consumers, homes, or devices for commercial purposes.
+- Companies that derive 50% or more of their annual revenue from the sale of
+  personal information.
+
+## Some differences between CCPA and GDPR
+
+The European General Data Protection Regulation is an evolution of the EU’s
+existing data rules and replaced the Data Protection Directive (DPD). It
+addresses many of the lacks in the DPD, including adding requirements for
+documenting IT procedures, performing risk assessments under certain conditions,
+notifying the consumer and authorities when there is a breach, and strengthening
+rules for data minimization.
+
+The GDPR protects similar private data as the CCPA and recommends that companies
+provide a “reasonable” level of protection for personal information. It also
+mandates that the business explains to the customer how their information will
+be used and to explicitly ask for their permission to collect and process it.
+
+No matter how influenced the CCPA may have been by the GDPR, there are some
+clear differences we should notice in each legislation. Although the two laws
+are quite similar, the CCPA differs from the GDPR in a few important ways:
+
+- **Business impacted**: whereas businesses of any size must comply with the
+  GDPR, the CCPA only impacts businesses that reach a certain size that
+  processes a certain amount of data from consumers.
+- **Penalties**: GDPR penalties are capped based on a company’s annual revenue,
+  on the other hand, CCPA penalties have no limit and are assessed per violation
+  and number of affected consumers.
+- **Opt-in/Opt-out**: under GDPR, businesses must have opt-in from consumers
+  before collecting data, in the case of CCPA, consumers must opt-out of data
+  collection.
+- **Third-party data sales**: for GDPR businesses must have consent from
+  customers before any third-party processing or sales its data, while the CCPA
+  requires businesses to simply notify the customer of a data sale or transfer
+  and allow them to refuse.
+
+In short, both regulations give more power to consumers and enable them to take
+action if they want their data to remain private, besides that, businesses are
+required to attend their requests.
+
+## Does CCPA apply to my business?
+
+Contrary to what some believe, CCPA doesn’t just apply to those businesses based
+within California, rather than that any business with customers in California
+can be affected if that business meets the criteria mentioned above.
+
+Under the CCPA, businesses must be aware of what is considered private data,
+locate and treat customers information in a secure way, even addressing their
+vendors to ensure that they are compliant too.
+
+To protect customer’s personal information, businesses need to know what data
+they have, where it resides, and how it is processed. In this way, they can set
+up the appropriate security measures to be compliant with this regulation.
+
+Companies must realize that the impact of the CCPA is no trivial matter. They
+have to begin preparing now to become compliant, if they don’t, they will face
+reputation damage, fines, and loss of customer’s trust. Being prepared for this
+kind of regulation will bring a smooth path for the futures ones will come and
+will open new business opportunities and process improvements, in other words,
+It will pay to be compliant, and consumers will value you for it.
+
+## How to be prepared for CCPA?
+
+As soon as you know that your business is subject to CCPA, you can start working
+to be compliant, the following steps can be useful in the way to get ready:
+
+- **Roadmap**: create a plan to achieve compliance with CCPA.
+- **Learn**: know your obligations and be aware of changing requirements.
+- **Data Map**: identify what personal information you collect from customers,
+  why is being collected, where it is stored, how secure is this information,
+  and with whom is being shared.
+- **Privacy policy**: update your privacy notices to be sure you comply with
+  CCPA’s requirements. Provide to your customers with a “Do Not Sell My
+  Information” to allow them to opt-out of the sale of their personal
+  information.
+- **Consumer requests**: establish a system for processing consumer rights
+  requests.
+- **Train**: train your team on how to handle personal information and consumer
+  requests.
+- **Security**: enforce the security of personal information to avoid breaches
+  and security incidents, make a risk assessment, and be sure to have an
+  incident response plan.
+- **Check providers**: evaluate your upstream and downstream contracts with
+  third-party service providers and modify the underlying agreements for CCPA
+  compliance. Think about your standard data-sharing practices, including
+  relationships with data aggregators, data brokers, etc.
+
+## What about CCPA and HIPAA? (case scenario)
+
+Despite its broad scope, CCPA creates certain exemptions designed around HIPAA
+and other laws. For example, CCPA does not apply to “Protected Health
+Information” (PHI) as defined in HIPAA, which is collected by a covered entity
+or business associate.
+
+CCPA’s HIPAA exemption is meant to allow covered entities and business
+associates to continue following the privacy regulations laid out in HIPAA
+without interference from an additional law. CCPA exempts an organization that
+“maintains patient information in the same manner” as PHI under HIPAA.
+
+Healthcare providers and insurance agents may assume that the law’s HIPAA
+exemption will cover PHI and other customer information. So we have good news,
+If your business is HIPAA compliant, you are not required to apply extra
+measures to protect your patient’s and customers’ information. Now let’s take a
+look at some examples where the exemption applies and not.
+
+**Case 1**: Assume that you own a sportswear company that sells products in
+California and you have developed a step-counter app that users can download to
+their phones through Google Play and App Store. The app tracks the number of
+steps a user takes each day and captures additional information, including the
+user's name, birthday, weight, calories burned, geolocation, and walking
+average. That company is probably not a covered entity or business associate
+under HIPAA and would not be able to apply to the CCPA's HIPAA exemption.
+
+**Case 2**: Now consider a health care system "operating" in California that
+created an app with the same features as the previous case, yet made the app
+available only to its patients to monitor their health and treat medical
+conditions. That organization is a covered entity under HIPAA, the data is
+probably PHI, and the HIPAA exemption probably applies.
+
+## Summary
+
+Data privacy regulations will demand a lot of work to get ready compliance, but
+being forced to optimizing the data that a company collects, processes and
+stores could create efficiency. Companies need only store the necessary pieces
+of personal information to perform their services and reduce the time and
+resources (they have spent in the past) to store all of it. Compliance can be
+viewed as a company’s competitive advantage by offering consumers peace of mind
+that their data is protected and secure.
+
+I believe that CCPA is a powerful law that will be a big win for both consumers
+and businesses, and will help to put the United States at the same level as
+Europe with GDPR in the global privacy discussion. This law came to stay and
+leverage the rights between consumers and business giving to the first ones the
+chance to know what a company knows about them, decide whether or not they can
+keep that information, and prevent them from selling it.
+
+Governments are beginning to take data privacy very seriously. Like in the
+European Union, Brazil, India, Japan, and other countries, the CCPA will have
+far-more impacts across state jurisdictions, reaching companies around the
+world. Getting prepared to be compliant it’s important and will save your
+company a lot of money, time, and reputation. Be compliant with these
+regulations can be a hard work to achieve, you need to be able to identify
+content related to a data subject, classify and protect consumer data, and
+sometimes even delete upon request. But there is some light at the end, if you
+get your business prepared for this kind of regulation, you will get a
+competitive advantage and it will be easy to get ready for new regulations as
+there are many more on the horizon.
+
+## References
+
+Privacy laws around the world -
+[https://piwik.pro/blog/privacy-laws-around-globe/](https://piwik.pro/blog/privacy-laws-around-globe/)
+
+State of California Department of Justice -
+[https://oag.ca.gov/privacy/](https://oag.ca.gov/privacy/)
+
+General Data Protection Regulation -
+[https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en](https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en)
