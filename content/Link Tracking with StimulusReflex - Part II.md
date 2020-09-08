@@ -457,7 +457,7 @@ And that's it, we can now create shortened links!
 
 If you open a new incognito session, you'll see there's some funny business going on. When working on one session it will also trigger actions on the other side, so opening a modal will magically make it appear on other users' screens. Like so:
 
-![Joined Sessions](stimulus_reflex_joined_sessions.png)
+![Joined Sessions](images/stimulus_reflex_joined_sessions.png)
 
 That's alright, the fix is quite simple, we just need to set a `CableReady` identifier in our `ApplicationController`
 
