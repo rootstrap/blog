@@ -1,24 +1,25 @@
 ## Registration and Authentication in your Django app with dj-rest-auth (part 1)
 
 A huge amount of existing applications have registration and authentication for users. Maybe every developer in the world has implemented something related to this in their work or while they learned. After the creation of the [Django REST framework](https://www.django-rest-framework.org/), Django developers started to implement more and more app-level REST API endpoints.  
-As a result, an open source package called [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/index.html) has been developed to provide a set of REST API endpoints to handle user registration and authentication tasks. In this article divided in two parts, I will talk about this package; and given that it can generate some problems at first, I will give you some tips to avoid them.
+As a result, an open source package called [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/index.html) has been developed to provide a set of REST API endpoints to handle user registration and authentication tasks. In this article divided into two parts, I will talk about this package; and given that it can generate some problems at first, I will give you some tips to avoid them.
 
 ### The dj-rest-auth package
 
-If you are a Django developer and you are coding a REST API with authentication, you will find the django-rest-auth package very useful. As said, this package provides a set of REST API endpoints to manage user registration and authentication. After an easy [installation and configuration](https://dj-rest-auth.readthedocs.io/en/latest/installation.html), you will have endpoints for:
+If you are a Django developer and you are coding a REST API with authentication, you will find the dj-rest-auth package very useful. This project is a fork from [django-rest-auth](https://github.com/Tivix/django-rest-auth) that is no longer maintained.  
+As said, dj-rest-auth provides a set of REST API endpoints to manage user registration and authentication. After an easy [installation and configuration](https://dj-rest-auth.readthedocs.io/en/latest/installation.html), you will have endpoints for:
 
-- User registration with activation.
+- User registration with optional activation.
 - Login and logout.
 - Retrieve and update the Django User model.
 - Password change.
 - Password reset via e-mail.
 - Social media authentication.
 
-You don't need to do too much work to have those functionalities in your app. Besides, given that dj-rest-auth is an open source package, it has the advantage of being used by lots of programmers that can find errors, purpose improvements, etc. Actually the project is a fork from [django-rest-auth](https://github.com/Tivix/django-rest-auth) that is no longer maintained. So, if you use dj-rest-auth you can be sure that you are using code created and maintained by an open source community.
+You don't need to do too much work to have those functionalities in your app. Besides, given that dj-rest-auth is an open source package, it has the advantage of being used by lots of programmers that can find errors, propose and add improvements, etc. So, if you use dj-rest-auth you can be sure that you are using code created and maintained by an open source community.
 
 ### Browsable endpoints
 
-Most of the endpoints that dj-rest-auth provides are browsable. This means that if you have added the package to your Django app, you can test those endpoints through the browser. As an example, if you open the browser and put the url of the login endpoint, you will see something like this:
+Most of the endpoints that dj-rest-auth provides are browsable. This means that if you have added the package to your Django app, you can test those endpoints through the browser. As an example, if you open the browser and put the URL of the login endpoint, you will see something like this:
 
 <img src="images/dj-rest-auth-browsable-endpoint.png" alt="Browsable endpoint" width="900"/>
 
@@ -30,7 +31,7 @@ As you can see, it's very useful to have very quickly a nice interface to use wh
 The documented installation and minimal configuration of dj-rest-auth is pretty clear and I won't talk about that in this blog post. The main idea of this section is to tell you about the big set of possibilities that you can have in your Django app just by adjusting a couple of parameters. This package uses [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html) behind so you can take advantage of all the [available settings](https://django-allauth.readthedocs.io/en/latest/configuration.html) in your own app. For example, you can define these parameters in your app configuration:
 
 - `ACCOUNT_EMAIL_REQUIRED (false by default):`: If true, the user is required to provide an e-mail address when signing up.
-- `ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE (false by default)`: If true, users will automatically be logged in once they have reset their password.
+- `ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE (false by default)`: If true, users will automatically be logged out once they have reset their password.
 - `ACCOUNT_USER_MODEL_EMAIL_FIELD ('email' by default)`: The name of the field in the user model containing the email.
 - `ACCOUNT_USERNAME_REQUIRED (true by default)`: If true, the user is required to enter a username when signing up.
 - `ACCOUNT_EMAIL_VERIFICATION ('optional' by default)`: Determines the e-mail verification method during signup. The possibilities are one of `mandatory`, `optional`, or `none`.
@@ -40,7 +41,7 @@ And many other parameters. As a conclusion, we can say that adjusting a couple o
 ### Customization
 
 If you are coding a REST API with Django and Django REST framework, you may need to customize the functionalities related to the registration and authentication. With those frameworks and dj-rest-auth it's quite simple. You can customize the Django User model, the views, the serializers, the main functionalities, etc.  
-For example, let's define a custom User model with unique email, with no username, whit a gender and a phone number attribute:
+For example, let's define a custom User model with unique email, with no username, with a gender and a phone number attribute:
 
 ```python
 # models.py in the users Django app
@@ -122,11 +123,11 @@ After this, if we go to the registration endpoint, we would see something like t
 <img src="images/dj-rest-auth-registration-example.png" alt="Registration endpoint" width="900"/>
 
 The username appears in the browsable endpoint, but thanks to the configuration you can leave it empty.  
-And thats it! we have added a customized registration endpoint to our Django app. Now we can create users with email, gender and phone number, and test the login too.
+And that's it! We have added a customized registration endpoint to our Django app. Now we can create users with email, gender, and phone number, and make some tests around the login functionality too.
 
 ### Use of JWT
 
-When an app manages authentication, a good and standard way is using [JWT (JSON web tokens)](https://auth0.com/docs/tokens/json-web-tokens). JWTs are a good way of securely transmitting information between parties because they can be signed, which means you can be sure that the senders are who they say they are. We can easily configure our Django app to use JWT. First we need to install `djangorestframework-simplejwt`:
+When an app manages authentication, a good and standard implementation of authentication by token authorization is using [JWT (JSON web tokens)](https://auth0.com/docs/tokens/json-web-tokens). JWTs are a good way of securely transmitting information between parties because they can be signed, which means you can be sure that the senders are who they say they are. We can easily configure our Django app to use JWT. First we need to install [djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt/):
 
 ```python
 pip install djangorestframework-simplejwt
@@ -211,4 +212,4 @@ As you can see in the picture, the only value that can be modified is the gender
 ### Summary
 
 This was the first part of the blog post. I have presented a very useful package to handle registration and authentication with a set of REST API endpoints.
-With a minimal configuration you can add endpoints to your Django app that already have those features implemented. I also talked about some advantages of the package, how easy is to customize it, and a few examples for demonstration. In the second part I'll talk a little bit more of customization, about a few problems that I had to face when I started with dj-rest-auth, and how they can be solved. I hope you liked this article and feel encourage to use the package and read the second part.
+With a minimal configuration you can add endpoints to your Django app that already have those features implemented. I also talked about some advantages of the package, how easy is to customize it, and a few examples for demonstration. In the second part I'll talk a little bit more of customization, about a few problems that I had to face when I started with dj-rest-auth, and how they can be solved. I hope you liked this article and feel encouraged to use the package and read the second part.
