@@ -6,7 +6,7 @@ In the [first part of this series](TODO: Add link to first part) we took care of
 
 ## Creating the model
 
-Let's start with some good all fashioned Rails code, we'll create the migration for our links and the associated model:
+Let's start with some good old fashioned Rails code, we'll create the migration for our links and the associated model:
 
 
 ```ruby
