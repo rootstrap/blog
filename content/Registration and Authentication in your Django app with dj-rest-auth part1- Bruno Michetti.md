@@ -38,6 +38,19 @@ The documented installation and minimal configuration of dj-rest-auth is pretty 
 
 And many other parameters. As a conclusion, we can say that adjusting a couple of parameters in your Django app settings, you get lots of different behaviors for the registration and authentication.
 
+#### Note:
+
+To understand better the examples in the next sections, first you need to follow the dj-rest-auth installation steps, also you need to have installed django allauth, and finally make sure you have the authentication backends in your settings:
+
+```python
+AUTHENTICATION_BACKENDS = [
+    # allauth specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    # Needed to login by username in Django admin, regardless of allauth
+    'django.contrib.auth.backends.ModelBackend',
+]
+```
+
 ### Customization
 
 If you are coding a REST API with Django and Django REST framework, you may need to customize the functionalities related to the registration and authentication. With those frameworks and dj-rest-auth it's quite simple. You can customize the Django User model, the views, the serializers, the main functionalities, etc.  
@@ -147,19 +160,6 @@ JWT_AUTH_COOKIE = 'my-app-auth' # The cookie key name can be the one you want
 ```
 
 And we are good to go! We have an app that manages the authentication with JWT.
-
-#### Note:
-
-To do all of the mentioned things on previous examples, first you need to follow the dj-rest-auth installation steps, also you need to have installed django allauth, and finally make sure you have the authentication backends in your settings:
-
-```python
-AUTHENTICATION_BACKENDS = [
-    # allauth specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-    # Needed to login by username in Django admin, regardless of allauth
-    'django.contrib.auth.backends.ModelBackend',
-]
-```
 
 ### The User endpoint
 
