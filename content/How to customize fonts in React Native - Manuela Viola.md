@@ -108,9 +108,9 @@ Now, if you execute `react-native run-ios` or `react-native run-android` you sho
 
 ## iOS "Unrecognized font family" error
 
-For some of you, maybe you are done (it used to work a few months ago), but if you are still getting the very common **Unrecognized font family** error, there are still some things you can check or do.
+After following all these steps, if you are getting the very common **Unrecognized font family** error, there are still some things you can check or do.
 
-First, you should check your **info.plist** file, located in the **ios/customize_fonts_react_native_tutorial** folder. This file must have a section with key **UIAppFonts** that contains an array of strings with your fonts. If this is missing, then you should add it:
+First, you should check your **info.plist** file, located in the **ios/customize_fonts_react_native_tutorial** folder. This file must have a section with key **UIAppFonts** that contains an array of strings with your fonts. If this is missing, then you should add this:
 
 ```xml
 <key>UIAppFonts</key>
