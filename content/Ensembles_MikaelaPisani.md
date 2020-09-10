@@ -14,6 +14,7 @@ There are [three](https://stats.stackexchange.com/questions/18891/bagging-boosti
 
 
 ![ensembles](images/Ensembles.png)
+
 While the ensembles seem to resolve all the problems, they are not magic and they also have disadvantages. In this table advantages and disadvantages are presented. You might need to find a balance between them and decide if it is convenient to use them or not for your specific problem. 
 
 
