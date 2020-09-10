@@ -1,27 +1,28 @@
 # Hash functions in daily life - part I
 
-I want to talk about passwords used to log into sites like an email account.
+I want to talk about passwords. Like the ones used to log into email accounts.
 
 But first I will talk a bit about ... laundry
 
 ## Doing laundry with a hash function
 
-Many years ago I moved to a new neighbourhood and did the laundry in a local store
-near my place.
+Many years ago I moved to a new neighbourhood and used to do the laundry in a local store
+nearby.
 
-I used to give the order number to the cashier and she would look for the bag with the
-matching number among all the laundry bags.
+I used to give the order number to the cashier and she would look among all the
+laundry bags for the one with the matching number.
 
 The store was quite crowded and handled a lot of orders. Picking the laundry was
-a pretty slow process.
+a process pretty slow.
 
-During that time I used to think how the search could be improved.
+During the time it took to find the laundry bag I used to think how the search
+could be improved.
 
 Here's a possible optimization.
 
 ## The orders grid
 
-Each laundry bag was kept in a shelf made of boxes. Pretty much like the one below
+Each laundry bag was kept in a shelf made of boxes like the one shown below
 
 
                   -------------------
@@ -34,11 +35,11 @@ Each laundry bag was kept in a shelf made of boxes. Pretty much like the one bel
 
 Each box contained 0 or more bags.
 
-The method to fill in the grid was to pick the first empty space and store
-the laundry bag there.
+The grid was filled by choosing the first empty space and storing the laundry bag
+there.
 
 The first empty space was either an empty box or a partially filled box with
-enough space for a new bag.
+enough space for another bag.
 
 
                   -------------------------
@@ -52,12 +53,14 @@ enough space for a new bag.
 If the grid had no space left the bags were stacked aside.
 
 
-To find an order number the cashier performed a lookup among all the bags in the
-grid.
+To find the bag with a matching order number the cashier performed a lookup among
+all the bags in the grid.
 
-That's called a linear look up. It's O(N), meaning that, let N be the number of
-laundry bags stored in the grid, the lookup could take up to N comparissons to
-find the searched one. It could take less but its worst case would take N comparisons.
+That's a linear look up. It's O(N), meaning that, let N be the number of
+laundry bags stored in the grid, the lookup would take an average of N comparissons
+to find the searched one. Actually it would take an average of N/2 comparissons
+but the order of magnitude is the same. It could take less or more than N/2 but
+in average it would take N/2 comparisons.
 
 ## Meet a hash function
 
@@ -68,11 +71,11 @@ The order number had several digits.
 
 The last digit of each order number was a number between 0 and 9.
 
-And it could be used to optimize the lookup.
+And that last digit could be used to optimize the lookup.
 
-To make the optimization the grid could be divided into different boxes. Each
+To make the optimization the grid could be divided into different boxes.
 
-box would have a digit assigned.
+Each box would have a digit assigned.
 
 For example
 
@@ -84,28 +87,34 @@ For example
           | 1 | 2 | 3 | 4 | 5 | 6 |
           -------------------------   ...
 
-At the time of storing the laundry the cashier could look at the order number and
+At the time of storing the laundry the cashier would look at the order number and
 take its last digit only. If the box corresponding to the last digit had empty
 space the bag would go into that box.
 
-If the box had not have space for a new bag the bag would go to the first box
+If the box had not enough space for a new bag the bag would go to the first box
 with space among the unnumbered boxes.
 
 
-The lookup applies the same algorithm. First she would look the bag in the box
-corresponding to the order last digit. It the bag was not there she would look
-for it in the unnumbered boxes.
+The lookup of a bug applies the same algorithm. First she would look the bag in
+the box corresponding to the order last digit. It the bag was not there she would
+look for it in the unnumbered boxes.
 
 That lookup is still O(N) in its worst case but in the average case it's O(1),
-meaning that in average the lookup would take only a constant number of comparissons,
-the number of bags that fit in a single box.
+meaning that in average the lookup would take only a constant number of comparissons.
+O(1) doesn't mean that it would take exactly one comparisson, it means that the
+number of comparissons is a constant number and it does not depend on the total
+number of bags. In this case the constant number would be the number of bags that
+fit in a single box.
 
 
-The algorithm is widely used in computer science and it's known as hash table
+This algorithm is widely used in computer science and it's known as hash table
 lookup.
 
-If you ever used a Map, Dictionary or Hash then you might have already used one.
-Map objects are commonly implemented on hash lookup ups.
+It's used to arrange items in such a way that a given items can be found in O(1)
+time.
+
+If you ever used a Map, a Dictionary or a Hash then you might have already used one.
+Map objects are commonly implemented as hash lookup tables.
 
 ## Hash functions
 
@@ -116,20 +125,21 @@ A generalization of a hash function would take an infinite set, for instance the
 of integer numbers, and map each element to a finite set, for instance
 the numbers between 0 and 9.
 
-To improve the lookup efficiency the laundry hash function would also need to meet
-some statistical conditions.
+For this hash function to make an actual improvement on the search efficiency the
+laundry order numbres would also need to meet some statistical conditions.
 
-The order numbers last digit would need to be evenly distributed (known as a normal
-distribution). Otherwise the number of hash collisions would be too high and it
-would end up forcing a linear lookup on every search.
+The order number last digit would need to be evenly distributed (such a distributions
+is known as a normal or gaussian distribution) among all orders. Otherwise the
+number of hash collisions would be too high and it would end up requiring a linear
+lookup on every search.
 
-If the hash function meets the statistical condition it's said to be a good hash
-function. If it does not it's said not to be a good hash function.
+If the hash function is good for the statistical condition of its domain set it's
+said to be a good hash function. If it does not it's said not to be a good hash function.
 
-The statistical condition depends on the domain set and on how the hash function
-is used.
+The statistical condition depends on the domain set, on the mapped set and on how
+the hash function is used.
 
 
-I never mentioned anything related to hash functions, lookups algorithms or statistical
-distributions to the cashier though.
-It was a really pretty laundry store and I wanted to keep going there.
+Of course I never mentioned anything related to hash functions, lookups algorithms
+or statistical distributions to the cashier though.
+It was a lovely laundry store and I wanted to keep going there.
