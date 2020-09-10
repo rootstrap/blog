@@ -4,10 +4,13 @@ Sometimes some models perform well for certain cases and in other cases other mo
 
 Ensembles are a combination of several ML models in order to generate a better model. 
 There are [three](https://stats.stackexchange.com/questions/18891/bagging-boosting-and-stacking-in-machine-learning) main ways of combining models:         
+ 
+ 
 - **Baggin:** the *same* model is performed several times changing the training dataset, the outputs are combined by averaging (prediction) or voting (classification).                  
-- **Boosting:** *consecutive* execution of the model learn in sequence correcting errors that the predecessor model made. The goal is to improve areas of the data where the model makes errors.             
-- **Stacking:** several models learn in *parallel* and finally are combined by averaging (prediction) or voting (classification).         
 
+- **Boosting:** *consecutive* execution of the model learn in sequence correcting errors that the predecessor model made. The goal is to improve areas of the data where the model makes errors.             
+
+- **Stacking:** several models learn in *parallel* and finally are combined by averaging (prediction) or voting (classification).         
 
 
 ![ensembles](images/Ensembles.png)
