@@ -2,18 +2,18 @@
 
 I want to talk about passwords. Like the ones used to log into email accounts.
 
-But first I will talk a bit about ... laundry
+Hence I will talk a bit about ... laundry
 
-## Doing laundry with a hash function
+## Doing the laundry with a hash function
 
-Many years ago I moved to a new neighbourhood and used to do the laundry in a local store
-nearby.
+Many years ago I moved to a new neighbourhood and I used to do the laundry in
+store nearby.
 
 I used to give the order number to the cashier and she would look among all the
 laundry bags for the one with the matching number.
 
 The store was quite crowded and handled a lot of orders. Picking the laundry was
-a process pretty slow.
+a pretty slow process.
 
 During the time it took to find the laundry bag I used to think how the search
 could be improved.
@@ -38,9 +38,19 @@ Each box contained 0 or more bags.
 The grid was filled by choosing the first empty space and storing the laundry bag
 there.
 
+                  -------------------------
+                  |   |   |   |   |   |   |
+                  -------------------------
+                  | . | . | . |   |   |   |
+                  -------------------------
+                  | . | . | . | . | . | . |
+                  -------------------------
+
+
 The first empty space was either an empty box or a partially filled box with
 enough space for another bag.
 
+If the grid had no space left the bags were stacked aside.
 
                   -------------------------
                   | . | . | . | . | . | . |
@@ -50,17 +60,19 @@ enough space for another bag.
                   | . | . | . | . | . | . |
                   -------------------------   ...
 
-If the grid had no space left the bags were stacked aside.
-
 
 To find the bag with a matching order number the cashier performed a lookup among
 all the bags in the grid.
 
 That's a linear look up. It's O(N), meaning that, let N be the number of
 laundry bags stored in the grid, the lookup would take an average of N comparissons
-to find the searched one. Actually it would take an average of N/2 comparissons
-but the order of magnitude is the same. It could take less or more than N/2 but
-in average it would take N/2 comparisons.
+to find the searched one.
+
+Actually it would take an average of N/2 comparissons but the order of magnitude
+is the same and it´s said to be O(N) for the sake of simplicity.
+
+It could take less or more than N/2 but in average, given an evenly distributed
+set of bags, it would take N/2 comparisons.
 
 ## Meet a hash function
 
@@ -71,7 +83,7 @@ The order number had several digits.
 
 The last digit of each order number was a number between 0 and 9.
 
-And that last digit could be used to optimize the lookup.
+That last digit could be used to optimize the lookup.
 
 To make the optimization the grid could be divided into different boxes.
 
@@ -80,12 +92,12 @@ Each box would have a digit assigned.
 For example
 
           -------------------------
-          | . | . | . | . | . | . |
+          |   |   |   |   |   |   |
           -------------------------
-          | 7 | 8 | 9 | 0 | . | . |
+          | 7 | 8 | 9 | 0 |   |   |
           -------------------------
           | 1 | 2 | 3 | 4 | 5 | 6 |
-          -------------------------   ...
+          -------------------------
 
 At the time of storing the laundry the cashier would look at the order number and
 take its last digit only. If the box corresponding to the last digit had empty
@@ -95,22 +107,23 @@ If the box had not enough space for a new bag the bag would go to the first box
 with space among the unnumbered boxes.
 
 
-The lookup of a bug applies the same algorithm. First she would look the bag in
+The lookup of a bag applies the same algorithm. First she would look the bag in
 the box corresponding to the order last digit. It the bag was not there she would
 look for it in the unnumbered boxes.
 
 That lookup is still O(N) in its worst case but in the average case it's O(1),
-meaning that in average the lookup would take only a constant number of comparissons.
-O(1) doesn't mean that it would take exactly one comparisson, it means that the
+meaning that, in average, the lookup would take only a constant number of comparissons.
+
+O(1) doesn't mean that it would take exactly one comparisson. It means that the
 number of comparissons is a constant number and it does not depend on the total
 number of bags. In this case the constant number would be the number of bags that
 fit in a single box.
 
 
-This algorithm is widely used in computer science and it's known as hash table
+This algorithm is widely used in computer science and it's known as a hash table
 lookup.
 
-It's used to arrange items in such a way that a given items can be found in O(1)
+It's used to arrange items in such a way that a given item can be found in O(1)
 time.
 
 If you ever used a Map, a Dictionary or a Hash then you might have already used one.
@@ -122,24 +135,25 @@ Taking the last digit from the order number is known as applying a hash function
 to the order number.
 
 A generalization of a hash function would take an infinite set, for instance the set
-of integer numbers, and map each element to a finite set, for instance
+of all integer numbers, and map each element to a finite set, for instance
 the numbers between 0 and 9.
 
-For this hash function to make an actual improvement on the search efficiency the
-laundry order numbres would also need to meet some statistical conditions.
+For this hash function to make an actual improvement on the search time the
+laundry order numbers would also need to meet some statistical conditions.
 
-The order number last digit would need to be evenly distributed (such a distributions
-is known as a normal or gaussian distribution) among all orders. Otherwise the
-number of hash collisions would be too high and it would end up requiring a linear
-lookup on every search.
+The order number last digit would need to be evenly distributed among all orders,
+otherwise the number of hash collisions would be too high and it would end up
+requiring a linear lookup on every search. Such a distribution is known as a
+Normal or Gaussian distribution.
 
-If the hash function is good for the statistical condition of its domain set it's
-said to be a good hash function. If it does not it's said not to be a good hash function.
+If the hash function is good for the statistical distributiom of its domain set
+it's said to be a good hash function. If it's not it's said not to be a good hash
+function.
 
-The statistical condition depends on the domain set, on the mapped set and on how
-the hash function is used.
+The goodness of a hash function depends on the domain set, on the mapped set and
+on how the hash function would be used.
 
 
-Of course I never mentioned anything related to hash functions, lookups algorithms
-or statistical distributions to the cashier though.
-It was a lovely laundry store and I wanted to keep going there.
+Of course I never mentioned anything related to hash functions, lookup algorithms
+or statistical distributions to the cashier. It was a lovely laundry store and I
+wanted to keep going there.
