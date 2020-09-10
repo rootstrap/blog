@@ -3,28 +3,28 @@
 
 ### Introduction
 
-Not long ago I finished working on a small project in Django when I realized that it could be improved greatly by adding a single feature.
-There were a few functionalities depending directly on constant values defined in the *settings* file but given their nature it seemed like a good idea to be able to modify them on runtime, that way the application's behavior could be altered without having to edit its settings file and deploy the project again.
+I recently finished working on a small project in Django when I realized that it could be improved greatly by adding a single feature.
+There were a few functionalities depending directly on constant values defined in the *settings* file but given their nature, it seemed like a good idea to be able to modify them on runtime. This way the application's behavior could be altered without having to edit its settings file and deploy the project again.
 
 After doing some research on the topic I learned that there are a few libraries that provide an implementation to handle editable or dynamic settings, but I felt they are a little overkill for the purposes of this project. Given that, I decided to implement my own solution which is simpler than the ones that are already implemented.
 
 
 ### Editing periodic celery tasks schedules
 
-The project included a couple periodic tasks running with Celery and I wanted to be able to edit those tasks' schedules, in this case the solution was very straightforward thanks to [django-celery-beat](https://github.com/celery/django-celery-beat).
+The project included a couple of periodic tasks running with Celery and I wanted to be able to edit those tasks' schedules, in this case, the solution was very straightforward thanks to [django-celery-beat](https://github.com/celery/django-celery-beat).
 
-Django-celery-beat is a library for Django that provides us with models for periodic tasks and models that help us to define and modify when and how those tasks will be executed; having a great degree of freedom. It can be done through code or the Django admin page, which results very helpful.
+Django-celery-beat is a library for Django that provides us with models for periodic tasks and models that help us to define and modify when and how those tasks will be executed; having a great degree of freedom. It can be done through code or the Django admin page, which results to be very helpful.
 
-Assuming you already have Celery integrated to your Django project all you have to do is install django-celery-beat and modify your settings file re-assigning or defining the `CELERY_BEAT_SCHEDULER` to be `'django_celery_beat.schedulers:DatabaseScheduler'`. After that all you have to do is run the `manage.py migrate` command and you are done.
+Assuming you already have Celery integrated to your Django project all you have to do is install django-celery-beat and modify your settings file re-assigning or defining the `CELERY_BEAT_SCHEDULER` to be `'django_celery_beat.schedulers:DatabaseScheduler'`. After that, all you have to do is run the `manage.py migrate` command, and you are done.
 
 
 ### Using a model to store configurations
 
 The fundamental idea is to define a model and use its fields to store the values that will be used as settings to determine the behavior of certain functionalities instead of using the *settings* file.
-Given the fact that we want the settings to be consistent wherever we read them from in the code it would be convenient to have only one instance of this model, in other words an implementation of the Singleton design pattern.
+Given the fact that we want the settings to be consistent wherever we read them from in the code, it would be convenient to have only one instance of this model, in other words, an implementation of the Singleton design pattern.
 Technically we won't be implementing a singleton, but for our purposes it will be the same.
 
-First we will define an abstract model that will be the basis for our settings model and that will provide the basic behavior:
+First, we will define an abstract model that will be the basis for our settings model and that will provide the basic behavior:
 
 ```python
 class Singleton(models.Model):
@@ -49,9 +49,9 @@ class Singleton(models.Model):
 - The `load` method returns an instance of `Singleton` that represents the only existing record in the table (if there are no records then creates one).
 - Finally the `delete` method does nothing.
 
-As previously said, this implementation does not correspond to the Singleton pattern because it is possible for multiple instances of the model to exist at the same time, but it guarantees that in any moment at most one register associated to `Singleton` can exist in the database, wich gives us the consistency that we wanted.
+As previously stated, this implementation does not correspond to the Singleton pattern because it is possible for multiple instances of the model to exist at the same time, but it guarantees that in any moment at most one register associated to `Singleton` can exist in the database, which gives us the consistency that we wanted.
 
-Now we can define our `EditableSettings` model wich inherits from `Singleton` and that simply contains the values that we will use as settings.
+Now we can define our `EditableSettings` model which inherits from `Singleton` and that simply contains the values that we will use as settings.
 
 ```python
 class EditableSettings(Singleton):
@@ -60,11 +60,11 @@ class EditableSettings(Singleton):
     settings_value_3 = models.CharField()
 ```
 
-Personally, I recommend to assign a default value to every field in order to have a default configuration set.
+Personally, I recommend assigning a default value to every field in order to have a default configuration set.
 Now we can register this model in the admin page and modify it from the Django admin page.
 
 
-### A couple things to keep in mind
+### A couple of things to keep in mind
 
 1. In general, we will access the values from `EditableSettings` as follows:
 
