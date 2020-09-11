@@ -6,8 +6,8 @@ Hence I will talk a bit about ... laundry
 
 ## Doing the laundry with a hash function
 
-Many years ago I moved to a new neighbourhood and I used to do the laundry in
-store nearby.
+Many years ago I moved to a new neighbourhood and I used to do the laundry in a
+nearby store.
 
 I used to give the order number to the cashier and she would look among all the
 laundry bags for the one with the matching number.
@@ -33,10 +33,10 @@ Each laundry bag was kept in a shelf made of boxes like the one shown below
                   |  |  |  |  |  |  |
                   -------------------
 
-Each box contained 0 or more bags.
+Each box could contained 0 or more bags.
 
 The grid was filled by choosing the first empty space and storing the laundry bag
-there.
+in it.
 
                   -------------------------
                   |   |   |   |   |   |   |
@@ -64,22 +64,22 @@ If the grid had no space left the bags were stacked aside.
 To find the bag with a matching order number the cashier performed a lookup among
 all the bags in the grid.
 
-That's a linear look up. It's O(N), meaning that, let N be the number of
+That's a linear lookup. It's O(N), meaning that, let N be the number of
 laundry bags stored in the grid, the lookup would take an average of N comparissons
 to find the searched one.
 
 Actually it would take an average of N/2 comparissons but the order of magnitude
-is the same and it´s said to be O(N) for the sake of simplicity.
+between N and N/2 is the same and it´s said to be O(N) for the sake of simplicity.
 
-It could take less or more than N/2 but in average, given an evenly distributed
-set of bags, it would take N/2 comparisons.
+To find a bag could take less or more than N/2 but in average, given an evenly
+distributed set of bags, it would take N/2 comparisons.
 
 ## Meet a hash function
 
 Each laundry order number was a sequencial integer number. The number was created
-at the time of leaving the laundry and got printed in the ticket.
+at the time of leaving the laundry in the store and got printed in the ticket.
 
-The order number had several digits.
+The order number had around 10 digits digits.
 
 The last digit of each order number was a number between 0 and 9.
 
@@ -87,7 +87,7 @@ That last digit could be used to optimize the lookup.
 
 To make the optimization the grid could be divided into different boxes.
 
-Each box would have a digit assigned.
+Some boxes would have a label assigned with a digit between 0 and 9.
 
 For example
 
@@ -104,12 +104,12 @@ take its last digit only. If the box corresponding to the last digit had empty
 space the bag would go into that box.
 
 If the box had not enough space for a new bag the bag would go to the first box
-with space among the unnumbered boxes.
+with space among the unlabeled boxes.
 
 
-The lookup of a bag applies the same algorithm. First she would look the bag in
-the box corresponding to the order last digit. It the bag was not there she would
-look for it in the unnumbered boxes.
+The lookup of a bag would apply the same algorithm. First she would look the bag
+in the box corresponding to the last digit of the order. It the bag was not there
+she would look for it in the unlabeled boxes.
 
 That lookup is still O(N) in its worst case but in the average case it's O(1),
 meaning that, in average, the lookup would take only a constant number of comparissons.
@@ -119,6 +119,10 @@ number of comparissons is a constant number and it does not depend on the total
 number of bags. In this case the constant number would be the number of bags that
 fit in a single box.
 
+As an example, if a box had enough space for 4 bags the average lookup would take
+4 comparissons regardless of the total number of bags the shelf had at that time.
+
+## Maps
 
 This algorithm is widely used in computer science and it's known as a hash table
 lookup.
@@ -127,6 +131,7 @@ It's used to arrange items in such a way that a given item can be found in O(1)
 time.
 
 If you ever used a Map, a Dictionary or a Hash then you might have already used one.
+
 Map objects are commonly implemented as hash lookup tables.
 
 ## Hash functions
@@ -141,12 +146,12 @@ the numbers between 0 and 9.
 For this hash function to make an actual improvement on the search time the
 laundry order numbers would also need to meet some statistical conditions.
 
-The order number last digit would need to be evenly distributed among all orders,
-otherwise the number of hash collisions would be too high and it would end up
+The order number last digit would need to be evenly distributed among all orders.
+Otherwise the number of hash collisions would be too high and it would end up
 requiring a linear lookup on every search. Such a distribution is known as a
 Normal or Gaussian distribution.
 
-If the hash function is good for the statistical distributiom of its domain set
+If the hash function is good for the statistical distribution of its domain set
 it's said to be a good hash function. If it's not it's said not to be a good hash
 function.
 
