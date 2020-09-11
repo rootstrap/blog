@@ -1,0 +1,143 @@
+# Hash functions in daily life - part II
+
+All right, now that I've talked about hash functions I'll talk about passwords now.
+
+## What's a password?
+
+A password is a means to verify somebody's identity or to verify a permission to
+access a resource.
+
+The most common example would be an online account
+
+```
+Username: Jane
+Password: 1234
+```
+
+The `Username` field is a user statment stating who she is.
+
+The `Password` field is a means for the server to vefiry that the Username
+statement is correct.
+
+A password can be used as an identity verification because its property of being
+known only by the user.
+
+
+Passwords are not the only way to verify permissions or identitis nor to grant
+access to a restricted resource and in many cases it might not be the most suited
+means to do it by it's still widely used.
+
+## Some problems of using passwords
+
+Authentication through passwords has several problems
+
+- If the password is easy ro remember for the user it might be possible to guess for
+others. For example a birthdate or the name of a known person
+
+- If the password has a meaning it might be possible to guess it using brute force
+algorithms. For example trying out all the words in the dictionary
+
+- If the password is too short it's easy to guess it using brute force algorithms
+ trying out all possible combinations of characters and numbers
+
+- If the password is long and meaningless it's difficult for the user to remember
+ it and it would need to be writen down in a physical device like a note or a
+ computer
+
+- If the user has many accounts it would not be possible to remember all of its
+passwords and might end up using the same password in all of them
+
+## Why the same password shouldn´t be used in different accounts
+
+If the same password is used for different accounts and the password is guessed
+for one account the same guess could be used for all the other accounts.
+
+Not all accounts manage passwords using the same procedures. If an account is
+more vulnerable to a password guess it would compromise all the other accounts
+as well, even the ones that are less vulnerable.
+
+For example an account might use an old algorithm to manage passwords like MD5.
+Algorithms become obsolete and vulnerable to attacks as the speed and processing
+power of new micro-processors increase in time.
+
+Or an account might have a vulnerable spot where passwords are treated in plain
+text making that spot attractive to attackers.
+
+## How passwords are stored in servers
+
+To be secure a password should be known only by its owner.
+
+Not even the server should know the user´s password.
+
+How can a server validate a password if it should not know it?
+
+Not using a password in plain text as it's filled in by the user but a derivative
+from it.
+
+For example applying a hash function to the user password and storing only the
+hashed password, not the password itself.
+
+Let go through an example.
+
+Say the user signs up using the credentials
+
+```
+Username: Jane
+Password: 1234
+```
+
+The server would receive the signup and would apply a hash function to the
+password. For example
+
+```
+SHA-512(1234) = 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+```
+
+and it would store the hashed password, not the one provided by the user:
+
+Jane: 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+
+
+Whane the user fills in the login she would send again
+
+```
+Username: Jane
+Password: 1234
+```
+
+The server would apply the same hash algorithm to the password
+
+SHA-512(1234) = 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+
+and it would compare the hashed value with the value stored during the signup:
+
+03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+==
+03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+
+As both hashes match the server would grant access to the user.
+
+If the password would had not been the correct one
+
+```
+Username: Jane
+Password: 123
+```
+
+The server would apply the same hash algorithm to the password
+
+SHA-512(123) = a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
+
+and it would compare the hashed value with the value stored during the signup:
+
+a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
+!=
+03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+
+As both hashes are different the server would deny access to the user.
+
+In a real algorithm the server would apply additional measures like adding a unique
+salt to the hash algorithm to make sure that the same SHA-256 applied to the same
+password 1234 would produce a different hash value in other servers and that the
+same password 1234 used by a different user, John, would also produce a different
+hash value, among others.
