@@ -1,6 +1,6 @@
 # How to customize fonts in React Native
 
-![Main image](images/customize_fonts_main.png)
+![Main image](images/customize_fonts_main.jpg)
 
 ## Introduction
 
@@ -103,6 +103,33 @@ Also modify **index.js** to point to new ./src/App instead of ./App.
 In this app, you are using the `react-native-global-props` library to set a custom font as default, in case you have an entire app with some default font. This is not necessary if you don't need it, you can just set the custom font only in the texts you want. Note how you can still do this even if you define a default custom font. Also note that there are two different default settings, one for the Text component and another for the TextInput.
 
 Now, if you execute `react-native run-ios` or `react-native run-android` you should see the text with your custom fonts.
+
+![IOS](images/customize_fonts_result.png)
+
+## iOS "Unrecognized font family" error
+
+After following all these steps, if you are getting the very common **Unrecognized font family** error, there are still some things you can check or do.
+
+First, you should check your **info.plist** file, located in the **ios/customize_fonts_react_native_tutorial** folder. This file must have a section with key **UIAppFonts** that contains an array of strings with your fonts. If this is missing, then you should add this:
+
+```xml
+<key>UIAppFonts</key>
+	<array>
+		<string>GoodFeelingSans.ttf</string>
+		<string>Dan'sDisneyUI.ttf</string>
+	</array>
+```
+
+If your project has multiple build targets, you should apply this change to their respective **info.plist** files.
+
+After this, if you are still getting the error, you could try doing some (or all) of the things listed below:
+
+- Uninstall app from simulator (or device)
+- Delete **node_modules** folder, **package-lock.json** file and execute **npm install**
+- In **ios** folder delete **Pods** folder, **Podfile.lock** file and execute **pod install**
+- Reset cache by runnning **npm start --reset-cache** command
+
+I hope after doing all this, you now have your new custom fonts working!
 
 ## Summary
 
