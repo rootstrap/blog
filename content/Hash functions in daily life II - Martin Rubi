@@ -69,15 +69,15 @@ To be secure a password should be known only by its owner.
 
 Not even the server should know the user´s password.
 
-How can a server validate a password if it should not know it?
+How can a server validate a password not knowing it?
 
 Not using a password in plain text as it's filled in by the user but a derivative
 from it.
 
-For example applying a hash function to the user password and storing only the
-hashed password, not the password itself.
+For example, applying a hash function to the user password and storing only the
+hashed password instead of the password itself.
 
-Let go through an example.
+I'll go through an example.
 
 Say the user signs up using the credentials
 
@@ -93,12 +93,13 @@ password. For example
 SHA-512(1234) = 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
 ```
 
-and it would store the hashed password, not the one provided by the user:
+and it would store the hashed password instead of the one provided by the user
 
+```
 Jane: 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+```
 
-
-Whane the user fills in the login she would send again
+When the user logs in she would send again
 
 ```
 Username: Jane
@@ -107,13 +108,17 @@ Password: 1234
 
 The server would apply the same hash algorithm to the password
 
+```
 SHA-512(1234) = 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+```
 
 and it would compare the hashed value with the value stored during the signup:
 
+```
 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
 ==
 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+```
 
 As both hashes match the server would grant access to the user.
 
@@ -130,17 +135,19 @@ SHA-512(123) = a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
 
 and it would compare the hashed value with the value stored during the signup:
 
+```
 a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
 !=
 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+```
 
-As both hashes are different the server would deny access to the user.
+As both hashed values are different the server would deny access to the user.
 
-In a real application the server would apply additional measures like adding a unique
-salt to the hash algorithm to make sure that the same SHA-256 applied to the same
-password 1234 would produce a different hash value in other servers and that the
-same password 1234 used by a different user, John, would also produce a different
-hash value, among others.
+In a real application the server would apply additional measures.
+Such as adding a unique salt to the hash algorithm to make sure that the same
+SHA-256 applied to the same password 1234 would produce a different hash value
+in other servers and that the same password 1234 used by a different user, John,
+would also produce a different hash value, among others.
 
 ## Summary
 
