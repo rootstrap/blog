@@ -162,3 +162,9 @@ on how the hash function would be used.
 Of course I never mentioned anything related to hash functions, lookup algorithms
 or statistical distributions to the cashier. It was a lovely laundry store and I
 wanted to keep going there.
+
+## Summary
+
+The article showed a concrete example of a simple hash function and how it could
+be used to optimize a problem that at first glance did not seem to be related
+to an algorithm.
