@@ -90,7 +90,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ```
 
-Also, let's configure by the moment a signup without email verification:
+Also, let's configure a signup without email verification just for now:
 
 ```python
 ACCOUNT_EMAIL_VERIFICATION = 'none'
