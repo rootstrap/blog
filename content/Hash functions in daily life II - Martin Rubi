@@ -16,33 +16,33 @@ Password: 1234
 
 The `Username` field is a user statment stating who she is.
 
-The `Password` field is a means for the server to vefiry that the Username
-statement is correct.
+The `Password` field is a means for the server to verify that the Username
+statement is legit.
 
-A password can be used as an identity verification because its property of being
+A password can be used as an identity verification because of its property of being
 known only by the user.
 
 
-Passwords are not the only way to verify permissions or identitis nor to grant
-access to a restricted resource and in many cases it might not be the most suited
-means to do it by it's still widely used.
+Passwords are not the only way to verify permissions or identity nor to grant
+access to a restricted resource. In many cases passwords might not be the best
+suited method to do it yet it's still widely used.
 
 ## Some problems of using passwords
 
 Authentication through passwords has several problems
 
-- If the password is easy ro remember for the user it might be possible to guess for
-others. For example a birthdate or the name of a known person
+- If the password is easy to remember for the user it might be possible for others
+to guess it. For example a birthday date or the name of a known person
 
 - If the password has a meaning it might be possible to guess it using brute force
 algorithms. For example trying out all the words in the dictionary
 
-- If the password is too short it's easy to guess it using brute force algorithms
+- If the password is too short it's easy to guess by brute force algorithms
  trying out all possible combinations of characters and numbers
 
 - If the password is long and meaningless it's difficult for the user to remember
- it and it would need to be writen down in a physical device like a note or a
- computer
+ it and it would need to be written down into a physical device like a paper note
+ or a computer
 
 - If the user has many accounts it would not be possible to remember all of its
 passwords and might end up using the same password in all of them
@@ -56,26 +56,27 @@ Not all accounts manage passwords using the same procedures. If an account is
 more vulnerable to a password guess it would compromise all the other accounts
 as well, even the ones that are less vulnerable.
 
-For example an account might use an old algorithm to manage passwords like MD5.
-Algorithms become obsolete and vulnerable to attacks as the speed and processing
-power of new micro-processors increase in time.
+For example an account might use an old algorithm like MD5 to manage passwords.
+Cypher algorithms become obsolete and vulnerable to attacks as the speed,
+processing power and parallelization of tasks of new micro-processors increase
+in time.
 
 Or an account might have a vulnerable spot where passwords are treated in plain
 text making that spot attractive to attackers.
 
-## How passwords are stored in servers
+## How do servers store passwords
 
 To be secure a password should be known only by its owner.
 
-Not even the server should know the user´s password.
+Even the server shouldn´t know the user's password.
 
 How can a server validate a password not knowing it?
 
-Not using a password in plain text as it's filled in by the user but a derivative
-from it.
+Keeping a derivative from the user password as it's filled in instead
+of the password itself.
 
 For example, applying a hash function to the user password and storing only the
-hashed password instead of the password itself.
+hashed value instead of the password itself.
 
 I'll go through an example.
 
@@ -87,19 +88,19 @@ Password: 1234
 ```
 
 The server would receive the signup and would apply a hash function to the
-password. For example
+password
 
 ```
 SHA-512(1234) = 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
 ```
 
-and it would store the hashed password instead of the one provided by the user
+and it would store the hashed value instead of the password provided by the user
 
 ```
 Jane: 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
 ```
 
-When the user logs in she would send again
+When the user logs in she would send
 
 ```
 Username: Jane
@@ -112,7 +113,7 @@ The server would apply the same hash algorithm to the password
 SHA-512(1234) = 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
 ```
 
-and it would compare the hashed value with the value stored during the signup:
+and it would compare the hashed value with the value stored during the signup
 
 ```
 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
@@ -122,18 +123,18 @@ and it would compare the hashed value with the value stored during the signup:
 
 As both hashes match the server would grant access to the user.
 
-If the password would had not been the correct one
+If the password sent is not the correct one
 
 ```
 Username: Jane
 Password: 123
 ```
 
-The server would apply the same hash algorithm to the password
+the server would apply the same hash algorithm to the password
 
 SHA-512(123) = a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
 
-and it would compare the hashed value with the value stored during the signup:
+and it would compare the hashed value with the value stored during the signup
 
 ```
 a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
@@ -143,11 +144,12 @@ a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
 
 As both hashed values are different the server would deny access to the user.
 
-In a real application the server would apply additional measures.
-Such as adding a unique salt to the hash algorithm to make sure that the same
-SHA-256 applied to the same password 1234 would produce a different hash value
-in other servers and that the same password 1234 used by a different user, John,
-would also produce a different hash value, among others.
+In a real application the server would apply additional measuress like adding
+a unique salt to the hash algorithm, among others.
+
+Salt is used to make sure that the same SHA-256 applied to the same password 1234
+would produce a different hash value in other servers and that the same password
+1234 used by a different user, say John, would produce a different hash value.
 
 ## Summary
 

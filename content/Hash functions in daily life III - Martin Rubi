@@ -1,11 +1,11 @@
 # Hash functions in daily life - part III
 
 Many sites use authentication methods different than, or complementary to, the
-use of passwords like Two Factor Authentication, Facebook or Google login or one
-time password to name a few.
+use of passwords. Two Factor Authentication, OAuth 2.0 or One
+Time Password to name a few.
 
 Yet there are still many sites and applications that rely in passwords as one of
-its methods.
+its authentication methods.
 
 Would it be possible to relieve a user with many different accounts from having
 to remember many different secure passwords?
@@ -14,8 +14,8 @@ In this article I will propose a method that attemps to do that.
 
 ## What conditions should the generated passwords meet?
 
-For the reasons stated in the previous article, even if a user has many
-accounts the passwords should:
+For the reasons stated in the previous article, Hash functions in daily life - part II,
+even if a user has many accounts the passwords should:
 
 - Be unique and different for each account
 - Not require to write down the password in a device. Not even in a device with
@@ -79,9 +79,9 @@ the file and private password remains the same.
 
 A combination of a derivative from the account name, unique to each account, and
 a derivative from the password, known only by the user, could be used to choose
-only a section of the file. That is a method to mimic choosing different files
-for each account, making it more difficult to guess the generated hash for
-an account from the knowledge of a generated hash to another account.
+only a section of the file. That is a method to mimic choosing different files or
+different keys for each account, making it more difficult to guess the generated
+hash for an account from the knowledge of a generated hash to another account.
 
 
 
