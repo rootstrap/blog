@@ -166,7 +166,7 @@ wanted to keep going there.
 
 ## Summary
 
-The article gave a informal definition of what a hash function it, showed a
-concrete example of a simple hash function and explained how it could be used to
-optimize a problem that, at a first glance, did not seem to be related to a
-computational algorithm.
+The article gave an informal definition of what a hash function is.
+It showed a concrete example of a simple hash function and it explained how to
+use it to optimize a problem that, at a first glance, did not seem to be related
+to a computational algorithm.
