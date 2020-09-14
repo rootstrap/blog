@@ -1,0 +1,90 @@
+# Hash functions in daily life - part III
+
+Many sites use authentication methods different than, or complementary to, the
+use of passwords. Two Factor Authentication, OAuth 2.0 or One
+Time Password, just to name a few.
+
+Yet there are still many sites and applications that rely in passwords as one of
+its authentication methods.
+
+Would it be possible to relieve a user with many different accounts from having
+to remember many different secure passwords?
+
+In this article I will propose a method that attemps to do that.
+
+## What conditions should the generated passwords meet?
+
+For the reasons stated in the previous article, Hash functions in daily life - part II,
+even if a user has many accounts the passwords should
+
+- Be unique and different for each account
+- Not require to write down the password in a device. Not even in a device with
+  strong encryption
+- Relieve the user from having to remember many different, long and meaningless
+  passwords without lowering the strength of the chosen password
+
+## Using hash functions to generate passwords
+
+So far I mentioned how servers apply a hash function to a user password to not to
+store it in plain text yet still be able to validate it.
+
+The same could be done on the user side to generate many different, long,
+meaningless passwords from a small set of passwords the user can remember.
+
+The idea is pretty simple.
+
+For each account let the user choose three inputs:
+
+- A unique account name to identify each account
+- A password easy to remember for the user without the need to write it down
+- A medium to large size file chosen and known only by the user
+
+An example of these credentiales might be
+
+```
+Account: gmail
+Password: 123456
+File: a user file
+```
+
+```
+Account: facebook
+Password: 123456
+File: a user file
+```
+
+```
+Account: apple
+Password: 123456
+File: a user file
+```
+
+The hashing algorithm would take the three inputs, account name, password and file
+
+```
+Account: gmail
+Password: 123456
+File: a file
+```
+
+and produce a unique, meaningless password to use in the application login:
+
+```
+s6lEPU2idFuNtwJMM8xLBAdA/r5HYsF9k7D+ynci
+```
+
+As a derivative from the account name is used to seed the generated hashed
+value, different accounts will produce different generated hashed values even if
+the file and private password remains the same.
+
+A combination of a derivative from the account name, unique to each account, and
+a derivative from the password, known only by the user, could be used to choose
+only a section of the file. That is a method to mimic choosing different files or
+different keys for each account, making it more difficult to guess the generated
+hash for an account from the knowledge of a generated hash to another account.
+
+
+## Summary
+
+The article gives and idea of a simple method to produce strong passwords to use
+in sites and applications using passwords as the authentication method.
