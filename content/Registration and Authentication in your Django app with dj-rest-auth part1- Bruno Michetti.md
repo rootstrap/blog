@@ -163,7 +163,7 @@ And we are good to go! We have an app that manages the authentication with JWT.
 
 ### The User endpoint
 
-If you need to modify or just retrieve the information of an authenticated user, then you can use and endpoint provided by dj-rest-auth: `dj-rest-auth/user/`. It's a very useful endpoint in the case you want the user to be able to modify its own information.  
+If you need to modify or just retrieve the information of an authenticated user; you can use an endpoint provided by dj-rest-auth: `dj-rest-auth/user/`. It's a very useful endpoint in the case you want the user to be able to modify its own information.  
 What happens if you have customized the Django user model? Well, in that case you need to overwrite the user serializer to be able to see and update those added attributes. Let's continue with the example of a customized model with a gender and a phone number. In that case we need to tell dj-rest-auth to use the customized serializer already created (`CustomRegisterSerializer`) as the user's detail serializer, adding this to the settings:
 
 ```python
