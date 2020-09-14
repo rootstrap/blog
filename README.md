@@ -10,7 +10,7 @@ Publishing an article help us to improve the Rootstrap brand with quality conten
    - Suggested name for the branch: `article/<title>`.
 
 4. Ask for reviewers in the `technical-blog` channel. If it's possible, choose reviewers that have knowledge about the blog topic. Try to get at least two approves.
-5. After the approval of the PR, go to the [trello content board](https://trello.com/b/qdyCLffW/content) and create a card in the `Copy Write` column. Put in the card the title of the article and link to the PR. Please add a good quality picture for the article. You can wait for the design team to make a picture for the blog, or you can choose a public one on internet.
+5. After the approval of the PR, go to the [trello content board](https://trello.com/b/qdyCLffW/content) and create a card in the `Copy Write` column. Put in the card the title of the article and link to the PR. Please add a good quality picture for the article. You can wait for the design team to make a picture for the blog, or you can choose a public one on internet. In the second case, make sure to use public images, you can search them in [pexels](https://www.pexels.com/) and [unsplash](https://unsplash.com/).
 6. The copywriter will move the card to the `Wordpress` column so Dinesh can upload the article to the [Rootstrap page](https://www.rootstrap.com/blog/). You can merge now the PR and close the issue.
 
 ## Proccess flow
