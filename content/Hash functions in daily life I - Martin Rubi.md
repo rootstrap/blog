@@ -15,7 +15,7 @@ laundry bags for the one with the matching number.
 The store was quite crowded and handled a lot of orders. Picking the laundry was
 a pretty slow process.
 
-During the time it took to find the laundry bag I used to think how the search
+During the time it took to find the laundry bag I used to think about how the search
 could be improved.
 
 I'll propose a possible optimization in the sections that follow.
