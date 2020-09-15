@@ -99,7 +99,7 @@ For example
           | 1 | 2 | 3 | 4 | 5 | 6 |
           -------------------------
 
-At the time of storing the laundry the cashier would look at the order number and
+At the time of storing the laundry, the cashier would look at the order number and
 take its last digit only. If the box corresponding to the last digit had empty
 space the bag would go into that box.
 
