@@ -1,3 +1,5 @@
+![](https://images.unsplash.com/photo-1512851685250-bfa0aa982a1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80)
+
 # Clustering Analisis and Neural Networks
 
 The most popular methods in machine learning clustering and neural networks. While clustering can help you find groups in your data, neural networks let you perform complex models in a few lines of code. There exists different types of methods inside these two categories. In this article, some of the most common types are described.
