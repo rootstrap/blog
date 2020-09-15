@@ -1,21 +1,25 @@
 # Ensembles
 
-Sometimes some models perform well for certain cases and in other cases other models fit better the data. Why not combine those models to create a more powerful model? Your predictions are going to be much more accurate! However, do not get so ex 
+Sometimes some models perform well for certain cases and in other cases other models fit better the data. Why not combine those models to create a more powerful model? Your predictions are going to be much more accurate!  
 
 Ensembles are a combination of several ML models in order to generate a better model. 
-There are [three](https://stats.stackexchange.com/questions/18891/bagging-boosting-and-stacking-in-machine-learning) main ways of combining models:         
+There are 3 main ways of combining models:         
  
  
-- **Baggin:** the *same* model is performed several times changing the training dataset, the outputs are combined by averaging (prediction) or voting (classification).                  
+- **Baggin:** the *same* model is performed several times changing the training dataset, the outputs are combined by averaging (prediction) or voting (classification).   
+For example, applying a Logistic Regression over 3 different training sets, then combine the results taking the class that is classified by 2 models.  
 
-- **Boosting:** *consecutive* execution of the model learn in sequence correcting errors that the predecessor model made. The goal is to improve areas of the data where the model makes errors.             
+- **Boosting:** *consecutive* execution of the model learn in sequence correcting errors that the predecessor model made. The goal is to improve areas of the data where the model makes errors.  
+It is commonly applied in decision trees, for boosting trees each base classifier is a decision tree, connected as a sequence.          
 
 - **Stacking:** several models learn in *parallel* and finally are combined by averaging (prediction) or voting (classification).         
+The idea is to combine different models into one, being able to consider different properties from the same training data. Finally, those models are combined to produce a final result. 
 
 
 ![ensembles](images/Ensembles.png)
+Ensembles can be compared with people's decision, if we have different points of view from different people abput the same problem, then we can combine those views into one by choosing the one that most people agree with. Therefore, we can compare Ensembles models with democacry!  
 
-While the ensembles seem to resolve all the problems, they are not magic and they also have disadvantages. In this table advantages and disadvantages are presented. You might need to find a balance between them and decide if it is convenient to use them or not for your specific problem. 
+While ensembles seem to resolve all the problems, they are not magic and they also have disadvantages. In this table advantages and disadvantages are presented. You might need to find a balance between them and decide if it is convenient to use them or not for your specific problem. 
 
 
 |Advantages|Disadvantages|
