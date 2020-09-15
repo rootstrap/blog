@@ -6,7 +6,7 @@ Hence I will talk a bit about ... laundry
 
 ## Doing the laundry with a hash function
 
-Many years ago I moved to a new neighbourhood and I used to do the laundry in a
+Many years ago I moved to a new neighborhood and I used to do the laundry in a
 store nearby.
 
 I used to give the order number to the cashier and she would look upon all the
