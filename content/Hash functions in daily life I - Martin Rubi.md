@@ -160,7 +160,7 @@ The goodness of a hash function depends on the domain set, on the mapped set and
 on how the hash function would be used.
 
 
-Of course I never mentioned anything related to hash functions, lookup algorithms
+Of course, I never mentioned anything related to hash functions, lookup algorithms
 or statistical distributions to the cashier. It was a lovely laundry store and I
 wanted to keep going there.
 
