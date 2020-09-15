@@ -116,7 +116,7 @@ meaning that, on average, the lookup would take only a constant number of compar
 
 O(1) doesn't mean that it would take exactly one comparison. It means that the
 number of comparisons is a constant number and it does not depend on the total
-number of bags. In this case the constant number would be the number of bags that
+number of bags. In this case, the constant number would be the number of bags that
 could fit in a single box.
 
 As an example, if a box had enough space for 4 bags the average lookup would take
