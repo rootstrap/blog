@@ -79,7 +79,7 @@ distributed set of bags, it would take N/2 comparisons.
 Each laundry order number was a sequencial integer number. The number was created
 at the time of leaving the laundry in the store and was printed in the ticket.
 
-The order number had around 10 digits digits.
+The order number had around 10 digits.
 
 The last digit of each order number was a number between 0 and 9.
 
