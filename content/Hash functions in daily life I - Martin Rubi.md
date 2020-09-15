@@ -112,7 +112,7 @@ bag in the box corresponding to the last digit of the order. It the bag wasn't
 there she would look for it in the unlabeled boxes.
 
 That lookup is still O(N) in its worst case but in the average case it's O(1),
-meaning that, in average, the lookup would take only a constant number of comparisons.
+meaning that, on average, the lookup would take only a constant number of comparisons.
 
 O(1) doesn't mean that it would take exactly one comparison. It means that the
 number of comparisons is a constant number and it does not depend on the total
