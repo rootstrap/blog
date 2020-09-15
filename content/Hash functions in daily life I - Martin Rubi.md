@@ -76,8 +76,8 @@ distributed set of bags, it would take N/2 comparisons.
 
 ## Meet a hash function
 
-Each laundry order number was a sequencial integer number. The number was created
-at the time of leaving the laundry in the store and was printed in the ticket.
+Each laundry order number was a sequential integer number. The number was created
+at the time of leaving the laundry in the store and was printed on the ticket.
 
 The order number had around 10 digits.
 
