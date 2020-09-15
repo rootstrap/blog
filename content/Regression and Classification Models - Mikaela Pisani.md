@@ -1,3 +1,5 @@
+![](https://images.unsplash.com/photo-1581094289810-adf5d25690e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+
 # Regression and Classification Models
 In machine learning, we want to determine something from the available data. Either it is a numerical value (prediction) or is a class(classification). Most of the common models for regression and classification techniques are presented in this section. From these base models, several variations might exist.
 
