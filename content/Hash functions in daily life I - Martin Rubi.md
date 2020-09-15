@@ -33,7 +33,7 @@ Each laundry bag was kept in a shelf made of boxes, like the one below
                   |  |  |  |  |  |  |
                   -------------------
 
-Each box could contained 0 or more bags.
+Each box could contain 0 or more bags.
 
 The grid was filled by choosing the first empty space and storing the laundry bag
 in it.
