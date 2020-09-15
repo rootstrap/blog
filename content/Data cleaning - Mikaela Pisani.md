@@ -1,3 +1,5 @@
+![](https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80)
+
 # Data cleaning
 
 The data never comes perfect. There is always missing information, different formats, or it is full of useless information for your analysis. The process of data cleaning consists of the correction and transformation of the values, standardizing all the formats, fixing encoding, removing unnecessary information, splitting columns and extracting relevant information. In addition, the data needs to be analyzed, in order to understand the distribution of the data and the meaning of the values for each column. 
