@@ -140,8 +140,8 @@ Map objects are commonly implemented as hash lookup tables.
 Taking the last digit from the order number is known as applying a hash function
 to the order number.
 
-A generalization of a hash function would take an infinite set, for instance the set
-of all integer numbers, and map each element to a finite set, for instance
+A generalization of a hash function would take an infinite set, for instance, the set
+of all integer numbers, and map each element to a finite set, for instance,
 the numbers between 0 and 9.
 
 For this hash function to make an actual improvement on the search time the
