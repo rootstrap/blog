@@ -17,7 +17,7 @@ The idea is to combine different models into one, being able to consider differe
 
 
 ![ensembles](images/Ensembles.png)
-Ensembles can be compared with people's decision, if we have different points of view from different people abput the same problem, then we can combine those views into one by choosing the one that most people agree with. Therefore, we can compare Ensembles models with democacry!  
+ 
 
 While ensembles seem to resolve all the problems, they are not magic and they also have disadvantages. In this table advantages and disadvantages are presented. You might need to find a balance between them and decide if it is convenient to use them or not for your specific problem. 
 
