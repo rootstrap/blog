@@ -148,7 +148,7 @@ For this hash function to make an actual improvement on the search time the
 laundry order numbers would also need to meet some statistical conditions.
 
 The order number last digit would need to be evenly distributed among all orders.
-Otherwise the number of hash collisions would be too high and it would end up
+Otherwise, the number of hash collisions would be too high and it would end up
 requiring a linear lookup on every search. Such a distribution is known as a
 Normal or Gaussian distribution.
 
