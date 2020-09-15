@@ -1,3 +1,5 @@
+![](https://images.unsplash.com/photo-1515463626042-123ab67dcaa7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+
 # Dimension reduction 
 Whenever you have too many features in your model, applying dimension reduction might be a good idea. It will help you to reduce the complexity of the model as well as to avoid overfitting. Dimension reduction can be applied either to represent the data graphically or to reduce the number of input variables. 
 
