@@ -71,7 +71,7 @@ to find the searched one.
 Actually it would take an average of N/2 comparisons but the order of magnitude
 between N and N/2 is the same and it´s said to be O(N) for simplicity.
 
-To find a given bag could take less or more than N/2 but in average, given an evenly
+To find a given bag could take less or more than N/2 but on average, given an evenly
 distributed set of bags, it would take N/2 comparisons.
 
 ## Meet a hash function
