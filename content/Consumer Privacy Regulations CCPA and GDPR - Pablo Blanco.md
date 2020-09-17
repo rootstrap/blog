@@ -74,8 +74,7 @@ parent is a must.
 
 CCPA defines a business as a for-profit entity that collects consumer personal
 data and applies to all companies that serve California residents, whether they
-are physically placed in California or not. If the company meets at least one of
-the following thresholds, may be subject to compliance:
+are physically placed in California or not. The company may be subject to compliance if it meets at least one of the following thresholds:
 
 - Companies with at least \$25 million in annual revenue (applies to total
   revenue, not just revenue in California).
