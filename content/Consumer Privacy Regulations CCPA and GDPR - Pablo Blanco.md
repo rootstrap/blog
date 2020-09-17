@@ -9,9 +9,9 @@ with ethical hacking and information security. You can also follow Pablo on
 
 California is considered the world’s 5th biggest economy, ranking higher than
 some European countries. This is not a surprise given it’s home not only to
-Silicon Valley, the world’s premier innovation hub and headquarters of
-famous tech giants, and the entertainment mecca Hollywood, but also to California's Central
-Valley, one of the most productive agricultural regions on Earth.
+Silicon Valley, the world’s premier innovation hub and headquarters of famous
+tech giants, and the entertainment mecca Hollywood, but also to California's
+Central Valley, one of the most productive agricultural regions on Earth.
 
 Given numerous data breaches, inappropriate use of customer’s information for
 targeted advertising, and other areas of concern such as usage of personal data
@@ -74,7 +74,8 @@ parent is a must.
 
 CCPA defines a business as a for-profit entity that collects consumer personal
 data and applies to all companies that serve California residents, whether they
-are physically placed in California or not. The company may be subject to compliance if it meets at least one of the following thresholds:
+are physically placed in California or not. The company may be subject to
+compliance if it meets at least one of the following thresholds:
 
 - Companies with at least \$25 million in annual revenue (applies to total
   revenue, not just revenue in California).
@@ -211,21 +212,21 @@ that their data is protected and secure.
 I believe that CCPA is a powerful law that will be a big win for both consumers
 and businesses, and will help to put the United States at the same level as
 Europe with GDPR in the global privacy discussion. This law came to stay and
-leverage the rights between consumers and business, giving the former
-the chance to know what a company knows about them, decide whether or not they
-can keep that information, and prevent them from selling it.
+leverage the rights between consumers and business, giving the former the chance
+to know what a company knows about them, decide whether or not they can keep
+that information, and prevent them from selling it.
 
 Governments are beginning to take data privacy very seriously. Like in the
 European Union, Brazil, India, Japan, and other countries, the CCPA will have
 far more impacts across state jurisdictions, reaching companies around the
-world. Getting prepared to be compliant is important and will save your
-company a lot of money, time, and reputation. To be compliant with these
-regulations can be a hard work to achieve, you need to be able to identify
-content related to a data subject, classify and protect consumer data, and
-sometimes even delete upon request. But there is some light at the end of the
-tunnel, if you get your business prepared for this kind of regulation, you will
-get a competitive advantage and it will be easy to get ready for new regulations
-as there are many more on the horizon.
+world. Getting prepared to be compliant is important and will save your company
+a lot of money, time, and reputation. To be compliant with these regulations can
+be a hard work to achieve, you need to be able to identify content related to a
+data subject, classify and protect consumer data, and sometimes even delete upon
+request. But there is some light at the end of the tunnel, if you get your
+business prepared for this kind of regulation, you will get a competitive
+advantage and it will be easy to get ready for new regulations as there are many
+more on the horizon.
 
 ## References
 
