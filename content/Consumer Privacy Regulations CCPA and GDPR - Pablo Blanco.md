@@ -219,7 +219,7 @@ Governments are beginning to take data privacy very seriously. Like in the
 European Union, Brazil, India, Japan, and other countries, the CCPA will have
 far-more impacts across state jurisdictions, reaching companies around the
 world. Getting prepared to be compliant is important and will save your
-company a lot of money, time, and reputation. Be compliant with these
+company a lot of money, time, and reputation. To be compliant with these
 regulations can be a hard work to achieve, you need to be able to identify
 content related to a data subject, classify and protect consumer data, and
 sometimes even delete upon request. But there is some light at the end, if you
