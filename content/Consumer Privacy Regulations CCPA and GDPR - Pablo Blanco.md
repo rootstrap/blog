@@ -211,7 +211,7 @@ that their data is protected and secure.
 I believe that CCPA is a powerful law that will be a big win for both consumers
 and businesses, and will help to put the United States at the same level as
 Europe with GDPR in the global privacy discussion. This law came to stay and
-leverage the rights between consumers and business, giving to the first ones,
+leverage the rights between consumers and business, giving the former
 the chance to know what a company knows about them, decide whether or not they
 can keep that information, and prevent them from selling it.
 
