@@ -88,7 +88,7 @@ the following thresholds, may be subject to compliance:
 
 The European General Data Protection Regulation is an evolution of the EU’s
 existing data rules and replaced the Data Protection Directive (DPD). It
-addresses many of the lacks in the DPD, including adding requirements for
+addresses many of the weaknesses in the DPD, including adding requirements for
 documenting IT procedures, performing risk assessments under certain conditions,
 notifying the consumer and authorities when there is a breach, and strengthening
 rules for data minimization.
@@ -103,8 +103,8 @@ clear differences we should notice in each legislation. Although the two laws
 are quite similar, the CCPA differs from the GDPR in a few important ways:
 
 - **Business impacted**: whereas businesses of any size must comply with the
-  GDPR, the CCPA only impacts businesses that reach a certain size that
-  processes a certain amount of data from consumers.
+  GDPR, the CCPA only impacts businesses that reach a certain size and that
+  process a certain amount of data from consumers.
 - **Penalties**: GDPR penalties are capped based on a company’s annual revenue,
   on the other hand, CCPA penalties have no limit and are assessed per violation
   and number of affected consumers.
@@ -223,10 +223,10 @@ world. Getting prepared to be compliant it’s important and will save your
 company a lot of money, time, and reputation. Be compliant with these
 regulations can be a hard work to achieve, you need to be able to identify
 content related to a data subject, classify and protect consumer data, and
-sometimes even delete upon request. But there is some light at the end, if you
-get your business prepared for this kind of regulation, you will get a
-competitive advantage and it will be easy to get ready for new regulations as
-there are many more on the horizon.
+sometimes even delete upon request. But there is some light at the end of the
+tunnel, if you get your business prepared for this kind of regulation, you will
+get a competitive advantage and it will be easy to get ready for new regulations
+as there are many more on the horizon.
 
 ## References
 
