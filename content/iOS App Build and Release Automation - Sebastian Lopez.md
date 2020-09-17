@@ -1,17 +1,19 @@
-# **Automating Mobile App Builds with Fastlane and GitHub Actions**
+# **Automating iOS App Builds with Fastlane and GitHub Actions**
 
-![cover photo](https://cover.photo.url.here)
+![cover photo](images/apps_touch.jpg)
 
 *This is part 1 of a two-part post on mobile app automation. Next chapter will focus on Android build automation*
 
-Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as for backend and web applications. Just as Continuous Integration and Continuos Delivery require maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time consuming and error prone process, which should -and can be automated, even though it presents a particular set of challenges.
+Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as for backend and web applications. As Continuous Integration/Continuos Delivery requires maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time consuming and error prone process, which should -and can be automated, even though it presents a particular set of challenges.
 
-In this post I am going to describe the approach we implemented for iOS CI/CD making use of Fastlane, a CI system (GitHub Actions), and some spare MacMinis which were sitting idle in the office and got turned into build servers. I will also use [Amazon S3](https://aws.amazon.com/s3/) to store signing artifacts, but any system where we could safely store encrypted files could serve.
+In this post I am going to describe the approach we implemented for iOS CI/CD making use of Fastlane, a CI system (GitHub Actions), and some spare MacMinis which were sitting idle in the office and got turned into build servers. I will also use AWS S3 to store signing artifacts, but any system where we could safely store encrypted files could serve.
 
 For this example we will use an iOS app developed with React Native, but the same approach works when developing natively for iOS -and as we will see in the follow-up article, it can also be translated to Android apps.
 Using local machines is not absolutely required, but it is useful for iOS.
 
 ## Why Fastlane
+
+<img src="images/fastlane.png" alt="Signing" height="50" align="middle"/>
 
 [Fastlane](https://docs.fastlane.tools/) touts itself as the easiest way to automate deployments for mobile apps. If offers integrations with other CLI tools and APIs including Xcode, Android SDK, Gradle, iTunes App Store, Google Play Store, Git, AWS S3, etc. We adopted it because we found it to be:
 * Easy to setup (just install a Ruby gem)
@@ -22,27 +24,31 @@ Using local machines is not absolutely required, but it is useful for iOS.
 
 ## Why GitHub Actions
 
-GitHub offers [Actions](https://github.com/features/actions) as a complete CI/CD system that seamlessly integrates with repositories hosted by them. 
+GitHub offers [Actions](https://github.com/features/actions) as a complete CI/CD system that seamlessly integrates with repositories hosted there. 
 Our experience showed it to be:
 * Easy to write and read, with a straightforward YAML syntax
 * Flexible, offering hosted runners in every major OS and integrations with pretty much every major tech stack and hosting platform
-* Free for Open Source projects and when using self-hosted runners (this is where our spare MacMinis become valuable)
+* Cheap -considering it is free for Open Source projects and when using self-hosted runners (this is where our spare MacMinis become valuable)
 
 ## Prep work
 
 ### Application Targets
 
-Within our Xcode project we would define multiple iOS [build targets](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/WorkingwithTargets.html) with build settings corresponding to each target environment. Each of these will need to be associated to an app bundle ID in the App Store Connect.
+Within our Xcode project we would define multiple iOS [build targets](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/WorkingwithTargets.html) with build settings corresponding to each target environment. Each of these will need to be associated to an app bundle ID created in the Developer Portal, and listed in the [iTunes Connect site](https://itunesconnect.apple.com/).
 
 We should [disable Xcode automatic signing](https://help.apple.com/xcode/mac/current/#/dev1bf96f17e) for the targets we want to handle with Fastlane and associate the corresponding Provisioning Profile. This configuration should be checked into our repo to be picked by the CI system (we can always override them to use automatic signing locally).
 
+<img src="images/ios_signing.png" alt="Signing" height="200" align="middle"/>
+
 ### Codesigning 
 
-For an iOS app to be distributed, it needs to be signed with a certificate issued by Apple and a provisioning profile allowing to install or distribute the application with such certificate. So after registering these apps we will need:
+We know that for an iOS app to be distributed, it needs to be signed with a certificate issued by Apple and a provisioning profile allowing to install or distribute the application with such certificate. So after registering these apps we will need:
   - A Distribution Certificate (.cer) and private key (.p12) (https://calvium.com/how-to-make-a-p12-file/)
   - A Provisioning Profile for Appstore distribution tied to app bundle ID and cert
 
 We can store the password for the .p12 file in [GitHub Secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) and make it available to the workflow as an environment variable when importing it.
+
+<img src="images/secrets.png" alt="Secrets" height="250" align="middle"/>
 
 All three files should be uploaded to a secure location that our CI process will have access to. 
 Fastlane suggests using [match](https://docs.fastlane.tools/actions/match/) for this, which is a pretty good solution but has some limitations:
@@ -50,7 +56,7 @@ Fastlane suggests using [match](https://docs.fastlane.tools/actions/match/) for 
 * It cannot be extended to cover other sensitive files our build might need
 * It requires access to a specific GitHub repo for each project, which involves some extra steps when running from a CI/CD server
 
-So the solution we are trying here makes use of AWS S3. This works well for us as we typically use S3 in all our projects (Frontend and Backend) and normally have  AWS credentials in our working environment. One single *private* bucket, encrypted with [AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) allows us to securely handle our Certificates, Keystores and other sensitive files for all our projects. It is a good practice to create a specific user for our CI workflow which only has access to proper bucket and path. You can read about Access Management for S3 [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html)
+So the solution we are trying here makes use of [Amazon S3](https://aws.amazon.com/s3/). This works well for us as we typically use S3 in all our projects (Frontend and Backend) and normally have  AWS credentials in our working environment. One single *private* bucket, encrypted with [AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) allows us to securely handle our Certificates, Keystores and other sensitive files for all our projects. It is a good practice to create a specific user for our CI workflow which only has access to proper bucket and path. You can read about Access Management for S3 [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html)
 
 Our workflow thus only needs to include environment variables with valid AWS keys, which should be also stored as repo Secrets.
 * `AWS_ACCESS_KEY_ID`
@@ -64,9 +70,8 @@ This means when it needs to authenticate to the App Store from a new machine, Fa
 * Generating a temporary Apple login session and storing in `FASTLANE_SESSION` variable. This can be done using Fastlane's `spaceauth`. It is however restricted not only in duration (one month), but also geographically (cannot be used on a different region from where it is generated).
 
 For use of our CI workflow we will manually log into the shared Apple ID from our build servers, associating them as trusted devices.
-[screenshot]
 
-The following environment variables need to be present in our workflow, so we should store their values as repo Secrets:
+The following environment variables will need to be present in our workflow, so we should store their values as repo Secrets:
 * `FASTLANE_USER`                               : Apple ID used for submission
 * `FASTLANE_PASSWORD`                           : Password for this ID 
 * `FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD`: Application-specific password
@@ -80,7 +85,7 @@ See [Fastlane docs on Apple Authentication](https://docs.fastlane.tools/best-pra
 For a React Native project we would typically have a `.env` file including multiple environment-specific variables, including but not limited to the backend URL that each version of our app should target. Likewise for an iOS-native project we could have `.xcconfig` files including environment-specific params, several of which could be sensitive. There are several ways to securely handle and process these items, but in our example we will store all the relevant parameters as repo Secrets and read them as environment variables in our workflow in order to build this `.env` file at runtime. So for instance our DEV workflow would have a `API_URL` environment variable pointed to the `DEV_API_URL` repo Secret.
 
 
-## The iOS Fastfile
+## The Fastfile
 
 ### Environment settings
 The required input parameters could be hardcoded here but it is preferable to read them from environment vars due to:
@@ -132,21 +137,26 @@ The GitHub workflow file is checked into `.github\workflows\dev_build.yml` and p
 * Download the codesigning elements from S3 (certificate, private key, provisioning profile)
 * Generate the environment configuration file from values in Secrets
 * Call Fastlane to build and publish the app
-(gist)
+https://gist.github.com/sebalopez/79c96e4734c208ed7a091c8e174d1f4c
 
 ## Setting up a local build server
 
-As mentioned before, the previous workflow will run on a GitHub macos runner, but it will likely get stuck when attempting to log into TestFlight due to a 2FA token prompt. 
+As mentioned before, the previous workflow could run on any GitHub macos runner, but it would likely get stuck when attempting to log into TestFlight due to a 2FA token prompt. The workaround 
+we implemented is using any Mac we have physical access to as a self-hosted runner. 
+For this we need to perform two simple steps:
 
-This is where GitHub Actions' support for self-hosted runners comes in. You can very easily setup a MacMini you have physical access to for running the workflows which require authenticating with Apple IDs.  
-You can follow GitHub's guide for [self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners).
-* If you are an organization owner you can add self-hosted runners shared by multiple repos in an organization (though limited by job concurrency).
-* Otherwise you need to repeat the process of adding it individually for each repo (the same actual machine can still be reused for multiple projects).
+* Associate the device with the Apple ID used for submission, by logging into https://appleid.apple.com/ and entering the 2FA token from the device.
 
-The good thing is, beyond associating the device with the Apple ID used for submission and entering the 2FA token there is no need to do any specific setup, as we can let GHA handle the build requirements (official and third-party Actions are available to self-hosted runners). We also do not need to give the machine a public IP address, as the agent installed during the setup will poll GH for kicking off the workflows and reporting back.
+* Setup the GH agent by following GitHub's guide for [self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners).
+  * Organization owners can add self-hosted runners shared by multiple repos in an organization (keeping in mind job concurrency limits).
+  * Otherwise repo owners need to repeat the process of adding it individually for each repo (the same actual machine can still be reused for multiple projects).
 
-Upon setting up the runner, we can associate our workflows with it just by specifying its label in the on: section:
-(gist)
+Fortunately there is no need to do any project-specific setup beyond this, as we can let GHA handle the build requirements (official and third-party Actions are available to self-hosted runners). We also do not need to give the machine a public IP address, as the agent installed during the setup will poll GH for kicking off the workflows and reporting back.
+
+Upon setting up the runner, we can associate our workflows with it just by specifying its label in the `on:` section.
+
+<img src="images/actions_runner_status.png" alt="Signing" height="100" align="middle"/>
+
 
 Some important configuration items:
 * [Set the Mac to never enter sleep mode ](https://support.apple.com/guide/mac-help/set-sleep-and-wake-times-mchle41a6ccd/mac)
@@ -155,10 +165,10 @@ Some important configuration items:
 
 ## Summary
 
-We have looked at Fastlane as a powerful free tool for automating our mobile app build and release processes, and GitHub Actions as a good CICD system that can integrate with Fastlane to trigger our pipelines automatically and in a secure environment. Also it is a very easy way for turning our spare Macs into build servers. 
+We have gone through an example of Fastlane as a powerful free tool for automating our mobile app build and release processes, and GitHub Actions as a good CICD system that can integrate with Fastlane to trigger our pipelines automatically and in a secure environment. We have also see an easy way for turning our spare Macs into build servers. 
 
-You can find complete working examples in our Open Source boilerplate projects, [ios-base](https://github.com/rootstrap/ios-base) and [react-native-base](https://github.com/rootstrap/react-native-base). 
+You can find complete working examples in our Open Source boilerplate projects, [iOS Base](https://github.com/rootstrap/ios-base) and [React Native Base](https://github.com/rootstrap/react-native-base). 
 
-All these cover just a couple of the many use cases you can apply these tools for -we highly recommed you to go through their extensive documentation sites. 
+All these cover just a couple of the many use cases you can apply these tools for -we highly recommend you to go through their extensive documentation sites. 
 
 Stay tuned for the follow-up article, where we build a similar workflow for an Android project!
