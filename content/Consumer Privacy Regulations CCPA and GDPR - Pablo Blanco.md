@@ -67,7 +67,7 @@ This data protection gives consumers the right to:
   privacy rights (right to non-discrimination).
 
 It’s also prohibited selling the personal information of consumers ages 13–16
-(unless the consumer opts-in). For consumers under the age of 13, consent from a
+(unless consumer opts-in). For consumers under the age of 13, consent from a
 parent is a must.
 
 ## Who does the CCPA apply to?
@@ -84,7 +84,7 @@ compliance if it meets at least one of the following thresholds:
 - Companies that derive 50% or more of their annual revenue from the sale of
   personal information.
 
-## Some differences between CCPA and GDPR
+## CCPA vs GDPR: What are the differences?
 
 The European General Data Protection Regulation is an evolution of the EU’s
 existing data rules and replaced the Data Protection Directive (DPD). It
@@ -102,7 +102,7 @@ No matter how influenced the CCPA may have been by the GDPR, there are some
 clear differences we should notice in each legislation. Although the two laws
 are quite similar, the CCPA differs from the GDPR in a few important ways:
 
-- **Business impacted**: whereas businesses of any size must comply with the
+- **Impacted businesses**: whereas businesses of any size must comply with the
   GDPR, the CCPA only impacts businesses that reach a certain size and that
   process a certain amount of data from consumers.
 - **Penalties**: GDPR penalties are capped based on a company’s annual revenue,
@@ -199,15 +199,15 @@ available only to its patients to monitor their health and treat medical
 conditions. That organization is a covered entity under HIPAA, the data is
 probably PHI, and the HIPAA exemption probably applies.
 
-## Summary
+## Final thoughts
 
-Data privacy regulations will demand a lot of work to get ready compliance, but
-being forced to optimizing the data that a company collects, processes and
-stores could create efficiency. Companies need only store the necessary pieces
-of personal information to perform their services and reduce the time and
-resources (they have spent in the past) to store all of it. Compliance can be
-viewed as a company’s competitive advantage by offering consumers peace of mind
-that their data is protected and secure.
+Data privacy regulations will demand a lot of work in the preparedness to be
+compliance, but being forced to optimizing the data that a company collects,
+processes and stores could create efficiency. Companies need only store the
+necessary pieces of personal information to perform their services and reduce
+the time and resources (they have spent in the past) to store all of it.
+Compliance can be viewed as a company’s competitive advantage by offering
+consumers peace of mind that their data is protected and secure.
 
 I believe that CCPA is a powerful law that will be a big win for both consumers
 and businesses, and will help to put the United States at the same level as
