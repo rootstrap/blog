@@ -1,4 +1,4 @@
-# Consumer Privacy Regulations CCPA and GDPR
+# GDPR and CCPA Compliance for Dummies
 
 _[Pablo Blanco](https://www.rootstrap.com/blog/author/pabloblancorootstrapcom/)
 is a Full-Stack developer on the Rootstrap team and writes about his experience
