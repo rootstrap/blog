@@ -1,7 +1,7 @@
 ## Registration and Authentication in your Django app with dj-rest-auth (part 1)
 
 A huge amount of existing applications have registration and authentication for users. Maybe every developer in the world has implemented something related to this in their work or while they learned. After the creation of the [Django REST framework](https://www.django-rest-framework.org/), Django developers started to implement more and more app-level REST API endpoints.  
-As a result, an open source package called [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/index.html) has been developed to provide a set of REST API endpoints to handle user registration and authentication tasks. In this article divided into two parts, I will talk about this package; and given that it can generate some problems at first, I will give you some tips to avoid them.
+As a result, an open source package called [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/index.html) has been developed to provide a set of REST API endpoints to handle user registration and authentication tasks. In this article divided into two parts, I will not only talk about this particular package but also, I will give you some tips to avoid some of the most common problems faced when configuring it.
 
 ### The dj-rest-auth package
 
@@ -15,7 +15,7 @@ As said, dj-rest-auth provides a set of REST API endpoints to manage user regist
 - Password reset via e-mail.
 - Social media authentication.
 
-You don't need to do too much work to have those functionalities in your app. Besides, given that dj-rest-auth is an open source package, it has the advantage of being used by lots of programmers that can find errors, propose and add improvements, etc. So, if you use dj-rest-auth you can be sure that you are using code created and maintained by an open source community.
+You don't need to do too much work to have those functionalities in your app. Besides, given that dj-rest-auth is an open source package, it has the advantage of being used by lots of programmers that can find errors, propose and add improvements, and so on. So, if you use dj-rest-auth you can be sure that you are using code created and maintained by an open source community.
 
 ### Browsable endpoints
 
