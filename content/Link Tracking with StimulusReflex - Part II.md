@@ -16,7 +16,7 @@ class CreateShortenedLinks < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.string :shortened_path, null: false
       t.string :original_url, null: false
-      t.integer :views_count, default: 0
+      t.integer :views_count, null: false, default: 0
 
       t.timestamps
     end
@@ -98,7 +98,7 @@ What we did in the last section was pretty normal, huh? Let's keep going. Now we
 ```javascript
 // app/javascript/controllers/shortened_links_controller.js
 
-import { Controller } from "stimulus"
+import { Controller } from 'stimulus'
 import StimulusReflex from 'stimulus_reflex'
 
 export default class extends Controller {
@@ -593,7 +593,7 @@ Bind it in `app/javascript/controllers/shortened_links_controller.js`
 ```javascript
   destroyLink(e) {
     if (confirm('Are you sure you want to remove this link?')) {
-      const linkId = parseInt(e.target.dataset.linkId)
+      const linkId = parseInt(e.target.dataset.linkId, 10)
       this.stimulate('ShortenedLinksReflex#destroy', linkId)
     }
   }
