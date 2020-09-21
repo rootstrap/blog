@@ -2,11 +2,12 @@
 
 In the [first part of this blog post](link-to-part-1) I've presented the dj-rest-auth package that allows us to handle registration and authentication through REST API endpoints with a minimal configuration.
 I've also talked about different customizations that you can take advantage of.
-When I started to use this package I had to face some problems. The roots of those problems were partly because I was learning Django and partly because dj-rest-auth has many features and possibilities for each feature that the first time is used it can lead to some confusion. So the main goal of the second part is to show you more examples and give you some tips. Let's continue with the example of the `CustomUser` shown in the previous part, with no username, unique email, a gender and a phone number attribute.
+When I started to use this package I had to face some problems. The roots of those problems were partly because I was learning Django and partly because dj-rest-auth has many features and possibilities for each feature that the first time is used it can lead to some confusion. So the main goal of the second part is to show you more examples and give you some tips.  
+Let's continue with the example of the `CustomUser` shown in the previous part, with no username, unique email, a gender and a phone number attribute. First I will show you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I will talk about the reset password functionality, and finally how to customize the templates with your own desired values.
 
 ### Sign-up with email verification
 
-Having installed and integrated dj-rest-auth to your Django app, it's possible to configure email verification at the moment that a user registers. This means that a successfully registered user has to check the inbox and confirm trough the received email that he really is the owner of the email account. To do this, go to your settings and turn on email verification:
+Having installed and integrated dj-rest-auth to your Django app, it's possible to configure email verification at the moment that a user registers. This means that a successfully registered user has to check the inbox and confirm through the received email that he really is the owner of the email account. To do this, go to your settings and turn on email verification:
 
 ```python
 # Your settings file
@@ -108,7 +109,7 @@ EMAIL_HOST_USER = 'your email host user'
 EMAIL_HOST_PASSWORD = 'your email host password'
 ```
 
-You have to choose the `EMAIL_HOST`, for example `'smpt.gmail.com'`. In the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` parameters put the information of the account that will be the email sender. If you are using gmail as mail server you will need to allow less secure apps and display unlock captcha. After this, your Django app will send verification emails for all the new users.  I recommend you to use environment variables to keep sensitive information in your settings such as keys, the email host account and its password, etc.   
+You have to choose the `EMAIL_HOST`, for example `'smpt.gmail.com'`. In the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` parameters put the information of the account that will be the email sender. If you are using gmail as mail server you will need to allow less secure apps and display unlock captcha. After this, your Django app will send verification emails for all the new users. I recommend you to use environment variables to keep sensitive information in your settings such as keys, the email host account and its password, etc.  
 In real applications the best way to do this is integrating with an email service such as [SendGrid](https://sendgrid.com/docs/for-developers/sending-email/django/).
 
 ### Email templates
@@ -145,18 +146,30 @@ For example, to customize the email confirmation message, you have to create an 
 It's important to say that there are some variables defined in the email templates that are needed and you have to keep them in case you overwrite the files. For example, this is the file of `email_confirmation_message.txt`:
 
 ```html
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
-
-You're receiving this e-mail because user {{ user_display }} has given your e-mail address to register an account on {{ site_domain }}.
-
-To confirm this is correct, go to {{ activate_url }}
-{% endblocktrans %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
-{{ site_domain }}{% endblocktrans %}
-{% endautoescape %}
+{% load account %}{% user_display user as user_display %}{% load i18n %}{%
+autoescape off %}{% blocktrans with site_name=current_site.name
+site_domain=current_site.domain %}Hello from {{ site_name }}! You're receiving
+this e-mail because user {{ user_display }} has given your e-mail address to
+register an account on {{ site_domain }}. To confirm this is correct, go to {{
+activate_url }} {% endblocktrans %} {% blocktrans with
+site_name=current_site.name site_domain=current_site.domain %}Thank you from {{
+site_name }}! {{ site_domain }}{% endblocktrans %} {% endautoescape %}
 ```
 
-There you have `activate_url`, that is the link for the user confirmation. So you can remove for example the `site_name` if you want (or change it to show a different one) but you definitely have to keep the `activate_url` value. Otherwise a registered user won't be able to activate his account.
+There you have `activate_url`, that is the link for the user confirmation. So you can remove for example the `site_name` if you want (or change it to show a different one) but you definitely have to keep the `activate_url` value. Otherwise, registered users won't be able to activate their accounts. Summarizing this section, if you decide to overwrite the `email_confirmation_message.txt`, your project structure will look like this:
+
+```
+root-project-folder
+    |__myapp
+    |    |__templates
+    |        |__account
+    |            |__email
+    |                |__email_confirmation_message.txt
+    |
+    ...
+```
+
+Now let's see about the reset password functionality and how to customize it.
 
 ### Reset password
 
@@ -182,27 +195,37 @@ And now you are good to go! You can test the browsable endpoint which receives t
 You are able to modify the email template for the reset password functionality too. Assuming that you have already configured the `TEMPLATES` folder as in the previous section example, you can create a file in `myapp/templates/registration/` called `password_reset_email.html` to overwrite the one used by default. Why do you have to define it there? Because is the [default path used by Django](https://github.com/django/django/tree/master/django/contrib/admin/templates/registration). You can even reuse some code of the default file, that looks like this:
 
 ```html
-
-{% load i18n %}{% autoescape off %}
-{% blocktranslate %}You're receiving this email because you requested a password reset for your user account at {{ site_name }}.{% endblocktranslate %}
-
-{% translate "Please go to the following page and choose a new password:" %}
-{% block reset_link %}
-{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
-{% endblock %}
-{% translate 'Your username, in case you’ve forgotten:' %} {{ user.get_username }}
-
-{% translate "Thanks for using our site!" %}
-
-{% blocktranslate %}The {{ site_name }} team{% endblocktranslate %}
-
-{% endautoescape %}
+{% load i18n %}{% autoescape off %} {% blocktranslate %}You're receiving this
+email because you requested a password reset for your user account at {{
+site_name }}.{% endblocktranslate %} {% translate "Please go to the following
+page and choose a new password:" %} {% block reset_link %} {{ protocol }}://{{
+domain }}{% url 'password_reset_confirm' uidb64=uid token=token %} {% endblock
+%} {% translate 'Your username, in case you’ve forgotten:' %} {{
+user.get_username }} {% translate "Thanks for using our site!" %} {%
+blocktranslate %}The {{ site_name }} team{% endblocktranslate %} {%
+endautoescape %}
 ```
 
- As said in the email validation section, remember to keep some of the needed variables in the template. In this case the most important is the `url` with the `uid` and the `token` that are required to update the user's password.  
- After these steps, you have finished the reset password functionality customization! Now let's see how we can modify some of the default variables used in the templates.
+As said in the email validation section, remember to keep some of the needed variables in the template. In this case the most important is the `url` with the `uid` and the `token` that are required to update the user's password.  
+ After these steps, you have finished the reset password functionality customization! Taking the previous section into account, your project folder would be now like this one:
+
+```
+root-project-folder
+    |__myapp
+    |    |__templates
+    |        |__account
+    |        |   |__email
+    |        |        |__email_confirmation_message.txt
+    |        |__registration
+    |            |__password_reset_email.html
+    |
+    ...
+```
+
+Let's see in the last section how we can modify some of the default variables used in the templates.
 
 ### Customize variables used in the templates
+
 Let's think about this example: What if you want to modify the URL sent by default in the reset password email template? Well, Django allows you to define variables to be used in the templates by creating your own template tags. First thing you need to do, is to define the custom value desired for the URL in your settings:
 
 ```python
@@ -211,7 +234,7 @@ Let's think about this example: What if you want to modify the URL sent by defau
 CUSTOM_PASSWORD_RESET_CONFIRM = 'desired URL'
 ```
 
-Then you have to create two files under `myapp/templatetags/`: One has to be an empty __init__.py file, and the other one registers and gets the tags. Let's call it `password_reset_template_load.py`:
+Then you have to create two files under `myapp/templatetags/`: One has to be an empty `__init__.py` file, and the other one registers and gets the tags. Let's call it `password_reset_template_load.py`:
 
 ```python
 from django import template
@@ -228,18 +251,33 @@ def get_settings_var(name):
 Finally, go to your customized email template that you have created to overwrite the default one, and load the defined value by adding `{% load password_reset_template_load %}` at the top of the file, and after that add the line that has the custom value (in this case don't forget the `uid` and `token`):
 
 ```html
-// Your template
-{% load password_reset_template_load %}
-...
-{% get_settings_var 'CUSTOM_PASSWORD_RESET_CONFIRM' %}?uidb64={{ uid }}&token={{ token }}
+// Your template {% load password_reset_template_load %} ... {% get_settings_var
+'CUSTOM_PASSWORD_RESET_CONFIRM' %}?uidb64={{ uid }}&token={{ token }}
 ```
 
-With these settings you have defined your custom template tags. From now on, the email for password reset will show a customized URL. Remember that this was an example, you can create any template tag you want and use it in any template you have.
+With these settings you have defined your custom template tags. I'm going to show you the final project structure with all the customization that I talked about:
+
+```
+root-project-folder
+    |__myapp
+    |    |__templates
+    |    |   |__account
+    |    |   |   |__email
+    |    |   |        |__email_confirmation_message.txt
+    |    |   |__registration
+    |    |       |__password_reset_email.html
+    |    |__templatetags
+    |        |__password_reset_template_load.py
+    ...
+```
+
+From now on, the email for password reset will show a customized URL. Remember that this was an example, you can create any template tag you want and use it in any template you have.
 
 #### Notes
+
 1. If wile trying this you have an error that shows `Site matching query does not exist.`, you can solve it by adding `SITE_ID = 1` to your settings.
 2. When you create your own templatetags make sure that the main app is added in the `INSTALLED_APP` list in your settings.
 
-
 ### Summary
+
 This finishes a blog post divided into two parts. This last part talked about some very useful features that you can have with dj-rest-auth and how to solve the possible upcoming errors. First I have shown you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I talked about the reset password functionality, and finally how to customize the templates with your own desired values. I recommend using the presented package because it solves lot's of common problems and provides a set of features that are very important for the most of the existent applications. Maybe in the future you can not only use it but also contribute to it.
