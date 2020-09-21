@@ -1,7 +1,4 @@
-## Simple dynamic settings for Django
-
-
-### Introduction
+## How to manage dynamic settings in Django
 
 I recently finished working on a small project in Django when I realized that it could be improved greatly by adding a single feature.
 There were a few functionalities depending directly on constant values defined in the *settings* file but given their nature, it seemed like a good idea to be able to modify them on runtime. This way the application's behavior could be altered without having to edit its settings file and deploy the project again.
