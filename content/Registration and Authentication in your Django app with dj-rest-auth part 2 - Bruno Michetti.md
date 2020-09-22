@@ -77,25 +77,13 @@ Having this configuration, the user will be redirected to the login page after c
 LOGIN_URL = 'http://localhost:8000/dj-rest-auth/login'
 ```
 
-Now we need to specify to Django the email backend that is in charge of sending the emails. To locally test the signup feature during development, you can set:
-
-```python
-# Your settings file
-...
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-```
-
-In this case the email won't be sent, it will be printed in the console instead. By default, you will see something like this after a successful registration:
-
-<img src="images/dj-rest-auth-console-email-example.png" alt="Email console example" />
-
-If you open your browser and go to the link shown in the printed email, the user's account will be activated and you will be redirected to the `LOGIN_URL`. Now you are able to login with the entered email and password.  
-And there it is! You have configured signup with email verification. Now let's see some other email backend settings to actually send the email.
+Finally, you need to specify to Django the email backend that is in charge of sending the emails of your app.
 
 #### Email backend
 
-It's possible to configure the [Django email backend](https://docs.djangoproject.com/en/3.1/topics/email/#email-backends) in different ways. You can configure an SMTP server by adding:
+The [Django email backend](https://docs.djangoproject.com/en/3.1/topics/email/#email-backends) is the component that handles the sending of an email. You can choose among different possibilities that Django provides. The most common are SMTP and console backend.
+
+You can configure an SMTP server by adding:
 
 ```python
 # Your settings file
@@ -109,8 +97,24 @@ EMAIL_HOST_USER = 'your email host user'
 EMAIL_HOST_PASSWORD = 'your email host password'
 ```
 
-You have to choose the `EMAIL_HOST`, for example `'smpt.gmail.com'`. In the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` parameters put the information of the account that will be the email sender. If you are using gmail as mail server you will need to allow less secure apps and display unlock captcha. After this, your Django app will send verification emails for all the new users. I recommend you to use environment variables to keep sensitive information in your settings such as keys, the email host account and its password, etc.  
+You have to choose the `EMAIL_HOST`, for example `'smtp.gmail.com'`. In the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` parameters put the information of the account that will be the email sender. If you are using gmail as mail server you will need to allow less secure apps and display unlock captcha. After this, your Django app will send verification emails for all the new users. I recommend you to use environment variables to keep sensitive information in your settings such as keys, the email host account and its password, etc.  
 In real applications the best way to do this is integrating with an email service such as [SendGrid](https://sendgrid.com/docs/for-developers/sending-email/django/).
+
+In the second option, you can locally test the signup feature during development, by setting:
+
+```python
+# Your settings file
+...
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+```
+
+In this case the email is sent and received by the console. So after a successful registration you will see in the console something like this:
+
+<img src="images/dj-rest-auth-console-email-example.png" alt="Email console example" />
+
+If you open your browser and go to the link shown in the printed email, the user's account will be activated and you will be redirected to the `LOGIN_URL`. Now you are able to login with the entered email and password.  
+And there it is! You have configured signup with email verification. Let's see how to customize the emails that your application sends.
 
 ### Email templates
 
