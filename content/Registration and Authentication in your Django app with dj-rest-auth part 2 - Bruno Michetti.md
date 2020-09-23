@@ -279,9 +279,9 @@ From now on, the email for password reset will show a customized URL. Remember t
 
 #### Notes
 
-1. If wile trying this you have an error that shows `Site matching query does not exist.`, you can solve it by adding `SITE_ID = 1` to your settings.
-2. When you create your own templatetags make sure that the main app is added in the `INSTALLED_APP` list in your settings.
+1. If while trying this you have an error that shows `Site matching query does not exist.`, you can solve it by adding `SITE_ID = 1` to your settings.
+2. When you create your own templatetags make sure that the main app is added in the `INSTALLED_APPS` list in your settings.
 
 ### Summary
 
-This finishes a blog post divided into two parts. This last part talked about some very useful features that you can have with dj-rest-auth and how to solve the possible upcoming errors. First I have shown you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I talked about the reset password functionality, and finally how to customize the templates with your own desired values. I recommend using the presented package because it solves lot's of common problems and provides a set of features that are very important for the most of the existent applications. Maybe in the future you can not only use it but also contribute to it.
+This finishes a blog post divided into two parts. This last part talked about some very useful features that you can have with dj-rest-auth and how to solve the possible upcoming errors. First I have shown you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I talked about the reset password functionality, and finally how to customize the templates with your own desired values. I recommend using the presented package because it solves lots of common problems and provides a set of features that are very important for the most of the existent applications. Maybe in the future you can not only use it but also contribute to it.
