@@ -2,9 +2,9 @@
 
 ![cover photo](images/apps_touch.jpg)
 
-*This is part 1 of a two-part post on mobile app automation. Next chapter will focus on Android build automation*
+*This is part 1 of a two-part post on mobile app automation. Next chapter will focus on Android build automation.*
 
-Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as we do for backend and web applications. As Continuous Integration/Continuous Delivery requires maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time consuming and error prone process, which can -and should- be automated, though it presents a particular set of challenges.
+Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as we do for backend and web applications. As Continuous Integration/Continuous Delivery requires maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time-consuming and error prone process, which can -and should- be automated, though it presents a particular set of challenges.
 
 In this post I am going to describe the approach we implemented for iOS CI/CD making use of Fastlane, a CI system (GitHub Actions), and some spare Mac Minis which were sitting idle at the office and got turned into build servers. We'll use AWS S3 to store signing artifacts, but any system where we could safely store encrypted files could serve.
 
@@ -16,11 +16,11 @@ For this example we will use an iOS app developed with React Native, but the sam
 <img src="images/fastlane.png" alt="Signing" height="50" align="middle"/>
 
 [Fastlane](https://docs.fastlane.tools/) touts itself as the easiest way to automate deployments for mobile apps. It offers integrations with other CLI tools and APIs including Xcode, Android SDK, Gradle, iTunes App Store, Google Play Store, Git, AWS S3, etc. We adopted it because we found it to be:
-* Easy to setup (just install a Ruby gem)
+* Easy to set up (just install a Ruby gem)
 * Flexible, with an easy to read syntax (most commands have self-descriptive aliases)
 * Open Source and free to use
-* Widely adopted and well maintained (accquired by Google in 2017)
-* Easy to integrate with CI systems (though 2FA presents challenges as we'll see)
+* Widely adopted and well maintained (acquired by Google in 2017)
+* Easy to integrate with CI systems (though 2FA presents challenges, as we'll see)
 
 ## Why GitHub Actions
 
@@ -40,7 +40,7 @@ We should [disable Xcode automatic signing](https://help.apple.com/xcode/mac/cur
 
 <img src="images/ios_signing.png" alt="Signing" height="200" align="middle"/>
 
-### Codesigning 
+### Code signing 
 
 We know that for an iOS app to be distributed, it needs to be signed with a certificate issued by Apple and a provisioning profile allowing to install or distribute the application with such certificate. So after registering these apps we will need:
   - A Distribution Certificate (.cer) and private key (.p12) (https://calvium.com/how-to-make-a-p12-file/)
@@ -56,7 +56,7 @@ Fastlane suggests using [match](https://docs.fastlane.tools/actions/match/) for 
 * It cannot be extended to cover other sensitive files our build might need
 * It requires access to a specific GitHub repo for each project, which involves some extra steps when running from a CI/CD server
 
-So the solution we are trying here makes use of [Amazon S3](https://aws.amazon.com/s3/). This works well for us as we typically use S3 in all our projects (Frontend and Backend) and normally have  AWS credentials in our working environment. One single *private* bucket, encrypted with [AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) allows us to securely handle our Certificates, Keystores and other sensitive files for all our projects. It is a good practice to create a specific user for our CI workflow which only has access to proper bucket and path. You can read about Access Management for S3 [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html)
+So the solution we are trying here makes use of [Amazon S3](https://aws.amazon.com/s3/). This works well for us as we typically use S3 in all our projects (Frontend and Backend) and normally have  AWS credentials in our working environment. One single *private* bucket, encrypted with [AWS KMS](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html), allows us to securely handle our Certificates, Keystores and other sensitive files for all our projects. It is a good practice to create a specific user for our CI workflow which only has access to proper bucket and path. You can read about Access Management for S3 [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html)
 
 Our workflow thus only needs to include environment variables with valid AWS keys, which should be also stored as repo Secrets.
 * `AWS_ACCESS_KEY_ID`
@@ -66,7 +66,7 @@ Our workflow thus only needs to include environment variables with valid AWS key
 
 In order to authenticate to App Store Connect Fastlane recommends using a dedicated Apple ID that doesn't have 2FA enable and is not an Account Holder. However it is currently not possible to create a new Apple ID without 2FA (and old accounts cannot remove it once enabled). 
 This means when it needs to authenticate to the App Store from a new machine, Fastlane will prompt for a security code which will be sent to a trusted device. There are two possible workarounds for this when running on CI systems, both with significant limitations:
-* Generating a temporary Apple login session and storing it in the `FASTLANE_SESSION` variable. This can be done using Fastlane's [spaceauth](https://docs.fastlane.tools/best-practices/continuous-integration/#spaceauth) feature. It is however restricted not only in duration (one month), but also geographically (cannot be used on a different region from where it is generated).
+* Generating a temporary Apple login session and storing it in the `FASTLANE_SESSION` variable. This can be done using Fastlane's [spaceauth](https://docs.fastlane.tools/best-practices/continuous-integration/#spaceauth) feature. It is however restricted not only in duration (one month) but also geographically (cannot be used on a different region from where it is generated).
 * Apple application-specific passwords (only good for uploading binaries) which can be generated in the [Apple ID site](https://appleid.apple.com/account/manage). These are made available to Fastlane through the environment variable `FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD`.
 
 For use of our CI workflow, in addition to the latter option we will manually log into our build servers with our shared Apple ID, associating them as trusted devices.
@@ -81,7 +81,7 @@ See [Fastlane docs on Apple Authentication](https://docs.fastlane.tools/best-pra
 
 ### Other environment variables and files
 
-For a React Native project we would typically have a `.env` file including multiple environment-specific variables, including but not limited to the backend URL that each version of our app should target. Likewise for an iOS-native project we could have `.xcconfig` files including environment-specific params, several of which could be sensitive. There are several ways to securely handle and process these items, but in our example we will store all the relevant parameters as repo Secrets and read them as environment variables in our workflow in order to build this `.env` file at runtime. So for instance our DEV workflow would have a `API_URL` environment variable pointed to the `DEV_API_URL` repo Secret.
+For a React Native project we would typically have a `.env` file including multiple environment-specific variables, including but not limited to the backend URL that each version of our app should target. Likewise for an iOS-native project we could have `.xcconfig` files including environment-specific params, several of which could be sensitive. There are several ways to securely handle and process these items, but in our example we will store all the relevant parameters as repo Secrets and read them as environment variables in our workflow in order to build this `.env` file at runtime. So for instance our DEV workflow would have an `API_URL` environment variable pointed to the `DEV_API_URL` repo Secret.
 
 ## The Fastfile
 
@@ -138,7 +138,7 @@ https://gist.github.com/sebalopez/79c96e4734c208ed7a091c8e174d1f4c
 
 ## Setting up a local build server
 
-As mentioned before, the previous workflow could run on any GitHub macOS runner, but it would likely get stuck when attempting to log into TestFlight due to a 2FA token prompt. The workaround we implemented is using any Mac we have physical access to as a self-hosted runner. This not only spares us having to generate  session cookies but also allows us to use GitHub Actions without consuming the free minutes in our plan (MacOS runner minutes are expensive, counting as 10 linux runner minutes each).
+As mentioned before, the previous workflow could run on any GitHub macOS runner, but it would likely get stuck when attempting to log into TestFlight due to a 2FA token prompt. The workaround we implemented is using any Mac we have physical access to as a self-hosted runner. This not only spares us having to generate  session cookies but also allows us to use GitHub Actions without consuming the free minutes in our plan (MacOS runner minutes are expensive, counting as 10 Linux runner minutes each).
 For this we need to perform two simple steps:
 
 * Associate the device with the Apple ID used for submission, by logging into https://appleid.apple.com/ and entering the 2FA token from the device.
