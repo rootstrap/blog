@@ -1,4 +1,4 @@
-# AppleAuth, an easy ruby way to integrate with Apple Sign In.
+AppleAuth: Ruby Gem for Apple Sign in Rails Integration
 
 ![Apple](images/apple_auth.jpg)
 
@@ -11,12 +11,12 @@ Apple announced Sign in with Apple in the [WWDC 2019 Conference](https://develop
 ### Apple sign-in workflow
 ![Apple sign in flow](images/apple_sign_in_flow.png)
 
-For more information, check the [Apple Oficial Documentation](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_rest_api)
+For more information, check the [Apple Official Documentation](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_rest_api)
 
 ## How does AppleAuth works?
 
 ### Validation
-Apple authentication follows the OAuth 2.0 flow, and this gem will help us with this flow. After the user signs in in the client side, we will have access to the user_identity, code, and JWT on our server side. The last one is a token that will be used to validate the user authentication with Apple. So Apple_Auth's first step will be to decode and validate the JWT.
+Apple authentication follows the OAuth 2.0 flow, and this gem will help us with this flow. After the user signs in the client-side, we will have access to the user_identity, code, and JWT on our server-side. The last one is a token that will be used to validate user authentication with Apple. So Apple_Auth's first step will be to decode and validate the JWT.
 
 ```ruby
 # with a valid JWT
