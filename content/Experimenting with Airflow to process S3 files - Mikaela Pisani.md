@@ -198,7 +198,7 @@ Restart the containers
 
 ![](images/s3_connection.png)
 
-It is important the the script that you set in the S3FileTransformOperator starts with **#!/usr/bin/python3 **in the case of python.      
+It is important that the script that you set in the S3FileTransformOperator starts with **#!/usr/bin/python3 **in the case of python.      
 
 **Problem: if your script needs specific libraries to be installed (for example needs pandas), those are not installed in the worker, so when it executes the task gives you an error. For this problem there is not a clean solution, unless instead of celery you use KubernetesExecutor.**
 
@@ -331,15 +331,15 @@ start_op >> loop_files
 When you run it it, from the web it appears the option to enter to the subdag's information and logs:
 ![](images/subdag_operator.png)
 
-This example list the files in a s3 bucket and for each file creates a subdag "hellow_wold_X". 
+This example lists the files in a s3 bucket and for each file creates a subdag "hellow_wold_X". 
 
 ![](images/subdags.png)
 
-**Problem: too many tasks are queued and it is probable that you will need to add more workers.**
+**Problem: too many tasks are queued, and it is probable that you will need to add more workers.**
 
 
 # Lessons learned
-- When you don't need specific dependencies use BashOperator or PythonOperator
-- When your tasks need specific dependencies use KubernetesOperator    
+- When you don't need specific dependencies, use BashOperator or PythonOperator
+- When your tasks need specific dependencies, use KubernetesOperator    
 - Subdags are useful when you need to repeat a serie of tasks for each S3 file, but you need to be careful to control the size of the queue. 
 
