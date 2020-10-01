@@ -70,7 +70,7 @@ ActiveRecord::Base.connected_to(role: :reading) do
 end
 ```
 
-- Automatic swapping between the primary and replica depending on the HTTP verb and recent writes
+- Automatically swapping between the primary and replica depending on the HTTP verb and recent writes.
 
 As we are used to in Rails, this comes standardized:
 
