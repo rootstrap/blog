@@ -1,11 +1,11 @@
-# ** Rails 6 - Multiple Databases **
+#  Rails 6 Multiple Database Management: An Overview
 
 ![main image](images/databases.jpg)
 
-Rails 6.0 came up with this amazing enhancement, but for most people, I'm aware they think that is a new feature.
+Rails 6.0 recently shared their amazing enhancements, though most would consider these feature upgrades.
 In my opinion, both are correct, because the actual state of multiple databases before rails 6.0 was not even useful to consider it a completed feature.
 
-Let's dive into Rails < 6 state, Rails 6 introduced changes and the current roadmap.
+Let's dive into Rails < 6 state! Rails 6 introduced changes and the current roadmap.
 
 
 ## Rails 5 state
