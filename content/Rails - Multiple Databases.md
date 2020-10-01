@@ -120,5 +120,7 @@ So the summary would be:
 
 ## Some personal ideas
 
-I'm a huge fan of non-relational databases, so I would love to see some mixins of MongoDB + Postgres for example. And with this introduced changes I think that the road is prepared enough to start working on a way to properly work with it.
-My doubts are more into "Should ActiveRecord really support non-relational databases?" or "Is something more rails work outside ActiveRecord?". Leave your thoughts and I will be more than happy to chat over it :)
+I'm a huge fan of non-relational databases, so I would love to see some mixins of MongoDB + Postgres for example. With the introduced changes I think we can soon find a way to properly work with it.
+ My doubts are "Should ActiveRecord support non-relational databases?" or "Is something more rails work outside ActiveRecord?" 
+ 
+Would love to hear your thoughts. Feel free to leave a comment or connect with me about this topic! 
