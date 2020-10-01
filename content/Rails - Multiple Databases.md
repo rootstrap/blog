@@ -1,4 +1,4 @@
-#  Rails 6 Multiple Database Management: An Overview
+#  Feature Updates in Rails 6: Multiple Databases and State Management
 
 ![main image](images/databases.jpg)
 
