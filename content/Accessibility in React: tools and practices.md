@@ -17,7 +17,7 @@ Therefore, **making a website accessible for everyone benefits not only individu
 
 Contemplating on who the possible users are when developing an application is always difficult. We tend to simplify the user cases and focus on generating more features, and in some cases, we neglect the fact that some of our users may not be able to access those features.
 
-The first thing we need to know to tackle this problem is the different kinds of disabilities there are:
+To tackle this problem we first need to know and understand the different kinds of disabilities there are:
 
 - Auditory
 
