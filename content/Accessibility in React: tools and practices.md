@@ -1,20 +1,20 @@
-# Accessibility in React: tools and practices
+# Accessibility in React: Tools and Best Practices
 
 ![Main image](images/accessibility.jpg)
 
-Accessibility is one of the main points when you develop an application (and one of those points that **developers tend to forget or not know how to implement**). In this article, we will make a review of some of the tools, libraries, and standards that make it easier to integrate the best practices associated with accessibility on the web, making your application usable by as many people as possible.
+Accessibility should be standard when developing an application, but it’s sometimes forgotten. In this article, we will review some of the best tools and libraries. We will also share some of the best practices to broaden your reach and make your app accessible to all.   
 
 ## Why is accessibility important?
 
 Internet nowadays is an essential part of our life for socializing, learning, getting a job, commerce, getting access to government services and health care services, and much more.
 
-The accessibility of the different platforms plays an important role here, and takes a lot of relevance for a lot of people ([61 million people only in the USA](https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html)), but there's a huge problem, only [30% percent](https://www.huffingtonpost.co.uk/damiano-la-rocca/website-accessibility_b_9931304.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAJobBHy6SubR-65wvVQ3zedOfXuRMmNGMJTpfWR5uVL2FjlWqI6aE9I_a6ewpFB8iI61U7RcYmJ3fYQbGulqkwmRAQNOBUfHhmGfBddbf5k209MMFPvS85Aae4HQLyNocKwZRKw6RWceAuLO5ZF1urVMNX0csJ4rS6TcD9wYA-0d) of the pages in the UK are abiding the accessibility law established in that country, and in the USA the number and cost of federal accessibility lawsuits related to technological accessibility has risen dramatically over the last few years (the case that took more notoriety is the [Domino Pizza lawsuit](https://equidox.co/blog/robles-vs-dominos-pizza-explained-no-published-guidelines-doesnt-mean-no-standards/) by a blind user who could not use Domino's mobile app).
+Making the apps accessible is incredibly important and not taking the time to do so affects roughly about ([61 million people in the USA](https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html)) There's a huge problem with this as only [30% percent](https://www.huffingtonpost.co.uk/damiano-la-rocca/website-accessibility_b_9931304.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAJobBHy6SubR-65wvVQ3zedOfXuRMmNGMJTpfWR5uVL2FjlWqI6aE9I_a6ewpFB8iI61U7RcYmJ3fYQbGulqkwmRAQNOBUfHhmGfBddbf5k209MMFPvS85Aae4HQLyNocKwZRKw6RWceAuLO5ZF1urVMNX0csJ4rS6TcD9wYA-0d) of the pages in the UK are abiding the accessibility law established, and in the USA the number and cost of federal accessibility lawsuits related to technological accessibility have risen dramatically over the last few years (the case that took more notoriety is the [Domino Pizza lawsuit](https://equidox.co/blog/robles-vs-dominos-pizza-explained-no-published-guidelines-doesnt-mean-no-standards/) by a blind user who could not use Domino's mobile app)
 
-Therefore, **making a website accessible for everyone benefits not only individuals but also businesses and society in general**.
+Therefore, **making a website accessible for everyone benefits not only individuals with disabilities but also businesses and society in general**.
 
 ## Who is everyone?
 
-Contemplate who are the possible users when we develop an application is always difficult, we tend to simplify the user cases and focus on generating more features, and in some cases, we affect the value awarded to our users because, among other things, our users can't access to those features.
+Contemplating on who the possible users are when developing an application is always difficult. We tend to simplify the user cases and focus on generating more features, and in some cases, we neglect the fact that some of our users may not be able to access those features.
 
 The first thing we need to know to tackle this problem is the different kinds of disabilities there are:
 
@@ -30,19 +30,19 @@ The first thing we need to know to tackle this problem is the different kinds of
 
 - Visual
 
-Also, make your application accessible for everyone benefits those without disabilities, for example:
+Making your application accessible to everyone benefits those without disabilities, for example:
 
-- People who access with small screens cellphones
+- People who have small cellphone screens. 
 
 - People using slow internet connection
 
 - And many more cases that we didn't know!
 
-After reading this you're probably thinking that it's impossible to contemplate these kinds of disabilities for all the features that you implement every day. And that's true, it's impossible to create the perfect feature for everyone (in general, not only regarding accessibility), but it's totally possible to create a feature to which the majority of the users can access to it, by simply applying a few practices and tools.
+After reading this you're probably thinking that it's impossible to address all these kinds of disabilities through features. And that's true, it's impossible to create the perfect feature for everyone (in general, not only regarding accessibility), but it's totally possible to create features in which the majority of the users can access it, by simply by applying a few practices and tools.
 
 ## Introducing accessibility to your React application
 
-We have a lot of tools and standards out there, ready to be used and implemented in our project by only changing little aspects in the way we develop every day. So in this section, there's an introduction of some of the tools and classic mistakes that React developers do that affect the accessibility of your application.
+There are lots of tools available and ready to be implemented in projects. Implementation can only require having to make little changes in everyday development practices. In this section, there's an introduction to some of the tools and classic mistakes that React developers make that can affect the accessibility of your application.
 
 ### Fragments and the wrapper hell
 
@@ -147,4 +147,4 @@ With this simple tool and without any installation or setup, we can know where a
 
 ## Conclusion
 
-Accessibility is a big problem on the web right now, our industry does not perceive the decrease of value on the products we build for the simple reason that a big part of the potential users can't access the features we develop every day. With simple tools and practices, we can increase the quality of our products and make society more inclusive for everyone.
+Accessibility is a problem in the development industry. The industry does not understand the opportunity available to increase the quality of our products and make apps more inclusive for everyone. With simple tools and better practices - we can start to serve our users more adequately and acknowledge their unique needs. 
