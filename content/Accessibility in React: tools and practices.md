@@ -6,7 +6,8 @@ Accessibility should be standard when developing an application, but it’s some
 
 ## Why is accessibility important?
 
-Internet nowadays is an essential part of our life for socializing, learning, getting a job, commerce, getting access to government services and health care services, and much more.
+The internet has become an integral part of our lives for basically everything. We can’t live without it whether we use it for socializing, learning, working, shopping, getting access to government services, or health care services, and much more. 
+
 
 Making the apps accessible is incredibly important and not taking the time to do so affects roughly about ([61 million people in the USA](https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html)) There's a huge problem with this as only [30% percent](https://www.huffingtonpost.co.uk/damiano-la-rocca/website-accessibility_b_9931304.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAJobBHy6SubR-65wvVQ3zedOfXuRMmNGMJTpfWR5uVL2FjlWqI6aE9I_a6ewpFB8iI61U7RcYmJ3fYQbGulqkwmRAQNOBUfHhmGfBddbf5k209MMFPvS85Aae4HQLyNocKwZRKw6RWceAuLO5ZF1urVMNX0csJ4rS6TcD9wYA-0d) of the pages in the UK are abiding the accessibility law established, and in the USA the number and cost of federal accessibility lawsuits related to technological accessibility have risen dramatically over the last few years (the case that took more notoriety is the [Domino Pizza lawsuit](https://equidox.co/blog/robles-vs-dominos-pizza-explained-no-published-guidelines-doesnt-mean-no-standards/) by a blind user who could not use Domino's mobile app)
 
