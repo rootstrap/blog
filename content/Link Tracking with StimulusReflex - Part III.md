@@ -1,12 +1,12 @@
 # Link Tracking with StimulusReflex - Part II
 
-In this last part of this series we'll use what [we built before](TODO: Add link to second part) to actually start tracking views. To do so, we'll use [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) and [CableReady](https://github.com/hopsoft/cable_ready) to broadcast and make changes in our frontend.
+In this last part of this series, we'll use what [we built before](TODO: Add link to second part) to actually start tracking views. To do so, we'll use [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) and [CableReady](https://github.com/hopsoft/cable_ready) to broadcast and make changes in our frontend.
 
 ![Header image](images/stimulus_reflex.jpeg)
 
 ### Redirecting users
 
-Let's start with the simple stuff, when a user follows one of our shortened links they expect to be redirected to the original URL. To do this we'll create a new controller and add the corresponding route.
+Let's start with the simple stuff, when a user follows one of our shortened links, they expect to be redirected to the original URL. To do this, we'll create a new controller and add the corresponding route.
 
 ```ruby
 # app/controllers/redirections_controller.rb
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 end
 ```
 
-With this the implementation should be pretty straightforward:
+With this, the implementation should be pretty straightforward:
 
 ```ruby
 # app/controllers/redirections_controller.rb
@@ -55,7 +55,7 @@ At this point we could just make a static page and spit out our data, but what's
 As a way to show how to pass data from the server to the view, as opposed to what we've been doing until now,
 we'll make page views update in real time using CableReady. 
 
-For this let's first genearate a new channel by running:
+To do this, let's first generate a new channel by running:
 
 ```bash
 bundle exec rails generate channel LinkViews
@@ -147,7 +147,7 @@ as users visit them.
 
 ### What's next?
 
-This concludes this series on how to use StimulusReflex but you can still play around with this project and add more functionality:
+This concludes this series on how to use StimulusReflex, but you can still play around with this project and add more functionality:
 
 - Track the browser from which the user clicked the link
 - Track the user's country
