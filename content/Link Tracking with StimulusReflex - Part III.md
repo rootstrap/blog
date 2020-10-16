@@ -1,4 +1,4 @@
-# Link Tracking with StimulusReflex - Part II
+# Link Tracking with StimulusReflex - Part III
 
 In this last part of this series, we'll use what [we built before](TODO: Add link to second part) to actually start tracking views. To do so, we'll use [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) and [CableReady](https://github.com/hopsoft/cable_ready) to broadcast and make changes in our frontend.
 
@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get '/:path', to: 'redirections#index'
 end
 ```
+
+Remember to add it at the bottom of the block so it does not override any other routes.
 
 With this, the implementation should be pretty straightforward:
 
@@ -53,7 +55,7 @@ get redirected to the original URL and we'll track one morer view for that link.
 
 At this point we could just make a static page and spit out our data, but what's the fun in that?
 As a way to show how to pass data from the server to the view, as opposed to what we've been doing until now,
-we'll make page views update in real time using CableReady. 
+we'll make page views update in real time using CableReady.
 
 To do this, let's first generate a new channel by running:
 
@@ -135,15 +137,15 @@ end
 ```
 
 What's going on here? Well it's pretty simple, we are including `CableReady::Broadcaster`
-to be able to broadcast operations. Then we add an operation on the 
+to be able to broadcast operations. Then we add an operation on the
 `"link_views"` channel, you know the one we set to stream from before. The operation
 is a text replacement in the node with the id `link-#{link.id}-views-count`,
 that's what the `#` symbolizes, and the text is the new views count.
 
 ### Conclusion
 
-And that's all. You can now see your link's view counts update in real time
-as users visit them.
+In the series we learned how to setup StimulusReflex, build CRUD apps on a breeze and track data in real time. All
+of this with minimal JS and maximum productivity.
 
 ### What's next?
 
@@ -154,3 +156,4 @@ This concludes this series on how to use StimulusReflex, but you can still play 
 - Add charts in real time
 - Much more...
 
+Or just start a project of your own and give StimulusReflex a try!
