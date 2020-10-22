@@ -2,7 +2,7 @@
 
 # useStyles: a hook to manage styles in React Native
 
-¿Does anyone know how to properly manage styles in React Native? I don't.
+Does anyone know how to properly manage styles in React Native? I don't.
 
 I have been working with this framework for a couple of years now and couldn't get a concise way of using styles. This last year I've tried some libraries with novel concepts as Styled Components, but I couldn't get used to them. As a result of this dissatisfaction with the current alternatives, useStyles was born.
 
