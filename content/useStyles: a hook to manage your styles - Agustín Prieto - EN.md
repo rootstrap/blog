@@ -12,7 +12,7 @@ I have been working with this framework for a couple of years now and couldn't g
 
 Organizing styles in React Native can be tricky, a headache if you don't apply good programming practices. useStyles comes with the idea of ​​alleviating this burden by providing the tools so that you can generate applications where the styles have their own place and can reside harmoniously with the components.
 
-If we summarize what useStyles does: it is a hook, which allows you to consume the styles of your application in a simple, clean and efficient way. So, if it appeals to you the idea of ​​improving the way you write your styles and thus generate cleaner applications, I invite you to visit the [repository](https://github.com/rootstrap/react-native-use-styles) and try it out for yourself.
+If we summarize what useStyles does: it is a hook, which allows you to consume the styles of your application in a simple, clean, and efficient way. So if the idea of ​​improving the way you write your styles and generating cleaner applications is appealing, I invite you to visit the [repository](https://github.com/rootstrap/react-native-use-styles) and try it out for yourself.
 
 
 ## Usage
