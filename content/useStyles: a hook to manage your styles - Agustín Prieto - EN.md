@@ -14,7 +14,6 @@ Organizing styles in React Native can be tricky, a headache if you don't apply g
 
 If we summarize what useStyles does: it is a hook, which allows you to consume the styles of your application in a simple, clean and efficient way. So, if it appeals to you the idea of ​​improving the way you write your styles and thus generate cleaner applications, I invite you to visit the [repository](https://github.com/rootstrap/react-native-use-styles) and try it out for yourself.
 
-Next, we will see an example of use.
 
 ## Usage
 
