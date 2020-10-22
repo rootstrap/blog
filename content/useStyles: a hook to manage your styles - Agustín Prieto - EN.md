@@ -52,7 +52,7 @@ We are not going to analyze in detail each one of the functionalities, for that,
 
 ## Summary
 
-useStyles is a library created with the purpose of solving a recurring problem that developers usually have in React Native: disorganized and invasive styles in our components. With useStyles we use a hook to consume the styles, which gives us a simple, clean and efficient interface.
+useStyles is a library created with the purpose of solving a recurring problem that developers usually have in React Native: disorganized and invasive styles in our components. With useStyles we use a hook to consume the styles, which gives us a simple, clean, and efficient interface.
 
 You're invited to check the [repository](https://github.com/rootstrap/react-native-use-styles) to see what else you can do with useStyles and check that this library will really ease your work as a developer. Of course, any contribution is welcome.
 
