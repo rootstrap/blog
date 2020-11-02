@@ -55,19 +55,24 @@ end
 It looks terrible, doesn't it? Maybe our first thinking about that piece of code is to make a refactoring moving the creation of the post to a service named `PostCreationService`, which could be useful and it might be used in the future in another part of the system. But... what have we said about _reinventing the wheel_?
 
 Using **YAAF** we should create a new `PostForm` class that is going to encapsulate all the logic of post creation and related models inside it. And is very simple to implement it! Look at this code:
+
 ```ruby
 # app/forms/registration_form.rb
 
 class PostForm < ApplicationForm
-  attr_accessor :post, :category_name, :tags
+  attr_accessor :post_form_params
+  validate :amount_of_tags
 
   def initialize(args = {})
-    super(args)
+    @post_form_params = args
     @models = [post, category, tags].flatten.compact
   end
 
   def post
-    @post ||= Post.new(post_form_params[:post], category: category, tags: tags)
+    @post ||= Post.new(post_form_params[:post]).tap do |post|
+      post.category = category
+      post.tags = tags
+    end
   end
 
   def category
@@ -83,8 +88,18 @@ class PostForm < ApplicationForm
       tag[:id].present? ? Tag.find(tag[:id]) : Tag.find_or_initialize_by(name: tag[:name])
     end
   end
+
+  private
+
+  def amount_of_tags
+    return if tags.size.between?(1, 3)
+
+    errors.add(:base, "You can't assign more than three tags to a post")
+  end
 end
 ```
+
+**Note:** We have also added a custom validation named `amount_of_tags`, YAAF help us to encapsulate business rules in our Form Object.
 
 And then in our controller
 
