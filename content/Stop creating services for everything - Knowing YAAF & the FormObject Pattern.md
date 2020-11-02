@@ -1,6 +1,6 @@
-![YAAF](images/Yaaf-Blog-cover.png)
+[![YAAF](images/Yaaf-Blog-cover.png)](https://github.com/rootstrap/yaaf)
 
-# Stop creating services for everything - Knowing YAAF & the FormObject Pattern
+# Form object patterns in Rails: Stop creating services for everything with YAAF
 
 ## Working with large controllers
 
@@ -13,9 +13,9 @@ Services are great.  If we code them in an atomic way, they will be easy to test
 >-"Hey, I don't know how properly refactor this piece of code"
 >-"Dude, do a new service"
 
-**But no!** Making a new service is not always the best option, in some cases, we are _reinventing the wheel_ and maybe there is a pattern that already fits with our needs.
+**But no!** Making a new service is not always the best option. In some cases, we are _reinventing the wheel_ and maybe there is a pattern that already fits with our needs.
 
-So here comes **YAAF** (Yet Another Active Form) to save our day. **YAAF** is a gem that lets you create form objects in an easy and friendly Rails way. It makes use of `ActiveRecord` and `ActiveModel` features in order to provide you with a form object that behaves pretty much like a Rails model, and still be completely configurable.
+So here comes **YAAF** (Yet Another Active Form) to save our day. **YAAF** is a gem that lets you create form objects in an easy and friendly Rails way. It makes use of `ActiveRecord` and `ActiveModel` features in order to provide you with a form object that behaves pretty much like a Rails model and still be completely configurable.
 
 ## When to use YAAF?
 
@@ -23,7 +23,7 @@ Let's think that we have an API endpoint that saves a new post on our database. 
 
 Tags and categories could be created at the moment that the publisher sends the post. (If our inputs don't find the correct tag or category, they will let the user write the name of a new one).
 
-So in our controller, in the worst-case scenario we could have something like this:
+So in our controller, in the worst-case scenario, we could have something like this:
 
 ```ruby
 class Api::V1::PostsController < Api::V1::ApiController
@@ -59,31 +59,29 @@ Using **YAAF** we should create a new `PostForm` class that is going to encapsul
 # app/forms/registration_form.rb
 
 class PostForm < ApplicationForm
-  attr_accessor :post_form_params
+  attr_accessor :post, :category_name, :tags
 
   def initialize(args = {})
-    @post_form_params = args
+    super(args)
     @models = [post, category, tags].flatten.compact
   end
 
   def post
-    @post ||= Post.new(post_form_params[:post])
+    @post ||= Post.new(post_form_params[:post], category: category, tags: tags)
   end
 
   def category
     return [] if post_form_params[:category_name].blank?
 
-    post.category = Category.find_or_initialize_by(name: post_form_params[:category_name])
-    post.category
+    @category ||= Category.find_or_initialize_by(name: post_form_params[:category_name])
   end
 
   def tags
     return [] if post_form_params[:tags].blank?
 
-    post.tags = post_form_params[:tags].map do |tag|
+    @tags ||= post_form_params[:tags].map do |tag|
       tag[:id].present? ? Tag.find(tag[:id]) : Tag.find_or_initialize_by(name: tag[:name])
     end
-    post.tags
   end
 end
 ```
@@ -121,10 +119,10 @@ Another good thing is that **YAAF** provides a similar API to `ActiveModel` mode
 - **Make customized Services or PORO's could be disorganized** if you're working in a team.
 - YAAF helps you to apply the **Form Pattern** in an easy way.
 - YAAF is only **64 lines long**.
-- Is **well tested and maintained**.
+- It's **well tested and maintained**.
 - It helps you keep your models, views and controllers thin by providing a better place where to put business logic. In the end, this will **improve the quality of your codebase and make it easier to maintain and extend**.
 - And a lot **[more](https://github.com/rootstrap/yaaf)**.
 
 ## Summary
 
-Well if you come along this way I hope this article helps you to integrate **YAAF** in your project and start using the `FormObject` Pattern to make your code even better, you can see more examples **[here](https://yaaf-examples.herokuapp.com/)**. **YAAF** is open-source and is open to receive new contributions so check it out!
+Well, if you come along this way I hope this article helps you to integrate **YAAF** in your project and start using the `FormObject` Pattern to make your code even better. You can see more examples **[here](https://github.com/rootstrap/yaaf)**. **YAAF** is open-source and is open to receive new contributions, so check it out!
