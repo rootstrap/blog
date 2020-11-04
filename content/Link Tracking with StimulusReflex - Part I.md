@@ -1,6 +1,6 @@
 # Link Tracking with StimulusReflex - Part I
 
-era of the backend-side-managed frontends. This might sound weird but there's been a couple of projects, starting with [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) and following with things like [Motion](https://github.com/unabridged/motion) and [Sockpuppet](https://github.com/jonathan-s/django-sockpuppet), which use WebSockets to push updates from the server to the client and update the DOM accordingly.
+This is the first of a series about StimulusReflex, a new tool to help you bring Rails to the era of the backend-side-managed frontends. I was surprised to see that [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) and following with things like [Motion](https://github.com/unabridged/motion) and [Sockpuppet](https://github.com/jonathan-s/django-sockpuppet) use WebSockets to push updates from the server to the client and update the DOM accordingly.
 
 Luckily the team at [StimulusReflex's folks](https://docs.stimulusreflex.com) created a gem that does just that. I'll show you how to use it by building a link shortener with this new and exciting technology. In this part of the series, we'll focus on setting up and running StimulusReflex so we can build awesome features for our next project.
 
@@ -14,11 +14,11 @@ To get started we are just going to follow the [original docs](https://docs.stim
 rails new sho_lin --webpack=stimulus -d postgresql
 ```
 
-By the way, StimuluJS is a frontend framework concerned with adding functionality to the HTML rather than controlling the whole DOM. If you wish to learn more about it, there's a [recent post](https://www.smashingmagazine.com/2020/07/introduction-stimulusjs/) that explains how it works.
+By the way, StimuluJS is a front-end framework concerned with adding functionality to the HTML rather than controlling the whole DOM. If you wish to learn more about it, here's a [recent post](https://www.smashingmagazine.com/2020/07/introduction-stimulusjs/) that explains how it works.
 
 ## Testing that StimulusJS works
 
-Even though this framework deserves a more in-depth explanation, let's do a quick example to make sure everything works as expected and have a basic idea of how it works.
+Even though this framework deserves a more in-depth explanation,  let's work on a quick example to make sure everything works as expected and to provide you with insights on how it works.
 
 First, we'll create a basic controller with an index action to just render some HTML
 
@@ -60,7 +60,7 @@ data attributes
 </div>
 ```
 
-Now if you run the server with `rails s` and go to `http://localhost:3000` you'll see that when you click on the "Say hello" button you'll get back "Hello, Stimulus!". I think the code it's pretty self explanatory but I'll give a quick walkthrough anyway.
+Now if you run the server with `rails s` and go to `http://localhost:3000` you'll see that when you click on the "Say hello" button you'll get back "Hello, Stimulus!". I think the code it's pretty self-explanatory but I'll give a quick walkthrough anyway.
 
 Here we are just telling StimulusJS to hook the controller prefixed with `Hello` scoped to that HTML tree. That will start looking for specific data attributes which in this case are `data-action` and `data-target`. The first accepts a syntax to call specific methods on the instance of the controller on a given event, currently set to invoke the `sayHello` method when the click event occurs. The latter binds the text to a target, which is just like a reference to the element but more at the same time, keeping them synchronized.
 
@@ -143,8 +143,8 @@ export default class extends Controller {
 }
 ```
 
-You can test it again and you should get back "Hello, StimulusReflex!". How did it happen? Behind the scenes, StimulusReflex opens up a WebSocket connection and runs the Reflex's action and then the Controller's action sending the resulting HTML over the wire. On the client's side it does a diff between the result and the current DOM performing the minimum updates to update the latter.
+You can test it again and you should get back "Hello, StimulusReflex!". How did it happen? Behind the scenes, StimulusReflex opens up a WebSocket connection and runs the Reflex's action and then the Controller's action sending the resulting HTML over the wire. On the client's side, it does a diff between the result and the current DOM performing the minimum updates to update the latter.
 
 ## Up next
 
-We now have a basic Hello World example up and for which you can see the whole code on these [two](https://github.com/brunvez/sho_lin/commit/7a7a81f8c702d7d15402bf54ef49c701ed3ac46e) [commits](https://github.com/brunvez/sho_lin/commit/e3dd684bd6c00eca4d847bbf7f70d0cefe4e8a26). In the next part, we'll add some code to list and manage our links all with the best features from Rails. So keep posted!
+We now have a basic Hello World example up where you can see the whole code on these [two](https://github.com/brunvez/sho_lin/commit/7a7a81f8c702d7d15402bf54ef49c701ed3ac46e) [commits](https://github.com/brunvez/sho_lin/commit/e3dd684bd6c00eca4d847bbf7f70d0cefe4e8a26). In the next part, we'll add some code to list and manage our links with the best features from Rails. Stay posted!
