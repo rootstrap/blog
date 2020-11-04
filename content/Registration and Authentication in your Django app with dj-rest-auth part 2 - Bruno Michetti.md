@@ -2,8 +2,8 @@
 
 In the [first part of this blog post](link-to-part-1) I've presented the dj-rest-auth package that allows us to handle registration and authentication through REST API endpoints with a minimal configuration.
 I've also talked about different customizations that you can take advantage of.
-When I started to use this package I had to face some problems. The roots of those problems were partly because I was learning Django and partly because dj-rest-auth has many features and possibilities for each feature that the first time is used it can lead to some confusion. So the main goal of the second part is to show you more examples and give you some tips.  
-Let's continue with the example of the `CustomUser` shown in the previous part, with no username, unique email, a gender and a phone number attribute. First I will show you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I will talk about the reset password functionality, and finally how to customize the templates with your own desired values.
+When I started to use this package I faced some problems because I was learning Django and dj-rest-auth offers many features and possibilities for each feature. This is why first-time users may experience some confusion. I will be sharing more examples and give you some tips.  
+Let's continue with the example of the `CustomUser` shown in the previous part, with no username, unique email, gender, and phone number attribute. First I will show you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I will talk about the reset password functionality, and finally how to customize the templates with your own desired values.
 
 ### Sign-up with email verification
 
@@ -97,7 +97,7 @@ EMAIL_HOST_USER = 'your email host user'
 EMAIL_HOST_PASSWORD = 'your email host password'
 ```
 
-You have to choose the `EMAIL_HOST`, for example `'smtp.gmail.com'`. In the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` parameters put the information of the account that will be the email sender. If you are using gmail as mail server you will need to allow less secure apps and display unlock captcha. After this, your Django app will send verification emails for all the new users. I recommend you to use environment variables to keep sensitive information in your settings such as keys, the email host account and its password, etc.  
+You have to choose the `EMAIL_HOST`, for example `'smtp.gmail.com'`. In the `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` parameters put the information of the account that will be the email sender. If you are using Gmail as a mail server you will need to allow less secure apps and display unlock captcha. After this, your Django app will send verification emails for all the new users. I recommend you to use environment variables to keep sensitive information in your settings such as keys, the email host account, and its password, etc.  
 In real applications the best way to do this is integrating with an email service such as [SendGrid](https://sendgrid.com/docs/for-developers/sending-email/django/).
 
 In the second option, you can locally test the signup feature during development, by setting:
@@ -230,7 +230,7 @@ Let's see in the last section how we can modify some of the default variables us
 
 ### Customize variables used in the templates
 
-Let's think about this example: What if you want to modify the URL sent by default in the reset password email template? Well, Django allows you to define variables to be used in the templates by creating your own template tags. First thing you need to do, is to define the custom value desired for the URL in your settings:
+Let's think about this example: What if you want to modify the URL sent by default in the reset password email template? Well, Django allows you to define variables to be used in the templates by creating your own template tags. The first thing you need to do is define the custom value desired for the URL in your settings:
 
 ```python
 # Your settings file
@@ -284,4 +284,4 @@ From now on, the email for password reset will show a customized URL. Remember t
 
 ### Summary
 
-This finishes a blog post divided into two parts. This last part talked about some very useful features that you can have with dj-rest-auth and how to solve the possible upcoming errors. First I have shown you how to implement email validation at signup, and how to customize the emails that are sent by your app. Then I talked about the reset password functionality, and finally how to customize the templates with your own desired values. I recommend using the presented package because it solves lots of common problems and provides a set of features that are very important for the most of the existent applications. Maybe in the future you can not only use it but also contribute to it.
+This article discussed some very useful features that you can have with dj-rest-auth and how to solve the possible upcoming errors. I have shown you how to implement email validation at signup, and how to customize the emails that are sent by your app. We learned about the reset password functionality, and finally how to customize the templates with your own desired values. I recommend using the presented package because it solves lots of common problems and provides a set of features that are very important for the most of the existent applications. Maybe in the future, you can not only use it but also contribute to it.
