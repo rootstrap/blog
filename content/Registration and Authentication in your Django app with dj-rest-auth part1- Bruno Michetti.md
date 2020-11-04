@@ -1,7 +1,7 @@
 ## Registration and Authentication in your Django app with dj-rest-auth (part 1)
 
 A huge amount of existing applications have registration and authentication for users. Maybe every developer in the world has implemented something related to this in their work or while they learned. After the creation of the [Django REST framework](https://www.django-rest-framework.org/), Django developers started to implement more and more app-level REST API endpoints.  
-As a result, an open source package called [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/index.html) has been developed to provide a set of REST API endpoints to handle user registration and authentication tasks. In this article divided into two parts, I will not only talk about this particular package but also, I will give you some tips to avoid some of the most common problems faced when configuring it.
+As a result, an open-source package called [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/index.html) has been developed to provide a set of REST API endpoints to handle user registration and authentication tasks. In this article divided into two parts, I will not only talk about this particular package but will also give you some tips to avoid some of the most common problems faced when configuring it.
 
 ### The dj-rest-auth package
 
@@ -23,8 +23,8 @@ Most of the endpoints that dj-rest-auth provides are browsable. This means that 
 
 <img src="images/dj-rest-auth-browsable-endpoint.png" alt="Browsable endpoint" width="900"/>
 
-In the image above you can enter username, email and password to test the login functionality. The message of `Method GET not allowed` it is not an error. It means that your endpoint doesn't allow the GET method but you can test it doing a POST. That method is possible because the corresponding blue button is shown.  
-As you can see, it's very useful to have very quickly a nice interface to use while you are coding.
+In the image above you can enter a username, email, and password to test the login functionality. The message of `Method GET not allowed` is not an error. It means that your endpoint doesn't allow the GET method but you can test it doing a POST. That method is possible because the corresponding blue button is shown.  
+As you can see, it's very useful to very quickly have a nice interface to use while you are coding.
 
 ### Configuration
 
@@ -40,7 +40,11 @@ And many other parameters. As a conclusion, we can say that adjusting a couple o
 
 #### Note:
 
-To understand better the examples in the next sections, first you need to follow the dj-rest-auth installation steps, also you need to have installed django allauth, and finally make sure you have the authentication backends in your settings:
+To better understand the examples in the next sections:
+1. You need to follow the dj-rest-auth installation steps.
+2. Have installed django allauth.
+3. Make sure you have the authentication backends in your settings:
+
 
 ```python
 AUTHENTICATION_BACKENDS = [
@@ -54,7 +58,7 @@ AUTHENTICATION_BACKENDS = [
 ### Customization
 
 If you are coding a REST API with Django and Django REST framework, you may need to customize the functionalities related to the registration and authentication. With those frameworks and dj-rest-auth it's quite simple. You can customize the Django User model, the views, the serializers, the main functionalities, etc.  
-For example, let's define a custom User model with unique email, with no username, with a gender and a phone number attribute:
+For example, let's define a custom User model with a unique email, with no username, with a gender and a phone number attribute:
 
 ```python
 # models.py in the users Django app
@@ -75,7 +79,7 @@ class CustomUser(AbstractUser):
     phone_number = models.CharField(max_length=30)
 ```
 
-In our settings we have to use the Django parameter called `AUTH_USER_MODEL` to specify our User model. If the `CustomUser` model is defined in an app called `users`, we must add:
+In our settings, we have to use the Django parameter called `AUTH_USER_MODEL` to specify our User model. If the `CustomUser` model is defined in an app called `users`, we must add:
 
 ```python
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -172,7 +176,7 @@ REST_AUTH_SERIALIZERS = {
 }
 ```
 
-With that definition we can retrieve and update the gender and phone_number of an authenticated user with the named endpoint. Let's say now, that our app only allows the gender to be updated after a registration. In the `CustomRegisterSerializer` the phone number can be modified of course, because we want the user to add that value at the moment of the registration. We can define then another serializer that doesn't allow the phone number to be modified. Let's call it `CustomUserDetailSerializer` and add it in the same file that is `CustomRegisterSerializer`:
+With that definition, we can retrieve and update the gender and phone_number of an authenticated user with the named endpoint. Let's say now, that our app only allows the gender to be updated after registration. In the `CustomRegisterSerializer` the phone number can be modified of course, because we want the user to add that value at the moment of the registration. We can define then another serializer that doesn't allow the phone number to be modified. Let's call it `CustomUserDetailSerializer` and add it in the same file that is `CustomRegisterSerializer`:
 
 ```python
 # serializers.py in the users Django app
@@ -212,4 +216,4 @@ As you can see in the picture, the only value that can be modified is the gender
 ### Summary
 
 This was the first part of the blog post. I have presented a very useful package to handle registration and authentication with a set of REST API endpoints.
-With a minimal configuration you can add endpoints to your Django app that already have those features implemented. I also talked about some advantages of the package, how easy is to customize it, and a few examples for demonstration. In the second part I'll talk a little bit more of customization, about a few problems that I had to face when I started with dj-rest-auth, and how they can be solved. I hope you liked this article and feel encouraged to use the package and read the second part.
+With minimal configuration, you can add endpoints to your Django app that already have those features implemented. We reviewed some advantages of the package, how easy it is to customize it, and code snippet examples. In my next article, I’ll explain customization, and go over a few problems that I had to face when I started with dj-rest-auth, and how they can be solved. I hope you enjoyed this article and feel encouraged to use the package and read the second part.
