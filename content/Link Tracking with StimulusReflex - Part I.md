@@ -3,7 +3,6 @@
 era of the backend-side-managed frontends. This might sound weird but there's been a couple of projects, starting with [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) and following with things like [Motion](https://github.com/unabridged/motion) and [Sockpuppet](https://github.com/jonathan-s/django-sockpuppet), which use WebSockets to push updates from the server to the client and update the DOM accordingly.
 
 This is better defined by the [StimulusReflex's folks](https://docs.stimulusreflex.com) which as you may have guessed is a gem that does just that. I'm not going to explain this any further in words but rather I'll show you how to use it by building a link shortener with this
-new and exciting technology. In this part of the series, we'll focus on getting up and running so we can build awesome features for our project.
 
 ![Header image](images/stimulus_reflex.jpeg)
 
