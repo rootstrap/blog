@@ -1,4 +1,4 @@
-# Link Tracking with StimulusReflex - Part I
+# Link Tracking with StimulusReflex 
 
 This is the first of a series about StimulusReflex, a new tool to help you bring Rails to the era of the backend-side-managed frontends. I was surprised to see that [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) and following with things like [Motion](https://github.com/unabridged/motion) and [Sockpuppet](https://github.com/jonathan-s/django-sockpuppet) use WebSockets to push updates from the server to the client and update the DOM accordingly.
 
