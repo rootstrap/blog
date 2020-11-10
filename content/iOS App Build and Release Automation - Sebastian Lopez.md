@@ -1,4 +1,4 @@
-# **How to automate your iOS app builds with Fastlane and GitHub Actions**
+# **How to Automate iOS App Builds Using Fastlane & GitHub**
 
 ![cover photo](images/apps_touch.jpg)
 
