@@ -1,6 +1,7 @@
-# **Automating Mobile App Builds with Fastlane and GitHub Actions**
+# **How to Automate Android App Builds using Fastlane and GitHub Actions**
 
-![cover photo](images/android_robot.jpg)
+<img src="images/android_robot.jpg" height="500" />
+
 
 *This is a follow-up post to our post on iOS app automation, which you can find [here](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/)*: 
 
