@@ -1,6 +1,6 @@
 # **Automating Mobile App Builds with Fastlane and GitHub Actions**
 
-![cover photo](https://cover.photo.url.here)
+![cover photo](images/android_robot.jpg)
 
 *This is a follow-up post to our post on iOS app automation, which you can find [here](ios.article.url)*: 
 
