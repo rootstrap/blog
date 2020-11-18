@@ -2,17 +2,17 @@
 
 ![cover photo](images/android_robot.jpg)
 
-*This is a follow-up post to our post on iOS app automation, which you can find [here](ios.article.url)*: 
+*This is a follow-up post to our post on iOS app automation, which you can find [here](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/)*: 
 
 Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as for backend and web applications. Just as Continuous Integration and Continuos Delivery require maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time consuming and error prone process, which should -and can be automated, even though it presents a particular set of challenges.
 
 In this post I am going to describe the approach we implemented for Android CI/CD making use of Fastlane and a CI system (GitHub Actions). I will also use Amazon S3 to store signing artifacts, but any system where we could safely store encrypted files could serve.
 
-In the previous post about [iOS app automation]((ios.article.url)) you can find a summary of why we chose [Fastlane](https://docs.fastlane.tools/) for automating our build and release steps, and [GitHub Actions]((https://github.com/features/actions)) for integrating it into a CICD workflow. To put it here in one line: they allow for simple, flexible, free(-ish), and fully version-controlled workflows.
+In the previous post about [iOS app automation](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/) you can find a summary of why we chose [Fastlane](https://docs.fastlane.tools/) for automating our build and release steps, and [GitHub Actions]((https://github.com/features/actions)) for integrating it into a CICD workflow. To put it here in one line: they allow for simple, flexible, free(-ish), and fully version-controlled workflows.
 
 For this example I will use an Android app developed with React Native, but the same approach works when developing with other languages supported by the Android SDK, such as Kotlin. The key assumption is that we use [Gradle](https://developer.android.com/studio/releases/gradle-plugin) for building the APK.
 
-If you are interested in using self-hosted machines to run your builds, check the previous chapter on [iOS build automation](ios.article.url#self-hosted) for an example. 
+If you are interested in using self-hosted machines to run your builds, check the previous chapter on [iOS build automation](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/) for an example. 
 
 
 ## Prep work
