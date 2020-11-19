@@ -263,7 +263,7 @@ end
 
 Pretty reactive, we just need to change a variable, and the `if` we added above will automatically stop rendering the modal by not sending the HTML to the frontend. This is very neat in my opinion.
 
-Next up we just bind the closing action on the `X`
+Next up we just bind the closing action on the `X`.
 
 ```html
 <div class="live-modal-close" data-action="click->shortened-link-form#closeModal">&times;</div>
