@@ -489,7 +489,7 @@ The first thing we need to do to allow these actions is to actually add the butt
   </div>
 ```
 
-Don't forget to add an empty call after `Original url`
+Don't forget to add the following empty call after `Original url`:
 
 ```erb
   <div class="col"><b>Original url</b></div>
