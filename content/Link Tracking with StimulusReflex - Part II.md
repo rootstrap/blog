@@ -429,7 +429,7 @@ And then we just need to bind again:
 <button class="btn btn-primary" data-action="click->shortened-link-form#save">Create Shortened Link</button>
 ```
 
-As a last touch we can also add a flash notice, the markdown it's straightforward
+As a last touch, we can also add a flash notice, the markdown here is straightforward:
 
 ```erb
 <% if flash.key?(:notice) %>
