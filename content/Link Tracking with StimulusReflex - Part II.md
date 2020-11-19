@@ -550,7 +550,7 @@ There's also the issue of how do we determine the current form of action, to do 
   end
 ```
 
-And refactor the methods we have to use it
+And refactor the methods we have to use it:
 
 ```ruby
   def validate(params)
