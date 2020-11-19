@@ -81,7 +81,7 @@ We are also going to add [Bootstrap](https://getbootstrap.com/) styling so it do
 
 ## The link form
 
-What we did in the last section was pretty normal, huh? Let's keep going. Now we'll add a button to create new links by stimulating a Reflex. To do so, we add this markup and the corresponding StimulusReflex code:
+What we did in the last section was pretty normal, huh? So, let's keep going. Now we'll add a button to create new links by stimulating a Reflex. To do so, we add this markup and the corresponding StimulusReflex code:
 
 ```erb
 # app/views/shortened_links/index.html.erb
