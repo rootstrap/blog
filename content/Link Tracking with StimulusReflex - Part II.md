@@ -232,7 +232,7 @@ With the needed CSS in `app/assets/stylesheets/modal.css`
 
 ```
 
-There's not much to be said here, the only interesting part is `<div class="live-modal" data-controller="shortened-link-form">` where we are actually using a new controller. This is just to decompose our code in more reusable units.
+There's not much to be said here, the only interesting part is `<div class="live-modal" data-controller="shortened-link-form">` where we are actually using a new controller. This is just to decompose our code into more reusable units.
 
 Let's go ahead and add that Stimulus controller in `app/javascript/controllers/shortened_link_form_controller.js` with a method to close the modal
 
