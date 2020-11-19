@@ -542,7 +542,7 @@ We also need to add a method to load the link correctly in `app/reflexes/shorten
   end
 ```
 
-There's also the issue of how do we determine the current form action, to do so we can do a simple method
+There's also the issue of how do we determine the current form of action, to do so we need a simple method:
 
 ```ruby
   def determine_form_action
