@@ -310,7 +310,7 @@ Cool! Now we have a form inside a working modal and all with just a few lines of
 
 ## Adding validations
 
-ActiveRecord validations rule! That's why we want to use them as much as possible. To do so we first need to send the values to the Reflex by binding them in the JS controller and adding a validation action.
+ActiveRecord validations rule! That's why we want to use them as much as possible. To do this, we first need to send the values to the Reflex by binding them in the JS controller and adding a validation action.
 
 ```javascript
 // app/javascript/controllers/shortened_link_form_controller.js
