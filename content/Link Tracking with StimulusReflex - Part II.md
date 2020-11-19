@@ -251,7 +251,7 @@ export default class extends Controller {
 }
 ```
 
-For which we'll clearly need a new reflex in  `app/reflexes/shortened_link_form_reflex.rb` with the following code
+For which we'll clearly need a new reflex in  `app/reflexes/shortened_link_form_reflex.rb` with the following code:
 
 ```ruby
 class ShortenedLinkFormReflex < ApplicationReflex
