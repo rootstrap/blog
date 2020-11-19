@@ -475,7 +475,7 @@ end
 
 ## Editing and destroying
 
-The first thing we need to do to allow these actions is to actually add the buttons. We can do so at `app/views/shortened_links/index.html.erb`
+The first thing we need to do to allow these actions is to actually add the buttons. We can do so at `app/views/shortened_links/index.html.erb`:
 
 ```erb
   <div class="row">
