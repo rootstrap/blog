@@ -289,7 +289,7 @@ And bind it in the view:
 <div class="live-modal-content" data-action="click->shortened-link-form#trapClick">
 ```
 
-Also, just for fun, let's also close the modal when the exit key is pressed
+Also, just for fun, let's also close the modal when the exit key is pressed:
 
 ```html
 <div class="live-modal"
