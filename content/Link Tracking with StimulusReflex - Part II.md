@@ -599,7 +599,7 @@ Bind it in `app/javascript/controllers/shortened_links_controller.js`:
   }
 ```
 
-And add the method in the Reflex `app/reflexes/shortened_links_reflex.rb`
+And add the method in the Reflex `app/reflexes/shortened_links_reflex.rb`:
 
 ```ruby
   def destroy(id)
