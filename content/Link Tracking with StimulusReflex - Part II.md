@@ -588,7 +588,7 @@ Destroying a record should be pretty simple, so I'll just show you the code. Cha
 </div>
 ```
 
-Bind it in `app/javascript/controllers/shortened_links_controller.js`
+Bind it in `app/javascript/controllers/shortened_links_controller.js`:
 
 ```javascript
   destroyLink(e) {
