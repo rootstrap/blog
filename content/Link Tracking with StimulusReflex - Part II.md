@@ -275,7 +275,7 @@ And on the backdrop:
 <div class="live-modal-backdrop" data-action="click->shortened-link-form#closeModal">
 ```
 
-But we also need to trap the click so that it doesn't close when clicking inside. So we just add a method to trap that `app/javascript/controllers/shortened_link_form_controller.js`
+But we also need to trap the click so that it doesn't close when clicking inside. So we just add this method to trap that - `app/javascript/controllers/shortened_link_form_controller.js`
 
 ```javascript
   trapClick(e) {
