@@ -73,7 +73,7 @@ end
 </div>
 ```
 
-We are also going to add [Bootstrap](https://getbootstrap.com/) styling so it doesn't look so dull, add the following tag to `app/views/layouts/application.html.erb`
+We are also going to add [Bootstrap](https://getbootstrap.com/) styling so it doesn't look so dull. To do this, add the following tag to `app/views/layouts/application.html.erb`
 
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
