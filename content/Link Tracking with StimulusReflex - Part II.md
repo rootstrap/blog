@@ -579,7 +579,7 @@ The only thing left to do is change the modal's title according to the action `a
 <% end %>
 ```
 
-Destroying a record should be pretty simple, so I'll just show you the code. Change `app/views/shortened_links/index.html.erb`
+Destroying a record should be pretty simple, so I'll just show you the code. Change `app/views/shortened_links/index.html.erb`:
 
 ```html
 <div class="col">
