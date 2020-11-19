@@ -6,7 +6,7 @@ In this last part of this series, we'll use what we built before to actually sta
 
 ### Redirecting users
 
-Let's start with the simple stuff, when a user follows one of our shortened links, they expect to be redirected to the original URL. To do this, we'll create a new controller and add the corresponding route.
+Let's start with the simple stuff, when a user follows one of our shortened links, they expect to be redirected to the original URL. To do this, we'll create a new controller and add the corresponding route:
 
 ```ruby
 # app/controllers/redirections_controller.rb
