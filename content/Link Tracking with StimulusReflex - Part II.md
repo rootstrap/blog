@@ -283,7 +283,7 @@ But we also need to trap the click so that it doesn't close when clicking inside
   }
 ```
 
-And bind it in the view
+And bind it in the view:
 
 ```html
 <div class="live-modal-content" data-action="click->shortened-link-form#trapClick">
