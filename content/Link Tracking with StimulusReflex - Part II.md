@@ -506,7 +506,7 @@ And now we can implement the edit action. For that, we need the id on the HTML `
 >
 ```
 
-And to use it on the StimulusJS controller `app/javascript/controllers/shortened_link_form_controller.js`
+And to use it on the StimulusJS controller `app/javascript/controllers/shortened_link_form_controller.js`:
 
 
 ```javascript
