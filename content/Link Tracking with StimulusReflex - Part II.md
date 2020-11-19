@@ -123,7 +123,7 @@ class ShortenedLinksReflex < ApplicationReflex
 end
 ````
 
-And change the controller's index action to take default values
+And change the controller's index action to take default values.
 
 ```ruby
   # app/controllers/shortened_links_controller.rb
