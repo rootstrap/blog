@@ -439,7 +439,7 @@ As a last touch, we can also add a flash notice, the markdown here is straightfo
 <h1>Shortened Links</h1>
 ```
 
-Then set the message after creating the link
+Then set the following message after creating the link:
 
 ```ruby
   def save(params)
