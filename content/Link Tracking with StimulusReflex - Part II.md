@@ -269,7 +269,7 @@ Next up we just bind the closing action on the `X`.
 <div class="live-modal-close" data-action="click->shortened-link-form#closeModal">&times;</div>
 ```
 
-And on the backdrop
+And on the backdrop:
 
 ```html
 <div class="live-modal-backdrop" data-action="click->shortened-link-form#closeModal">
