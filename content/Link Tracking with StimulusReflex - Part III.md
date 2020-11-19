@@ -43,7 +43,7 @@ class RedirectionsController < ApplicationController
 end
 ```
 
-We want to use [`#increment!`](https://apidock.com/rails/ActiveRecord/Base/increment!) since it's atomic and we are sure we don't want to run any validations, which would just slow us down.
+We want to use [`#increment!`](https://apidock.com/rails/ActiveRecord/Base/increment!) since it's atomic, and we are sure we don't want to run any validations, which would just slow us down.
 However, what you really want to do is have a background job to increment
 the attribute. That way you are absolutely certain that the redirect will
 happen in the least possible time, but that's outside the scope of this article.
