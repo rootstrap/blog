@@ -63,7 +63,7 @@ To do this, let's first generate a new channel by running:
 bundle exec rails generate channel LinkViews
 ```
 
-Then we'll change `app/channels/link_views_channel.rb` to just stream from `"link_views"`
+Then we'll change `app/channels/link_views_channel.rb` to just stream from `"link_views"`:
 
 ```ruby
 class LinkViewsChannel < ApplicationCable::Channel
