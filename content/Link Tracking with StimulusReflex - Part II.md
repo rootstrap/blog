@@ -569,7 +569,7 @@ And refactor the methods we have to use it:
   end
 ```
 
-The only thing left to do is change the modal's title according to the action `app/views/shortened_links/_form.html.erb`
+The only thing left to do is change the modal's title according to the action `app/views/shortened_links/_form.html.erb`:
 
 ```erb
 <% if form_action == :edit %>
