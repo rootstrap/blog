@@ -610,4 +610,4 @@ And add the method in the Reflex `app/reflexes/shortened_links_reflex.rb`:
 
 ## Up next
 
-We've learned how to do the basic CRUD operations that can be applied to any domain. All that's left is actually tracking the views which we'll cover in the next and last part of this series. And as always, here's a link to [the complete code on this post](https://github.com/brunvez/sho_lin/commit/e894853507149422530fc2a1315dcb8ae64289cc).
+We've learned how to do the basic CRUD operations that can be applied to any domain. All that's left is actually tracking the views which we'll cover in the next and last part of this series. And as always, here's a link to [the complete code on this post](https://github.com/brunvez/sho_lin/commit/e894853507149422530fc2a1315dcb8ae64289cc):
