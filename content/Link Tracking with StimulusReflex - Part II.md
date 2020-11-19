@@ -135,7 +135,7 @@ And change the controller's index action to take default values.
   end
 ```
 
-The only thing left is to actually render the form when we need to by adding the following in our `app/views/shortened_links/index.html.erb`
+The only thing left to do is to actually render the form when we need to by adding the following in our `app/views/shortened_links/index.html.erb`
 
 ```html
 <h1>Shortened Links</h1>
