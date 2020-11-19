@@ -155,4 +155,4 @@ This concludes this series on how to use StimulusReflex, but you can still play 
 - Add charts in real time
 - Much more...
 
-Or just start a project of your own and give StimulusReflex a try!
+Or, just start a project of your own and give StimulusReflex a try!
