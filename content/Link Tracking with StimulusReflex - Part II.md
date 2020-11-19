@@ -37,7 +37,7 @@ Notice how we added some simple validations to make it more fun.
 
 ## Listing links
 
-Let's start by the simplest of actions: listing the links. To do so, we'll create the following files:
+Let's start with the simplest of actions, listing the links. To do so, we'll create the following files:
 
 ```ruby
 # app/controllers/shortened_links_controller.rb
