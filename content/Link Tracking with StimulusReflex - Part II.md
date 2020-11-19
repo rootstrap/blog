@@ -261,7 +261,7 @@ class ShortenedLinkFormReflex < ApplicationReflex
 end
 ```
 
-Pretty reactive, we just need to change a variable and the `if` we added above will automatically stop rendering the modal by not sending the HTML to the frontend. Very neat in my opinion.
+Pretty reactive, we just need to change a variable, and the `if` we added above will automatically stop rendering the modal by not sending the HTML to the frontend. This is very neat in my opinion.
 
 Next up we just bind the closing action on the `X`
 
