@@ -423,7 +423,7 @@ class ShortenedLinkFormReflex < ApplicationReflex
 end
 ```
 
-And then we just need to bind again
+And then we just need to bind again:
 
 ```html
 <button class="btn btn-primary" data-action="click->shortened-link-form#save">Create Shortened Link</button>
