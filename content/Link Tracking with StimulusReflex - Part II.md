@@ -527,7 +527,7 @@ And to use it on the StimulusJS controller `app/javascript/controllers/shortened
   }
 ```
 
-We also need to add a method to load the link correctly in `app/reflexes/shortened_link_form_reflex.rb`
+We also need to add a method to load the link correctly in `app/reflexes/shortened_link_form_reflex.rb`:
 
 ```ruby
   def load_shortened_link(params)
