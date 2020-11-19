@@ -496,7 +496,7 @@ Don't forget to add the following empty call after `Original url`:
   <div class="col"></div>
 ```
 
-And now we can implement the edit action. For that we need the id on the HTML `app/views/shortened_links/_form.html.erb`
+And now we can implement the edit action. For that, we need the id on the HTML `app/views/shortened_links/_form.html.erb`:
 
 ```erb
 <div class="live-modal"
