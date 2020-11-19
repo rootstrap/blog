@@ -459,7 +459,7 @@ If you open a new incognito session, you'll see there's some funny business goin
 
 ![Joined Sessions](images/stimulus_reflex_joined_sessions.gif)
 
-That's alright, the fix is quite simple, we just need to set a `CableReady` identifier in our `ApplicationController`
+That's alright, the fix is quite simple, we just need to set a `CableReady` identifier in our `ApplicationController`:
 
 ```ruby
 class ApplicationController < ActionController::Base
