@@ -164,7 +164,7 @@ and other laws. For example, CCPA does not apply to “Protected Health
 Information” (PHI) as defined in HIPAA. This is collected by a covered entity
 or business associate.
 
-CCPA’s HIPAA exemption is desinged to allow covered entities and business
+CCPA’s HIPAA exemption is designed to allow covered entities and business
 associates to continue following the privacy regulations laid out in HIPAA
 and without interference from an additional law. CCPA exempts an organization that
 “maintains patient information in the same manner” as PHI under HIPAA.
