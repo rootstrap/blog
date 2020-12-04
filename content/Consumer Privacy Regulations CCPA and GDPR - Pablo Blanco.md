@@ -18,7 +18,7 @@ personal information, security, and privacy. Data privacy regulations are
 becoming a primary element in any data security conversation. In the case of
 the Union GDPR (2018),  Brazilian LGPD (2020), and the California Consumer
 Privacy Act (2020), the ability to protect personal information is a top priority. 
-For companies that base their operative around customer data, trust becomes an
+For companies that base their operations around customer data, trust becomes an
 essential part of their business model.
 
 In this article, we are going to explore some concepts of the California
