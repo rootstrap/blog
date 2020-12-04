@@ -149,7 +149,7 @@ to be compliant. The following steps can be useful to help get ready:
 - **Consumer requests**: Establish a system for processing consumer rights requests.
 -
 - **Train**: Educate your team on how to handle personal information and consumer requests.
-- **Security**: enforce the security of personal information to avoid breaches
+- **Security**: Enforce the security of personal information
   and security incidents, make a risk assessment, and be sure to have an
   incident response plan.
 - **Check providers**: evaluate your upstream and downstream contracts with
