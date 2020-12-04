@@ -206,7 +206,7 @@ leverage the rights between consumers and business, giving the former the chance
 to know what a company knows about them, decide whether or not they can keep
 that information, and prevent them from selling it.
 
-Governments are beginning to take data privacy very seriously. Like in the
+Governments are beginning to take data privacy very seriously. For example, 
 European Union, Brazil, India, Japan, and other countries, the CCPA will have
 far more impacts across state jurisdictions, reaching companies around the
 world. Getting prepared to be compliant is important and will save your company
