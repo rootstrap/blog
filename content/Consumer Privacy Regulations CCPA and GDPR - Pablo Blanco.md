@@ -145,7 +145,7 @@ to be compliant. The following steps can be useful to help get ready:
 - **Data Map**: Identity what personal information you collect from customers,
   why it is being collected, where it is stored, how secure it is, and who it is being shared with. 
 - **Privacy policy**: Update your privacy notices to comply with
-  CCPA’s requirements. Provide to your customers with a “Do Not Sell My
+  CCPA’s requirements. You can also provide your customers with a **“Do Not Sell My Information** option.
   Information” to allow them to opt-out of the sale of their personal
   information.
 - **Consumer requests**: establish a system for processing consumer rights
