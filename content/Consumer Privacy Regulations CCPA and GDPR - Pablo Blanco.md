@@ -118,7 +118,7 @@ required to adhere to their requests.
 
 ## Does CCPA apply to my business?
 
-Contrary to what some believe, CCPA doesn’t just apply to those businesses based
+Unbeknownst to some, CCPA doesn’t just apply to businesses based
 within California, rather than that any business with customers in California
 can be affected if that business meets the criteria mentioned above.
 
