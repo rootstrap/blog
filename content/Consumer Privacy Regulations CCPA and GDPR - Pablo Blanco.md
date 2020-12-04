@@ -161,7 +161,7 @@ with risk assessment, and
 
 Despite its broad scope, CCPA creates certain exemptions designed around HIPAA
 and other laws. For example, CCPA does not apply to “Protected Health
-Information” (PHI) as defined in HIPAA, which is collected by a covered entity
+Information” (PHI) as defined in HIPAA. This is collected by a covered entity
 or business associate.
 
 CCPA’s HIPAA exemption is meant to allow covered entities and business
