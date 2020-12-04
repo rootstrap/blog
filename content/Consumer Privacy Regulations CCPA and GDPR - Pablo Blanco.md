@@ -52,7 +52,7 @@ Businesses have a track record of using personal information to benefit their
 agenda and the CCPA  serves to protect California consumer rights and encourage
 stronger privacy, traceability, and transparency. The CCPA allows
 consumers to have control, ownership, and gain security over their personal
-information.  They also allow for the request that any business disclose
+information. They also allow for the request that any business disclose
 , and if necessary, delete any personal information collected.
 
 This data protection gives consumers the right to:
