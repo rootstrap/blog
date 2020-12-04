@@ -141,7 +141,7 @@ As soon as you know that your business is subject to CCPA, you can start working
 to be compliant. The following steps can be useful to help get ready:
 
 - **Roadmap**: Create a plan to help achieve compliance with CCPA.
-- **Learn**: know your obligations and be aware of changing requirements.
+- **Learn**: Know your obligations and be aware of any changing requirements.
 - **Data Map**: identify what personal information you collect from customers,
   why it is being collected, where it is stored, how secure it is, and who it is being shared with. 
   and with whom is being shared.
