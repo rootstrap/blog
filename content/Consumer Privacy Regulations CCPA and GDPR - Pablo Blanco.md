@@ -107,7 +107,7 @@ are quite similar, the CCPA differs from the GDPR in a few important ways:
 - **Opt-in/Opt-out**: Under GDPR, businesses must have opt-in from consumers
   before collecting data. In the case of CCPA, consumers must opt-out of data
   collection.
-- **Third-party data sales**: for GDPR businesses must have consent from
+- **Third-party data sales**:  GDPR businesses must have consent from
   customers before any third-party processing or sales its data, while the CCPA
   requires businesses to simply notify the customer of a data sale or transfer
   and allow them to refuse.
