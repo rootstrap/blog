@@ -9,7 +9,7 @@ with ethical hacking and information security. You can also follow Pablo on
 
 California is considered the world’s 5th biggest economy, ranking higher than
 some European countries. This is not a surprise as it's home to
-Silicon Valley, the world’s premier innovation hub and headquarters of several multiple tech giants.
+Silicon Valley, the world’s premier innovation hub and headquarters of multiple tech giants.
 
 Given the numerous data breaches and inappropriate use of customer’s information for
 targeted advertising,
