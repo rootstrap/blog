@@ -147,7 +147,7 @@ to be compliant. The following steps can be useful to help get ready:
 - **Privacy policy**: Update your privacy notices to comply with
   CCPA’s requirements. You can also provide your customers with a **“Do Not Sell My Information** option.
 - **Consumer requests**: Establish a system for processing consumer rights requests.
-  requests.
+-
 - **Train**: train your team on how to handle personal information and consumer
   requests.
 - **Security**: enforce the security of personal information to avoid breaches
