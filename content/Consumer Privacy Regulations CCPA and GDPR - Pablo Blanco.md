@@ -39,7 +39,7 @@ of personal information that is held by businesses. The meaning of Personal
 information is quite broad, the definition given in
 [CCPA](https://oag.ca.gov/privacy/) says:
 
-_Personal information is information that identifies, relates to, or could
+Personal information is information that identifies, relates to, or could
 reasonably be linked with an individual or household._
 
 Some examples of that are customer personal and private information,
