@@ -74,7 +74,7 @@ data, and applies to all companies that serve California residents.
 Companies may be subject to
 compliance if it meets at least one of the following thresholds:
 
-- Companies with at least \$25 million in annual revenue (applies to total
+- A minimum of $25 million in annual revenue 
 - Companies that annually buy, sell, receive, or share personal information of
   at least 50,000 consumers, homes, or devices for commercial purposes.
 - Companies that derive 50% or more of their annual revenue from the sale of
