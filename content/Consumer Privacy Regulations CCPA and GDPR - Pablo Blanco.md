@@ -99,7 +99,7 @@ clear differences we should notice in each legislation. Although the two laws
 are quite similar, the CCPA differs from the GDPR in a few important ways:
 
 - **Impacted businesses**: where businesses of any size must comply with the
-  GDPR, the CCPA only impacts businesses that reach a certain size and that
+  GDPR, the CCPA only impacts businesses that reach a certain size and
   process a certain amount of data from consumers.
 - **Penalties**: GDPR penalties are capped based on a company’s annual revenue,
   on the other hand, CCPA penalties have no limit and are assessed per violation
