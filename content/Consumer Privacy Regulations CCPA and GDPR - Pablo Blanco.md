@@ -16,7 +16,7 @@ targeted advertising,
 there is growing public concern regardung the misuse of
 personal information, security, and privacy. Data privacy regulations are
 becoming a primary element in any data security conversation. In the case of
-Union GDPR (2018),  Brazilian LGPD (2020), and the California Consumer
+the Union GDPR (2018),  Brazilian LGPD (2020), and the California Consumer
 Privacy Act (2020), the ability to protect personal information is a top priority. 
 For companies that base their operative around customer data, trust becomes an
 essential part of their business model.
