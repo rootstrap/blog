@@ -64,7 +64,7 @@ This data protection gives consumers the right to:
 - Have equal service, price,
 and privacy rights (right to non-discrimination).
 
-It’s should also be noted that it is illegal to sell personal information of any consumers aged 13–16.
+It should also be noted that it is illegal to sell personal information of any consumers aged 13–16.
 without the consent of a parent or guardian.
 
 ## Who does the CCPA apply to?
