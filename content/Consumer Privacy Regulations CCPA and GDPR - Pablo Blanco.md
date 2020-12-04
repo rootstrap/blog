@@ -135,7 +135,7 @@ reputation damage, fines, and loss of customer’s trust. Being prepared for thi
 kind of regulation will bring a smooth path for the future ones that will come and
 In other words, it will pay to be compliant, and consumers will value you for it.
 
-## How to be prepared for CCPA?
+## How to be prepared for CCPA
 
 As soon as you know that your business is subject to CCPA, you can start working
 to be compliant. The following steps can be useful to help get ready:
