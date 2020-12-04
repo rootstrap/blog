@@ -89,7 +89,7 @@ documenting IT procedures, performing risk assessments under certain conditions,
 notifying the consumer and authorities when there is a breach, and strengthening
 rules for data minimization.
 
-The GDPR protects similar private data as the CCPA and recommends that companies
+The GDPR protects similar private data as the CCPA recommends that companies
 provide a “reasonable” level of protection for personal information. It also
 mandates that the business explains to the customer how their information will
 be used and to explicitly ask for their permission to collect and process it.
