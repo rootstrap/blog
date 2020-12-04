@@ -150,7 +150,7 @@ to be compliant. The following steps can be useful to help get ready:
 -
 - **Train**: Educate your team on how to handle personal information and consumer requests.
 - **Security**: Enforce the security of personal information
-  and security incidents, make a risk assessment, and be sure to have an
+with risk assessment, and
   incident response plan.
 - **Check providers**: evaluate your upstream and downstream contracts with
   third-party service providers and modify the underlying agreements for CCPA
