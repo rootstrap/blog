@@ -45,7 +45,7 @@ reasonably be linked with an individual or household._
 Some examples of that are customer personal and private information,
 internet browsing history,
  geolocation data, fingerprints, IP addresses, etc.
-Personal information does not include publicly
+Personal information does not include 
 available information from federal, state, or local government records.
 
 Businesses have a track record of using personal information to benefit their
