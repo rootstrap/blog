@@ -138,7 +138,7 @@ In other words, it will pay to be compliant, and consumers will value you for it
 ## How to be prepared for CCPA?
 
 As soon as you know that your business is subject to CCPA, you can start working
-to be compliant, the following steps can be useful in the way to get ready:
+to be compliant. The following steps can be useful to help get ready:
 
 - **Roadmap**: create a plan to achieve compliance with CCPA.
 - **Learn**: know your obligations and be aware of changing requirements.
