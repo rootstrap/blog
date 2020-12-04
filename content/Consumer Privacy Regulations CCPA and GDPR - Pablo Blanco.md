@@ -113,7 +113,7 @@ are quite similar, the CCPA differs from the GDPR in a few important ways:
   with the option to refuse.
 
 In short, both regulations give more power to consumers and enable them to take
-action if they want their data to remain private, besides that, businesses are
+action if they want their data to remain private. Besides that, businesses are
 required to attend their requests.
 
 ## Does CCPA apply to my business?
