@@ -212,7 +212,7 @@ far more impact across state jurisdictions, reaching companies around the
 world. Achieving compliance is important and will save your company
 money, time, and a potentially negative reputation. To comply with these regulations can 
 be hard work, and you need to be able to identify content related
-data subject, classify and protect consumer data, and sometimes even delete upon
+to the data subject, classify and protect consumer data, and sometimes even delete upon
 request. But there is some light at the end of the tunnel, if you get your
 business prepared for this kind of regulation, you will get a competitive
 advantage and it will be easy to get ready for new regulations as there are many
