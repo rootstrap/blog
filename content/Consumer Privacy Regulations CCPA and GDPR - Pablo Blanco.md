@@ -13,7 +13,7 @@ Silicon Valley, the world’s premier innovation hub and headquarters of several
 
 Given the numerous data breaches and inappropriate use of customer’s information for
 targeted advertising,
-there is growing public concern regardung the misuse of
+there is growing public concern regarding the misuse of
 personal information, security, and privacy. Data privacy regulations are
 becoming a primary element in any data security conversation. In the case of
 the Union GDPR (2018),  Brazilian LGPD (2020), and the California Consumer
