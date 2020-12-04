@@ -71,7 +71,7 @@ without the consent of a parent or guardian.
 
 CCPA defines a business as a for-profit entity, that collects consumer personal
 data, and applies to all companies that serve California residents.
-are physically placed in California or not. The company may be subject to
+Companies may be subject to
 compliance if it meets at least one of the following thresholds:
 
 - Companies with at least \$25 million in annual revenue (applies to total
