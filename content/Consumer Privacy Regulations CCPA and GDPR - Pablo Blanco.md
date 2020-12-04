@@ -142,7 +142,7 @@ to be compliant. The following steps can be useful to help get ready:
 
 - **Roadmap**: Create a plan to help achieve compliance with CCPA.
 - **Learn**: Know your obligations and be aware of any changing requirements.
-- **Data Map**: identify what personal information you collect from customers,
+- **Data Map**: Identity what personal information you collect from customers,
   why it is being collected, where it is stored, how secure it is, and who it is being shared with. 
   and with whom is being shared.
 - **Privacy policy**: update your privacy notices to be sure you comply with
