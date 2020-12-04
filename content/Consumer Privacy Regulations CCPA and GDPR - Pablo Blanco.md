@@ -15,7 +15,7 @@ Given the numerous data breaches and inappropriate use of customer’s informati
 targeted advertising,
 there is growing public concern regardung the misuse of
 personal information, security, and privacy. Data privacy regulations are
-becoming a primary element in any data security conversation, for 
+becoming a primary element in any data security conversation. In the case of
 Union GDPR (2018),  Brazilian LGPD (2020), and the California Consumer
 Privacy Act (2020), the ability to protect personal information is a top priority. 
 For companies that base their operative around customer data, trust becomes an
