@@ -119,7 +119,7 @@ required to adhere to their requests.
 ## Does CCPA apply to my business?
 
 Unbeknownst to some, CCPA doesn’t just apply to businesses based
-physically in California, but any business with customers who reside in the state
+physically in California, but any business with customers who reside in the state.
 
 Under the CCPA, businesses must be aware of what is considered private data,
 locate and treat customers information in a secure way, even addressing their
