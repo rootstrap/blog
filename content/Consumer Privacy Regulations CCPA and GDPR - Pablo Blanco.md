@@ -192,7 +192,7 @@ probably PHI, and the HIPAA exemption probably applies.
 ## Final thoughts
 
 Data privacy regulations will demand a lot of work in the preparedness for compliance 
-compliance, but being forced to optimizing the data that a company collects,
+compliance, but being forced to optimize the data that a company collects,
 processes and stores could create efficiency. Companies need only store the
 necessary pieces of personal information to perform their services and reduce
 the time and resources (they have spent in the past) to store all of it.
