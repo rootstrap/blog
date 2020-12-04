@@ -60,18 +60,17 @@ This data protection gives consumers the right to:
 - Know what personal information is collected.
 - Access to and the option to delete any necessary personal information.
 - Knowledge of who their personal information is being shared with
-  opt-out of the sale of their personal information
-- Have equal service and price, whether or not they choose to exercise their
-  privacy rights (right to non-discrimination).
+  and the option to deny such access.
+- Have equal service, price,
+and privacy rights (right to non-discrimination).
 
-It’s also prohibited selling the personal information of consumers ages 13–16
-(unless consumer opts-in). For consumers under the age of 13, consent from a
-parent is a must.
+It’s should also be noted that it is illegal to sell personal information of any consumers aged 13–16.
+without the consent of a parent or guardian.
 
 ## Who does the CCPA apply to?
 
-CCPA defines a business as a for-profit entity that collects consumer personal
-data and applies to all companies that serve California residents, whether they
+CCPA defines a business as a for-profit entity, that collects consumer personal
+data, and applies to all companies that serve California residents.
 are physically placed in California or not. The company may be subject to
 compliance if it meets at least one of the following thresholds:
 
