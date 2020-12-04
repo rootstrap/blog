@@ -166,7 +166,7 @@ or business associate.
 
 CCPA’s HIPAA exemption is desinged to allow covered entities and business
 associates to continue following the privacy regulations laid out in HIPAA
-without interference from an additional law. CCPA exempts an organization that
+and without interference from an additional law. CCPA exempts an organization that
 “maintains patient information in the same manner” as PHI under HIPAA.
 
 Healthcare providers and insurance agents may assume that the law’s HIPAA
