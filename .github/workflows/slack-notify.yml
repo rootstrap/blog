@@ -1,0 +1,26 @@
+name: Slack Notification
+on:
+  pull_request:
+    branches: [master]
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: "Review Steps"
+          SLACK_USERNAME: "Technical Blog Bot"
+          SLACK_FOOTER: ""
+          SLACK_ICON: "https://emoji.slack-edge.com/T03MKTLT5/rootstrap/7c01c605ff5fa8d4.png"
+          MSG_MINIMAL: true
+          SLACK_MESSAGE:
+            "Gracias por tu aporte! Si no lo hiciste, te recomendamos enviar el
+            topic al Marketing team para tener
+            <https://docs.google.com/spreadsheets/d/13Z_whEAB8s63LnmniO5MgnRRhClunZvZAZzaRM5tRXE/edit#gid=0|algunos
+            tips de SEO>. Recuerda también chequear
+            <https://www.notion.so/rootstrap/How-to-prepare-an-article-2e2469176cb542f3b79289937cf07127#eb1f32de32b547bea01a54bb6d3284b5|
+            los pasos para la revisión> de tu artículo."
