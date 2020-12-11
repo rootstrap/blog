@@ -101,7 +101,7 @@ end
 
 **Note:** We have also added a custom validation named `amount_of_tags`, YAAF helps us to encapsulate business rules in our Form Object.
 
-And then in our controller
+And then in our controller, we have the following:
 
 ```ruby
 class Api::V1::PostsController < Api::V1::ApiController
