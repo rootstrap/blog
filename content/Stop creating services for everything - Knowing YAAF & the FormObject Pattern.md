@@ -19,7 +19,7 @@ So here comes **YAAF** (Yet Another Active Form) to save our day. **YAAF** is a 
 
 ## When to use YAAF?
 
-Let's think that we have an API endpoint that saves a new post on our database. A post has a title, body, publisher, and could have tags and a category.
+Let's imagine that we have an API endpoint that saves a new post on our database. A post has a title, body, publisher, and could also have tags and a category.
 
 Tags and categories could be created at the moment that the publisher sends the post. (If our inputs don't find the correct tag or category, they will let the user write the name of a new one).
 
