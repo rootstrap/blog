@@ -135,7 +135,7 @@ Another good thing is that **YAAF** provides a similar API to `ActiveModel` mode
 - YAAF helps you to apply the **Form Pattern** in an easy way.
 - YAAF is only **64 lines long**.
 - It's **well tested and maintained**.
-- It helps you keep your models, views and controllers thin by providing a better place where to put business logic. In the end, this will **improve the quality of your codebase and make it easier to maintain and extend**.
+- It helps you keep your models, views, and controllers thin by providing a better place to put business logic. In the end, this will **improve the quality of your codebase and make it easier to maintain and extend**.
 - And a lot **[more](https://github.com/rootstrap/yaaf)**.
 
 ## Summary
