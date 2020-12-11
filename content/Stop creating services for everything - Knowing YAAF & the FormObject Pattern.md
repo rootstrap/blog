@@ -60,7 +60,7 @@ When using **YAAF**, we should create a new `PostForm` class that is going to en
 # app/forms/registration_form.rb
 
 class PostForm < ApplicationForm
-  attr_accessor :post_form_params
+  attr_accessor :post, :category_name, :tags
   validate :amount_of_tags
 
   def initialize(args = {})
