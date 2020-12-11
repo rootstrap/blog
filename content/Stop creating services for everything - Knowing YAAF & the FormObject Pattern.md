@@ -62,7 +62,7 @@ When using **YAAF**, we should create a new `PostForm` class that is going to en
 class PostForm < ApplicationForm
   attr_accessor :post, :category_name, :tags
   validate :amount_of_tags
-
+And then here, we should call **super(args)** to leverage the automatic attribute assignment from ActiveModel. This will populate the instance variables using the accessors defined previously.
   def initialize(args = {})
     @post_form_params = args
     @models = [post, category, tags].flatten.compact
