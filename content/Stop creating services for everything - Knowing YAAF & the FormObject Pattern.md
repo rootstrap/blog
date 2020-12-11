@@ -13,7 +13,7 @@ Services are great, and if we code them in an atomic way, they will be easy to t
 >-"Hey, I don't know how to properly refactor this piece of code"
 >-"Dude, just do a new service"
 
-**But no!** Making a new service is not always the best option. In some cases, we are _reinventing the wheel_ and maybe there is a pattern that already fits with our needs.
+**But no!**, making a new service is not always the best option. In some cases, we are _reinventing the wheel_ and maybe there is a pattern that already fits with our needs.
 
 So here comes **YAAF** (Yet Another Active Form) to save our day. **YAAF** is a gem that lets you create form objects in an easy and friendly Rails way. It makes use of `ActiveRecord` and `ActiveModel` features in order to provide you with a form object that behaves pretty much like a Rails model and still be completely configurable.
 
