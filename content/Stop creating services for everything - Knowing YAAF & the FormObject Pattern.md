@@ -8,7 +8,7 @@ How many times have you encountered large controller methods? If you are _lucky_
 
 One of the most common practices to start refactoring a long controller is to move the code to a service.
 
-Services are great.  If we code them in an atomic way, they will be easy to test and understand. But the problem is when we use the services like a _Swiss Army knife_.
+Services are great, and if we code them in an atomic way, they will be easy to test and understand. But the problem is when we use the services it's like using a _Swiss Army knife_.
 
 >-"Hey, I don't know how properly refactor this piece of code"
 >-"Dude, do a new service"
