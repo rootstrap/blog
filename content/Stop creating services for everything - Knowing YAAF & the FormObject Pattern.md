@@ -4,7 +4,7 @@
 
 ## Working with large controllers
 
-How many times have you encountered with large controller methods? If you are _lucky_ like me, probably many times.
+How many times have you encountered large controller methods? If you are _lucky_ like me, probably many times.
 
 One of the most common practices to start refactoring a long controller is to move the code to a service.
 
