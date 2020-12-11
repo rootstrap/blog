@@ -99,7 +99,7 @@ class PostForm < ApplicationForm
 end
 ```
 
-**Note:** We have also added a custom validation named `amount_of_tags`, YAAF help us to encapsulate business rules in our Form Object.
+**Note:** We have also added a custom validation named `amount_of_tags`, YAAF helps us to encapsulate business rules in our Form Object.
 
 And then in our controller
 
