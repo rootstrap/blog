@@ -11,7 +11,7 @@ One of the most common practices to start refactoring a long controller is to mo
 Services are great, and if we code them in an atomic way, they will be easy to test and understand. But the problem is when we use the services it's like using a _Swiss Army knife_.
 
 >-"Hey, I don't know how properly refactor this piece of code"
->-"Dude, do a new service"
+>-"Dude, just do a new service"
 
 **But no!** Making a new service is not always the best option. In some cases, we are _reinventing the wheel_ and maybe there is a pattern that already fits with our needs.
 
