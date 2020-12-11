@@ -54,7 +54,7 @@ end
 
 It looks terrible, right? Maybe our first thought about that piece of code is to make a refactoring that moves the creation of the post to a service named `PostCreationService`. This could be useful and might be used in the future in another part of the system. But, what have we said about _reinventing the wheel_?
 
-Using **YAAF** we should create a new `PostForm` class that is going to encapsulate all the logic of post creation and related models inside it. And is very simple to implement it! Look at this code:
+When using **YAAF**, we should create a new `PostForm` class that is going to encapsulate all the logic of post creation and related models inside it. And it is very simple to implement it! Just look at this code:
 
 ```ruby
 # app/forms/registration_form.rb
