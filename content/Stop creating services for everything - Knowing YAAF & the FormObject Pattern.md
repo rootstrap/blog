@@ -21,7 +21,7 @@ So here comes **YAAF**, yet another active form to save our day. **YAAF** is a g
 
 Let's imagine that we have an API endpoint that saves a new post on our database. A post has a title, body, publisher, and could also have tags and a category.
 
-Tags and categories could be created at the moment that the publisher sends the post. (If our inputs don't find the correct tag or category, they will let the user write the name of a new one).
+Tags and categories can be created as soon as the publisher sends the post. (If our inputs don't find the correct tag or category, they will let the user write the name of a new one).
 
 So, in the worst-case scenario, our controller could have something like this:
 
