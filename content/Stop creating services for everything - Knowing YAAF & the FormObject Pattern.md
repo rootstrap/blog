@@ -140,6 +140,6 @@ Another good thing is that **YAAF** provides a similar API to `ActiveModel` mode
 
 ## Summary
 
-Well, if you've got this far, I hope this article helps you to integrate **YAAF** in your project, while also helping you use the  `FormObject` Pattern to make your code even better. You can see more examples **[here](https://github.com/rootstrap/yaaf)**. **YAAF** is open-source and is open to receive new contributions. 
+Well, if you've got this far, I hope this article helps you to integrate **YAAF** in your project, while also helping you use the `FormObject` Pattern to make your code even better. You can see more examples **[here](https://github.com/rootstrap/yaaf)**. **YAAF** is open-source and is open to receive new contributions. 
 
 So check it out and see what you think!
