@@ -131,7 +131,7 @@ Another good thing is that **YAAF** provides a similar API to `ActiveModel` mode
 
 ## Why not a Service or PORO's?
 
-- **Make customized Services or PORO's could be disorganized** if you're working in a team.
+- **Making customized Services or PORO's could be disorganized** if you're working in a team.
 - YAAF helps you to apply the **Form Pattern** in an easy way.
 - YAAF is only **64 lines long**.
 - It's **well tested and maintained**.
