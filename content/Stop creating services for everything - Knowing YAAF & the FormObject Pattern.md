@@ -23,7 +23,7 @@ Let's imagine that we have an API endpoint that saves a new post on our database
 
 Tags and categories could be created at the moment that the publisher sends the post. (If our inputs don't find the correct tag or category, they will let the user write the name of a new one).
 
-So in our controller, in the worst-case scenario, we could have something like this:
+So, in the worst-case scenario, our controller could have something like this:
 
 ```ruby
 class Api::V1::PostsController < Api::V1::ApiController
