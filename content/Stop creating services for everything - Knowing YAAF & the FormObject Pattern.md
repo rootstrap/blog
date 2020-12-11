@@ -125,7 +125,7 @@ end
 
 **Tip:** Having an `ApplicationForm` which inherits from `YAAF::Form` is a good practice.
 
-That's it, now we have a `PostForm` which encapsulates all the persistency logic of post/tags/categories, leaving our controller and models clean and the code is easy to follow.
+That's it, now we have a `PostForm` which encapsulates all the persistency logic of post/tags/categories, leaving our controller and models clean, with an easy to follow code. 
 
 Another good thing is that **YAAF** provides a similar API to `ActiveModel` models so you can treat them interchangeably.
 
