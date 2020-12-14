@@ -1,27 +1,27 @@
 # Django vs Flask: which one should you choose for your project?
-Django and Flask are among the most popular Python web frameworks.
-In this article we're going to review their main strengths and weaknesses to help you decide which one is the better fit for your project.
+[Django](https://www.djangoproject.com/) and [Flask](https://flask.palletsprojects.com/en/1.1.x/) are among the most popular Python web frameworks.
+In this article, we're going to review their main strengths and weaknesses to help you decide which one is the better fit for your project.
 
 
 # Django
-![django logo](images/flask-vs-django-django-logo.png)
+[![django-logo](images/flask-vs-django-django-logo.png)](https://www.djangoproject.com/)
 ## Approach
-Django opts for an all batteries included approach.
+Django opts for an all batteries-included approach.
 From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
 
-It also has the concept of pluggable apps, that means that you can drop an app folder inside your project and get its functionality right away
+It also has the concept of pluggable apps, which means that you can drop an app folder inside your project and get its functionality right away
 with very little configuration.
 
 ## Main features
 - Django has a very powerful ORM that exposes a lot of SQL to the python programming language.
-- Authentication and Authorization built in, without any extra configuration.
-- A built in admin site.
-- A built in mailing system.
+- Authentication and Authorization built-in, without any extra configuration.
+- A built-in admin site.
+- A built-in mailing system.
 
 ## Pitfalls
 - Tightly coupled with its toolset, Django is sort of difficult to use in combination with other tools (replacing the form library for example).
 - The default scaffolding, while not bad for small projects, does not scale without modification when trying to manage things such as multiple environments.
-- It implements the Model View Template pattern, and requires some effort to implement other architecture types with it.
+- It implements the Model View Template pattern and requires some effort to implement other architecture types with it.
 
 ## Developer experience
 One of the perks of using an all batteries included approach is that the developer experience will be more or less the same across the framework.
@@ -37,7 +37,7 @@ Since it has sort of a scaffolded default structure for it's projects is very ea
 
 
 # Flask
-![flask logo](images/django-vs-flask-flask-logo.png)
+[![flask logo](images/django-vs-flask-flask-logo.png)](https://flask.palletsprojects.com/en/1.1.x/)
 ## Approach
 Born as a combination of an http server with a template engine zipped together, Flask opts for a very minimalistic approach.
 It provides some minimal structure, but leaves the decisions up to you.
@@ -85,7 +85,7 @@ If you plan to spin up a lot of microservices for example, this can be a good fi
 - Non MVT or MVC projects.
 - Small codebases and small teams maintaining them.
 
-# So... Which one should I choose?
+# So... Which one should you choose?
 To properly answer this question you need to take into consideration all the project requirements and make a decision based on that.
 If development speed is the most important thing because you need to go to the market fast, then Django probably will be the better choice,
 since you get a more complete feature set out of the box.
@@ -93,7 +93,7 @@ If you need a more custom solution, or your project features are out of the ordi
 At the end of the day, you should choose the framework that adjusts more into your project idea and particular situation,
 taking into consideration their strengths and weaknesess, not only code wise but also if the coding style that their propose it's adecuate to your organization.
 
-Do you have any experience that you want to share with any of this frameworks?
+Do you have any experience that you want to share with any of these frameworks?
 Are there any extra pros or cons that you feel are missing?
 If you do I invite you to discuss them in the comment section.
 
