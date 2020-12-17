@@ -23,7 +23,7 @@ It also has the concept of pluggable apps, which means you can drop an app folde
 - This functionality implements the Model View Template pattern but requires some effort to implement other architecture types with it.
 
 ## Developer Experience
-One of the perks of using an all batteries included approach is that the developer experience will be more or less the same across the framework.
+One of the main perks of using an all batteries included approach, is that the developer experience will be more or less the same across the framework.
 This proves very friendly to people new to the framework, that can follow a pattern and be guided to follow good practices by looking at existing code.
 The other gain you get from this is that core parts of every site would be tried and tested.
 This is a very desirable feature for some parts like authentication and authorization, or an admin panel for providing easy back office access to your team.
