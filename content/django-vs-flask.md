@@ -13,7 +13,7 @@ It also has the concept of pluggable apps, which means you can drop an app folde
 
 ## Main features
 - Django has a very powerful ORM that exposes a lot of SQL to the python programming language.
-- Authentication and Authorization built-in, without any extra configuration.
+- It has Authentication and Authorization built-in, without the need for any extra configuration.
 - A built-in admin site.
 - A built-in mailing system.
 
