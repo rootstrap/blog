@@ -30,7 +30,7 @@ This is a very desirable feature for parts like authentication and authorization
 
 ## Team Size and Structure
 Django is at its best for a small to medium team that plans to handle a middle to large sized code base
-The project structure takes that into account and file conflicts will be minimal.
+The project structure takes that into account and as a result file conflicts will be minimal.
 As it has a scaffolded default structure for its projects, it's easy to ramp up newbie developers to use it while under the supervision of a senior developer. 
 
 
