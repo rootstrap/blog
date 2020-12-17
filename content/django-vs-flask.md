@@ -54,7 +54,7 @@ This makes Flask very easy to extend with practically anything you want.
 - You have to mix and match libraries to get the desired functionality. This also means that different parts of your project have different support from the community.
 - The lack of opinions can lead to complicated architectures or very big single file projects.
 
-## Developer experience
+## Developer Experience
 Flask is what you want it to be.
 But it makes you work for it, you can start importing any libraries you like and code your app your own way.
 This can be really cool, and makes a lot of sense if you want to quickly spin up a quick api for puting your python code on the web.
