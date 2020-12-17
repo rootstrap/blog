@@ -78,7 +78,7 @@ If you plan to spin up a lot of microservices, for example, then this can be a g
 - Information systems in which reporting is important.
 - Medium or Large code bases with small or medium teams maintaining them.
 
-## Flask is a good idea for…
+## Flask is best suited to:
 - Lightweight applications.
 - Microservices.
 - Non MVT or MVC projects.
