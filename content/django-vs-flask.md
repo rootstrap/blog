@@ -70,7 +70,7 @@ Flask is better suited for very small code bases that do one thing and do it wel
 If you plan to spin up a lot of microservices for example, this can be a good fit.
 
 
-# Wrapping up
+# Wrapping Up
 
 ## Django is a good idea for…
 - Quickly validating business ideas.
