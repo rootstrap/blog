@@ -64,7 +64,7 @@ This can be a bit repetitive since most applications have these kinds of feature
 
 # Team Size and Structure
 The liberties that Flask gives you requires a lot of experience to take advantage of them.
-The initial simplicity of a sigle file app can lead very easily to a very big single file app.
+The initial simplicity of a single file app can easily lead to a very big single file app.
 This is not bad if you just want to prototype something, but when you sart to split the app into files you will have the entire responsibility of those architecture decisions.
 Flask is better suited for very small code bases that do one thing and do it well, maintained by small teams.
 If you plan to spin up a lot of microservices for example, this can be a good fit.
