@@ -40,7 +40,7 @@ As it has a scaffolded default structure for its projects, it's easy to ramp up 
 ## Approach
 Originally developed as a combination of an HTTP server and a template engine zipped together, Flask opts for a very minimalistic approach.
 It provides some minimal structure, but leaves the decisions up to you.
-This makes flask very easy to extend with practically whatever you want.
+This makes Flask very easy to extend with practically anything you want.
 
 ## Main Features
 - Very lightweight.
