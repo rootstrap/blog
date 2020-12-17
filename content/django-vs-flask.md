@@ -84,7 +84,7 @@ If you plan to spin up a lot of microservices, for example, then this can be a g
 - Non MVT or MVC projects.
 - Small code bases with small teams maintaining them.
 
-# So... Which one should you choose?
+# So, which one should you choose?
 To properly answer this question, you need to take into consideration all the project requirements and make a decision based on that.
 If development speed is the most important thing because you need to go to the market fast, then Django probably will be the better choice,
 since you get a more complete feature set out of the box.
