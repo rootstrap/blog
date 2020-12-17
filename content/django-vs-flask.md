@@ -28,7 +28,7 @@ This proves very beneficial to people new to the framework, as they can follow a
 Another benefit you get from this is that the core parts of every site are tried and tested.
 This is a very desirable feature for parts like authentication and authorization, or an admin panel used to provide easy back office access to your team.
 
-## Team size and structure
+## Team Size and Structure
 Django is at its best for a small to medium team that plans to handle a middle to large sized code base
 The project structure takes that into account and file conflicts will be minimal.
 Since it has some sort of scaffolded default structure for it's projects is very easy to ramp up newbie developers into it with a senior supervising the team.
