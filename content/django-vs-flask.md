@@ -93,7 +93,7 @@ At the end of the day, you should choose the framework that adjusts more into yo
 taking into consideration their strengths and weaknesses, not only code-wise but also if the coding style is best suited to your organization.
 
 Do you have any experience that you want to share with any of these frameworks?
-Are there any extra pros or cons that you feel are missing?
+Are there any additional pros or cons that you feel we didn't discuss here?
 If so, I invite you to discuss them in the comment section.
 
 I hope this post was beneficial to you and thanks for reading.
