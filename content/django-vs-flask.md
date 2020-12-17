@@ -38,7 +38,7 @@ As it has a scaffolded default structure for its projects, it's easy to ramp up 
 # Flask
 [![flask logo](images/django-vs-flask-flask-logo.png)](https://flask.palletsprojects.com/en/1.1.x/)
 ## Approach
-Born as a combination of a http server with a template engine zipped together, Flask opts for a very minimalistic approach.
+Originally developed as a combination of an HTTP server and a template engine zipped together, Flask opts for a very minimalistic approach.
 It provides some minimal structure, but leaves the decisions up to you.
 This makes flask very easy to extend with practically whatever you want.
 
