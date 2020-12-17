@@ -20,7 +20,7 @@ It also has the concept of pluggable apps, which means that you can drop an app 
 ## Pitfalls
 - Tightly coupled with its toolset, Django is sort of difficult to use in combination with other tools (replacing the form library, for example).
 - The default scaffolding, while not bad for small projects, does not scale without modification when trying to manage things such as multiple environments.
-- It implements the Model View Template pattern and requires some effort to implement other architecture types with it.
+- This functionality implements the Model View Template pattern but requires some effort to implement other architecture types with it.
 
 ## Developer experience
 One of the perks of using an all batteries included approach is that the developer experience will be more or less the same across the framework.
