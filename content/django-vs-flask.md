@@ -59,7 +59,7 @@ Flask is what you want it to be.
 But, it makes you work for it, and you can start importing any libraries you like and code your app in your own way.
 This can be really cool, and makes a lot of sense if you want to quickly spin up a quick api for puting your python code on the web.
 On the other hand, the lack of guidance can be a bit overwhelming for new users, and can also leave them a bit lost if they don't know how the framework operates. 
-Also, if you want some standard features, like Authorization and Authentication or an admin panel, you will have to search for thrid party libraries or roll your own implementations.
+Also, if you want some standard features - like Authorization and Authentication, or an admin panel, you will have to search for third-party libraries or roll your own implementations.
 This can be a bit repetitive since most applications have these kinds of features implemented to a certain degree.
 
 # Team Size and Structure
