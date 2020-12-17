@@ -15,7 +15,7 @@ It also has the concept of pluggable apps, which means you can drop an app folde
 - Django has a very powerful ORM that exposes a lot of SQL to the python programming language.
 - It has Authentication and Authorization built-in, without the need for any extra configuration.
 - It also boasts a built-in admin site, and
-- a built-in mailing system.
+ a built-in mailing system.
 
 ## Pitfalls
 - Being tightly coupled with its toolset, Django can be difficult to use in combination with other tools, like replacing the form library, for example.
