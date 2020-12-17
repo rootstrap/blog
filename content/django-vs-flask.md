@@ -72,7 +72,7 @@ If you plan to spin up a lot of microservices, for example, then this can be a g
 
 # What To Take Away
 
-## Django is a good idea for…
+## Django is best suited to: 
 - Quickly validating business ideas.
 - Ecommerce sites with standard features.
 - Information systems in general where reporting is important.
