@@ -24,7 +24,7 @@ It also has the concept of pluggable apps, which means you can drop an app folde
 
 ## Developer Experience
 One of the main perks of using an all batteries included approach, is that the developer experience will be more or less the same across the framework.
-This proves very beneficial to people new to the framework, as they can follow a pattern and a guide to follow good practices by looking at existing code.
+This can be very beneficial for users new to the framework as they can follow a pattern, and guide, for best practices by looking at existing code.
 Another benefit you get from this is that the core parts of every site are tried and tested.
 This is a very desirable feature for parts like authentication and authorization, or an admin panel used to provide easy back office access to your team.
 
