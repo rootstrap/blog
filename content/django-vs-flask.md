@@ -75,7 +75,7 @@ If you plan to spin up a lot of microservices, for example, then this can be a g
 ## Django is best suited to: 
 - Quickly validating business ideas.
 - Ecommerce sites with standard features.
-- Information systems in general where reporting is important.
+- Information systems in which reporting is important.
 - Medium or Large code bases with small or medium teams maintaining them.
 
 ## Flask is a good idea for…
