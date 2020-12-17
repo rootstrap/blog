@@ -62,7 +62,7 @@ On the other side, the lack of guidance can be a bit overwhelming for a new user
 Also, if you want some standard features, like Authorization and Authentication or an admin panel, you will have to search for thrid party libraries or roll your own implementations.
 This can be a bit repetitive since almost every application has these kind of features implemented to a certain extent
 
-# Team size and structure
+# Team Size and Structure
 The liberties that flask gives you require a lot of experience to take advantage of.
 The initial simplicity of a sigle file app can lead very easily to a very big single file app.
 This is not bad if you just want to prototype something, but when you sart to split the app into files you will have the entire responsibility of those architecture decisions.
