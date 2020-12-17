@@ -96,5 +96,5 @@ Do you have any experience that you want to share with any of these frameworks?
 Are there any extra pros or cons that you feel are missing?
 If you do, I invite you to discuss them in the comment section.
 
-Thanks for reading.
+I hope this post was beneficial to you and thanks for reading.
  
