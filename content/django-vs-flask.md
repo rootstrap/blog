@@ -52,7 +52,7 @@ This makes Flask very easy to extend with practically anything you want.
 ## Pitfalls
 - Since it's very lightweight, while the framework itself doesn't need any special configuration, the used libraries often do require config.
 - You have to mix and match libraries to get the desired functionality. This also means that different parts of your project have different support from the community.
-- The lack of opinion can lead to complicated architectures, or to very big single file projects.
+- The lack of opinions can lead to complicated architectures or very big single file projects.
 
 ## Developer experience
 Flask is what you want it to be.
