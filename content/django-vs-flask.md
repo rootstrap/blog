@@ -1,4 +1,4 @@
-# Django vs Flask: which one should you choose for your project?
+# Django vs Flask: Which one should you choose for your project?
 [Django](https://www.djangoproject.com/) and [Flask](https://flask.palletsprojects.com/en/1.1.x/) are among the most popular Python web frameworks.
 In this article, we're going to review their main strengths and weaknesses to help you decide which one is a better fit for your project.
 
