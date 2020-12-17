@@ -7,7 +7,7 @@ In this article, we're going to review their main strengths and weaknesses to he
 [![django-logo](images/flask-vs-django-django-logo.png)](https://www.djangoproject.com/)
 ## Approach
 Django opts for an all batteries-included approach.
-From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
+From a powerful ORM to an authentication system or templating engine, Django takes care of it all without the need to learn any extra libraries.
 
 It also has the concept of pluggable apps, which means you can drop an app folder inside your project and get its functionality right away with very little configuration. 
 
