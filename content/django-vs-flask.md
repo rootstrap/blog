@@ -87,7 +87,7 @@ If you plan to spin up a lot of microservices, for example, then this can be a g
 # So, which one should you choose?
 To properly answer this question, you will need to take all of your project requirements into consideration and make a decision based on them. 
 If development speed and getting to the market quickly is your priority, then Django would probably be the better choice for you,
-since you get a more complete feature set out of the box.
+as you get a more complete feature set right out of the box.
 If you need a more custom solution, or your project features are out of the ordinary Flask might be the better choice.
 At the end of the day, you should choose the framework that adjusts more into your project idea and particular situation,
 taking into consideration their strengths and weaknesess, not only code wise but also if the coding style that their propose it's adecuate to your organization.
