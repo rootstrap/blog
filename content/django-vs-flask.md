@@ -90,7 +90,7 @@ If development speed and getting to the market quickly is your priority, then Dj
 as you get a more complete feature set right out of the box.
 If you need a more custom solution, or your project features are out of the ordinary Flask might be the better choice.
 At the end of the day, you should choose the framework that adjusts more into your project idea and particular situation,
-taking into consideration their strengths and weaknesess, not only code wise but also if the coding style that their propose it's adecuate to your organization.
+taking into consideration their strengths and weaknesses, not only code-wise but also if the coding style is best suited to your organization.
 
 Do you have any experience that you want to share with any of these frameworks?
 Are there any extra pros or cons that you feel are missing?
