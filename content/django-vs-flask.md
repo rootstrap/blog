@@ -9,7 +9,7 @@ In this article, we're going to review their main strengths and weaknesses to he
 Django opts for an all batteries-included approach.
 From a powerful ORM to an authentication system or a templating engine, Django takes care of it all without the need to learn any extra libraries.
 
-It also has the concept of pluggable apps, which means that you can drop an app folder inside your project and get its functionality right away
+It also has the concept of pluggable apps, which means you can drop an app folder inside your project and get its functionality right away with very little configuration. 
 
 ## Main features
 - Django has a very powerful ORM that exposes a lot of SQL to the python programming language.
