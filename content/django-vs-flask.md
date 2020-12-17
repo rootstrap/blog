@@ -19,7 +19,7 @@ It also has the concept of pluggable apps, which means you can drop an app folde
 
 ## Pitfalls
 - Being tightly coupled with its toolset, Django can be difficult to use in combination with other tools, like replacing the form library, for example.
-- The default scaffolding, while not bad for small projects, does not scale without modification when trying to manage things such as multiple environments.
+- While Django's **default scaffolding function** is not bad for small projects, it does not scale without modification when trying to manage things such as multiple environments.
 - This functionality implements the Model View Template pattern but requires some effort to implement other architecture types with it.
 
 ## Developer Experience
