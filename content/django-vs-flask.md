@@ -29,7 +29,7 @@ Another benefit you get from this approach is that the core parts of every site 
 This is a very desirable feature for parts like authentication and authorization, or an admin panel used to provide easy back office access to your team.
 
 ## Team Size and Structure
-Django is at its best for a small to medium team that plans to handle a middle to large sized code base
+Django is best served for small to medium-sized teams, that must handle middle to large-sized code bases.
 The project structure takes that into account and as a result file conflicts will be minimal.
 As it has a scaffolded default structure for its projects, it's easy to ramp up newbie developers to use it while under the supervision of a senior developer. 
 
