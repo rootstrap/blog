@@ -42,7 +42,7 @@ Born as a combination of a http server with a template engine zipped together, F
 It provides some minimal structure, but leaves the decisions up to you.
 This makes flask very easy to extend with practically whatever you want.
 
-## Main features
+## Main Features
 - Very lightweight.
 - It requires little to no configuration.
 - Not opinionated, you have total freedom to decide the project structure from a single file to an elaborate folder system.
