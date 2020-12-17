@@ -44,7 +44,7 @@ This makes Flask very easy to extend with practically anything you want.
 
 ## Main Features
 - Very lightweight.
-- It requires little to no configuration.
+-  Requires little to no configuration.
 - Not opinionated, you have total freedom to decide the project structure from a single file to an elaborate folder system.
 - When you need some structure, you have blueprints to structure your app.
 - Easy to integrate with other python libraries.
