@@ -63,7 +63,7 @@ Also, if you want some standard features, like Authorization and Authentication 
 This can be a bit repetitive since most applications have these kinds of features implemented to a certain degree.
 
 # Team Size and Structure
-The liberties that flask gives you require a lot of experience to take advantage of.
+The liberties that Flask gives you requires a lot of experience to take advantage of them.
 The initial simplicity of a sigle file app can lead very easily to a very big single file app.
 This is not bad if you just want to prototype something, but when you sart to split the app into files you will have the entire responsibility of those architecture decisions.
 Flask is better suited for very small code bases that do one thing and do it well, maintained by small teams.
