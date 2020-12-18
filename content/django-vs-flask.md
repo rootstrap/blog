@@ -88,7 +88,7 @@ Okay, now that we've examined the strengths and weaknesses of Django and Flask, 
 To properly answer this question, you will need to take all of your project requirements into consideration and make a decision based on them. 
 If development speed and getting to the market quickly is your priority, then Django would probably be the better choice for you,
 as you get a more complete feature set right out of the box.
-If you need a more custom solution or your project features are out of the ordinary, then Flask might be the better choice to help achieve this.
+If you need a more custom solution or your project features are a little out of the ordinary, then Flask might be the better choice to help achieve this.
 At the end of the day, you should choose the framework that is more suited to your project idea and particular situation, while also
 taking into consideration their strengths and weaknesses, not only code-wise but also if the coding style is best suited to your organization.
 
