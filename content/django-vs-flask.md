@@ -66,7 +66,7 @@ This can be a bit repetitive since most applications have these kinds of feature
 The liberties that Flask gives you requires a lot of experience to take advantage of them.
 The initial simplicity of a single file app can easily lead to a very big single file app.
 This is not bad if you just want to prototype something, but when you start to split the app up into files, you will have the entire responsibility of those architecture decisions on you.
-Flask is better suited to very small codebases that have a single function and maintained by small teams.
+Flask is better suited to very small codebases that have a single function and are maintained by small teams.
 If you plan to spin up a lot of microservices, for example, then this can be a good fit.
 
 
