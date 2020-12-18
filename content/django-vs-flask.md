@@ -71,7 +71,7 @@ If you plan to spin up a lot of microservices, for example, then this can be a g
 
 
 # What To Take Away
-
+Okay, now that we've examined the strengths and weaknesses of Django and Flask, let's look at the type of platforms and functionalities each framework is best suited to. 
 ## Django is best suited to: 
 - Quickly validating business ideas.
 - Ecommerce sites with standard features.
