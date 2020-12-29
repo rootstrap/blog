@@ -108,7 +108,7 @@ To execute it, activate the tutorial DAG and enter the view for the DAG. You wil
       
 This Operator is used to download files from an S3 bucket, before transforming and then uploading them to another bucket. Therefore, in order to use this operator, we need to configure an S3 connection.
 
-In the web interface go to Admin->Connections: set the connection id and type. Add the access key and the secret key as ‘extra’ arguments.
+In the web interface, go to Admin->Connections, and set the connection id and type. Add the access key and the secret key as ‘extra’ arguments.
 
 To get the canonical user for s3: 
 ```bash
