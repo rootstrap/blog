@@ -197,7 +197,7 @@ Restart the containers:
 
 ![](images/s3_connection.png)
 
-It is important that the script that you set in the S3FileTransformOperator starts with **#!/usr/bin/python3 **in the case of python.      
+It's important that the script you set in the S3FileTransformOperator starts with **#!/usr/bin/python3 **in the form of python.      
 
 **Problem: if your script needs specific libraries to be installed (for example needs pandas), those are not installed in the worker, so when it executes the task gives you an error. For this problem there is not a clean solution, unless instead of celery you use KubernetesExecutor.**
 
