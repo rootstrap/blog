@@ -106,7 +106,7 @@ To execute it, activate the tutorial DAG and enter the view for the DAG. You wil
  
 ### S3FileTransformOperator
       
-This Operator is used to download a file from a s3 bucket, transform it and upload to another bucket. Therefore, in order to use this operator we need to configure a s3 connection.
+This Operator is used to download files from an S3 bucket, before transforming and then uploading them to another bucket. Therefore, in order to use this operator, we need to configure an S3 connection.
 
 In the web interface go to Admin->Connections: set the connection id and type. Add the access key and the secret key as ‘extra’ arguments.
 
