@@ -8,7 +8,7 @@ In this blog post, we look at some experiments using Airflow to process files fr
 ## What is Airflow? 
 Airflow is a platform used to programmatically schedule and monitor the workflows of tasks. This workflow is designed as a dependency graph between tasks. 
 
-It is composed by a **scheduler** which sends the tasks  to be executed following the dependencies, and **workers** which execute the tasks. It also provides an **user interface** to visualize pipelines running and monitor progress, see logs, start the workflows manually and others.
+It is composed of a **scheduler** which sends tasks to be executed following the dependencies and **workers** which execute the tasks. It also provides a **user interface** to visualize and monitor running pipelines, view logs, and start workflows manually.
 
 **Airflow executors:** Executors are the mechanism by which task instances get run. Airflow has different executors, you can them find [here](https://airflow.apache.org/docs/stable/executor/index.html). The most common ones are:
 
