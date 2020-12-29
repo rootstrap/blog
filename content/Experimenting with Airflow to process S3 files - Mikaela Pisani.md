@@ -54,7 +54,7 @@ Docker Compose runs an airflow architecture composed by:
 
 So you know, all components are docker containers.
 
-**Run with celery executor:**           
+**Run with Celery Executor:**           
 
 ```bash
 docker-compose -f docker-compose-CeleryExecutor.yml up -d
