@@ -73,7 +73,7 @@ You can use the command line to check the configured DAGs:
 ```
 
 **Run Manually** 
-In the list view, activate the DAG with the On/Off button. The enter to the DAG and press the Trigger button. 
+In the list view, activate the DAG with the On/Off button. Then, enter the DAG and press the Trigger button. 
 
 ![trigger_dag](images/trigger_dag.png)
 
