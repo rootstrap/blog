@@ -155,7 +155,7 @@ with DAG("s3_transformer", default_args=default_args, schedule_interval= '@once'
 
     t1.set_upstream(transformer)
 ```
-Change the parameters source\_s3\_key and dest\_s3\_key in the script, and copy the dag to dags folder.  
+Change the parameters source\_s3\_key and dest\_s3\_key in the script, and then copy the dag to the dags folder.  
 
 ```bash
 	 docker cp test_s3_file_transform_operator.py  docker-airflow_webserver_1:/usr/local/airflow/dags/
