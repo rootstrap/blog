@@ -248,7 +248,7 @@ with DAG("query_s3", default_args=default_args, schedule_interval= '@once') as d
     
     t1.set_upstream(run_query)
 ```    
-Copy the dag to the dags directory and execute it from the web interface. 
+Copy the DAG to the DAG's directory and execute it from the web interface. 
 
 **KubernetesPodOperator**
 
