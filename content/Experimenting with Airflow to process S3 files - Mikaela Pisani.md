@@ -208,7 +208,7 @@ If you are having problems, you can create a **DAG** that contains a [S3KeySenso
 
 This connector allows you to make a query to Athena's database. You will need to set the s3_connection in the ``aws_conn_id`` parameter. This connection should be defined in the connection configuration. 
 
-Update the following script with the correct database and the disered query. You need to create a database in [AWS Athena](https://aws.amazon.com/es/athena/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) to query the S3 files.  
+Update the following script with the correct database and desired query. You need to create a database in [AWS Athena](https://aws.amazon.com/es/athena/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) to query the S3 files.  
 
 ```python 
 from airflow import DAG
