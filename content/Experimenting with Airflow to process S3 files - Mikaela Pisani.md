@@ -2,7 +2,7 @@
 ![](images/airflow.png)
 
 With machine learning, we always need to deal with ETL processing (Extract, Transform, Load) to get data ready for our model. Airflow can help us build ETL pipelines, and visualize the results for each of the tasks in a centralized way.   
-This blog shows some experiments using Airflow to process files from S3, showing the possibilities and limitations that this tool has. 
+In this blog post, we look at some experiments using Airflow to process files from S3, which highlight the possibilities and limitations of the tool.
 
 
 ## What is Airflow? 
