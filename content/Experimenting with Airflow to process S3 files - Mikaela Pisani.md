@@ -50,7 +50,7 @@ Docker Compose runs an airflow architecture composed by:
 	- 1 worker & scheduler       
 	- Flower (jobs' UI)   
 	- Redis (as broker)      
-	- postgres (database)      
+	- Postgres (database)      
 
 All componentes are docker containers.
 
