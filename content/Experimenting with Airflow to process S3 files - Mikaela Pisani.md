@@ -258,7 +258,7 @@ If you have the following error:
 ```bash 
 	{pod_launcher.py:84} ERROR - Exception when attempting to create Namespaced Pod.
 ```
-Add **in_cluster=True** in the DAG in order to specify that the pod will run in the same cluster. 
+Add **in_cluster=True** in the DAG to specify that the pod will be running in the same cluster. 
 
 **SubdagOperator**
 
