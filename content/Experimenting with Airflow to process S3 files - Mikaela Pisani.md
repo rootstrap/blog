@@ -334,7 +334,7 @@ This example lists the files in an S3 bucket, and for each file, it then creates
 
 ![](images/subdags.png)
 
-**Problem: too many tasks are queued, and it is probable that you will need to add more workers.**
+**Potential problem: Often times too many tasks are queued, and it is probable that you will need to add more workers.**
 
 
 # Lessons learned
