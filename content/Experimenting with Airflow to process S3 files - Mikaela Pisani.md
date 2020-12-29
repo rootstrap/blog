@@ -31,7 +31,7 @@ So, when using the Celery Executor, these are the componentes of the architectur
 
 ![Airflow Architecture with Celery Executor](https://miro.medium.com/max/2000/1*avBjYUY6ZtfEyTkk7FI8JQ.png)
 
-So, the airflow scheduler uses the celery executor to schedule the tasks. The celery executor enqueues the tasks, and each of the workers takes the queued tasks to bee executed. 
+So, the Airflow Scheduler uses the Celery Executor to schedule tasks. The Celery Executor enqueues the tasks, and each of the workers takes the queued tasks to be executed. 
 
 All the componentes are deployed in a Kubernetes cluster. The database might be MySQL or Postgres. The message broker might be RabbitMQ or Redis. 
 
