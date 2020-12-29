@@ -47,7 +47,7 @@ Each of the tasks is implemented with an operator. Different types of operators 
 You can locally run the Kubernetes cluster for airflow locally with Docker Compose. Download this [repo](https://github.com/puckel/docker-airflow]).
 
 Docker Compose runs an airflow architecture composed by:    
-	- 1 worker, scheduler       
+	- 1 worker & scheduler       
 	- flower (jobs' UI)   
 	- redis (as broker)      
 	- postgres (database)      
