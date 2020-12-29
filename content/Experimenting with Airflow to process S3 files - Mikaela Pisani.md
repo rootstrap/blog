@@ -14,7 +14,7 @@ It is composed of a **scheduler** which sends tasks to be executed following the
 
 - **SequentialExecutor:** The default executor where tasks are executed sequentially.        
 - **LocalExecutor**:  LocalExecutor runs tasks on the same node as the scheduler. It allows you to locally run multiple jobs in parallel. 
-- CeleryExecutor **is the most mature option**. It requires Redis or RabbitMQ to queue the tasks.
+- **CeleryExecutor** **:  This is the **_most mature option_** and requires Redis or RabbitMQ to queue the tasks.
 - KubernetesExecutor was introduced in version 1.10.0. With KubernetesExecutor you can prepare different docker images for your tasks, and it gives you more flexibility.      
 
 Since CeleryExecutor is more mature, experiments have been performed including this executor in the architecture.   
