@@ -24,7 +24,7 @@ FYI - since CeleryExecutor is more mature, experiments have been performed with 
 So, when using the Celery Executor, these are the componentes of the architecture:  
 
 - A **Database**: This contains DAG's (workflows) status and task instances.
-- Airflow **web server**: a web interface to query the status in the database, monitor and execute DAGs.
+- Airflow **Web Server**: A web interface to query the database status, and monitor and execute DAGs.
 - Airflow **scheduler**: sends the tasks to the queues and updates information in the database. 
 - A **message broker**: put into the queue the task's commands to be run.
 - Airflow **Celery workers**: retrieve the commands from the queue, execute them and update the database.
