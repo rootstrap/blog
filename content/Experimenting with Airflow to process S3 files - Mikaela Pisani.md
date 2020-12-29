@@ -262,7 +262,7 @@ Add **in_cluster=True** in the DAG to specify that the pod will be running in th
 
 **SubdagOperator**
 
-Creates dynamically a subdag inside the dag. 
+This dynamically creates a subDag inside the dag. 
 
 ```python 
 from airflow import DAG
