@@ -183,7 +183,7 @@ Copy it to the container:
 	 docker exec -ti docker-airflow_webserver_1 mkdir /usr/local/airflow/dags/scfipts/ & docker cp transform.py  docker-airflow_webserver_1:/usr/local/airflow/dags/scfipts/
 ```
 
-In order to run this task, we will need to install some libraries in the containers, and then restart them: 
+To run this task, we will need to install some libraries in the containers and then restart them: 
 
 ```bash
 	docker exec -ti docker-airflow_worker_1 pip install boto3 boto botocore & docker exec -ti docker-airflow_scheduler_1 pip install boto3 boto botocore & docker exec -ti docker-airflow_webserver_1 pip install boto3 boto botocore
