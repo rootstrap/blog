@@ -253,7 +253,7 @@ Copy the DAG to the DAG's directory and execute it from the web interface.
 **KubernetesPodOperator**
 
 This DAG executes the task into a pod, and you then have the option to kill the pod once it finishes the execution.  
-If you have the following error: 
+Note - if you are seeing the following error: 
 
 ```bash 
 	{pod_launcher.py:84} ERROR - Exception when attempting to create Namespaced Pod.
