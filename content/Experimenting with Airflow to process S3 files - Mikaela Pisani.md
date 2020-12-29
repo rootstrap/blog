@@ -330,7 +330,7 @@ start_op >> loop_files
 Once you run it, you will see a web option to enter the SubDag's information and logs:
 ![](images/subdag_operator.png)
 
-This example lists the files in a s3 bucket and for each file creates a subdag "hellow_wold_X". 
+This example lists the files in an S3 bucket, and for each file, it then creates a SubDAG "hellow_wold_X". 
 
 ![](images/subdags.png)
 
