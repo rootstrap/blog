@@ -10,7 +10,7 @@ Airflow is a platform used to programmatically schedule and monitor the workflow
 
 It is composed of a **scheduler** which sends tasks to be executed following the dependencies and **workers** which execute the tasks. It also provides a **user interface** to visualize and monitor running pipelines, view logs, and start workflows manually.
 
-**Airflow executors:** Executors are the mechanism by which task instances get run. Airflow has different executors, you can them find [here](https://airflow.apache.org/docs/stable/executor/index.html). The most common ones are:
+**Airflow Executors:** Executors are the mechanisms on which task instances get to run. Airflow has different executors, which you can see [here](https://airflow.apache.org/docs/stable/executor/index.html). Here are the most common:
 
 - **SequentialExecutor:** The default executor where tasks are executed sequentially.        
 - **LocalExecutor**:  LocalExecutor runs tasks on the same node as the scheduler. It allows you to locally run multiple jobs in parallel. 
