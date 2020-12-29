@@ -199,7 +199,7 @@ Restart the containers:
 
 It's important that the script you set in the S3FileTransformOperator starts with **#!/usr/bin/python3 **in the form of python.      
 
-**Problem: if your script needs specific libraries to be installed (for example needs pandas), those are not installed in the worker, so when it executes the task gives you an error. For this problem there is not a clean solution, unless instead of celery you use KubernetesExecutor.**
+**Potential problem: If your script needs specific libraries to be installed (like pandas), they are NOT installed in the worker. So, when it executes, the task then gives you an error. There is not a clean solution for this issue unless you use KubernetesExecutor instead of celery.**
 
 In case that you are having problems, in order to test the connection you can create a DAG that contains a [S3KeySensor](https://airflow.readthedocs.io/en/stable/_modules/airflow/sensors/s3_key_sensor.html).         
 
