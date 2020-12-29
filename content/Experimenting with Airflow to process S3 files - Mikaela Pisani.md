@@ -327,7 +327,7 @@ loop_files = SubDagOperator(
 start_op >> loop_files
 ```
 
-When you run it it, from the web it appears the option to enter to the subdag's information and logs:
+Once you run it, you will see a web option to enter the SubDag's information and logs:
 ![](images/subdag_operator.png)
 
 This example lists the files in a s3 bucket and for each file creates a subdag "hellow_wold_X". 
