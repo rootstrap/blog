@@ -97,7 +97,7 @@ You can also check the logs for the scheduler and the worker from the console vi
 	 docker logs -f docker-airflow_worker_1
 ```
 
-## Experiments with operators:
+## Experiments with Operators:
 
 ### BashOperator
 
