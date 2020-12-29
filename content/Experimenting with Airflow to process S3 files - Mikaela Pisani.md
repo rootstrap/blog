@@ -48,7 +48,7 @@ You can locally run the Kubernetes cluster for airflow locally with Docker Compo
 
 Docker Compose runs an airflow architecture composed by:    
 	- 1 worker & scheduler       
-	- flower (jobs' UI)   
+	- Flower (jobs' UI)   
 	- redis (as broker)      
 	- postgres (database)      
 
