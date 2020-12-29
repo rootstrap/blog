@@ -12,7 +12,7 @@ It is composed of a **scheduler** which sends tasks to be executed following the
 
 **Airflow executors:** Executors are the mechanism by which task instances get run. Airflow has different executors, you can them find [here](https://airflow.apache.org/docs/stable/executor/index.html). The most common ones are:
 
-- SequentialExecutor is the default executor. The asks are executed sequentially.        
+- **SequentialExecutor:** The default executor where tasks are executed sequentially.        
 - LocalExecutor you can run locally multiple jobs in parallel. LocalExecutor runs the task on the same node as the scheduler.    
 - CeleryExecutor **is the most mature option**. It requires Redis or RabbitMQ to queue the tasks.
 - KubernetesExecutor was introduced in version 1.10.0. With KubernetesExecutor you can prepare different docker images for your tasks, and it gives you more flexibility.      
