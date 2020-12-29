@@ -201,7 +201,7 @@ It's important that the script you set in the S3FileTransformOperator starts wit
 
 **Potential problem: If your script needs specific libraries to be installed (like pandas), they are NOT installed in the worker. So, when it executes, the task then gives you an error. There is not a clean solution for this issue unless you use KubernetesExecutor instead of celery.**
 
-In case that you are having problems, in order to test the connection you can create a DAG that contains a [S3KeySensor](https://airflow.readthedocs.io/en/stable/_modules/airflow/sensors/s3_key_sensor.html).         
+If you are having problems, you can create a **DAG** that contains a [S3KeySensor](https://airflow.readthedocs.io/en/stable/_modules/airflow/sensors/s3_key_sensor.html) to test the connection.         
 
 
 ### AWSAthenaOperator
