@@ -17,7 +17,7 @@ It is composed of a **scheduler** which sends tasks to be executed following the
 - **CeleryExecutor** **:  This is the **_most mature option_** and requires Redis or RabbitMQ to queue the tasks.
 - **KubernetesExecutor**: This executor was introduced in version **1.10.0**. With KubernetesExecutor, you can prepare different docker images for your tasks with more flexibility.      
 
-Since CeleryExecutor is more mature, experiments have been performed including this executor in the architecture.   
+FYI - since CeleryExecutor is more mature, experiments have been performed with this executor in the architecture.   
 
 ## Airflow Architecture 
 
