@@ -52,7 +52,7 @@ Docker Compose runs an airflow architecture composed by:
 	- Redis (as broker)      
 	- Postgres (database)      
 
-All componentes are docker containers.
+So you know, all components are docker containers.
 
 **Run with celery executor:**           
 
