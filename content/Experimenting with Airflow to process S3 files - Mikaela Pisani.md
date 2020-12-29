@@ -110,7 +110,7 @@ This Operator is used to download files from an S3 bucket, before transforming a
 
 In the web interface, go to Admin->Connections, and set the connection id and type. Add the access key and the secret key as ‘extra’ arguments.
 
-To get the canonical user for s3: 
+To get the canonical user for S3: 
 ```bash
 	aws s3api list-buckets --query Owner.Ioutput text
 ```
