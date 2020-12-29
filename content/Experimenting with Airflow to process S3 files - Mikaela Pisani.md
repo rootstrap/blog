@@ -337,7 +337,7 @@ This example lists the files in an S3 bucket, and for each file, it then creates
 **Potential problem: Often times too many tasks are queued, and it is probable that you will need to add more workers.**
 
 
-# Lessons learned
+# Lessons Learned
 - When you don't need specific dependencies, use BashOperator or PythonOperator
 - When your tasks need specific dependencies, use KubernetesOperator    
 - Subdags are useful when you need to repeat a serie of tasks for each S3 file, but you need to be careful to control the size of the queue. 
