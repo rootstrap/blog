@@ -83,7 +83,7 @@ To see the logs for a task from the web, click on the task, and press the 'View 
 
 ![view_log](images/view_log.png)
 
-You can also check the logs for the scheduler and the worker from the console:
+You can also check the logs for the scheduler and the worker from the console via the following:
 
 - scheduler's logs :
 
