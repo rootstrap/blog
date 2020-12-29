@@ -77,7 +77,7 @@ In the list view, activate the DAG with the On/Off button. Then, enter the DAG a
 
 ![trigger_dag](images/trigger_dag.png)
 
-**See logs:**
+**See Logs:**
 
 See the logs for a certain task from the web: 
 
