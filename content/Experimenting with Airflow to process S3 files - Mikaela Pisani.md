@@ -340,4 +340,4 @@ This example lists the files in an S3 bucket, and for each file, it then creates
 # Lessons Learned
 - When you don't need specific dependencies, it's better to use **BashOperator** or **PythonOperator**
 - On the other hand, when your tasks need specific dependencies, it's better to use **KubernetesOperator**.  
-- In addition, SubDAGs are useful when you need to repeat a series of tasks for each S3 file. However, you need to ensure that you control the size of the queue. 
+Also, SubDAGs are useful when you need to repeat a series of tasks for each S3 file. However, you need to ensure that you remember to control the size of the queue. 
