@@ -37,7 +37,7 @@ All of the components are deployed in a Kubernetes cluster. The database can be 
 
 ## DAG 
 
-A [DAG](https://airflow.apache.org/docs/stable/concepts.html) (Directed Acyclic Graph) represents a group of tasks, where might exists dependence between them or not. It is defined as a python script, which represents the DAGs structure (tasks and their dependencies) as code.
+A [DAG](https://airflow.apache.org/docs/stable/concepts.html) (Directed Acyclic Graph) represents a group of tasks, where dependence might exist between them. It is defined as a python script that represents the DAG's structure (tasks and their dependencies) as code.
 
 Each of the tasks is implemented with an Operator. Different types of operator exist, even you can create your custom operator if needed. The most common Operators are BashOperator (to execute bash actions) and PythonOperator (to execute python scripts/functions). In this blog different examples are provided using some of the [operators available](https://airflow.apache.org/docs/stable/_api/airflow/operators/index.html).  
 
