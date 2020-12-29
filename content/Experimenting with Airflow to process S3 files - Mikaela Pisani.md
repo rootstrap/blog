@@ -252,7 +252,7 @@ Copy the DAG to the DAG's directory and execute it from the web interface.
 
 **KubernetesPodOperator**
 
-This DAG executes the task into a pod, you have the option to kill the pod once it finishes the execution.  
+This DAG executes the task into a pod, and you then have the option to kill the pod once it finishes the execution.  
 If you have the following error: 
 
 ```bash 
