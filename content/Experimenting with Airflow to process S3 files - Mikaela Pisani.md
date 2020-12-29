@@ -1,4 +1,4 @@
-# Experimenting with Airflow to process S3 files
+# Experimenting with Airflow to Process S3 Files
 ![](images/airflow.png)
 
 In machine learning problems we always need to deal with ETL processing to get ready the data for our model. Airflow might help us to build the ETL pipelines and visualize the results for each of the tasks in a centralized way.   
@@ -342,4 +342,3 @@ This example lists the files in a s3 bucket and for each file creates a subdag "
 - When you don't need specific dependencies, use BashOperator or PythonOperator
 - When your tasks need specific dependencies, use KubernetesOperator    
 - Subdags are useful when you need to repeat a serie of tasks for each S3 file, but you need to be careful to control the size of the queue. 
-
