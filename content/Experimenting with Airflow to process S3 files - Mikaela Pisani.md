@@ -102,7 +102,7 @@ You can also check the logs for the scheduler and the worker from the console vi
 ### BashOperator
 
 The BashOperator executes a bash command. This example contains three bash tasks, two of which can be executed in parallel. 
-To execute it, activate the tutorial DAG. Enter to the view for the DAG and you will see that the first task of the DAG will be scheduled and then queued to be executed.
+To execute it, activate the tutorial DAG and enter the view for the DAG. You will then see that the first task of the DAG will be scheduled and then queued for completion. 
  
 ### S3FileTransformOperator
       
