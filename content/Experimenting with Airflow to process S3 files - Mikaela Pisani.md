@@ -85,7 +85,7 @@ To see the logs for a task from the web, click on the task, and press the 'View 
 
 You can also check the logs for the scheduler and the worker from the console via the following:
 
-- scheduler's logs :
+- Scheduler's logs :
 
 ```bash
 	docker logs -f docker-airflow_scheduler_1
