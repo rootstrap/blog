@@ -6,7 +6,7 @@ In this blog post, we look at some experiments using Airflow to process files fr
 
 
 ## What is Airflow? 
-Airflow is a platform to programmatically schedule and monitor workflows of tasks. The workflow is designed as a dependency graph between tasks. 
+Airflow is a platform used to programmatically schedule and monitor the workflows of tasks. This workflow is designed as a dependency graph between tasks. 
 
 It is composed by a **scheduler** which sends the tasks  to be executed following the dependencies, and **workers** which execute the tasks. It also provides an **user interface** to visualize pipelines running and monitor progress, see logs, start the workflows manually and others.
 
