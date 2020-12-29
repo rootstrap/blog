@@ -79,7 +79,7 @@ In the list view, activate the DAG with the On/Off button. Then, enter the DAG a
 
 **See Logs:**
 
-See the logs for a certain task from the web: 
+To see the logs for a task from the web, click on the task, and press the 'View Log' button. 
 
 ![view_log](images/view_log.png)
 
