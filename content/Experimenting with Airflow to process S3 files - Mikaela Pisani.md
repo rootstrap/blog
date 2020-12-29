@@ -189,7 +189,7 @@ In order to run this task, we will need to install some libraries in the contain
 	docker exec -ti docker-airflow_worker_1 pip install boto3 boto botocore & docker exec -ti docker-airflow_scheduler_1 pip install boto3 boto botocore & docker exec -ti docker-airflow_webserver_1 pip install boto3 boto botocore
 ```
 
-Restart the containers
+Restart the containers:
 
 ```bash
 	docker restart docker-airflow_worker_1 & docker restart docker-airflow_scheduler_1 & docker restart docker-airflow_webserver_1
