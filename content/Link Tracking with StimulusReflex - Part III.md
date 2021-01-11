@@ -93,7 +93,7 @@ FYI, don't forget to actually import CableReady at the top of the file.
 import CableReady from 'cable_ready'
 ```
 
-Let's change our Rails views now to actually show the link's views count.
+Let's now change our Rails views to actually show the link's views count.
 Go to `app/views/shortened_links/index.html.erb` and add a new column on the table.
 
 
