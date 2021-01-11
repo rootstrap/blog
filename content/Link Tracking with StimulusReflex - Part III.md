@@ -49,7 +49,7 @@ the attribute. That way you are absolutely certain that the redirect will
 happen in the least possible time. However, that is outside the scope of this article.
 
 Once this in place, when people click on a shortened link, for example, `www.sholi.com/58dad962`, they will
-get redirected to the original URL and we'll track one morer view for that link.
+get redirected to the original URL, and we will then track an additional view for that link.
 
 ### Displaying Link Views
 
