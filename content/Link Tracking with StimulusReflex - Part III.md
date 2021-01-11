@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 end
 ```
 
-Remember to add it at the bottom of the block so it does not override any other routes.
+Make sure to add this at the bottom of the block so it does not override any other routes.
 
 With this, the implementation should be pretty straightforward:
 
