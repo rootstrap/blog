@@ -153,6 +153,6 @@ This concludes on how to use StimulusReflex, but you can still play around with 
 - Track the browser from the links users clicked
 - Track the user's country
 - Add charts in real-time
-- Much more...
+- And much more...
 
 Or, just start a project of your own and give StimulusReflex a try!
