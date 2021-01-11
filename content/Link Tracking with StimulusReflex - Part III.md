@@ -148,7 +148,7 @@ of this with minimal JS and maximum productivity.
 
 ### What's Next?
 
-This concludes this series on how to use StimulusReflex, but you can still play around with this project and add more functionality:
+This concludes on how to use StimulusReflex, but you can still play around with this project and add more functionality with the following:
 
 - Track the browser from which the user clicked the link
 - Track the user's country
