@@ -4,7 +4,7 @@ In this last part of this series, we'll use what we previously built to start tr
 
 ![Header image](images/stimulus_reflex.jpeg)
 
-### Redirecting users
+### Redirecting Users
 
 Let's start with the simple stuff, when a user follows one of our shortened links, they expect to be redirected to the original URL. To do this, we need to create a new controller and add the corresponding route:
 
