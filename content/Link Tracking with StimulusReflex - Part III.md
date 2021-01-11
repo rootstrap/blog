@@ -57,7 +57,7 @@ At this point, we could just make a static page and spit out our data, but where
 To provide you with an alternative method for passing data from the server to the view,
 we will make page views update in real-time, by using CableReady.
 
-To do this, let's first generate a new channel by running:
+To do this, let's first generate a new channel by running the following:
 
 ```bash
 bundle exec rails generate channel LinkViews
