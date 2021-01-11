@@ -150,7 +150,7 @@ of this with minimal JS and maximum productivity.
 
 This concludes on how to use StimulusReflex, but you can still play around with this project and add more functionality with the following:
 
-- Track the browser from which the user clicked the link
+- Track the browser from the links users clicked
 - Track the user's country
 - Add charts in real time
 - Much more...
