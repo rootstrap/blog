@@ -87,7 +87,7 @@ consumer.subscriptions.create('LinkViewsChannel', {
 });
 ```
 
-And don't forget to actually import CableReady at the top of the file
+FYI, don't forget to actually import CableReady at the top of the file.
 
 ```javascript
 import CableReady from 'cable_ready'
