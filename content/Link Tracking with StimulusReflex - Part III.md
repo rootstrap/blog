@@ -73,7 +73,7 @@ class LinkViewsChannel < ApplicationCable::Channel
 end
 ```
 
-We must now tell our client channel  (the Javascript one) to perform CableReady operations, if necessary. 
+We must now tell our client channel (the Javascript one) to perform CableReady operations, if necessary. 
 You can do this by editing the code inside the following:
 `app/javascript/channels/link_views_channel.js` to match the following snippet:
 
