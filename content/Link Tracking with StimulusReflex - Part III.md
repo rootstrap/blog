@@ -28,7 +28,7 @@ end
 
 Make sure to add this at the bottom of the block so it does not override any other routes.
 
-With this, the implementation should be pretty straightforward:
+By using the following, the implementation should be pretty straightforward:
 
 ```ruby
 # app/controllers/redirections_controller.rb
