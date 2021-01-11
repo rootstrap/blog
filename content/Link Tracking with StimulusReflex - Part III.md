@@ -112,7 +112,7 @@ Then, populate it with the right data:
 ```
 
 Notice how we wrapped the views count inside a span tag with an ID.
-We are doing this because we need to tell CableReady to perform operations later on and for that, we require a selector.
+We are doing this because we need to tell CableReady to perform operations later on. To do this, we must require a selector.
 
 So, just copy the selector and change `app/controllers/redirections_controller.rb` to look like this:
 
