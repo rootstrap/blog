@@ -103,7 +103,7 @@ Go to `app/views/shortened_links/index.html.erb` and add a new column on the tab
   <div class="col"></div>
 ```
 
-And populate it with the right data:
+Then, populate it with the right data:
 
 ```erb
   <div class="col"><%= shortened_link.original_url %></div>
