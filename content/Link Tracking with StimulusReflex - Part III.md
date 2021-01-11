@@ -51,7 +51,7 @@ happen in the least possible time. However, that is outside the scope of this ar
 With this in place, when people click on a shortened link, let's say `www.sholi.com/58dad962`. they'll
 get redirected to the original URL and we'll track one morer view for that link.
 
-### Displaying link views
+### Displaying Link Views
 
 At this point we could just make a static page and spit out our data, but what's the fun in that?
 As a way to show how to pass data from the server to the view, as opposed to what we've been doing until now,
