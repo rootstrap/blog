@@ -139,7 +139,7 @@ What's going on here? Well it's pretty simple, we are including `CableReady::Bro
 to so we can broadcast operations. Then we add an operation on the
 `"link_views"` channel (the one we set to stream from already). This operation
 is a text replacement in the node with the id `link-#{link.id}-views-count`,
-that's what the `#` symbolizes, and the text is the new views count.
+that's what the `#` symbolizes, and the text is the new view count.
 
 ### Conclusion
 
