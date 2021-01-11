@@ -143,7 +143,7 @@ that's what the `#` symbolizes, and the text is the new view count.
 
 ### Conclusion
 
-In the series, we learned how to setup StimulusReflex, build CRUD apps on a breeze, and track data in real-time. All
+Throughout this post, we learned how to setup StimulusReflex, build CRUD apps on a breeze, and track data in real-time. All
 of this with minimal JS and maximum productivity.
 
 ### What's next?
