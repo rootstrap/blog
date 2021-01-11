@@ -1,6 +1,6 @@
 # Link Tracking with StimulusReflex - Part III
 
-In this last part of this series, we'll use what we built before to actually start tracking views. To do so, we'll use [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) and [CableReady](https://github.com/hopsoft/cable_ready) to broadcast and make changes in our frontend.
+In this last part of this series, we'll use what we previously built to start tracking views. To do so, we will use [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) and [CableReady](https://github.com/hopsoft/cable_ready) to broadcast and make changes in our frontend.
 
 ![Header image](images/stimulus_reflex.jpeg)
 
