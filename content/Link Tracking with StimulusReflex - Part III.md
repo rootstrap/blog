@@ -55,7 +55,7 @@ get redirected to the original URL, and we will then track an additional view fo
 
 At this point, we could just make a static page and spit out our data, but where's the fun in that?
 To provide you with an alternative method for passing data from the server to the view,
-we'll make page views update in real time using CableReady.
+we will make page views update in real-time, by using CableReady.
 
 To do this, let's first generate a new channel by running:
 
