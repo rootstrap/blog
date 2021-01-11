@@ -46,7 +46,7 @@ end
 We want to use [`#increment!`](https://apidock.com/rails/ActiveRecord/Base/increment!) as it's atomic, and we also don't want to run any validations as it would just slow us down.
 However, what you really want to do is have a background job to increment
 the attribute. That way you are absolutely certain that the redirect will
-happen in the least possible time, but that's outside the scope of this article.
+happen in the least possible time. However, that is outside the scope of this article.
 
 With this in place, when people click on a shortened link, let's say `www.sholi.com/58dad962`. they'll
 get redirected to the original URL and we'll track one morer view for that link.
