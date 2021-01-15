@@ -56,7 +56,7 @@ If we have to do test from the terminal with our gem, we only need the command b
 
 In the Lib folder is where the magic will be done, here we will put our classes, our code, our methods that will be offered to those developers who want to use the gem that we make. If we look closely, we will see a folder with the name of our gem and if we look inside the folder, we will find a file with the name version. This version file is used to indicate what is the version of our gem and it is the file that is used to complete the version attribute of our gemspec file which we will see later.
 
-On the other hand we have the file name_gem.rb (in our example 'blog_gem.rb'), which is the main file of the gem. This file contains code similar to the following:
+As well as this, we have the file name_gem.rb (in our example 'blog_gem.rb'), which is the main file of the gem. This file contains specific code similar to the following:
 
 ```ruby
 require 'blog_gem/version'
