@@ -124,4 +124,4 @@ By default, Rsgem adds the following dev dependencies: Rake, Reek, RSpec, Ruboco
 
 Finally, in the Readme file, we will need to add all of the information associated with our gem. For example, how it works, how to install it, the methods that it offers, as well as anything that could be useful for a developer to use. 
 
-Now we have a general idea of the components that the project has, just get down to work and make your first gem! For more information about how to make a gem I strongly recommend looking at the page of [rubygems](https://guides.rubygems.org/make-your-own-gem/)
+Now that you have a general idea of the components contained in a project, you are ready to get down to work and develop your first gem! For more information about how to do this, I strongly recommend looking at the following page [rubygems](https://guides.rubygems.org/make-your-own-gem/)
