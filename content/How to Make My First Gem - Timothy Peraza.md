@@ -120,7 +120,7 @@ In this file we will put all the information about our gem, who made it, contact
 
 By default, rsgem adds the dev dependencies: rake, reek, rspec, rubocop, and simplecov. This is because in Rootstrap we focus a lot on the quality of the code, it seems to us something very important when developing therefore, we add these dependencies to control that our gem has good quality.
 
-## Readme file
+## Readme File
 
 Finally, in the readme file we will add all the information about our gem, how it works, how to install it, the methods it offers and everything that is useful so another developer can use it.
 
