@@ -54,7 +54,7 @@ If we have to test from the terminal with our gem, we just need the command bund
      width="500" height="250"
      align="middle"/>
 
-In the Lib folder is where the magic will be done, here we will put our classes, our code, our methods that will be offered to those developers who want to use the gem that we make. If we look closely, we will see a folder with the name of our gem and if we look inside the folder, we will find a file with the name version. This version file is used to indicate what is the version of our gem and it is the file that is used to complete the version attribute of our gemspec file which we will see later.
+The Lib folder is where the magic happens, as it is where we put the classes, codes, and methods, that will be on offer to the developers when using our gem. If you look closely, you will see a folder with the name of our gem, and if you look inside the folder, you will find a file with the name version. This version file is used to indicate the current version of our gem, and will also be used to complete the version attribute of our gemspec file, which we will see later.
 
 As well as this, we have the file name_gem.rb (in our example 'blog_gem.rb'), which is the main file of the gem. This file contains specific code similar to the following:
 
