@@ -68,7 +68,7 @@ end
 
 ```
 
-As we can see, it is a class where, in principle, you could put code directly. That decision is up to the developer's wish, but generally no code is added to this file, instead of it, 'requires' are done to the files which contain the classes which offer the methods of our gem. We can also see this class does generic error handling which follows the ruby guidelines.
+As we can see here, it is a class wherein principle, you could put the code directly in. That decision is up to the developer, but generally, there won't be code added to this file. Instead of this, 'requires' will be added to the files, which contain the classes that offer the methods of our gem. We can also see that this class covers generic error handling, which follows the ruby guidelines.
 
 ## Spec Folder
 
