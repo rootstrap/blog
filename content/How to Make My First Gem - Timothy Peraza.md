@@ -77,7 +77,7 @@ As we can see here, it is a class wherein principle, you could put the code dire
      width="500" height="250"
      align="middle"/>
 
-Both in Rootstrap and in the software world it is considered that good software always has to have unit tests which support the implemented code, for this very reason we use rspec. In the spec folder, we will put all the test files, where the unit tests of our gem will be implemented and which we can execute from the console with the rspec command.
+In the world of software development, it's understood that good software always has to have unit tests that support the implemented code. For this very reason, here at Rootstrap, we use RSpec. Our test files must be put in the spec folder, as this will allow us to implement the unit tests of our gem, which we can execute from the console with the RSpec command.
 
 ## Gemspec File
 
