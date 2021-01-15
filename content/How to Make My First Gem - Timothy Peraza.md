@@ -79,7 +79,7 @@ As we can see, it is a class where, in principle, you could put code directly. T
 
 Both in Rootstrap and in the software world it is considered that good software always has to have unit tests which support the implemented code, for this very reason we use rspec. In the spec folder, we will put all the test files, where the unit tests of our gem will be implemented and which we can execute from the console with the rspec command.
 
-## Gemspec file
+## Gemspec File
 
 ```ruby
 require_relative 'lib/blog_gem/version'
