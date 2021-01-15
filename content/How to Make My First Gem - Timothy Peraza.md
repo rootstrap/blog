@@ -2,7 +2,7 @@
 
 It could be argued, that most developers who have worked with ruby on rails, might be interested in developing a specific gem to solve problems for their fellow developers. 
 
-However, it's not uncommon for developers to not know where to begin, or where a gem is created in the first place. It's also not uncommon for a developer to feel like this would be a difficult and complicated task. For that reason, the aim of this article is to explain how to develop your first gem, and also take a look at the different components involved.  
+However, it's not uncommon for developers to not know where to begin, or to not know where a gem is created in the first place. It's also not uncommon for a developer to feel like this could be a difficult and complicated task. For that reason, the aim of this article is to explain how to develop your first gem, and also take a look at the different components involved.  
 
 Here at Rootstrap, we are very interested in being part of the open-source world. For that reason, we have been working on this topic for some time, by making libraries for different languages/frameworks, and also making them visible to the public. For example, we made [rsgem](https://github.com/rootstrap/rsgem), a gem that allows you to generate a base project to create a gem, on which this article is based.
 
