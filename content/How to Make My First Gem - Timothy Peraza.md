@@ -116,7 +116,7 @@ Gem::Specification.new do |spec|
 end
 ```
 
-In this file we will put all the information about our gem, who made it, contact email, description, version, the files that compose the gem to do a release and also add all the external dependencies which the gem needs.
+In this file, we will put all the information for our gem, i.e. who made it, contact email, description, and the version. This file will also contain the files that allow the gem to do a release and the external dependencies with which the gem needs.
 
 By default, rsgem adds the dev dependencies: rake, reek, rspec, rubocop, and simplecov. This is because in Rootstrap we focus a lot on the quality of the code, it seems to us something very important when developing therefore, we add these dependencies to control that our gem has good quality.
 
