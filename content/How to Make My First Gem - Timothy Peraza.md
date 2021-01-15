@@ -45,7 +45,7 @@ require 'irb'
 IRB.start(__FILE__)
 ```
 
-If we have to do test from the terminal with our gem, we only need the command bundle console 'require_name' to be able to access to the interactive ruby shell with each of our methods and dependecies of the gem. In our example of gem, we have just to do bundle console blog_gem.
+If we have to test from the terminal with our gem, we just need the command bundle console 'require_name', to access the interactive ruby shell with each of our methods, and also the dependencies of the gem. In our gem example, we just need to include a bundle console blog_gem.
 
 ## Lib Folder
 
