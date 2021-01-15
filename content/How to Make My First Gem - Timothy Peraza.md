@@ -25,7 +25,7 @@ It's important to mention that the gem rsgem is based on the command 'bundle gem
      width="500" height="250"
      align="middle"/>
 
-In the Bin folder, we can find the console and setup files. The important thing to highlight here is the utility of console file where we can see the next code:
+In the Bin folder, we will find the console and setup files. The important thing here is to highlight the utility of the console file, where we can see the next code:
 
 
 ```ruby
