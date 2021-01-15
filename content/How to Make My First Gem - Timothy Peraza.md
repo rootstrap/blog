@@ -7,7 +7,7 @@ However, sometimes it happens that one doesn't know where to start or how is a g
 Here at Rootstrap, we are very interested in being reconized in the open source world. For that reason, we have been working in this topic for some time, making libraries for diferents languages and frameworks and making them visible with blogs and posts in social media. In particular, we made [rsgem](https://github.com/rootstrap/rsgem), a gem which generates a base project to make a gem, in which one this article is based on.
 
 
-## Starting the Gem
+## Starting The Gem
 
 The first step to start is to install the rsgem, this is able to do easily by running `$ gem install rsgem`. After we have the gem installed, we have to run `$ rsgem new [name]`, with the name that we want for our gem. In particular, in this blog, we will be running the command `$ rsgem new blog_gem`, and this will generate a project with the following structure:
 
