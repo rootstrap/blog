@@ -9,7 +9,7 @@ Here at Rootstrap, we are very interested in being reconized in the open source 
 
 ## Starting The Gem
 
-The first step to start is to install the rsgem, this is able to do easily by running `$ gem install rsgem`. After we have the gem installed, we have to run `$ rsgem new [name]`, with the name that we want for our gem. In particular, in this blog, we will be running the command `$ rsgem new blog_gem`, and this will generate a project with the following structure:
+The first step here is to install the rsgem by running `$ gem install rsgem`. Once the gem is installed, we have to run `$ rsgem new [name]`, with the name that we want for our gem included. In this blog, we will pay close attention to running the command `$ rsgem new blog_gem`, as this will generate a project with the following structure:
 
 <img src="images/rsgem_structure.png"
      alt="Blog Gem"
