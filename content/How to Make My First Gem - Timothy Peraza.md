@@ -47,7 +47,7 @@ IRB.start(__FILE__)
 
 If we have to do test from the terminal with our gem, we only need the command bundle console 'require_name' to be able to access to the interactive ruby shell with each of our methods and dependecies of the gem. In our example of gem, we have just to do bundle console blog_gem.
 
-## Lib folder
+## Lib Folder
 
 <img src="images/lib_folder.png"
      alt="Lib folder"
