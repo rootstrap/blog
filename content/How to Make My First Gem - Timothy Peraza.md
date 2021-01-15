@@ -1,6 +1,6 @@
 # **How To Make Your First Ruby Gem (a step-by-step guide)**
 
-Every developer who has worked with ruby on rails and has felt passion or interest for the open source world, has wanted or wants to do a contribution to this community of development with a gem which could solve a particular or generic problem or improve an existing one, that appears in different projects across the developer career.
+It could be argued, that most developers who have worked with ruby on rails, might be interested in developing a specific gem to solve problems for their fellow developers. 
 
 However, sometimes it happens that one doesn't know where to start or how is a gem made in the first place, or other times one thinks or has the idea that to make a gem is a really hard or complicated task. For that reason, this article is aimed to inquire how to make your first gem and to explain a bit the different components of it.
 
