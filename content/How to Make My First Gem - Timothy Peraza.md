@@ -18,7 +18,7 @@ The first step to start is to install the rsgem, this is able to do easily by ru
 
 It's important to mention that the gem rsgem is based on the command 'bundle gem', said command is the one that generates the directories and the files that we see. Now, we will mention the different components which are generated for the gem that we want to create.
 
-## Bin folder
+## Bin Folder
 
 <img src="images/bin_folder.png"
      alt="Bin folder"
