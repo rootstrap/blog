@@ -70,7 +70,7 @@ end
 
 As we can see, it is a class where, in principle, you could put code directly. That decision is up to the developer's wish, but generally no code is added to this file, instead of it, 'requires' are done to the files which contain the classes which offer the methods of our gem. We can also see this class does generic error handling which follows the ruby guidelines.
 
-## Spec folder
+## Spec Folder
 
 <img src="images/spec_folder.png"
      alt="Spec folder"
