@@ -5,7 +5,7 @@
 
 Here at Rootstrap, we help our clients reach their business goals by developing high-quality, performant, and scalable software solutions. To achieve this, our team continuously focuses on improving all aspects of our processes, through several initiatives across all company departments.
 
-In this article, I'll go deep on why documentation is vital for the software development cycle.
+In this article, we will examine why documentation is vital for the software development cycle.
 
 ### **Why should we document?**
 
