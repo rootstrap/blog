@@ -2,7 +2,6 @@
 
 ![main image](images/why_documenting_matters.jpg)
 
-### **Introduction**
 
 Here at Rootstrap, we help our clients reach their business goals by developing high-quality, performant & scalable software solutions. To achieve this, our team continuously focuses on improving all aspects of our processes through several initiatives across all company departments.
 
