@@ -75,7 +75,7 @@ Rails Api Base is a boilerplate project for JSON RESTful APIs.
 
 ![image](images/postman.jpg)
 
-[Postman](https://www.postman.com/) is an amazing API client we use locally or with our testing environments so everyone on the team is able to inspect endpoint responses and debug. This is specially useful for frontend developers since it enables them to quickly get responses based on the request attributes. Furthermore, the environment can be easily switched in order to make a request (e.g. `staging`, `production`, and so on). Postman helps the team to better understand how the API works.
+[Postman](https://www.postman.com/) is an amazing API client we use locally or with our testing environments so everyone on the team is able to inspect endpoint responses and debug. This is especially useful for frontend developers since it enables them to quickly get responses based on the request attributes. Furthermore, the environment can be easily switched in order to make a request (e.g. `staging`, `production`, and so on). Postman helps the team to better understand how the API works.
 
 ---
 
