@@ -1,4 +1,4 @@
-## **Why is documentation important for development**
+## Why is Documentation Important For Development?
 
 ![main image](images/why_documenting_matters.jpg)
 
