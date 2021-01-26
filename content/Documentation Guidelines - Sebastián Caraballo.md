@@ -80,7 +80,7 @@ Rails Api Base is a boilerplate project for JSON RESTful APIs.
 ---
 
 #### **Repository READMEs**
-[READMEs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes) are a powerful yet simple way to communicate team developers about important project settings. Here is an [example](https://github.com/rootstrap/rails_api_base) from our Rails API Template. There are plenty of aspects that may be included, but it's important that developers take ownership of this initiative and update this file whenever is needed. Besides keeping the README file updated on setting up the project for development and listing used Ruby gems, we also started listing all the environment variables names needed for the different environments to work correctly.
+[READMEs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes) is a powerful yet simple way to communicate to your team developers about important project settings. Here is an [example](https://github.com/rootstrap/rails_api_base) from our Rails API Template. There are plenty of aspects that may be included, but it's important that developers take ownership of this initiative and update this file whenever is needed. Besides keeping the README file updated on setting up the project for development and listing used Ruby gems, we also started listing all the environment variables names needed for the different environments to work correctly.
 
 ---
 
