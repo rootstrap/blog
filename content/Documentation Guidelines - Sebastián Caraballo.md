@@ -13,7 +13,7 @@ You may be wondering what exactly the benefits of documenting are. Let me tell y
 
 Many features require backend work to be done first so that frontend devs can integrate their mocked code with the API afterward. This now implies that backend devs not only have to code and test but also add documentation on each newly released feature. By the time a frontend dev starts working with any API endpoint, they already have a detailed description of returned objects. They will also be aware of whether authentication is needed or not and will see any error messages that may arise based on different use case scenarios.
 
-Later on, the client hired a content manager. He'd be in charge of uploading new episodes and exclusive content on the platform. As a consequence, the team started developing documentation for the content manager to understand all the logic behind the administration site: how to upload new content, schedule episode releases, and so on. These documents were linked on the administration's dashboard site itself so are easy to access.
+Later on in the project, the client hired a content manager who was tasked with uploading new episodes and exclusive content to the platform. As a result, the team started developing documentation for the content manager to understand all the logic behind the administration site, for example,  how to upload new content, schedule episode releases, and so on. These documents were linked on the administration's dashboard site itself for easy access.
 
 ### **Documentation Tools**
 
