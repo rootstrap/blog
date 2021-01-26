@@ -7,7 +7,7 @@ Here at Rootstrap, we help our clients reach their business goals by developing 
 
 In this article, we will examine why documentation is vital for the software development cycle.
 
-### **Why should we document?**
+### Why is Documentation so Vital?
 
 The reader may be wondering about the benefits of documenting. Let me tell you a brief story. In March 2020, we started working with a client on a very exciting project. However, the whole team switched to remote work due to COVID-19. So we had to focus on how to keep a fluent communication among frontend & backend developers. In order to do this, the backend team started to document the API features and the available deliverables right away with different tools. Doing this helped to maintain the team's velocity, reduce synchronization time between devs, and keep everyone aware of each other's work.
 
