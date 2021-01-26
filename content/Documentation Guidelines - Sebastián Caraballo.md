@@ -99,7 +99,7 @@ Rails Api Base is a boilerplate project for JSON RESTful APIs.
 
 ### **Conclusions**
 
-I strongly believe good coding practices should be accompanied by high-quality documentation all along the development cycle. It helps new team members onboard faster and understand the project right away. It helps designers to understand content architecture so they can reason on it. It helps clients to communicate stakeholders about product capabilities. It helps developers to be aware of the whole system. In conclusion, **documenting increases product quality and reduces development time in the long run.**
+I strongly believe that good coding practices should be accompanied by high-quality documentation throughout the development cycle. It helps new team members get onboarded faster and understand the project from the get-go. It also helps designers understand content architecture so they can reason with it. Additionally, it helps clients to communicate with stakeholders about product capabilities. One more advantage, it can also help developers be more aware of the system as a whole. In conclusion, **documenting increases product quality and reduces development time in the long run.**
 
 ### **References**
 
