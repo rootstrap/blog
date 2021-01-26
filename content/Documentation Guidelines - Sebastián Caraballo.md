@@ -93,7 +93,7 @@ Rails Api Base is a boilerplate project for JSON RESTful APIs.
 
 ![image](images/notion-template-05.png)
 
-[Notion](https://www.notion.so/product) is an all-in-one platform that connects all the company areas: from product & design, to engineering. It allows us to share knowledge about projects, internal initiatives and so much more. In this specific project, designers portrayed content guidelines so that both web & mobile versions keep visual consistency. As an example, designers detailed some image upload specifications. By doing this, the content manager is able to adapt content so that it fits perfectly on the site. This is just one example of the different capabilities this tool offers.
+[Notion](https://www.notion.so/product) is an all-in-one platform that connects all the company areas: from product and design to engineering. It allows us to share knowledge about projects, internal initiatives and so much more. In this specific project, designers portrayed content guidelines so that both web and mobile versions keep visual consistency. As an example, designers detailed some image upload specifications. By doing this, the content manager is able to adapt content so that it fits perfectly on the site. This is just one example of the different capabilities that this tool offers.
 
 ---
 
