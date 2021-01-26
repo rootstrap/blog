@@ -20,7 +20,7 @@ Later on in the project, the client hired a content manager who was tasked with 
 Here are some of the tools we use everyday to document project deliverables.
 
 #### **Oracle Apiary**
-[Oracle Apiary](https://apiary.io/) is an API design stack we use to describe all endpoints using `API Blueprint`, a really cool description language based on Markdown. It allows to specify actions, declaring objects and data structures. The online editor provides automatic validation which helps developers to keep documents consistent. Here is a brief syntax example taken from our open source [Rails API Template](https://github.com/rootstrap/rails_api_base):
+[Oracle Apiary](https://apiary.io/) is an API design stack we use to describe all endpoints using `API Blueprint`, a really cool description language based on Markdown. It allows for specifying actions, declaring objects, and data structures. The online editor provides an automatic validation which helps developers to keep documents consistent. Here is a brief syntax example that is taken from our open-source [Rails API Template](https://github.com/rootstrap/rails_api_base):
 
 ```apib
 FORMAT: 1A
