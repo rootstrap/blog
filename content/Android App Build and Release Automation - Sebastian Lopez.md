@@ -65,7 +65,7 @@ This is how this looks for a React Native application using an Ubuntu runner in 
 
 https://gist.github.com/sebalopez/99f734d92cd6d84f423dee647a4e269b.js
 
-In a nutshell, this workflow:
+In a nutshell, here is this workflow:
 * Checks out our code
 * Installs the required version of Node
 * Installs Node dependencies for the RN project
