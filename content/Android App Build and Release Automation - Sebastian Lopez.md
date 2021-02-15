@@ -7,7 +7,6 @@
 
 Now, I am going to describe the approach we implemented for Android CI/CD making use of Fastlane and a CI system (GitHub Actions). We used Amazon S3 to store signing artifacts, but any system where we could safely store encrypted files will work.
 
-In the previous post about [iOS app automation](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/) you can find a summary of why we chose [Fastlane](https://docs.fastlane.tools/) for automating our build and release steps, and [GitHub Actions]((https://github.com/features/actions)) for integrating it into a CICD workflow. To put it here in one line: they allow for simple, flexible, free(-ish), and fully version-controlled workflows.
 
 For this example we'll use an Android app developed with React Native, but the same approach works when developing with other languages supported by the Android SDK, such as Kotlin. The key assumption is that we use [Gradle](https://developer.android.com/studio/releases/gradle-plugin) for building the APK.
 
