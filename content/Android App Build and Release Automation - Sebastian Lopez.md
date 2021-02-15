@@ -46,7 +46,7 @@ This lane provides the generic steps to run the defined tasks for cleaning the b
 
 https://gist.github.com/sebalopez/a09976693f0b87839b6a801c5e6fb610
 
-### Publish steps
+### Publish Steps
 This lane retrieves the version and build number of our package, and submits it to the Play Store, finishing with a Slack notification that the release was successful.  
 
 https://gist.github.com/sebalopez/0c71d25963d6f179f37dbb35538a31d4
