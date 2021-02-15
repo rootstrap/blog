@@ -3,7 +3,6 @@
 <img src="images/android_robot.jpg" height="500" />
 
 
-*This is a follow-up post to our post on iOS app automation, which you can find [here](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/)*: 
 
 Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as for backend and web applications. Just as Continuous Integration and Continuos Delivery require maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time consuming and error prone process, which should -and can be automated, even though it presents a particular set of challenges.
 
