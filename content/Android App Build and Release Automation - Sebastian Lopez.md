@@ -4,7 +4,6 @@
 
 
 
-Mobile app development is one of our core competencies here at Rootstrap, and we embrace best practices for development and delivery just as much as for backend and web applications. Just as Continuous Integration and Continuos Delivery require maintaining multiple backend environments (Development, QA, Staging, Production), with fully automated deployments to each, it also requires maintaining multiple versions of our mobile apps, to match each environment. Building and releasing all these versions is a time consuming and error prone process, which should -and can be automated, even though it presents a particular set of challenges.
 
 In this post I am going to describe the approach we implemented for Android CI/CD making use of Fastlane and a CI system (GitHub Actions). We also use Amazon S3 to store signing artifacts, but any system where we could safely store encrypted files would serve the purpose.
 
