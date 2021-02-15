@@ -21,7 +21,7 @@ After registering apps we will need the following:
 * A keystore file generated with Android Studio: https://developer.android.com/studio/publish/app-signing#generate-key
 * An API key (in json format) with permissions to publish apps into the Play Console: https://developers.google.com/android-publisher
 
-Both files should be placed in a secure location and credentials required to retrieve them stored in the repo Secrets.
+Both files should be placed in a secure location, with the credentials required to retrieve them stored in the repo Secrets.
 
 ### Code signing and API keys
 
