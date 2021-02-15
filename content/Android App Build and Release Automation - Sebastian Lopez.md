@@ -1,4 +1,4 @@
-# **How to Automate Android App Builds using Fastlane and GitHub Actions**
+# **How to Automate Android App Builds using Fastlane & GitHub Actions**
 
 <img src="images/android_robot.jpg" height="500" />
 
