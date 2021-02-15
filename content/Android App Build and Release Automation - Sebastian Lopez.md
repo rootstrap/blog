@@ -16,7 +16,7 @@ For this example, we'll use an Android app developed with React Native, but the 
 
 ### Registering Apps
 
-Within our Android project we would define multiple [build flavors](https://developer.android.com/studio/build/build-variants), specified in our `build.gradle` file. For each of these we would register an application in the Google Play Console.
+Within our Android project, we will define multiple [build flavors](https://developer.android.com/studio/build/build-variants), specified in our `build.gradle` file. For each of these, we would register an application in the Google Play Console.
 After registering apps we will need:
 * A keystore file generated with Android Studio: https://developer.android.com/studio/publish/app-signing#generate-key
 * An API key (in json format) with permissions to publish apps into the Play Console: https://developers.google.com/android-publisher
