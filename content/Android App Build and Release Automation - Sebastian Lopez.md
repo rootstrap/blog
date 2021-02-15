@@ -60,7 +60,7 @@ Alternatively we could define "debug only" lanes, which only run the build for l
 
 ## The GitHub Actions Workflow
 
-After we have a working Fastlane configuration, the next step is tie it to a CI/CD system so the build runs automatically with every push to the right branches. 
+After we have a working Fastlane configuration, the next step is to tie it to a CI/CD system so the build runs automatically with every push to the right branches. 
 This is how this looks for a React Native application using an Ubuntu runner in GitHub Actions:
 
 https://gist.github.com/sebalopez/99f734d92cd6d84f423dee647a4e269b.js
