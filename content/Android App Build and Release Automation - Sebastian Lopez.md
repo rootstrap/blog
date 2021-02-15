@@ -51,7 +51,7 @@ This lane retrieves the version and build number of our package and submits it t
 
 https://gist.github.com/sebalopez/0c71d25963d6f179f37dbb35538a31d4
 
-### Release targets
+### Release Targets
 After defining the generic steps for building and releasing, we can reuse them for multiple flavors/targets by creating lanes for each.
 
 https://gist.github.com/sebalopez/44b014e7d7f311cb1b35a338c142be2c
