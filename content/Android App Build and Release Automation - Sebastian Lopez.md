@@ -10,7 +10,6 @@ Now, I am going to describe the approach we implemented for Android CI/CD making
 
 For this example, we'll use an Android app developed with React Native, but the same approach also works when using other languages supported by the Android SDK, such as Kotlin. The key assumption here is that we will use [Gradle](https://developer.android.com/studio/releases/gradle-plugin) when building the APK.
 
-If you are interested in using self-hosted machines to run your builds, there is a section about this on [iOS build automation](https://www.rootstrap.com/blog/how-to-automate-ios-app-builds-using-fastlane-github/) where we illustrate an example. 
 
 
 ## Prep work
