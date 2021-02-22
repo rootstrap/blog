@@ -4,7 +4,7 @@
 
 
 
-Now, I am going to describe the approach we implemented for Android CI/CD making use of Fastlane and a CI system (GitHub Actions). We used Amazon S3 to store signing artifacts, but any system where we could safely store encrypted files will work.
+Now, I am going to describe the approach we implemented for Android CI/CD, making use of Fastlane and a CI system (GitHub Actions). We used Amazon S3 to store signing artifacts, but any system where we can safely store encrypted files will work.
 
 
 For this example, we'll use an Android app developed with React Native, but the same approach also works when using other languages supported by the Android SDK, such as Kotlin. The key assumption here is that we will use [Gradle](https://developer.android.com/studio/releases/gradle-plugin) when building the APK.
