@@ -74,7 +74,15 @@ In a nutshell, here is this workflow:
 
 ##  Summary
 
-Much like before with iOS, we have gone through another example of how to automate our mobile app deployment using Fastlane, a powerful free tool specifically designed for this, and showcased GitHub Actions as a good CI/CD system that can integrate with Fastlane to trigger our pipelines automatically and in a secure environment. 
+In this piece, we looked at examples of how to automate mobile app deployment using Fastlane, a powerful free tool specifically designed for this. 
+
+We also showcased GitHub Actions as a good CI/CD system that can integrate with Fastlane to trigger our pipelines automatically and in a secure environment. 
+
+You can find complete working examples in our Open Source boilerplate projects, iOS Base and React Native Base.
+
+All these cover just a couple of the many use cases you can apply these tools for -we highly recommend you to go through their extensive documentation sites.
+
+Thanks for reading and stay tuned for more similar content!
 
 You can find complete Fastlane working examples in our Open Source boilerplate projects, [Android Base](https://github.com/rootstrap/android-base) and [React Native Base](https://github.com/rootstrap/react-native-base).
 
