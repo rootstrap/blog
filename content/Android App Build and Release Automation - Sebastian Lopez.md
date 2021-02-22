@@ -11,7 +11,6 @@ For this example, we'll use an Android app developed with React Native, but the 
 
 
 
-## Prep work
 
 ### Registering Apps
 
