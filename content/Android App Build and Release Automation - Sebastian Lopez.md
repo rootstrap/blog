@@ -54,7 +54,7 @@ After defining the generic steps for building and releasing, we can then reuse t
 
 https://gist.github.com/sebalopez/44b014e7d7f311cb1b35a338c142be2c
 
-Alternatively we could define "debug only" lanes, which only run the build for local use without publishing, or store the APK on an alternate location (such as another S3 bucket).
+Alternatively, we could define "debug only" lanes, which only run the build for local use without publishing, or store the APK on an alternate location (such as another S3 bucket).
 
 ## The GitHub Actions Workflow
 
