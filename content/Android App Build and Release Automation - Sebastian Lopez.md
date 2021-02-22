@@ -84,5 +84,3 @@ All these cover just a couple of the many use cases you can apply these tools fo
 
 Thanks for reading and stay tuned for more similar content!
 
-
-All these cover just a couple of the many use cases you can apply these tools for -we highly recommend you to go through their extensive documentation sites.
