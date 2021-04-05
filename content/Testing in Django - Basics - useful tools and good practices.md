@@ -166,7 +166,7 @@ Factory Boy documentation has a section called [common recipes](https://factoryb
 - You can create factories of models including the model relationships using the `RelatedFactory` or `SubFactory` class.
 - Use the `create` function to create a new instance of the model in the factory and save it into the testing database. If you want to have instances but without saving them into the database, use `build` instead.
 - In an analogous way, you can create and save into the database N instances of the model in the factory using `create_batch(N)`, and `build_batch(N)` if you don't want to save them.
-- You can define an attribute in a factory that selects a choice of a set of choices just like a Django model choice field, using `FuzzyChoice`. In the next section we will see an example of this.
+- You can define an attribute in a factory that selects a choice of a set of choices just like a Django model choice field, using `random_element` of Faker. In the next section we will see an example of this.
 
 
 ## Test example and good practices
@@ -205,9 +205,12 @@ Now let's see the implementation of the user factory. This file is inside a test
 # factory.py inside users/test
 from faker import Faker as FakerClass
 from typing import Any, Sequence
-from factory import django, Faker, post_generation, fuzzy
+from factory import django, Faker, post_generation
 
 from users.models import User, Category
+
+
+CATEGORIES_VALUES = [x[0] for x in Category.choices]
 
 
 class UserFactory(django.DjangoModelFactory):
@@ -217,7 +220,7 @@ class UserFactory(django.DjangoModelFactory):
     
     username = Faker('user_name')
     phone_number = Faker('phone_number')
-    category = fuzzy.FuzzyChoice(Category, getter=lambda category: category[0])
+    category = Faker('random_element', elements=CATEGORIES_VALUES)
 
     @post_generation
     def password(self, create: bool, extracted: Sequence[Any], **kwargs):
@@ -238,7 +241,7 @@ class UserFactory(django.DjangoModelFactory):
 
 A couple of things about this:
 - In the `Meta` class inside the factory, we have to indicate the corresponding model.
-- In the category attribute, we use `FuzzyChoice` to select a choice of the Category choice list, and in the `getter` function we specify which part of the choice we want to take. That is because each element in the choices list is a tuple, where the first part is the value, and the second one the explanatory text. So the function returns that first part.
+- In the category attribute, we use `random_element` of Faker to randomly select a choice of the Category choice list. We've defined `CATEGORIES_VALUES` to specify which part of the choice we want to take. That is because each element in the choices list is a tuple, where the first part is the value, and the second one the explanatory text. So that `CATEGORIES_VALUES` set has only that first part for each element.
 - Through the `post_generator` decorator and the `password` function, we indicate that at the moment of the creation of a user instance, we can pass a desired password to be used, or else we generate one using the Faker functionality.
 
 ### Test case
@@ -333,7 +336,7 @@ This will search for all of your tests files under that folder and then execute 
 ### Customize the execution of the tests
 You can customize the test execution, for example you can indicate to test:  
 - Only a Django app, specifying `<Django app name>`: 
-  - `python manage.py test users`.
+  - `python manage.py test users`
 - Only a file in a given Django app, specifying `<Django app name>.path.to.file`:
   - `python manage.py test users.test.test_signup`
 - Only a test case class, specifying: `<Django app name>.path.to.file.ClassName`:
