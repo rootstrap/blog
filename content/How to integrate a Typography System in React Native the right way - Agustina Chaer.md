@@ -4,9 +4,9 @@
 
 ## The Problem
 
-If there is one thing that most react native apps have in common it is how they display text. Some simple apps show very little, but most apps display a lot. That is why it's vital to put the right system in place, to ensure adding and refactoring texts in your app is as simple as possible.
+If there is one thing that most react native apps have in common, it is how they display text. Some simple apps show very little, but most apps display a lot. That is why it's vital to put the right system in place, to ensure adding and refactoring texts in your app is as simple as possible.
 
-Now, you might be thinking - why am I reading an article on how to manage such a simple component? It's just text, right? Yes, but more often than not, you need to apply styles and properties to said text to make it look the way you want. When you have to do it for all the texts in your app, it adds up. It, of course, begs the question - how can I reduce the amount of code repetition?
+Now, you might be thinking - why am I reading an article on how to manage such a simple component? It's just text, right? Yes, but more often than not, you need to apply styles and properties to said text to make it look the way you want. When you have to do it for all the texts in your app, it adds up. This, of course, begs the question - how can I reduce the amount of code repetition?
 
 Over the years, I have seen my fair share of attempts at solving this problem, and I can finally say that I have landed on one solution that left me quite pleased.
 
@@ -26,9 +26,9 @@ It's as simple as that, and usually, you will only have to apply extra styles to
 
 Taking the naming convention and hierarchy of text components from the web makes it very easy to understand and remember. As you may have noticed, with the use of prop-types, it is very easy to notice if you misspelled a type when setting it on an instance of said component.
 
-Although adding custom fonts to your React Native project is out of scope for this article, you might find (link here) this article useful where we go over that subject ([How to customize fonts in React Native](https://www.rootstrap.com/blog/how-to-customize-fonts-in-react-native/))
+Although adding custom fonts to your React Native project is out of scope for this article, you might find (link here) this article useful where we cover that subject ([How to customize fonts in React Native](https://www.rootstrap.com/blog/how-to-customize-fonts-in-react-native/))
 
-## Conclusions
+## Conclusion
 
 As you can see, the solution is very clean and simple, but it fixes a problem in a component that is so basic that it is also often overlooked. Putting a bit of time and thought into these kinds of components that make up the core DNA of our apps can go a long way.
 
