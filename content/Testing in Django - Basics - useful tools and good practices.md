@@ -1,6 +1,6 @@
 # Testing in Django & Django REST - Basics, Useful Tools, & Good Practices
 
-If you are a developer, you already know how important is to test in any software project. More specifically, automatic testing helps you to corroborate your coding and see in a fast way that your program does what you want it to do. Also helps you to corroborate that the new changes in your code, didn't break the previous functionalities.
+If you are a developer, you already know how important testing is in any software project. In particular, automatic testing, as it can help you to corroborate your coding, and quickly see what your program does what you want it to do. It also helps to corroborate any new changes in your code that didn't break any previous functionalities.
 
 Does this mean that if you have automatic tests then your project won't have any errors? Noup.
 [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) the computer scientist says:  
