@@ -2,7 +2,7 @@
 
 If you are a developer, you already know how important testing is in any software project. In particular, automatic testing, as it can help you to corroborate your coding, and quickly see what your program does what you want it to do. It also helps to corroborate any new changes in your code that didn't break any previous functionalities.
 
-Does this mean that if you have automatic tests then your project won't have any errors? Noup.
+In saying that, does this mean that if you have automatic tests your project won't have any errors? It does not.
 [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) the computer scientist says:  
 
 `“Program testing can be used to show the presence of bugs, but never to show their absence”`.  
