@@ -7,7 +7,7 @@ As computer scientist Edsger W. Dijkstra once said:
 
 `“Program testing can be used to show the presence of bugs, but never to show their absence”`.  
 
-This phrase helps us to understand that we can't be sure that our program is perfect, but anyway testing is fundamental to discover errors and make fixes and improvements.
+This phrase helps us to understand that we can't be sure that a program is perfect, but, testing is fundamental to help us discover errors and make fixes and improvements.
 As a person that works in software development, I can say that it's a lot better that you discover the error, than your client, or a user in production. In this blog I'll talk about basic knowledge in automatic testing, useful tools and good practices in [Django](https://www.djangoproject.com/) projects, more focused on API's.
 
 ## Testing in Django and Django REST Framework
