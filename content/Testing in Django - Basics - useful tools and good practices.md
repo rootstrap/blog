@@ -11,7 +11,7 @@ This phrase helps us to understand that we can't be sure that a program is perfe
 As a person that works in software development, I can say that it's a lot better when **you** discover an error rather than your client or a user in production. In this article, I'll talk about basic knowledge in automatic testing, useful tools, and good practices in [Django](https://www.djangoproject.com/) projects, with a focus on API's.
 
 ## Testing in Django & Django REST Framework
-Django has a very nice [documentation](https://docs.djangoproject.com/en/3.1/topics/testing/) about testing, and [Django REST Framework](https://www.django-rest-framework.org/api-guide/testing/) too. So in this blog I'll talk just a little bit of the main tools in those two frameworks, and what you can do and use to improve your testing.
+Django has a very nice [documentation](https://docs.djangoproject.com/en/3.1/topics/testing/) about testing, and [Django REST Framework](https://www.django-rest-framework.org/api-guide/testing/) too. So, in this blog, I'll talk about the main tools in those two frameworks, and what you can do and use to improve your testing.
 
 ### Main testing classes
 Django provides several classes for testing. The one I'll talk about here is [TestCase](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase), very useful if your application uses databases.  
