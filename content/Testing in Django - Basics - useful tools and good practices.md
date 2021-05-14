@@ -330,7 +330,7 @@ Well, in this file we have a test case, defined as UserSignUpTestCase, and two u
 
 This was an example of a Test Case with two unit tests. You can add more unit tests, for example, to test if some data is incorrect in the request or the user can't sign-up. Besides you can add in that file (or another file) more test case classes, for example, to test the login functionality of the app.   
 
-## Running your tests
+## Running Your Tests
 Once you have coded a couple of tests, you can execute them with this command in the main folder of the project (the one that has the manage.py file):
 - `python manage.py test`
 This will search for all of your tests files under that folder and then execute them, showing the error or success of each unit test. 
