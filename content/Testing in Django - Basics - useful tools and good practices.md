@@ -247,7 +247,7 @@ A couple of things about this:
 - Through the `post_generator` decorator and the `password` function, we indicate that at the moment of the creation of a user instance, we can pass a desired password to be used, or else we generate one using the Faker functionality.
 
 ### Test Case
-Now let's see an example of testing for the user sign-up functionality. The implementation of the authentication part for this example project, has been made using dj-rest-auth. I won't talk about that, but if you want to know more, please take a look at this [blog](https://www.rootstrap.com/blog/registration-and-authentication-in-django-apps-with-dj-rest-auth/). This is a test_singup.py file inside the test folder of the users Django app:
+Now, let's see an example of testing for the user sign-up functionality. The implementation of the authentication part for this example project has been made using dj-rest-auth. I won't talk about that, but if you want to know more, please take a look at this [blog](https://www.rootstrap.com/blog/registration-and-authentication-in-django-apps-with-dj-rest-auth/). This is a test_singup.py file inside the test folder of the users Django app:
 
 ```python
 from django.urls import reverse
