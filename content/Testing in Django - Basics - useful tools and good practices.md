@@ -171,7 +171,7 @@ Factory Boy documentation has a section called [common recipes](https://factoryb
 - You can define an attribute in a factory that selects a choice of a set of choices just like a Django model choice field, using `random_element` of Faker. In the next section, we will see an example of this.
 
 
-## Test example and good practices
+## Test Example & Good Practices
 In this section I want to wrap up and show a little example. This is the tiny reality: In the project we have a Django app called users where we have the user model that have a username, phone_number, and a category in the system, that could be admin, common user, and guest. The user can sign-up and login in the application. 
 
 ### Model and factory definition
