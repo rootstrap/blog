@@ -174,7 +174,7 @@ Factory Boy documentation has a section called [common recipes](https://factoryb
 ## Test Example & Good Practices
 In this section, I want to wrap up and show a little example. This is the tiny reality: In the project, we have a Django app called users where we have the user model that has a username, phone_number, and a category in the system, that could be admin, common user, and guest. The user can sign-up and login in to the application. 
 
-### Model and factory definition
+### Model & Factory Definition
 
 ```python
 # model.py in the Django app called users
