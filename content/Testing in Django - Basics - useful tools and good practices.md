@@ -243,7 +243,7 @@ class UserFactory(django.DjangoModelFactory):
 
 A couple of things about this:
 - In the `Meta` class inside the factory, we have to indicate the corresponding model.
-- In the category attribute, we use `random_element` of Faker to randomly select a choice of the Category choice list. We've defined `CATEGORIES_VALUES` to specify which part of the choice we want to take. That is because each element in the choices list is a tuple, where the first part is the value, and the second one the explanatory text. So that `CATEGORIES_VALUES` set has only that first part for each element.
+- In the category attribute, we use `random_element` of Faker to randomly select a choice of the Category choice list. We've defined `CATEGORIES_VALUES` to specify which part of the choice we want to take. That is because each element in the choices list is a tuple, where the first part is the value, and the second one the explanatory text. So, that `CATEGORIES_VALUES` set has only that first part for each element.
 - Through the `post_generator` decorator and the `password` function, we indicate that at the moment of the creation of a user instance, we can pass a desired password to be used, or else we generate one using the Faker functionality.
 
 ### Test case
