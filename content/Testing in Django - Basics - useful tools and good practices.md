@@ -111,7 +111,7 @@ DATABASES = {
 }
 ```
 
-Take a look at the [available keys](https://docs.djangoproject.com/en/3.1/ref/settings/#test) for the `TEST` dictionary. If you don't define it, Django will create a database naming it equal as your database in the `default` settings, appending the `_test` suffix.
+Take a look at the [available keys](https://docs.djangoproject.com/en/3.1/ref/settings/#test) for the `TEST` dictionary. If you don't define it, Django will create a database naming it equal to your database in the `default` settings, appending the `_test` suffix.
 
 ## Useful tools
 In this section I will talk about two external tools that are very helpful for fixtures: [Faker](https://faker.readthedocs.io/en/master/) and [Factory Boy](https://factoryboy.readthedocs.io/en/stable/).
