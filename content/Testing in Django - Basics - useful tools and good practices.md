@@ -336,7 +336,7 @@ Once you have coded a couple of tests, you can execute them with this command in
 This will search for all of your tests files under that folder and then execute them, showing the error or success of each unit test. 
 
 ### Customize the Execution of the Tests
-You can customize the test execution, for example you can indicate to test:  
+You can customize the test execution, for example, you can indicate to test:  
 - Only a Django app, specifying `<Django app name>`: 
   - `python manage.py test users`
 - Only a file in a given Django app, specifying `<Django app name>.path.to.file`:
