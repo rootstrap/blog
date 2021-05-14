@@ -62,7 +62,7 @@ class UserLoginTestCase(APITestCase):
     ...
 ```
 
-### Main testing functions
+### Main Testing Functions
 The mentioned classes have a set of methods that will help you through the testing. With these functions you are able to corroborate that your software works as expected, and make test fixtures.  
 A test fixture is an environment that you can create to run your tests using consistency. Using fixtures you can make sure that certain conditions are met before the execution. For example, to have at the beginning of a determined set of data in your testing database, or to create needed objects. Here is a list of the main ones:
 - `setUp` and `tearDown`: These are functions to be executed before (setUp) and after (tearDown) each unit test. Very useful for fixtures.
