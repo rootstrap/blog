@@ -201,7 +201,7 @@ class User(AbstractUser):
     )
 ```
 
-Now let's see the implementation of the user factory. This file is inside a test folder in the users Django app:
+Now, let's see the implementation of the user factory. This file is inside a test folder in the users Django app:
 
 ```python
 # factory.py inside users/test
