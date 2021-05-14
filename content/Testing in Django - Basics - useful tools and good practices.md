@@ -72,7 +72,7 @@ A test fixture is an environment that you can create to run your tests using con
 
 You can avoid using these functions, or use any combination of them. They're no needed, but they're very useful and will help you a lot.
 
-### Test discovery and databases
+### Test Discovery & Databases
 Where do you have to put your tests classes? By default, Django recognizes any file that fullfil the pattern `test*.py` under the current working directory. That is, any file under the directory that starts with `test` and of course has the `.py` extension. Inside it, Django will execute any function in the test case class starting with `test`.  
 When you run your tests, you can pass a parameter indicating the desired pattern, just in case you want to use a different one. With that behavior, the place to put the test cases can be anywhere, but I recommend to divide the tests into the several Django apps that you may have in your project. For example, if you have a Django app called `users` that has the models and functionalities related to the users in your project, you can define in there a `test` folder as a module (adding the __init__.py file) with all the tests that cover that important part: tests for login, for sign-up, for user data, account deletion, etc. Something similar to this:
 
