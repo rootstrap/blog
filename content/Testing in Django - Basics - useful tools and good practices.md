@@ -114,7 +114,7 @@ DATABASES = {
 Take a look at the [available keys](https://docs.djangoproject.com/en/3.1/ref/settings/#test) for the `TEST` dictionary. If you don't define it, Django will create a database naming it equal to your database in the `default` settings, appending the `_test` suffix.
 
 ## Useful Tools
-In this section I will talk about two external tools that are very helpful for fixtures: [Faker](https://faker.readthedocs.io/en/master/) and [Factory Boy](https://factoryboy.readthedocs.io/en/stable/).
+In this section, I will talk about two external tools that are very helpful for fixtures: [Faker](https://faker.readthedocs.io/en/master/) and [Factory Boy](https://factoryboy.readthedocs.io/en/stable/).
 
 ### Faker
 Faker is a python package to generate fake but realistic data. You can use its functionalities to load data to your testing database, to generate data for the requests that you want to test, to generate data for the models, etc. Faker has a huge and diverse set of possibilities. You can generate in execution time, for example first names, last names, phone numbers, dates, passwords, emails, etc. Besides, you can pass parameters to the functions to generate data with different constraints, for example you can obtain a password specifying if you want to use special characters or not, specifying the desired length, indicating if you want to have upper case or not, etc. Take a look at the [Faker providers](https://faker.readthedocs.io/en/master/providers.html) to see all the different fake but realistic data that you can generate for your tests. Instead of using for example `user_test@mail.com` for your test cases, you can have data that is closer to the reality, improving the quality.
