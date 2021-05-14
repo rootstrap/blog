@@ -15,7 +15,7 @@ Django has a very nice [documentation](https://docs.djangoproject.com/en/3.1/top
 
 ### Main Testing Classes
 Django provides several classes for testing. The one I'll talk about here is [TestCase](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase), which is very useful if your application uses databases.  
-As the name says, to create a test case in your Django project, you will define a class that inherits from TestCase. Doing this, you can use all the methods and properties of the named class that will help you to create and execute your tests. Then you will define different functions that will correspond to each unit test inside the test case. Let's see an example of the structure of a test case:
+As the name states, to create a test case in your Django project, you will define a class that inherits from TestCase. By doing this, you can use all the methods and properties of the named class that will help you to create and execute your tests. Then you will define different functions that will correspond to each unit test inside the test case. Let's see an example of the structure of a test case:
 
 ```python
 # your test file
