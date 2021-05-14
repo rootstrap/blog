@@ -48,7 +48,7 @@ class UserLoginTestCase(TestCase):
 Also, you can use the [Client](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.Client) class of Django which simulates a dummy browser so you can make HTTP requests and test how your Django API responds.  
 
 Since we are focusing on API testing, I want to talk about [APITestCase](https://www.django-rest-framework.org/api-guide/testing/#api-test-cases), a class of Django REST framework that is a mirror of TestCase but uses a different client class: [APIClient](https://www.django-rest-framework.org/api-guide/testing/#apiclient). This client extends the TestClient, meaning that it has the same functionalities and adds others such as the `credentials` function. This function is very useful to overwrite authentication headers, for example, using OAuth1, OAuth2, or any simple token authentication scheme.  
-So if you are working on a project with Django REST framework, you can change the previous example in this way:
+So, if you are working on a project with the Django REST framework, you can change the previous example in this way:
 
 
 ```python
