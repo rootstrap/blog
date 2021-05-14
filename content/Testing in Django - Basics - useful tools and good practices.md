@@ -328,7 +328,7 @@ Well, in this file we have a test case, defined as UserSignUpTestCase, and two u
   - Check the response: Check the response data (if there is data) and status. When working with Django REST framework, I recommend using [status](https://www.django-rest-framework.org/api-guide/status-codes/). With this, you have the HTTP status codes in a cleaner way. If you don't want to, you can just put the number directly.
   - Check the database: If the request generates changes in the database, please corroborate it to make sure that the functionality modifies it correctly. If you have the case that doesn't modify the database, it's a good practice to test that the database remains without changes (just as in the second unit test).
 
-This was an example of a Test Case with two unit tests. You can add more unit tests, for example to test that if some data is incorrect in the request, the user can't sign-up. Besides you can add in that file (or another file) more test case classes, for example to test the login functionality of the app.   
+This was an example of a Test Case with two unit tests. You can add more unit tests, for example, to test if some data is incorrect in the request or the user can't sign-up. Besides you can add in that file (or another file) more test case classes, for example, to test the login functionality of the app.   
 
 ## Running your tests
 Once you have coded a couple of tests, you can execute them with this command in the main folder of the project (the one that has the manage.py file):
