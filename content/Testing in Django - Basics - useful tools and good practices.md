@@ -91,7 +91,7 @@ my_project
 ...
 ```
 
-Regarding the databases, when you run your tests by default Django creates one and destroys it after the finalization. This is to avoid conflicts between your production and/or development databases, and your testing database.
+Regarding the databases, when you run your tests by default, Django creates one and then destroys it after the finalization. This is to avoid conflicts between your production and/or development databases, as well as your testing database.
 You can define and customize a database for tests, inside the `DATABASES` dictionary, adding another one named `TEST`. Something like:
 
 ```python
