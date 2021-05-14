@@ -168,7 +168,7 @@ Factory Boy documentation has a section called [common recipes](https://factoryb
 - You can create factories of models including the model relationships using the `RelatedFactory` or `SubFactory` class.
 - Use the `create` function to create a new instance of the model in the factory and save it into the testing database. If you want to have instances but without saving them into the database, use `build` instead.
 - In an analogous way, you can create and save into the database N instances of the model in the factory using `create_batch(N)`, and `build_batch(N)` if you don't want to save them.
-- You can define an attribute in a factory that selects a choice of a set of choices just like a Django model choice field, using `random_element` of Faker. In the next section we will see an example of this.
+- You can define an attribute in a factory that selects a choice of a set of choices just like a Django model choice field, using `random_element` of Faker. In the next section, we will see an example of this.
 
 
 ## Test example and good practices
