@@ -351,4 +351,4 @@ You can also add some flags to the command to customize the execution, for examp
 - `--parallel` to run the tests in parallel improving also the speed on multi-core hardware. If you do this make sure they're well isolated.
 
 ## Summary
-In this blog I've presented some basics of testing with Django and Django REST framework. Also I showed a couple of useful tools and good practices more focused on API's. I showed you some examples, and how to run and customize your tests with the named framework. I hope you have enjoyed the reading. I hope also that this blog can help you to test and improve your own Django API project. 
+Throughout this piece, I've presented some basics of testing with Django and Django REST framework. Also, I showcased some useful tools and good practices that are more focused on API's. I highlighted some examples, and how to run and customize your tests with the named framework. I hope you enjoyed reading and I hope that this blog can help you to test and improve your own Django API projects. 
