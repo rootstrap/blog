@@ -6,7 +6,7 @@ However, this can generate a lot of compatibility issues unless you manage them 
 
 ## Python Virtual Environments
 
-In this image you can see an abstract example of the different Python projects, with the different combinations of packages that you can have installed: 
+In the following image, you can see an abstract example of different Python projects containing the different combinations of packages that you can install: 
 
 <img src="images/python_environments.png" alt="Python environments" />
 
