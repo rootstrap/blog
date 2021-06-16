@@ -1,6 +1,8 @@
 # How to Manage your Python projects with Pipenv & Pyenv
 
-A Python virtual environment is an important tool for the developers, used to separate projects dependencies in isolated environments. If you work locally on several Python projects, you may need to use different Python versions on each one, to install different packages on each one, to have different versions of the named packages on each one, etc. This can generate a lot of compatibility issues, unless you manage them correctly  using virtual environments. There are many ways to do this, and in this blog I will talk about two tools that can help us a lot: [Pyenv](https://github.com/pyenv/pyenv) and [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/). 
+A Python virtual environment is an important tool for developers when separating project dependencies in isolated environments. If working locally on several Python projects, developers may need to use different Python versions on each to install different packages and have different versions of the named packages on each. 
+
+However, this can generate a lot of compatibility issues unless you manage them correctly using virtual environments. There are many ways to do this and in this blog, I will highlight two tools that can help achieve this: [Pyenv](https://github.com/pyenv/pyenv) and [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/). 
 
 ## Python virtual environments
 
