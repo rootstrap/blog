@@ -75,7 +75,7 @@ You can change that, of course, by executing the command again with the desired 
 python -V
 ```
 
-With Pyenv, you can have a global version, and a local version for each project. To set a local version, go to the project folder in the terminal:
+With Pyenv, you can have a global and a local version for each project. To set a local version, go to the project folder in the terminal:
 
 ```
 cd ~/path/to/the/project/folder
