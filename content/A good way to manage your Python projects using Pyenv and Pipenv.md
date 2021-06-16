@@ -4,7 +4,7 @@ A Python virtual environment is an important tool for developers when separating
 
 However, this can generate a lot of compatibility issues unless you manage them correctly using virtual environments. There are many ways to do this and in this blog, I will highlight two tools that can help achieve this: [Pyenv](https://github.com/pyenv/pyenv) and [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/). 
 
-## Python virtual environments
+## Python Virtual Environments
 
 In this image you can see an abstract example of the different Python projects, with the different combinations of packages that you can have installed: 
 
