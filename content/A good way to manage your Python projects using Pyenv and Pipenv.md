@@ -10,7 +10,7 @@ In the following image, you can see an abstract example of different Python proj
 
 <img src="images/python_environments.png" alt="Python environments" />
 
-Each big colored box is a Python virtual environment. It happens very commonly that some packages versions are supported only by some determined Python versions. Also, you may need a determined version of a package in one project, and another one in other projects. And also, a determined version of a package can generate conflicts with another package or Python version. 
+Each big colored box represents a Python virtual environment. It's common for certain package versions to be supported only by determined Python versions. Also, you may need a determined version of a package in one project and another version for others. As well as this, a determined version of a package can generate conflicts with packages or Python versions. 
 Many combinations of compatibility issues can be found, but having those isolated environments you can avoid them. You will be able to install, uninstall, update, etc in one virtual environment without affecting the rest of them. As said, there are many tools to do this and in the next sections, I will talk about the ones that I've found pretty easy to understand and use.
 
 ## Pyenv
