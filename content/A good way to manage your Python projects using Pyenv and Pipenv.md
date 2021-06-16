@@ -57,7 +57,7 @@ You will see a large list of Python versions. You can pick one to install it, le
 pyenv install 3.9.1
 ```
 
-You can run that command with any version that you want to have installed in your computer. To see all the installed versions, just run:
+You can run that command with any version that you want to have installed on your computer. To see all the installed versions, just run:
 
 ```
 pyenv versions
