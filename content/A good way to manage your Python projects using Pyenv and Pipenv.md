@@ -87,7 +87,7 @@ And set the local version, for example, 3.9.1:
 pyenv local 3.9.1
 ```
 
-This will create a `.python-version` file in the folder indicating the current local Python version for the project. Also if you run `python -V` in that folder, you will see the local version, not the global one.
+This will create a `.python-version` file in the folder indicating the current local Python version for the project. Also, if you run `python -V` in that folder, you will see the local version, and not the global one.
 
 So in summary, you have these useful commands:
 
