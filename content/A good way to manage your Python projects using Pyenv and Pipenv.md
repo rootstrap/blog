@@ -91,7 +91,7 @@ This will create a `.python-version` file in the folder indicating the current l
 
 So, to sum up, you have the following useful commands at your disposal:
 
-- `pyenv install --list` to see the available Python versions that you can install.
+- `pyenv install --list` to see the available Python versions you can install.
 - `pyenv versions` to see the installed Python versions.
 - `pyenv global <Python version>` to set an installed Python version as global.
 - `pyenv local <Python version>`  to set an installed Python version for a given project folder.
