@@ -14,7 +14,7 @@ Each big colored box represents a Python virtual environment. It's common for ce
 Many combinations of compatibility issues can be found, but having those isolated environments you can avoid them. You will be able to install, uninstall, update, etc in one virtual environment without affecting the rest of them. As said, there are many tools to do this and in the next sections, I will talk about the ones that I've found pretty easy to understand and use.
 
 ## Pyenv
-Pyenv is a tool to manage the different Python versions. With this tool you are able to:
+Pyenv is a tool used to manage different Python versions. With this tool you can:
 - Install several Python versions.
 - Set/change the global(default) Python version in your computer.
 - Set/change a Python version locally for a project.
