@@ -81,7 +81,7 @@ With Pyenv, you can have a global and a local version for each project. To set a
 cd ~/path/to/the/project/folder
 ```
 
-And set the local version, for example 3.9.1:
+And set the local version, for example, 3.9.1:
 
 ```
 pyenv local 3.9.1
