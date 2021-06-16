@@ -69,7 +69,7 @@ Also, you can set the global version that you want to use in your system, this w
 pyenv global 3.8.8
 ```
 
-You can change that of course, executing that command again with the desired installed version. If you want to check your global version, just run:
+You can change that, of course, by executing the command again with the desired installed version. If you want to check your global version, just run:
 
 ```
 python -V
