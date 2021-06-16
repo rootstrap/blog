@@ -21,7 +21,7 @@ Pyenv is a tool used to manage different Python versions. With this tool you can
 - Create and manage virtual environments.
 
 ### Installation
-On macOs, you can install this tool using [Homebrew](https://brew.sh/):
+On macOS, you can install this tool using [Homebrew](https://brew.sh/):
 
 ```
 brew install pyenv
