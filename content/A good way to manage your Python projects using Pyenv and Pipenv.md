@@ -51,7 +51,7 @@ Now let's take a look at the possible Python versions that you can install throu
 pyenv install --list
 ```
 
-You will se a large list of Python versions. You can pick one to install it, let's say 3.9.1:
+You will see a large list of Python versions. You can pick one to install it, let's say 3.9.1:
 
 ```
 pyenv install 3.9.1
