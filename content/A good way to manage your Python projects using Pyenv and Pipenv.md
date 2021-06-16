@@ -97,7 +97,7 @@ So, to sum up, you have the following useful commands at your disposal:
 - `pyenv local <Python version>`  to set an installed Python version for a given project folder.
 - `pyenv uninstall <Python version>` to uninstall an already installed Python version.
 
-Pyenv also allows us to manage environments with a plugin called [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv), but for this, I prefer to use Pipenv, so I will talk about that in the next section.
+Pyenv also allows us to manage environments with a plugin called [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv), but for this, I prefer to use Pipenv, which I will discuss in the next section.
 
 ## Pipenv
 Pipenv is a tool to manage the needed packages in a Python project. With this tool you are able to:
