@@ -27,7 +27,7 @@ On macOS, you can install this tool using [Homebrew](https://brew.sh/):
 brew install pyenv
 ```
 
-To install it in other platforms, you can watch [this section in the github docs](https://github.com/pyenv/pyenv#installation). After the installation, edit your used shell startup script (`.bashrc`, `.zshrc`, `.bash_profile`, ...) adding this line:
+To install it on other platforms, you can watch [this section in the GitHub docs](https://github.com/pyenv/pyenv#installation). After the installation, edit your used shell startup script (`.bashrc`, `.zshrc`, `.bash_profile`, ...) adding the following line:
 
 ```
 if command -v pyenv 1>/dev/null 2>&1; then
