@@ -234,7 +234,7 @@ django-drip-campaigns = "*"
 flake8 = "*"
 ```
 
-And what if you need a specific version of a package? For example you need [django](https://www.djangoproject.com/), not the latest but the 2.2 version. Then run:
+Also, what if you need a specific version of a package? For example, you need [Django](https://www.djangoproject.com/), not the latest but the 2.2 version. Then run:
 
 ```
 pipenv install django==2.2
