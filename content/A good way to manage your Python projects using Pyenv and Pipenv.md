@@ -154,7 +154,7 @@ name = "pypi"
 python_version = "3.7"
 ```
 
-Under the `[packages]` section you will see the installed packages for execution. The ones that your Python program will need to be executed correctly. Under the `[dev-packages]` section you will see the packages that are needed only for development. Also, you can see in that example that the used Python version is `3.7`. If you use Pyenv, the `pipenv install` command will use the global Python version of your system. But as you already know, you can specify a local Python version in your proyect. For example:
+Under the `[packages]` section, you will see the installed packages for execution - the ones that your Python program will need to be executed correctly. Under the `[dev-packages]` section, you will see the packages that are needed only for development. Also, you can see in that example that the used Python version is `3.7`. If you use Pyenv, the `pipenv install` command will use the global Python version of your system. But as you already know, you can specify a local Python version in your project. For example:
 
 ```
 pyenv local 3.8.8
