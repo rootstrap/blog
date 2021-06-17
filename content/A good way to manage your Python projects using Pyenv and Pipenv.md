@@ -196,7 +196,7 @@ Ok, so you now know how to create, delete, activate and deactivate a virtual env
 pipenv install django-drip-campaigns
 ```
 
-That command will:
+This command will:
 - Install the latest available version of that package.
 - Automatically update the Pipfile file adding the package.
 - Automatically update the Pipfile.lock file adding the package version and some other important metadata.
