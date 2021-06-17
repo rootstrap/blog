@@ -172,7 +172,7 @@ Now, what if you want to delete the created virtual environment to create anothe
 pipenv --rm
 ```
 
-Another important thing, is to activate the created virtual environment, you will do this by running:
+Another important thing to remember is to activate the created virtual environment, which you do by running:
 
 ```
 pipenv shell
