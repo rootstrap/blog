@@ -189,7 +189,7 @@ exit
 ```
 
 
-### Managing packages
+### Managing Packages
 You already know how to create, delete, activate and deactivate a virtual environment. Now let's see how to manage the packages inside them. First, don't forget to activate the virtual environment. Now, to install a package, for example [django-drip-campaings](https://pypi.org/project/django-drip-campaigns/), you can execute:
 
 ```
