@@ -259,7 +259,7 @@ pipenv uninstall django-drip-campaigns
 ```
 
 That command will uninstall the package, and remove the information from the Pipfile and Pipfile.lock files.
-Now suppose you need the latest version of `django` in your project(not the 2.2 version). To update a package to the latest version you have to:
+Now suppose you need the latest version of `Django` in your project (not the 2.2 version). To update a package to the latest version you have to:
 
 1. Change the `django = "==2.2"` line in the Pipfile by `django = "*"`.
 2. Then run:
