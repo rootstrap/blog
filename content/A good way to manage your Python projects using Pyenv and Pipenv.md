@@ -268,7 +268,7 @@ Now suppose you need the latest version of `Django` in your project (not the 2.2
 pipenv update django
 ```
 
-An alternative to these steps is to uninstall `django` and then install it again without specifying the version. Of course, you can repeat those steps in an analogous way, to downgrade a package version instead of upgrading it. 
+Alternatively, you can uninstall `Django` and then install it again without specifying the version. Of course, you can repeat those steps in an analogous way, to downgrade a package version instead of upgrading it. 
 You can do a lot of things with Pipenv, but the previously detailed are to me the main ones. Pretty easy, right? Now let's see a summary of the mentioned commands provided by Pipenv:
 
 - `pipenv install` to create a virtual environment.
