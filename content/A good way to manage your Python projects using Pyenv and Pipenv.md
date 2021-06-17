@@ -251,7 +251,7 @@ django = "==2.2"
 flake8 = "*"
 ```
 
-In the `django` package line, you don't see the "*", you see the specific version indicated in the command.
+In the `Django` package line, you don't see the "*", you instead see the specific version indicated in the command.
 If you need to uninstall a package, for example `django-drip-campaigns`, just run:
 
 ```
