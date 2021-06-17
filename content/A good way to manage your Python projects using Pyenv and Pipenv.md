@@ -178,7 +178,7 @@ Another important thing to remember is to activate the created virtual environme
 pipenv shell
 ```
 
-With this command, you "have entered" to your virtual environment. In your terminal you can check that you have already activated the virtual environment, if you see the name between brackets at the beginning of the line, as in this example picture:
+With this command, you "have entered" your virtual environment. In your terminal you can check that you have already activated the virtual environment, if you see the name between brackets at the beginning of the line, as in this example picture:
 
 <img src="images/pipenv_shell.png" alt="Python environments" />
 
