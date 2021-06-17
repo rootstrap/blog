@@ -240,7 +240,7 @@ Also, what if you need a specific version of a package? For example, you need [D
 pipenv install django==2.2
 ```
 
-Now the Pipfile is updated and is something like:
+Now the Pipfile is updated and will resemble something like:
 
 ```
 [packages]
