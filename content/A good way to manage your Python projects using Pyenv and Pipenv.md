@@ -122,7 +122,7 @@ brew install pipenv
 And you don't need to do anything else. You're ready to start!
 To install it in other platforms, you can watch [this section in the pipenv docs](https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv).
 
-### Creating virtual environments
+### Creating Virtual Environments
 Now let's see how to create a virtual environment for a Python project. Go to the project folder:
 
 ```
