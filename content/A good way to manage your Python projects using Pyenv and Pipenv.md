@@ -286,5 +286,5 @@ Now let's take a look at the summary of the commands after the virtual environme
 
 
 ## Summary
-I have presented two different tools for managing Python projects, using virtual environments. There are many ways to do this, and I talked about the one that I like the most. I think these tools are very tidy, maintainable, and easy to understand and use.
+As highlighted, I have presented two different tools for managing Python projects using virtual environments. There are many ways to do this, but I showcased the one I believe to be the most effective. I find these tools to be very tidy and maintainable, as well as being easy to understand and use.
 They are Pyenv and Pipenv. The first one is to manage different Python versions, and the second one to manage the Python packages. I really like it, and hope you feel the same way about these tools and Python development. Also, I hope that you enjoyed the reading and feel encouraged to use them.
