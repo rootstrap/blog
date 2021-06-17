@@ -166,7 +166,7 @@ And if you want to use that local Python version, you can indicate that to Pipen
 pipenv install --python 3.8.8
 ```
 
-Now, what if you want to delete the created virtual environment to create another one? You can do it by running:
+Now, what if you want to delete the created virtual environment to create another one? You can do so by running:
 
 ```
 pipenv --rm
