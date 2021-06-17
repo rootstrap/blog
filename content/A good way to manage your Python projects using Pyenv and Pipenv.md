@@ -139,7 +139,7 @@ This will create a virtual environment and:
 1. If you already have a Pipfile and a Pipfile.lock: it will also install all the specified packages on them.
 2. If you don't have a Pipfile and a Pipfile.lock: it will generate them for that environment.
 
-This is how it looks like a Pipfile recently created:
+This is how a Pipfile recently created looks like:
 ```
 [[source]]
 url = "https://pypi.org/simple"
