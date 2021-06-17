@@ -123,7 +123,7 @@ And you don't need to do anything else. You're ready to start!
 To install it in other platforms, you can watch [this section in the pipenv docs](https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv).
 
 ### Creating Virtual Environments
-Now let's see how to create a virtual environment for a Python project. Go to the project folder:
+Now, let's look at how to create a virtual environment for a Python project. First, go to the project folder:
 
 ```
 cd ~/path/to/the/project/folder
