@@ -269,7 +269,7 @@ pipenv update django
 ```
 
 Alternatively, you can uninstall `Django` and then install it again without specifying the version. Of course, you can repeat those steps in an analogous way, to downgrade a package version instead of upgrading it. 
-You can do a lot of things with Pipenv, but the previously detailed are to me the main ones. Pretty easy, right? Now let's see a summary of the mentioned commands provided by Pipenv:
+You can do a lot of things with Pipenv, but the previously mentioned throughout are the main features. Pretty easy, right? Now let's see a summary of the mentioned commands provided by Pipenv:
 
 - `pipenv install` to create a virtual environment.
 - `pipenv install --python <Python version>` to create a virtual environment indicating the desired Python version (that you have installed using Pyenv).
