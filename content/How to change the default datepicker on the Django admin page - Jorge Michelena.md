@@ -1,13 +1,10 @@
 When you register a model in your Django admin page it automatically matches each of the model's fields to
-a widget so you can input data and manage instances of the models easily from the Django admin panel, 
-most of the time the default widgets are enough but in some cases they may not be the most suitable for our particular needs.
+a widget so you can input data and manage instances of the models easily from the Django admin panel. Most of the time the default widgets are enough but in some cases they may not be the most suitable for our particular needs.
 
-For instance, if one of your models has a `DateField` which represents the birth date of a user and you know that for whatever
-reason you will need to create user instances frequently from the admin panelthen the default datepicker may be very inconvenient
-if you want to input realistic data since you can't input the year in a straightforward way and would have to navigate month to month to reach a desired year.
+For instance, let's say one of your models has a `DateField` representing the birth date of a user, and let's also say that for whatever reason you will need to create user instances frequently from the admin panel, maybe for testing purposes.
+Then the default datepicker may be very inconvenient if you want to input realistic data since you can't input the year in a straightforward way and would have to navigate month to month to reach a desired year.
 
-In such a case you may want to change the widget to pick the date but after doing some research may not find a clear explanation
-on how to do this, but you are on luck because not only is it pretty easy but it is also what we will be guiding through in this article! Let's begin.
+In that case, you may want to change the widget to pick the date. If after doing some research you don't find a clear explanation on how to do this, don't worry, this is your lucky day because not only it is pretty easy but it is also what I will be guiding you through in this article! Let's begin.
 
 ### Set up
 
@@ -50,9 +47,11 @@ class Customer(models.Model):
 
 ```
 
-Having registered the model in the admin page then when trying to create/modify a new instance from the admin panel it will look like this
+Having registered the model on the admin page then when we try to create/modify a new instance from the admin panel it will look like this
 
 ![image](images/default_datepicker.gif)
+
+As you can see, picking a date from just a few years ago can already be very tedious, so just imagine how tortuous it would be to search for a birthday!
 
 We will now change this widget for a new one that makes navigating through years easier and more fitting to handle birth dates.
 
@@ -95,8 +94,7 @@ Here we are defining what date format the input is gonna enforce (`%Y-%m-%d` mea
 Then we are simply calling the parent class' constructor to handle the rest.
 
 With this we already have a widget that addresses our main concern of navigating through years in a convenient way, you can subclass
-it to more specific properties to better handle your use case, for our `Customer` model since we will be handling birth dates we
-also want to make sure that no future dates will be used as input, so in the same file just under this class we will define:
+it to more specific properties to better handle your use case. For our `Customer` model since we will be handling birth dates we also want to make sure that no future dates will be used as input, so in the same file just under this class we will define:
 
 
 ```python
@@ -110,10 +108,10 @@ class PastCustomDatePickerWidget(CustomDatePickerWidget):
 
 ```
 
-As you can se in the constructor we updates `attrs` specifying `max` as `date.today()`.
+As you can see in the constructor we update `attrs` specifying `max` as `date.today()`.
 Now, with our new widget defined we just need to use it where we registered the model in the admin page to override the default one.
-At `project/customers/admin.py` I already had a `CustomerAdmin` which was the class I used to register the `Customer` model in the
-admin page, in my case it was empty so I am going to add to it the following code:
+At `project/customers/admin.py` I already had a `CustomerAdmin` which was the class I used to register the `Customer` model on the
+admin page. In my case it was empty so I am going to add the following code:
 
 
 ```python
@@ -134,7 +132,7 @@ class CustomerAdmin(admin.ModelAdmin):
 
 ```
 
-Which basically amounts to import the datepicker and using it as the value for `widget` in the `formfield_overrides` as shown in the code.
+What we are doing here is importing the datepicker and using it as the value for `widget` in the `formfield_overrides` as shown in the code.
 
 ![image](images/new_datepicker.gif)
 
@@ -143,4 +141,4 @@ And that's it! Now we can input birth date values in a much more comfortable man
 
 ### Conclusion
 
-In this blog post you learned how to create a new custom datepicker for Django as well as how to use it as the default datepicker for on the Django admin page.
+In this blog post, you learned how to create a new custom datepicker for Django as well as how to use it as the default datepicker on the Django admin page.
