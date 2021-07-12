@@ -1,4 +1,4 @@
-We have talked in previous blog posts about Django REST framework and about dj-rest-auth, both amazing libraries for Django that allow us to easily create rest APIs and handle user authentication respectively. In this blog, we will focus particularly on rest-auth and in one of its built-in functionalities which is the reset password feature.
+We have talked in previous blog posts about [Django REST framework](https://www.rootstrap.com/blog/django-best-practices-and-beginner-tips/) and about [dj-rest-auth](https://www.rootstrap.com/blog/registration-and-authentication-in-django-apps-with-dj-rest-auth/), both amazing libraries for Django that allow us to easily create rest APIs and handle user authentication respectively. In this blog, we will focus particularly on rest-auth and in one of its built-in functionalities which is the reset password feature.
 
 If the user wants to reset their password because they forgot it, or because they want to start using a different one, then usually they must make a reset password request, and then they'll receive an email with a link to a page in which they will be able to introduce and set their new password.
 
