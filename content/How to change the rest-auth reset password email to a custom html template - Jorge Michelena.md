@@ -261,5 +261,8 @@ And this is how it looks:
 
 ### Conclusion
 
-In this blog post you learned how to change the default dj-rest-auth reset password email with a new HTML one by defining a custom `PasswordResetSerializer`,
-as well as how to change/add information to the content of the email dinamically using the `get_email_options` method of the `PasswordResetSerializer` base class.
+In this blog post you learned how to overwrite any email template in dj-rest-auth, we focused on the one used for the reset password feature but the same principle can be used in other cases.
+We replaced the reset password email with a new HTML one by defining a custom `PasswordResetSerializer`,
+and learned how to change/add information to the content of the email dinamically using the `get_email_options` method of the `PasswordResetSerializer` base class.
+
+I hope you enjoyed it and found it useful, thank you for reading!
