@@ -13,7 +13,7 @@ In my case I made a very simple project called `project` with just one app calle
 
 
 ```
-| project
+project
 ├── customers
 │   ├── __init__.py
 │   ├── admin.py
@@ -63,7 +63,7 @@ specific one that inherits from it and also doesn't allow for the user to input 
 (i.e. future dates)
 
 It all boils down to which date format the widget uses, the date format that the default widget enforces is `day-month-year`.
-Our new `CustomDatePickerWidget` will require the `year-month-date` format, to define this new widget lets create a new
+Our new `CustomDatePickerWidget` will require the `year-month-date` format, to define these new widget let's create a new
 file `widgets.py` which in my case I will create at `project/project/widgets.py` with the following code:
 
 
@@ -90,7 +90,7 @@ class CustomDatePickerWidget(forms.DateInput):
 
 Here we are defining what date format the input is gonna enforce (`%Y-%m-%d` meaning `year-month-day`) and in the class constructor we are doing two things:
 - Adding `class`: `form-control` and `type`: `date` to `attrs` which is important to ensure that a calendar widget will be displayed from where we can select a date (if we didn't the input displayed for this field in the form would be a plain text one)
-- Setting `%Y-%m-%d` as the class' `format` attribute if no other format is provided as an argument
+- Setting `%Y-%m-%d` as the class' `format` attribute if no other format is provided as an argument.
 Then we are simply calling the parent class' constructor to handle the rest.
 
 With this we already have a widget that addresses our main concern of navigating through years in a convenient way, you can subclass
