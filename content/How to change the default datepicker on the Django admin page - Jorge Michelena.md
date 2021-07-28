@@ -142,3 +142,5 @@ And that's it! Now we can input birth date values in a much more comfortable man
 ### Conclusion
 
 In this blog post, you learned how to create a new custom datepicker for Django as well as how to use it as the default datepicker on the Django admin page.
+
+I hope you enjoyed it and found it useful, thank you for reading!
