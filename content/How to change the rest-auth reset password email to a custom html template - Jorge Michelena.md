@@ -1,6 +1,6 @@
-We have talked in previous blog posts about [Django REST framework](https://www.rootstrap.com/blog/django-best-practices-and-beginner-tips/) and about [dj-rest-auth](https://www.rootstrap.com/blog/registration-and-authentication-in-django-apps-with-dj-rest-auth/), both amazing libraries for Django that allow us to easily create rest APIs and handle user authentication respectively. In this blog, we will focus particularly on rest-auth and in one of its built-in functionalities which is the reset password feature.
+We have talked in previous blog posts about [Django REST framework](https://www.rootstrap.com/blog/django-best-practices-and-beginner-tips/) and [dj-rest-auth](https://www.rootstrap.com/blog/registration-and-authentication-in-django-apps-with-dj-rest-auth/), both amazing libraries for Django that allow us to easily create rest APIs and handle user authentication respectively. In this blog, we will focus particularly on dj-rest-auth and in one of its built-in functionalities which is the reset password feature.
 
-If the user wants to reset their password because they forgot it, or because they want to start using a different one, then usually they must make a reset password request, and then they'll receive an email with a link to a page in which they will be able to introduce and set their new password.
+If the users want to reset their password because they forgot it, or because they want to start using a different one, then usually they must make a reset password request, and then they'll receive an email with a link to a page in which they will be able to introduce and set a new password.
 
 This feature is provided by the dj-rest-auth library but the email that is sent to the user is a plain text one and the link that comes in it, is from a built-in dj-rest-auth endpoint, which may be exactly what you want in some cases, but not in others.
 If you want to change the content of the email the process is well documented but only if you want to change it to a plain text file. In case you want to change to a custom HTML template then there is not much information covering how to do it, that is why we will explain it in this article.
@@ -65,7 +65,7 @@ The relevant variables like `site_name`, `domain` and such will be automatically
 
 ### Changing the default email
 
-Now that we have our template what we need to do is indicate that this is what we want to send to our users when they request a password reset. To do that we have to define a serializer that inherits from `dj-rest-auth`'s `PasswordResetSerializer` and overwrite
+Now that we have our template what we need to do is to indicate that this is what we want to send to our users when they request a password reset. To do that we have to define a serializer that inherits from `dj-rest-auth`'s `PasswordResetSerializer` and overwrite
 its `get_email_options` method and then use that serializer instead of the default one.
 
 So first we will define the new serializer:
