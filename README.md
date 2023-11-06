@@ -1,4 +1,6 @@
-# How to write and publish an article in the Rootstrap blog
+# [Warning: This github repo is deprecated]
+
+## How to write and publish an article in the Rootstrap blog
 
 Publishing an article helps us to improve the Rootstrap brand with quality content on the web. Also writing about a topic, enhances your knowledge of it. If you want to write and publish an article, please take a look at these Notion links:
 
